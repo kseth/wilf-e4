@@ -187,6 +187,46 @@ semigroups and applies it to special families.[^chomicz] It does not claim
 Wilf's conjecture in embedding dimension four. It is nevertheless close enough
 in geometry and timing that it must be discussed and compared explicitly.
 
+### 4.5 What Chomicz changes in the present strategy
+
+Chomicz describes an Apéry set by deleting upper orthants in
+(\mathbb N^3) along relations whose labels are positive multiples of a
+distinguished generator. Theorem 2.2 gives a universal relation-deletion
+description. Propositions 2.5 and 2.8 construct three-dimensional L-shapes in
+the main and exceptional relation configurations, and Proposition 2.11
+characterizes when the L-shape is unique by equality of the ordinary and
+distinguished-generator-positive pure relation orders.[^chomicz]
+
+These results clarify the geometry but do not currently remove a lemma from
+the proposed proof:
+
+1. The lexicographic exponent set already has the two properties used
+   throughout: it is a lower ideal and contains exactly one representative of
+   every Apéry residue. Zhai and Hellus--Rechenauer--Waldi provide a shorter,
+   more direct source for those precise facts.
+2. Chomicz's relation dichotomy may require rearranging all four generators.
+   The proof here must distinguish the multiplicity (m), since
+   (|\operatorname{Ap}(S,m)|=m),
+   (\max\operatorname{Ap}(S,m)=c+m-1), and (A\ge m+1) drive the moment
+   normalization. Reordering away from (m) would therefore cost more than it
+   saves.
+3. Choosing a different L-shape cannot change the weighted moment:
+   (a\cdot\sum_{x\in T}x) is the sum of the Apéry elements for every choice of
+   their factorizations. It can change the corners and the auxiliary centroid
+   witnesses, so nonuniqueness remains a possible way to simplify a future
+   geometric proof, not the current numerical inequality itself.
+
+The useful new research target is in B5. All 431 lower ideals for which the
+local two-step witness fails were tested against necessary residue-relation
+conditions. None can be a genuine Apéry L-shape: 199 fail using only the full
+corner and the three axes, and each remaining shape fails after adding one
+mixed corner and its complementary axis. This is consistent with Chomicz's
+relation-deletion picture and suggests seeking a structural proof that an
+actual Apéry L-shape always has the local witness. Until such a proof exists,
+the manuscript should retain the analytic axis witness instead of adding a
+second modular enumeration. The exact assessment and reproducible exploratory
+check are in [`research/chomicz-assessment.md`](../research/chomicz-assessment.md).
+
 ## 5. Other reductions and recent work
 
 Moscariello and Sammartano prove an asymptotic result for fixed
@@ -233,7 +273,7 @@ claim.
 | Weighted mean inequality for a finite lower ideal | Attribute to Zhai. |
 | Residue-lattice tiling and support/exclusion lemma | Attribute to Hellus--Rechenauer--Waldi. |
 | Kunz/Apéry-poset verification through (m=19) | Bruns et al.; Kliem--Stump. |
-| Three-dimensional L-shape context | Aguiló-Gost--García-Sánchez--Llena; compare Chomicz. |
+| Three-dimensional L-shape context and relation-deletion construction | Aguiló-Gost--García-Sánchez--Llena; Chomicz. The proof retains the canonical lexicographic L-shape. |
 | Exact moment-deficit reformulation | Short derived lemma; cite its classical and Zhai inputs. |
 | Positive surplus estimates for three-dimensional lower ideals | Proposed new content; audit branch by branch. |
 | Seven-case geometric partition | Proposed new content; search terminology and adjacent extremal results before claiming novelty. |

@@ -50,6 +50,12 @@ H=M/A,\qquad R=\max_{x\in T}|x|_1,
 \qquad D_0=3mH-4b\mathbin\cdot s.
 \]
 
+In the terminology used in the geometric literature, (T) is a
+three-dimensional L-shape for the Apéry set. Chomicz gives relation-based
+procedures that can produce other L-shapes. The present route retains the
+lexicographic choice because it is canonical and interfaces directly with the
+initial-ideal results used below.
+
 The proof uses three foundational facts.
 
 ### F1. Preferred Apéry ideal [E]+[A]
@@ -63,6 +69,8 @@ developed as an initial-monomial-ideal construction by Hellus, Rechenauer, and
 Waldi. The clean proof should translate and cite those results, proving here
 only any convention-dependent details. See the
 [literature survey](../literature/survey.md#41-apéry-sets-and-preferred-factorizations).
+Chomicz's L-shape constructions give the same lower-ideal and residue-
+representative interface, but do not presently shorten these inputs.
 
 ### F2. Moment identity [A]
 
@@ -75,6 +83,19 @@ The Apéry genus formula gives
 
 Consequently the problem is reduced to a lower bound for the weighted moment
 deficit (D_0).
+
+This reduction is independent of which L-shape is chosen. Indeed, for every
+system of one factorization (x(w)) of each Apéry element,
+
+\[
+b\mathbin\cdot\sum_w x(w)
+=\frac1A\sum_w a\mathbin\cdot x(w)
+=\frac1A\sum_{w\in\operatorname{Ap}(S,m)}w.
+\]
+
+Thus changing L-shape cannot improve (D_0) itself. It can only change the
+auxiliary geometry---for example (R), the minimal corners, (U_2), and (G)---
+used to certify the same invariant inequality.
 
 The underlying Apéry genus formula is classical. Zhai's weighted inequality
 for finite downsets supplies the nonnegative baseline for (D_0); the new burden
@@ -276,6 +297,23 @@ but 431, and the axis witness handles those 431. Finding a structural proof of
 (4), perhaps by classifying the fallback shapes, is the highest-priority
 opportunity to remove a large enumeration.
 
+A focused residue audit found that none of the 431 fallback shapes satisfies
+the necessary residue conditions for an Apéry L-shape. Of these, 199 are
+already excluded by nonzero, pairwise-distinct generator residues, the
+full-corner relation, and injectivity on the three axes; each of the remaining
+232 is excluded by one mixed minimal corner together with the opposite-axis
+support condition from F3. This suggests the sharper structural target
+
+\[
+\text{genuine Apéry L-shape in this branch}\quad\Longrightarrow\quad U_2(T)\ge m.
+\tag{5}
+\]
+
+We do not replace (4) by a modular search: that would exchange a short
+analytic witness for another computation rather than reduce verification.
+The present strategy keeps (G) and treats (5) as a candidate analytic lemma.
+See the [Chomicz assessment](../research/chomicz-assessment.md).
+
 Historical source: `round10/local_centroid/local_centroid_theorem.md`.
 
 ### B6. Residual degree at least seven [A], [C]
@@ -349,7 +387,7 @@ The following is the minimal presently retained proof interface.
 | B2 | No-corner weighted theorem | [A]+[C] | Seek an analytic horn inequality |
 | B3 | Six-final-window theorem | [A]+[C] | Shrink the shape/completion argument and certificate interface |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
-| B5 | Local-or-axis theorem | [A]+[C] | Prove (4) structurally from the two restrictions |
+| B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
 | C | Case exhaustion and final arithmetic | [A] | Present as the main theorem's short final proof |
@@ -374,7 +412,8 @@ example from them should appear in the main paper.
 1. Complete the attribution audit and translate the exact upstream lemmas.
 2. Audit the derived moment identity and final arithmetic.
 3. Isolate and audit the conductor reduction B1b.
-4. Study the 431 B5 fallback shapes for a structural replacement of (4).
+4. Seek an analytic proof that the corner/axis incompatibility found in all
+   431 B5 fallback shapes forces (5); retain (G) unless this succeeds.
 5. Reconstruct B3 and B4 as standalone lemmas with explicit finite contracts.
 6. Reconstruct the no-corner and high-height analytic reductions.
 7. Decide which computations remain essential and design their minimal

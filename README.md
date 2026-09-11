@@ -15,6 +15,8 @@ analytic arguments and finite verifications have been independently checked.
   spine and dependency ledger. Start here.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
+- [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the
+  focused comparison with Chomicz's three-dimensional L-shape construction.
 - `artifacts/` is the frozen research archive: manuscripts, historical routes,
   exact programs, certificates, and replay records.
 - A definitive TeX paper and a minimal verification package will be added only
