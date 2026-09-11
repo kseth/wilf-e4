@@ -66,8 +66,10 @@ modulo (m).
 
 The preferred-factorization/downset construction is due to Zhai and was
 developed as an initial-monomial-ideal construction by Hellus, Rechenauer, and
-Waldi. The clean proof should translate and cite those results, proving here
-only any convention-dependent details. See the
+Waldi. The foundational note gives a self-contained translation with exact
+attribution. See the
+[foundational note](foundations.md#3-preferred-exponent-representatives-f1)
+and the
 [literature survey](../literature/survey.md#41-apéry-sets-and-preferred-factorizations).
 Chomicz's L-shape constructions give the same lower-ideal and residue-
 representative interface, but do not presently shorten these inputs.
@@ -99,7 +101,9 @@ used to certify the same invariant inequality.
 
 The underlying Apéry genus formula is classical. Zhai's weighted inequality
 for finite downsets supplies the nonnegative baseline for (D_0); the new burden
-is the positive surplus needed to dominate (m(m-1)/A).
+is the positive surplus needed to dominate (m(m-1)/A). The identity and
+baseline are proved in the
+[foundational note](foundations.md#4-the-moment-identity-and-baseline-f2).
 
 ### F3. Minimal-exclusion structure [E]+[A]
 
@@ -112,11 +116,12 @@ points sharing a positive coordinate have different residues. Hence:
 3. all other minimal excluded points are visible in coordinate planes.
 
 The proof of these facts is the common arithmetic input to every large-(m)
-branch.
+branch. It is given in the
+[foundational note](foundations.md#5-minimal-excluded-points-f3).
 
 This support/exclusion structure is substantially present in Proposition 2.6
-of Hellus, Rechenauer, and Waldi. Before drafting, separate their cited result
-from any genuinely stronger statement needed below.
+of Hellus, Rechenauer, and Waldi. The foundational note distinguishes that
+cited result from the elementary representative-disjointness corollary.
 
 ## 2. The complete case partition
 
@@ -380,7 +385,7 @@ The following is the minimal presently retained proof interface.
 
 | ID | Dependency | Form | Main simplification target |
 |---|---|---|---|
-| F1–F3 | Apéry ideal, moment identity, exclusion structure | [E]+[A] | Translate and cite Zhai and Hellus--Rechenauer--Waldi; prove only the derived identity and any strengthening |
+| F1–F3 | Apéry ideal, moment identity, exclusion structure | [E]+[A] | Reconstructed in `foundations.md`; obtain independent review |
 | B1a | Published multiplicity (\le19) theorem | [E] | Verify statement and bibliography |
 | B1b | Negative-case conductor reduction | [A] | Isolate from historical global reduction |
 | B1c | Multiplicities (20\)–(29) | [C] | Retain two small exact kernels or find a literature replacement |
@@ -409,8 +414,9 @@ example from them should appear in the main paper.
 
 ## 7. Reconstruction order
 
-1. Complete the attribution audit and translate the exact upstream lemmas.
-2. Audit the derived moment identity and final arithmetic.
+1. Obtain independent review of the reconstructed upstream lemmas in
+   `foundations.md`.
+2. Audit the final arithmetic that applies the moment identity.
 3. Isolate and audit the conductor reduction B1b.
 4. Seek an analytic proof that the corner/axis incompatibility found in all
    431 B5 fallback shapes forces (5); retain (G) unless this succeeds.

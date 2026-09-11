@@ -13,6 +13,8 @@ analytic arguments and finite verifications have been independently checked.
 
 - [`paper/proof-outline.md`](paper/proof-outline.md) is the current clean proof
   spine and dependency ledger. Start here.
+- [`paper/foundations.md`](paper/foundations.md) proves the common Apéry,
+  residue, exclusion, and moment lemmas used by every proof branch.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the

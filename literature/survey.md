@@ -125,15 +125,9 @@ the periodic residue-lattice tiling; and Proposition 2.6 gives the relevant
 support restriction on minimal excluded points.[^hrw] These are direct
 predecessors of facts F1 and F3 in the proof outline.
 
-The clean paper should therefore do one of two things:
-
-1. quote the applicable propositions verbatim after translating notation; or
-2. give short self-contained proofs while stating explicitly that the
-   construction and underlying lemmas are due to Zhai and to
-   Hellus--Rechenauer--Waldi.
-
-The second option is probably better for readability, provided the attribution
-is unmistakable.
+The reconstruction adopts the second approach: short self-contained proofs,
+with explicit attribution and a theorem-by-theorem source map, now appear in
+[`paper/foundations.md`](../paper/foundations.md).
 
 ### 4.2 The Apéry moment identity
 
@@ -284,10 +278,10 @@ claim.
 The literature suggests the following order, before any TeX manuscript is
 written:
 
-1. Replace F1 and F3 in the proof outline by precisely translated cited
-   propositions, retaining only any new strengthening.
-2. State Zhai's weighted downset inequality as the baseline and formulate one
-   “surplus theorem” that contains exactly the new burden.
+1. Independently review the self-contained reconstruction of F1--F3 in
+   `paper/foundations.md`, retaining only any genuinely new strengthening.
+2. Use Proposition 4.4 of `paper/foundations.md` as the baseline and formulate
+   one “surplus theorem” that contains exactly the new burden.
 3. Apply all known reductions first: (m\ge20), (c>3m), (n\ge13), and
    (t\ge4). Test whether the Marashdeh decomposition gives more.
 4. Re-examine the seven cases for overlap. In particular, look for a single
