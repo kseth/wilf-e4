@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "payloads": 108,
+  "archive_bytes": 14639866,
+  "archive_sha256": "efdb8d9faac39c35408d5d32a82e4d19b3d3f8b191ed80db9bd3f7cfa83fd09c",
+  "all_payload_hashes_checked": true,
+  "both_final_proof_manifests_checked": true,
+  "observed_local_replay_shapes": 5574644,
+  "observed_envelope_replay_cells": 44281,
+  "full_mathematical_replay_during_packaging": false
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "target": "D>=m",
+  "source_hashes_verified": 3,
+  "old_filter_and_histogram_records_matched": 9,
+  "total_shapes": 3742041,
+  "line_at_least_m": 3741763,
+  "axis_at_least_m": 2090810,
+  "union_at_least_m": 3742041,
+  "per_corner_min_max_U_G_minus_m": [
+    "0",
+    "0",
+    "1",
+    "2",
+    "4",
+    "14",
+    "22",
+    "27",
+    "33"
+  ],
+  "worst_witnesses_recomputed_with_python_fractions": 9,
+  "lp_data_required": false,
+  "old_archive_required": false
+}

@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "independent formulas, low-height and decimation checks; full strips audited separately",
+  "clipped_box_moment_checks": 1728,
+  "decimation_fixtures": [
+    {
+      "R": 17,
+      "L": 1,
+      "m": 460,
+      "classes": 1,
+      "D": 2040
+    },
+    {
+      "R": 18,
+      "L": 1,
+      "m": 514,
+      "classes": 1,
+      "D": 2448
+    },
+    {
+      "R": 33,
+      "L": 1,
+      "m": 1684,
+      "classes": 1,
+      "D": 16368
+    },
+    {
+      "R": 34,
+      "L": 2,
+      "m": 1786,
+      "classes": 7,
+      "D": 17952
+    },
+    {
+      "R": 50,
+      "L": 2,
+      "m": 3826,
+      "classes": 7,
+      "D": 58800
+    },
+    {
+      "R": 79,
+      "L": 4,
+      "m": 9481,
+      "classes": 37,
+      "D": 237237
+    }
+  ],
+  "low_height_non111_maximum": -1,
+  "sharp_threshold": 65
+}

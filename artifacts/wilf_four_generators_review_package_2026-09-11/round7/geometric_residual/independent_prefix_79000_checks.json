@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "partial checkpoint",
+  "certificate_sha256": "8cd6cab2100471f77007d8da24ae9fae6008d8e661f242a27f8b2ba9129e2c70",
+  "coverage": {
+    "split": 39504,
+    "dp": 39496,
+    "empty": 0,
+    "pending": 9,
+    "unresolved": 0
+  },
+  "dp_leaves_replayed": 5004,
+  "independent_corner_cases": 5520016,
+  "sampled": false,
+  "cached_verified_leaves": 34492,
+  "cached_corner_cases": 25922743,
+  "total_verified_leaves": 39496,
+  "selected_worker": "specialized",
+  "coverage_only": false,
+  "seconds": 288.81563782691956
+}

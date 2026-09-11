@@ -1,0 +1,30 @@
+{
+  "exact_bytes_equal": true,
+  "rows": 1029,
+  "files": {
+    "canonical_strip.txt": "936f87f13fffe2ed7cb18fd85ebc06536308648fcb4e43febe90c9a1184d7fad",
+    "independent_strip.txt": "936f87f13fffe2ed7cb18fd85ebc06536308648fcb4e43febe90c9a1184d7fad"
+  },
+  "per_R": [
+    {
+      "R": 18,
+      "configurations": 204,
+      "maximum": -50
+    },
+    {
+      "R": 19,
+      "configurations": 237,
+      "maximum": -53
+    },
+    {
+      "R": 20,
+      "configurations": 274,
+      "maximum": -56
+    },
+    {
+      "R": 21,
+      "configurations": 314,
+      "maximum": -59
+    }
+  ]
+}

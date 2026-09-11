@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "profiles": 1429,
+  "shapes": 3742041,
+  "line_upgrade": 3741920,
+  "axis_simplex": 2140902,
+  "union": 3742041,
+  "cheap_union": 3741962,
+  "target": "D>=m",
+  "line_at_least_m": 3741763,
+  "axis_at_least_m": 2090810,
+  "union_at_least_m": 3742041,
+  "floating_point_used": false,
+  "lp_certificates_used": false
+}

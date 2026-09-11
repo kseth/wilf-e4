@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "cardinality": 56,
+  "coordinate_sums": [
+    98,
+    76,
+    58
+  ],
+  "minimal_excluded": [
+    [
+      0,
+      0,
+      5
+    ],
+    [
+      0,
+      2,
+      2
+    ],
+    [
+      0,
+      6,
+      0
+    ],
+    [
+      2,
+      0,
+      2
+    ],
+    [
+      2,
+      2,
+      0
+    ],
+    [
+      7,
+      0,
+      0
+    ]
+  ],
+  "unique_ordered_minimizer": [
+    "1",
+    "5/4",
+    "5/3"
+  ],
+  "minimum_D": "1018/3",
+  "unit_D": 416,
+  "fixed_H_slope": "338/3",
+  "scope": "Obstruction to naive equal-weight minimization, not a counterexample to the weighted target; no Ap\u00e9ry realization asserted."
+}

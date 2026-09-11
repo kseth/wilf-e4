@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "normals": 2425,
+  "normal_coordinate_orbits": 416,
+  "parameter_cases": 44281,
+  "moment_certificates": 40115,
+  "cardinality_certificates": 4166,
+  "greatest_normalized_upper_numerator": -999992,
+  "greatest_normalized_upper_denominator": 1000000,
+  "seconds": 49.75016260147095,
+  "scipy_used": false,
+  "producer_imported": false,
+  "arithmetic": "exact Python integers"
+}

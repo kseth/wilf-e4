@@ -1,0 +1,206 @@
+{
+  "scope": "all full-support corners at unit height6; exact Lagrange2m-D maxima and their cardinalities",
+  "results": [
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        1,
+        1,
+        1
+      ],
+      "penalty": 2,
+      "maximum": 68,
+      "optimal_cardinalities": [
+        64
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        1,
+        1,
+        2
+      ],
+      "penalty": 2,
+      "maximum": 68,
+      "optimal_cardinalities": [
+        69
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        1,
+        1,
+        3
+      ],
+      "penalty": 2,
+      "maximum": 60,
+      "optimal_cardinalities": [
+        69
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        1,
+        1,
+        4
+      ],
+      "penalty": 2,
+      "maximum": 52,
+      "optimal_cardinalities": [
+        67
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        1,
+        1,
+        5
+      ],
+      "penalty": 2,
+      "maximum": 44,
+      "optimal_cardinalities": [
+        66,
+        67
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        1,
+        2,
+        2
+      ],
+      "penalty": 2,
+      "maximum": 68,
+      "optimal_cardinalities": [
+        71
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        1,
+        2,
+        3
+      ],
+      "penalty": 2,
+      "maximum": 56,
+      "optimal_cardinalities": [
+        69
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        1,
+        2,
+        4
+      ],
+      "penalty": 2,
+      "maximum": 44,
+      "optimal_cardinalities": [
+        66,
+        67
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        1,
+        3,
+        3
+      ],
+      "penalty": 2,
+      "maximum": 44,
+      "optimal_cardinalities": [
+        66,
+        67
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        2,
+        2,
+        2
+      ],
+      "penalty": 2,
+      "maximum": 64,
+      "optimal_cardinalities": [
+        71
+      ]
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 6,
+      "p": [
+        2,
+        2,
+        3
+      ],
+      "penalty": 2,
+      "maximum": 48,
+      "optimal_cardinalities": [
+        68
+      ]
+    }
+  ]
+}

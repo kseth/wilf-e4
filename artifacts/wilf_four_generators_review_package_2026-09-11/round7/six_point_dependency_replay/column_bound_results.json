@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "random_identity_checks": 90,
+  "examples": [
+    {
+      "e": 4,
+      "generators": [
+        8,
+        12,
+        18,
+        27
+      ],
+      "m": 8,
+      "c": 50,
+      "W": 50,
+      "A": 4,
+      "min_column_length": 2
+    },
+    {
+      "e": 5,
+      "generators": [
+        16,
+        24,
+        36,
+        54,
+        81
+      ],
+      "m": 16,
+      "c": 180,
+      "W": 270,
+      "A": 8,
+      "min_column_length": 2
+    },
+    {
+      "e": 6,
+      "generators": [
+        32,
+        48,
+        72,
+        108,
+        162,
+        243
+      ],
+      "m": 32,
+      "c": 602,
+      "W": 1204,
+      "A": 16,
+      "min_column_length": 2
+    },
+    {
+      "e": 7,
+      "generators": [
+        64,
+        96,
+        144,
+        216,
+        324,
+        486,
+        729
+      ],
+      "m": 64,
+      "c": 1932,
+      "W": 4830,
+      "A": 32,
+      "min_column_length": 2
+    },
+    {
+      "e": 8,
+      "generators": [
+        128,
+        192,
+        288,
+        432,
+        648,
+        972,
+        1458,
+        2187
+      ],
+      "m": 128,
+      "c": 6050,
+      "W": 18150,
+      "A": 64,
+      "min_column_length": 2
+    },
+    {
+      "e": 4,
+      "generators": [
+        28,
+        31,
+        42,
+        49
+      ],
+      "m": 28,
+      "c": 250,
+      "W": 250,
+      "A": 4,
+      "min_column_length": 7
+    },
+    {
+      "e": 4,
+      "generators": [
+        126,
+        127,
+        2569,
+        3615
+      ],
+      "m": 126,
+      "c": 8316,
+      "W": 7060,
+      "A": 3,
+      "column_lengths": [
+        38,
+        39,
+        49
+      ],
+      "min_column_length": 38
+    }
+  ],
+  "scope": "Analytic sufficient theorem for e>=4; not unrestricted Wilf"
+}

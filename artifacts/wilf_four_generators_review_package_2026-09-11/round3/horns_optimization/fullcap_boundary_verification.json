@@ -1,0 +1,7 @@
+{
+  "canonical_gap_identity": true,
+  "boundary_tent_derivative_identity": true,
+  "boundary_gain_identity": true,
+  "remaining_positive_polynomial_identity": true,
+  "equal_caps_gain": "1/120000"
+}

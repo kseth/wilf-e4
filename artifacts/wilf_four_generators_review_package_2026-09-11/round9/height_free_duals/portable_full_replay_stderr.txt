@@ -1,0 +1,9 @@
+pid 0 verified 708617 exact weighted duals; compatible 4112203
+pid 1 verified 976430 exact weighted duals; compatible 5796538
+pid 2 verified 571100 exact weighted duals; compatible 5862929
+pid 3 verified 519716 exact weighted duals; compatible 8772820
+pid 4 verified 533570 exact weighted duals; compatible 13325338
+pid 5 verified 150481 exact weighted duals; compatible 2252380
+pid 6 verified 100341 exact weighted duals; compatible 3589363
+pid 7 verified 90696 exact weighted duals; compatible 4014473
+pid 8 verified 91090 exact weighted duals; compatible 7473254

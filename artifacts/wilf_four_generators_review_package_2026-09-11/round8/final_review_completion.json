@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "date": "2026-09-11",
+  "scope": "Completion and provenance of the fresh in-session review; recorded full computations are not rerun by this script.",
+  "fresh_original_low_height_duals": 3361434,
+  "fresh_supplementary_low_height_duals": 380607,
+  "combined_direct_low_height_duals": 3742041,
+  "fresh_high_height_leaves": 47088,
+  "high_height_cached_leaves": 0,
+  "fresh_high_height_cartesian_cases": 35852138,
+  "high_height_certificate_sha256": "173fe6ec196b3d2adabad313749482542ad3492b5f6b4e398e76bbe6e52e405c",
+  "unresolved_high_height_nodes": 0,
+  "six_point_dependency_removed_from_residual_low_height_branch": true,
+  "six_point_dependency_retained_for_corner_111": true,
+  "external_mathematical_review_performed": false,
+  "proof_assistant_formalization_performed": false,
+  "audit_note_sha256": {
+    "round8/audit_structure.md": "25dfafd11efa03b25a0bc3a715ec8be8d284758f87808f222a67497e753dd602",
+    "round8/audit_phase.md": "82b57119517458361f45b7fb62cdd11bed663bcc8b367004ba376a621f57c619",
+    "round8/audit_lowheight.md": "276b98949c04ba76489c09c6b30b0c6271b798a48c50578dca1c8656e34d7981",
+    "round8/audit_sixpoint.md": "0f874c5e337b222b63130f8d5d5ff37739173136b1429ca31c511392dcf567f8",
+    "round8/audit_computation.md": "57de4b77681edbfff5d087307d2401c27b6a9408da8854b21db61d61cbba8bc3"
+  },
+  "full_high_replay_report_sha256": "940a9b3fbe4f9dada50ec215a8dc5fe2cd63f8d2da4ed93fab0e99a717e5a455"
+}

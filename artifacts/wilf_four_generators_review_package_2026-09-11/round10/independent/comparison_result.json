@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "old_filter_and_histogram_records_matched": 9,
+  "comparison_keys": [
+    "pid",
+    "corner",
+    "compatible",
+    "degree_ok",
+    "m30",
+    "erosion_ok",
+    "q_ok",
+    "six_maxima",
+    "remaining",
+    "max_m_pre_erosion",
+    "smallest_tenth_margin",
+    "histogram"
+  ],
+  "total_shapes": 3742041,
+  "line_at_least_m": 3741763,
+  "axis_at_least_m": 2090810,
+  "union_at_least_m": 3742041,
+  "per_corner_min_max_U_G_minus_m": [
+    "0",
+    "0",
+    "1",
+    "2",
+    "4",
+    "14",
+    "22",
+    "27",
+    "33"
+  ],
+  "worst_witnesses_recomputed_with_python_fractions": 9
+}

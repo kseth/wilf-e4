@@ -1,0 +1,90 @@
+{
+  "scope": "independent finite implementation audit, not universal one-corner theorem",
+  "cases": [
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 3,
+      "p": [
+        1,
+        1,
+        1
+      ],
+      "enumerated_ideals": 2111,
+      "best": 16,
+      "size": 19,
+      "agreement": true
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 4,
+      "p": [
+        1,
+        1,
+        1
+      ],
+      "enumerated_ideals": 59242,
+      "best": 19,
+      "size": 31,
+      "agreement": true
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "M": 4,
+      "p": [
+        1,
+        1,
+        2
+      ],
+      "enumerated_ideals": 38816,
+      "best": 15,
+      "size": 31,
+      "agreement": true
+    },
+    {
+      "weights": [
+        2,
+        3,
+        5
+      ],
+      "M": 9,
+      "p": [
+        1,
+        1,
+        1
+      ],
+      "enumerated_ideals": 409,
+      "best": -26,
+      "size": 1,
+      "agreement": true
+    },
+    {
+      "weights": [
+        2,
+        3,
+        3
+      ],
+      "M": 10,
+      "p": [
+        1,
+        1,
+        2
+      ],
+      "enumerated_ideals": 6139,
+      "best": -29,
+      "size": 1,
+      "agreement": true
+    }
+  ]
+}

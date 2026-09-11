@@ -1,0 +1,75 @@
+{
+  "scope": "Diagnostic from existing binary only; no new universal theorem and no independent recurrence replay. Requested by geometric_residual.",
+  "command": "round6/uniform_gap/one_corner_unit_dp 18 21 6",
+  "results": [
+    {
+      "R": 18,
+      "penalty": 6,
+      "maximum": 1812,
+      "corner_cases": 204,
+      "corner": [
+        3,
+        3,
+        3
+      ],
+      "center": [
+        7,
+        8,
+        8
+      ],
+      "seconds": 0.0134488
+    },
+    {
+      "R": 19,
+      "penalty": 6,
+      "maximum": 1794,
+      "corner_cases": 237,
+      "corner": [
+        4,
+        4,
+        4
+      ],
+      "center": [
+        7,
+        8,
+        8
+      ],
+      "seconds": 0.0190216
+    },
+    {
+      "R": 20,
+      "penalty": 6,
+      "maximum": 1716,
+      "corner_cases": 274,
+      "corner": [
+        4,
+        4,
+        4
+      ],
+      "center": [
+        8,
+        8,
+        8
+      ],
+      "seconds": 0.0259976
+    },
+    {
+      "R": 21,
+      "penalty": 6,
+      "maximum": 1554,
+      "corner_cases": 314,
+      "corner": [
+        4,
+        4,
+        4
+      ],
+      "center": [
+        8,
+        9,
+        9
+      ],
+      "seconds": 0.0345608
+    }
+  ],
+  "passed": false
+}

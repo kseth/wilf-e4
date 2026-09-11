@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "scope": "all real 1<=b<=c<=M with 5<=M<=24",
+  "tree_nodes": 50885,
+  "kinds": {
+    "split": 25442,
+    "dp": 24912,
+    "continuous": 531
+  },
+  "largest_dp_bound_numerator": 4096,
+  "scale": 4096,
+  "degree_four_max_cardinality": 29,
+  "seconds": 27.379167079925537
+}

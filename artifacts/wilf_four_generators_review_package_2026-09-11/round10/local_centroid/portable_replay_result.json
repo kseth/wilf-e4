@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "Fresh independent complete enumeration of the larger class; direct local successor tests",
+  "total_shapes": 5574644,
+  "local_two_step_gain_at_least_m": 5574213,
+  "axis_gain_at_least_m": 3011728,
+  "axis_fallbacks": 431,
+  "all_fallbacks_independently_reconstructed_with_python_fractions": true,
+  "uniform_centroid_surplus": "at least m",
+  "all_nine_coverage_records_and_histograms_match": true,
+  "erosion_filter_used": false,
+  "refined_dominating_corner_filter_used": false,
+  "floating_point_used": false,
+  "external_certificate_data_used": false,
+  "elapsed_seconds": 25.379318,
+  "source_sha256": "114417d8754bf11db6b070e988f4d89c3d833837033e06a6cfc29ceceeac0a03"
+}

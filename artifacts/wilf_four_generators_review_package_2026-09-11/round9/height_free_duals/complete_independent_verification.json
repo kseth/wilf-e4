@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "full_independent_recomputation_this_run": false,
+  "run_summary": null,
+  "all_coverage_fields_and_histograms_match": true,
+  "totals": {
+    "compatible": 55199298,
+    "degree_ok": 17808013,
+    "m30": 17727110,
+    "erosion_ok": 12575521,
+    "q_ok": 3742041,
+    "six_maxima": 380607,
+    "remaining": 3742041
+  },
+  "exact_weighted_target": "D >= m - 29/10 for every weight vector >= (1,1,1), without a height cutoff",
+  "binary_assignment_encoding": "explicit little-endian unsigned 32-bit",
+  "file_sha256": {
+    "independent_verify_height_free.cpp": "0dacc4b52dd1f4f7d50cc7f464b256fea53966fa60b6f49020845272dfb175eb",
+    "verify_complete_certificate.py": "25cca2d5f44eead9ba64cb1f8ff6ab2093da88edee44ae2ed38e0755b1de1267",
+    "dual_bases.jsonl": "e3324346974516bdcbfbb0c09b7f6e3878efedd1c2ca63c11ffb2171b456d621",
+    "dual_assignments.bin": "7f1fe86605deb1fee2943648a41a29ed3ae3bdd45b3735641943c0346b017cdf",
+    "certification.jsonl": "c50736ad2b075950383894f7a836ac3f7de238c47aaf17e52557049b2acb5a30",
+    "independent_verification.jsonl": "0308ddcc2c74f638c8891aaef98462202f542d6dbc1dd6e6f1e8e45cebb4a1db"
+  },
+  "scope": "Degree<=6 residual ideal class, all heights and all real weights >=1. Excluded shapes use the named prior theorems and necessary arithmetic filters."
+}

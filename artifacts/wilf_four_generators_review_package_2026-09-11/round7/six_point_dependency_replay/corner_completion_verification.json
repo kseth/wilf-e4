@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "nonempty_ideals": 979,
+  "ideals_with_at_most_one_interior_corner": 892,
+  "maximal_sets_admitting_completion": 892,
+  "stretch_invariance_checks": 979,
+  "proper_completion_example": {
+    "Z": [
+      [
+        2,
+        2,
+        2
+      ]
+    ],
+    "U_size": 25,
+    "completion_size": 26,
+    "added_point": [
+      2,
+      1,
+      1
+    ],
+    "interior_corner": [
+      1,
+      1,
+      2
+    ]
+  },
+  "scope": "Bounded check; the general theorem has an analytic proof"
+}

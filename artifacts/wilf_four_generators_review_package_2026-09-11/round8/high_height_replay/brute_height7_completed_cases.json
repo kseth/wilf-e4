@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "two fully completed direct-enumeration cases; third optional case interrupted and not counted",
+  "rows": [
+    {
+      "input": [
+        1,
+        1,
+        1,
+        7,
+        1,
+        1,
+        7,
+        1,
+        2,
+        2
+      ],
+      "brute_best": -28,
+      "horn_bound": -20,
+      "compatible": 1278654031,
+      "feasible": 543537300,
+      "point_scores": 35562744901,
+      "profile_counts": [
+        4608,
+        4608,
+        4068
+      ]
+    },
+    {
+      "input": [
+        1,
+        1,
+        1,
+        7,
+        1,
+        1,
+        7,
+        2,
+        2,
+        2
+      ],
+      "brute_best": -28,
+      "horn_bound": -20,
+      "compatible": 1072375676,
+      "feasible": 299057140,
+      "point_scores": 20678354300,
+      "profile_counts": [
+        4068,
+        4068,
+        4068
+      ]
+    }
+  ]
+}

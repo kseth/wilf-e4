@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "generators": [
+    155,
+    1552,
+    1647,
+    1651
+  ],
+  "conductor": 17979,
+  "genus": 11114,
+  "n": 6865,
+  "type": 13,
+  "wilf": 9481,
+  "pseudo_frobenius": [
+    12360,
+    13813,
+    16157,
+    16351,
+    17511,
+    17610,
+    17879,
+    17883,
+    17887,
+    17891,
+    17895,
+    17899,
+    17978
+  ],
+  "lambdas": [
+    2417,
+    3337,
+    5168,
+    5326,
+    6421,
+    6512,
+    6772,
+    6775,
+    6778,
+    6781,
+    6784,
+    6787,
+    6865
+  ],
+  "Theta": 65609,
+  "Xi": 22130,
+  "required_redundancy": 56287,
+  "Xi_shortfall": 34157,
+  "stronger_conjecture_margin": 9322,
+  "tail_penalty": 159,
+  "full_corners": [
+    [
+      1,
+      7,
+      4
+    ]
+  ],
+  "independent_method": "Integer membership recurrence and direct incidence counting; separate factorization loops."
+}

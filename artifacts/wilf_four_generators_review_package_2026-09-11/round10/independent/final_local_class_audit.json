@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "independent_records_matched": 9,
+  "target": "max(U2,G)>=m",
+  "shapes": 5574644,
+  "two_step": 5574213,
+  "axis": 3011728,
+  "union": 5574644,
+  "fallback_count": 431,
+  "minima": [
+    "0",
+    "0",
+    "0",
+    "2",
+    "4",
+    "10",
+    "13",
+    "21",
+    "31"
+  ],
+  "source_sha256": {
+    "round10/ablation/local2_no_upper.cpp": "322091b526a0b1b4f8bb1a2cccaa7c87e1f5978727d3c2e60de7b3d472dc1bf2",
+    "round10/local_centroid/independent_two_step.cpp": "114417d8754bf11db6b070e988f4d89c3d833837033e06a6cfc29ceceeac0a03"
+  },
+  "retained_structural_filters": [
+    "one full corner degree5..7",
+    "ideal degree<=6",
+    "m>=30",
+    "total mixed plane corners<=|p|-2",
+    "pairwise exposed surface count<=twice complementary axis length"
+  ],
+  "removed_structural_filters": [
+    "erosion",
+    "dominating mixed-plane-corner count"
+  ]
+}

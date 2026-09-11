@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "arithmetic": "exact fractions",
+  "box_identity_checks": 3375,
+  "prism_identity_checks": 18214,
+  "prism_theorem_examples": 13559,
+  "recorded_line_upgrade_failure_probe": {
+    "rows": 121,
+    "clipped_boxes": 0,
+    "clipped_prisms": 0,
+    "proved_prism_cases": 0
+  },
+  "scope": "Finite sanity checks; the accompanying symbolic proofs establish the infinite families."
+}

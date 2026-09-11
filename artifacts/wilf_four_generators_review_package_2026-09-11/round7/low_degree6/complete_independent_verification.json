@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "full_independent_recomputation_this_run": true,
+  "run_summary": {
+    "status": "passed",
+    "profiles": 1429,
+    "bases": 5733,
+    "exact_weighted_duals": 3361434,
+    "floating_point_used": false
+  },
+  "all_coverage_fields_and_histograms_match": true,
+  "totals": {
+    "compatible": 55199298,
+    "degree_ok": 17808013,
+    "m30": 17727110,
+    "erosion_ok": 12575521,
+    "q_ok": 3742041,
+    "six_maxima": 380607,
+    "remaining": 3361434
+  },
+  "exact_weighted_target": "D >= m - 29/10 for every weight vector >= (1,1,1), with M<=7",
+  "binary_assignment_encoding": "explicit little-endian unsigned 32-bit",
+  "file_sha256": {
+    "independent_verify.cpp": "d29a113f38dbf478cdf2ec83ddde4bbe5147ba776ccd5b68302abb95fc137a88",
+    "verify_complete_certificate.py": "62bcac74081ce83ea92e0caf1e316cc166b704b7c19fef0f8b400215b4ecf126",
+    "dual_bases.jsonl": "527c594578d7d97194bf8a8353a204a4ef06d005cb77ba01cb88fd20f23034d5",
+    "dual_assignments.bin": "5ef90115f09c42b7747436216f1897ddb2ee9e9b46e97d24e5c58de11f9cb1de",
+    "certification.jsonl": "eb7304af6d1643c43c87037b0281b30dc088b4fc264439db4dbb269cedd664cb",
+    "independent_verification.jsonl": "172e732601bb4646f24d8ce5bf9b0c012c937096de59b7ba940708d57b967366"
+  },
+  "scope": "Degree<=6 residual ideal class only. Excluded shapes use the named prior theorems and necessary arithmetic filters."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "independent complete coverage and every DP leaf; three corner permutations",
+  "nodes": 110865,
+  "node_kinds": {
+    "split": 55432,
+    "dp": 54978,
+    "planar": 455
+  },
+  "corner_bounds_checked": 164934,
+  "scale": 4096,
+  "largest_bound": 4096,
+  "certificate_sha256": "c840c66eae5ade228ef500567e2bd1daa7533be89276cd6a73906abf3dfea1ac",
+  "seconds": 25.236868143081665
+}

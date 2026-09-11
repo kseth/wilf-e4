@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "scope": "Fresh independent full enumeration and exact closed-form centroid verification",
+  "total_shapes": 3742041,
+  "line_upgrade_at_least_m": 3741763,
+  "axis_gain_at_least_m": 2090810,
+  "axis_fallbacks": 278,
+  "uniform_centroid_surplus": "at least m",
+  "all_nine_coverage_records_and_histograms_match": true,
+  "floating_point_used": false,
+  "external_certificate_data_used": false,
+  "elapsed_seconds": 16.787078,
+  "source_sha256": "07006e14ba6622fce0304b75d3f22e41a484c3d727cff8d5dd6f6073da2d7c31"
+}

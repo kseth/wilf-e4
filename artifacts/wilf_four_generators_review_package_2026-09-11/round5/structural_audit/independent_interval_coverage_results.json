@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "complete closed-box coverage of 1<=b<=c<=M, 5<=M<=24",
+  "nodes": 50885,
+  "node_kinds": {
+    "split": 25442,
+    "dp": 24912,
+    "continuous": 531
+  },
+  "scale": 4096
+}

@@ -1,0 +1,9 @@
+pid 0 verified 708617 shapes; line 708558 axis 395465
+pid 1 verified 976430 shapes; line 976368 axis 630844
+pid 2 verified 571100 shapes; line 571100 axis 313197
+pid 3 verified 519716 shapes; line 519716 axis 297456
+pid 4 verified 533570 shapes; line 533570 axis 307807
+pid 5 verified 150481 shapes; line 150481 axis 76420
+pid 6 verified 100341 shapes; line 100341 axis 44727
+pid 7 verified 90696 shapes; line 90696 axis 38202
+pid 8 verified 91090 shapes; line 91090 axis 36784

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "date": "2026-09-11",
+  "source_and_certificate_bytes_match_round7": true,
+  "compiled_from_fresh_sources_without_existing_executable": true,
+  "cached_leaves": 0,
+  "replayed_leaves": 47088,
+  "cartesian_corner_cases": 35852138,
+  "command": "python3 round8/high_height_replay/verify_residual_certificate.py --certificate round8/high_height_replay/residual_parallel_interval_certificate.json --worker specialized --jobs 8",
+  "files": {
+    "residual_parallel_interval_certificate.json": {
+      "sha256": "173fe6ec196b3d2adabad313749482542ad3492b5f6b4e398e76bbe6e52e405c",
+      "bytes": 9472012
+    },
+    "verify_residual_certificate.py": {
+      "sha256": "f78f1afa1ee78d6cd1b4921c1ab2b0968fa5fecba935ce34ac2b2cbc1843593c",
+      "bytes": 11290
+    },
+    "independent_specialized_piece_worker.cpp": {
+      "sha256": "5e793c961673653b0245c774c70d8860cb9c53b2ab14087c3f18a581670b3c01",
+      "bytes": 4544
+    },
+    "independent_residual_worker.cpp": {
+      "sha256": "4c8772f74ef8006f54652837e5537e1b9b2d22ea5dfa523bae2314e17000e3b3",
+      "bytes": 3999
+    },
+    "independent_residual_point_worker.cpp": {
+      "sha256": "0ef19f58caf9d279628b1efce574794920c3919ef00ed6030c74b04eea6d36a4",
+      "bytes": 3326
+    },
+    "independent_residual_complete_checks.json": {
+      "sha256": "940a9b3fbe4f9dada50ec215a8dc5fe2cd63f8d2da4ed93fab0e99a717e5a455",
+      "bytes": 535
+    },
+    "full_replay_stdout.txt": {
+      "sha256": "13e31d8c4549888f79eb92414d32a08fba15706555ce774cd1a3a1775b4be407",
+      "bytes": 3953
+    }
+  }
+}

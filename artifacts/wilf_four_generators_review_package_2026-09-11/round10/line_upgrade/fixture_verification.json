@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "exact_fixtures": 121,
+  "coordinate_permutation_orbits": 62,
+  "minimum_axis_gain_minus_m": "8",
+  "multiplicity_range": [
+    30,
+    34
+  ],
+  "scope": "All recorded line-upgrade failures; this fixture replay is not full enumeration."
+}

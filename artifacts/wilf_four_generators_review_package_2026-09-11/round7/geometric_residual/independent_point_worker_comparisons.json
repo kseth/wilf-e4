@@ -1,0 +1,180 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "q": 4096,
+      "lo": [
+        4096,
+        4096,
+        28672
+      ],
+      "hi": [
+        4097,
+        4097,
+        28673
+      ],
+      "workers": {
+        "independent_residual_worker": {
+          "result": [
+            -81920,
+            1,
+            1,
+            3,
+            52
+          ],
+          "seconds": 0.006016308998368913
+        },
+        "independent_residual_point_worker": {
+          "result": [
+            -81920,
+            1,
+            1,
+            3,
+            52
+          ],
+          "seconds": 0.0033471970018581487
+        }
+      }
+    },
+    {
+      "q": 16,
+      "lo": [
+        20,
+        28,
+        128
+      ],
+      "hi": [
+        21,
+        29,
+        129
+      ],
+      "workers": {
+        "independent_residual_worker": {
+          "result": [
+            -368,
+            1,
+            1,
+            3,
+            23
+          ],
+          "seconds": 0.0020106080010009464
+        },
+        "independent_residual_point_worker": {
+          "result": [
+            -368,
+            1,
+            1,
+            3,
+            23
+          ],
+          "seconds": 0.003975297000579303
+        }
+      }
+    },
+    {
+      "q": 16,
+      "lo": [
+        16,
+        20,
+        112
+      ],
+      "hi": [
+        16,
+        21,
+        113
+      ],
+      "workers": {
+        "independent_residual_worker": {
+          "result": [
+            -320,
+            1,
+            1,
+            3,
+            30
+          ],
+          "seconds": 0.002253476999612758
+        },
+        "independent_residual_point_worker": {
+          "result": [
+            -320,
+            1,
+            1,
+            3,
+            30
+          ],
+          "seconds": 0.003754029003175674
+        }
+      }
+    },
+    {
+      "q": 16,
+      "lo": [
+        16,
+        16,
+        112
+      ],
+      "hi": [
+        17,
+        17,
+        113
+      ],
+      "workers": {
+        "independent_residual_worker": {
+          "result": [
+            884,
+            2,
+            2,
+            2,
+            52
+          ],
+          "seconds": 0.003104908002569573
+        },
+        "independent_residual_point_worker": {
+          "result": [
+            884,
+            2,
+            2,
+            2,
+            52
+          ],
+          "seconds": 0.01065936500162934
+        }
+      }
+    },
+    {
+      "q": 4096,
+      "lo": [
+        4096,
+        5552,
+        96129
+      ],
+      "hi": [
+        4200,
+        5760,
+        99534
+      ],
+      "workers": {
+        "independent_residual_worker": {
+          "result": [
+            -284291,
+            1,
+            1,
+            3,
+            1606
+          ],
+          "seconds": 1.458975317000295
+        },
+        "independent_residual_point_worker": {
+          "result": [
+            -284291,
+            1,
+            1,
+            3,
+            1606
+          ],
+          "seconds": 0.626819280001655
+        }
+      }
+    }
+  ]
+}

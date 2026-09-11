@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "one fully completed direct-enumeration case; optional batch later interrupted; no uncompleted case counted",
+  "row": {
+    "input": [
+      1,
+      1,
+      1,
+      7,
+      1,
+      1,
+      7,
+      1,
+      2,
+      2
+    ],
+    "brute_best": -28,
+    "horn_bound": -20,
+    "compatible": 1278654031,
+    "feasible": 543537300,
+    "point_scores": 35562744901,
+    "profile_counts": [
+      4608,
+      4608,
+      4068
+    ]
+  }
+}

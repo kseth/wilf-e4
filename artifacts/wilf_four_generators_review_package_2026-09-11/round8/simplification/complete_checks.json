@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "profiles": 1429,
+  "bases": 4513,
+  "exact_weighted_duals": 380607,
+  "floating_point_used": false,
+  "coverage_counts_and_histograms_match": true,
+  "old_complementary_shapes": 3361434,
+  "combined_dual_covered_shapes": 3742041,
+  "all_nine_corner_classes": true,
+  "zero_failed_certificates": true,
+  "generator_lp_proposals": 15342,
+  "generator_cache_hits": 365265,
+  "scope": "all previously skipped low-height residual shapes with at most six coordinatewise maxima; no six-point theorem used in this certificate"
+}

@@ -1,0 +1,1226 @@
+{
+  "original": {
+    "registry_bases": 5733,
+    "used_registry_bases": 5733,
+    "raw": {
+      "distinct": 5733,
+      "assigned_shapes": 3361434,
+      "families_needed_by_recorded_assignment_percent": {
+        "50": 107,
+        "75": 401,
+        "90": 1056,
+        "95": 1705,
+        "99": 3241,
+        "100": 5733
+      },
+      "top_10_coverage": 501681,
+      "top_100_coverage": 1640430,
+      "top_20": [
+        {
+          "columns": [
+            5,
+            42,
+            294,
+            344
+          ],
+          "assigned_shapes": 75400
+        },
+        {
+          "columns": [
+            5,
+            35,
+            294,
+            343
+          ],
+          "assigned_shapes": 72444
+        },
+        {
+          "columns": [
+            5,
+            42,
+            245,
+            344
+          ],
+          "assigned_shapes": 71515
+        },
+        {
+          "columns": [
+            6,
+            42,
+            245,
+            345
+          ],
+          "assigned_shapes": 47554
+        },
+        {
+          "columns": [
+            6,
+            35,
+            245,
+            345
+          ],
+          "assigned_shapes": 46789
+        },
+        {
+          "columns": [
+            42,
+            53,
+            245,
+            344
+          ],
+          "assigned_shapes": 41731
+        },
+        {
+          "columns": [
+            5,
+            84,
+            294,
+            344
+          ],
+          "assigned_shapes": 39574
+        },
+        {
+          "columns": [
+            4,
+            42,
+            294,
+            344
+          ],
+          "assigned_shapes": 36455
+        },
+        {
+          "columns": [
+            66,
+            108,
+            114,
+            345
+          ],
+          "assigned_shapes": 35862
+        },
+        {
+          "columns": [
+            5,
+            84,
+            245,
+            344
+          ],
+          "assigned_shapes": 34357
+        },
+        {
+          "columns": [
+            5,
+            42,
+            252,
+            344
+          ],
+          "assigned_shapes": 34179
+        },
+        {
+          "columns": [
+            42,
+            66,
+            108,
+            345
+          ],
+          "assigned_shapes": 29709
+        },
+        {
+          "columns": [
+            66,
+            72,
+            196,
+            345
+          ],
+          "assigned_shapes": 28553
+        },
+        {
+          "columns": [
+            11,
+            35,
+            294,
+            343
+          ],
+          "assigned_shapes": 28341
+        },
+        {
+          "columns": [
+            5,
+            126,
+            294,
+            344
+          ],
+          "assigned_shapes": 26234
+        },
+        {
+          "columns": [
+            6,
+            42,
+            294,
+            345
+          ],
+          "assigned_shapes": 24315
+        },
+        {
+          "columns": [
+            6,
+            35,
+            294,
+            345
+          ],
+          "assigned_shapes": 23842
+        },
+        {
+          "columns": [
+            5,
+            35,
+            252,
+            343
+          ],
+          "assigned_shapes": 23423
+        },
+        {
+          "columns": [
+            66,
+            196,
+            344,
+            345
+          ],
+          "assigned_shapes": 21601
+        },
+        {
+          "columns": [
+            42,
+            59,
+            245,
+            344
+          ],
+          "assigned_shapes": 21574
+        }
+      ]
+    },
+    "coordinate_symmetry": {
+      "distinct": 2310,
+      "assigned_shapes": 3361434,
+      "families_needed_by_recorded_assignment_percent": {
+        "50": 46,
+        "75": 171,
+        "90": 440,
+        "95": 679,
+        "99": 1260,
+        "100": 2310
+      },
+      "top_10_coverage": 843338,
+      "top_100_coverage": 2178708,
+      "top_20": [
+        {
+          "columns": [
+            5,
+            35,
+            294,
+            343
+          ],
+          "assigned_shapes": 190748
+        },
+        {
+          "columns": [
+            5,
+            42,
+            294,
+            343
+          ],
+          "assigned_shapes": 146796
+        },
+        {
+          "columns": [
+            5,
+            29,
+            294,
+            343
+          ],
+          "assigned_shapes": 99744
+        },
+        {
+          "columns": [
+            5,
+            35,
+            246,
+            343
+          ],
+          "assigned_shapes": 78336
+        },
+        {
+          "columns": [
+            4,
+            42,
+            294,
+            343
+          ],
+          "assigned_shapes": 64883
+        },
+        {
+          "columns": [
+            5,
+            120,
+            343,
+            344
+          ],
+          "assigned_shapes": 63976
+        },
+        {
+          "columns": [
+            4,
+            35,
+            294,
+            343
+          ],
+          "assigned_shapes": 59915
+        },
+        {
+          "columns": [
+            4,
+            120,
+            343,
+            344
+          ],
+          "assigned_shapes": 50483
+        },
+        {
+          "columns": [
+            5,
+            42,
+            252,
+            343
+          ],
+          "assigned_shapes": 46824
+        },
+        {
+          "columns": [
+            5,
+            29,
+            246,
+            343
+          ],
+          "assigned_shapes": 41633
+        },
+        {
+          "columns": [
+            6,
+            120,
+            344,
+            345
+          ],
+          "assigned_shapes": 41110
+        },
+        {
+          "columns": [
+            5,
+            36,
+            294,
+            344
+          ],
+          "assigned_shapes": 37561
+        },
+        {
+          "columns": [
+            5,
+            42,
+            252,
+            344
+          ],
+          "assigned_shapes": 37043
+        },
+        {
+          "columns": [
+            5,
+            23,
+            294,
+            343
+          ],
+          "assigned_shapes": 36300
+        },
+        {
+          "columns": [
+            66,
+            108,
+            114,
+            345
+          ],
+          "assigned_shapes": 35862
+        },
+        {
+          "columns": [
+            4,
+            29,
+            294,
+            343
+          ],
+          "assigned_shapes": 35727
+        },
+        {
+          "columns": [
+            6,
+            72,
+            120,
+            344
+          ],
+          "assigned_shapes": 34623
+        },
+        {
+          "columns": [
+            6,
+            29,
+            294,
+            343
+          ],
+          "assigned_shapes": 33321
+        },
+        {
+          "columns": [
+            5,
+            42,
+            203,
+            344
+          ],
+          "assigned_shapes": 32288
+        },
+        {
+          "columns": [
+            5,
+            42,
+            210,
+            343
+          ],
+          "assigned_shapes": 29779
+        }
+      ]
+    }
+  },
+  "supplementary": {
+    "registry_bases": 4513,
+    "used_registry_bases": 4513,
+    "raw": {
+      "distinct": 4513,
+      "assigned_shapes": 380607,
+      "families_needed_by_recorded_assignment_percent": {
+        "50": 294,
+        "75": 842,
+        "90": 1697,
+        "95": 2309,
+        "99": 3409,
+        "100": 4513
+      },
+      "top_10_coverage": 28534,
+      "top_100_coverage": 110368,
+      "top_20": [
+        {
+          "columns": [
+            114,
+            343,
+            344,
+            345
+          ],
+          "assigned_shapes": 6296
+        },
+        {
+          "columns": [
+            4,
+            120,
+            343,
+            344
+          ],
+          "assigned_shapes": 4099
+        },
+        {
+          "columns": [
+            4,
+            162,
+            343,
+            344
+          ],
+          "assigned_shapes": 3417
+        },
+        {
+          "columns": [
+            65,
+            107,
+            344,
+            345
+          ],
+          "assigned_shapes": 2484
+        },
+        {
+          "columns": [
+            162,
+            343,
+            344,
+            347
+          ],
+          "assigned_shapes": 2436
+        },
+        {
+          "columns": [
+            66,
+            196,
+            344,
+            345
+          ],
+          "assigned_shapes": 2189
+        },
+        {
+          "columns": [
+            4,
+            78,
+            344,
+            347
+          ],
+          "assigned_shapes": 2090
+        },
+        {
+          "columns": [
+            66,
+            108,
+            344,
+            345
+          ],
+          "assigned_shapes": 1972
+        },
+        {
+          "columns": [
+            17,
+            59,
+            65,
+            345
+          ],
+          "assigned_shapes": 1791
+        },
+        {
+          "columns": [
+            53,
+            84,
+            196,
+            344
+          ],
+          "assigned_shapes": 1760
+        },
+        {
+          "columns": [
+            35,
+            108,
+            343,
+            345
+          ],
+          "assigned_shapes": 1745
+        },
+        {
+          "columns": [
+            42,
+            53,
+            203,
+            344
+          ],
+          "assigned_shapes": 1743
+        },
+        {
+          "columns": [
+            35,
+            156,
+            343,
+            345
+          ],
+          "assigned_shapes": 1542
+        },
+        {
+          "columns": [
+            42,
+            53,
+            154,
+            344
+          ],
+          "assigned_shapes": 1492
+        },
+        {
+          "columns": [
+            10,
+            162,
+            343,
+            344
+          ],
+          "assigned_shapes": 1415
+        },
+        {
+          "columns": [
+            59,
+            65,
+            245,
+            345
+          ],
+          "assigned_shapes": 1392
+        },
+        {
+          "columns": [
+            108,
+            343,
+            344,
+            345
+          ],
+          "assigned_shapes": 1380
+        },
+        {
+          "columns": [
+            42,
+            114,
+            343,
+            344
+          ],
+          "assigned_shapes": 1350
+        },
+        {
+          "columns": [
+            35,
+            60,
+            345,
+            347
+          ],
+          "assigned_shapes": 1322
+        },
+        {
+          "columns": [
+            66,
+            108,
+            114,
+            345
+          ],
+          "assigned_shapes": 1263
+        }
+      ]
+    },
+    "coordinate_symmetry": {
+      "distinct": 2081,
+      "assigned_shapes": 380607,
+      "families_needed_by_recorded_assignment_percent": {
+        "50": 110,
+        "75": 333,
+        "90": 700,
+        "95": 972,
+        "99": 1485,
+        "100": 2081
+      },
+      "top_10_coverage": 51980,
+      "top_100_coverage": 182804,
+      "top_20": [
+        {
+          "columns": [
+            4,
+            120,
+            343,
+            344
+          ],
+          "assigned_shapes": 12407
+        },
+        {
+          "columns": [
+            5,
+            120,
+            343,
+            344
+          ],
+          "assigned_shapes": 6647
+        },
+        {
+          "columns": [
+            114,
+            343,
+            344,
+            345
+          ],
+          "assigned_shapes": 6296
+        },
+        {
+          "columns": [
+            66,
+            343,
+            344,
+            345
+          ],
+          "assigned_shapes": 4381
+        },
+        {
+          "columns": [
+            65,
+            107,
+            343,
+            345
+          ],
+          "assigned_shapes": 4224
+        },
+        {
+          "columns": [
+            66,
+            344,
+            345,
+            347
+          ],
+          "assigned_shapes": 3866
+        },
+        {
+          "columns": [
+            4,
+            78,
+            344,
+            347
+          ],
+          "assigned_shapes": 3770
+        },
+        {
+          "columns": [
+            5,
+            78,
+            344,
+            347
+          ],
+          "assigned_shapes": 3538
+        },
+        {
+          "columns": [
+            4,
+            29,
+            246,
+            343
+          ],
+          "assigned_shapes": 3490
+        },
+        {
+          "columns": [
+            5,
+            29,
+            294,
+            343
+          ],
+          "assigned_shapes": 3361
+        },
+        {
+          "columns": [
+            6,
+            29,
+            203,
+            345
+          ],
+          "assigned_shapes": 3159
+        },
+        {
+          "columns": [
+            6,
+            120,
+            344,
+            345
+          ],
+          "assigned_shapes": 3095
+        },
+        {
+          "columns": [
+            11,
+            162,
+            343,
+            344
+          ],
+          "assigned_shapes": 2980
+        },
+        {
+          "columns": [
+            66,
+            108,
+            343,
+            345
+          ],
+          "assigned_shapes": 2971
+        },
+        {
+          "columns": [
+            10,
+            162,
+            343,
+            344
+          ],
+          "assigned_shapes": 2774
+        },
+        {
+          "columns": [
+            5,
+            22,
+            246,
+            343
+          ],
+          "assigned_shapes": 2642
+        },
+        {
+          "columns": [
+            65,
+            156,
+            343,
+            345
+          ],
+          "assigned_shapes": 2595
+        },
+        {
+          "columns": [
+            17,
+            162,
+            343,
+            344
+          ],
+          "assigned_shapes": 2463
+        },
+        {
+          "columns": [
+            4,
+            113,
+            343,
+            344
+          ],
+          "assigned_shapes": 2391
+        },
+        {
+          "columns": [
+            11,
+            120,
+            343,
+            344
+          ],
+          "assigned_shapes": 2262
+        }
+      ]
+    }
+  },
+  "combined": {
+    "raw": {
+      "distinct": 6662,
+      "assigned_shapes": 3742041,
+      "families_needed_by_recorded_assignment_percent": {
+        "50": 129,
+        "75": 493,
+        "90": 1298,
+        "95": 2091,
+        "99": 3919,
+        "100": 6662
+      },
+      "top_10_coverage": 505626,
+      "top_100_coverage": 1698142,
+      "top_20": [
+        {
+          "columns": [
+            5,
+            42,
+            294,
+            344
+          ],
+          "assigned_shapes": 75549
+        },
+        {
+          "columns": [
+            5,
+            35,
+            294,
+            343
+          ],
+          "assigned_shapes": 72535
+        },
+        {
+          "columns": [
+            5,
+            42,
+            245,
+            344
+          ],
+          "assigned_shapes": 71753
+        },
+        {
+          "columns": [
+            6,
+            42,
+            245,
+            345
+          ],
+          "assigned_shapes": 47662
+        },
+        {
+          "columns": [
+            6,
+            35,
+            245,
+            345
+          ],
+          "assigned_shapes": 47026
+        },
+        {
+          "columns": [
+            42,
+            53,
+            245,
+            344
+          ],
+          "assigned_shapes": 42961
+        },
+        {
+          "columns": [
+            5,
+            84,
+            294,
+            344
+          ],
+          "assigned_shapes": 39875
+        },
+        {
+          "columns": [
+            66,
+            108,
+            114,
+            345
+          ],
+          "assigned_shapes": 37125
+        },
+        {
+          "columns": [
+            4,
+            42,
+            294,
+            344
+          ],
+          "assigned_shapes": 36455
+        },
+        {
+          "columns": [
+            5,
+            84,
+            245,
+            344
+          ],
+          "assigned_shapes": 34685
+        },
+        {
+          "columns": [
+            5,
+            42,
+            252,
+            344
+          ],
+          "assigned_shapes": 34393
+        },
+        {
+          "columns": [
+            42,
+            66,
+            108,
+            345
+          ],
+          "assigned_shapes": 29990
+        },
+        {
+          "columns": [
+            11,
+            35,
+            294,
+            343
+          ],
+          "assigned_shapes": 29346
+        },
+        {
+          "columns": [
+            66,
+            72,
+            196,
+            345
+          ],
+          "assigned_shapes": 28855
+        },
+        {
+          "columns": [
+            5,
+            126,
+            294,
+            344
+          ],
+          "assigned_shapes": 26234
+        },
+        {
+          "columns": [
+            6,
+            42,
+            294,
+            345
+          ],
+          "assigned_shapes": 24342
+        },
+        {
+          "columns": [
+            6,
+            35,
+            294,
+            345
+          ],
+          "assigned_shapes": 23905
+        },
+        {
+          "columns": [
+            66,
+            196,
+            344,
+            345
+          ],
+          "assigned_shapes": 23790
+        },
+        {
+          "columns": [
+            5,
+            35,
+            252,
+            343
+          ],
+          "assigned_shapes": 23423
+        },
+        {
+          "columns": [
+            114,
+            343,
+            344,
+            345
+          ],
+          "assigned_shapes": 23351
+        }
+      ]
+    },
+    "coordinate_symmetry": {
+      "distinct": 2589,
+      "assigned_shapes": 3742041,
+      "families_needed_by_recorded_assignment_percent": {
+        "50": 54,
+        "75": 201,
+        "90": 515,
+        "95": 797,
+        "99": 1456,
+        "100": 2589
+      },
+      "top_10_coverage": 872627,
+      "top_100_coverage": 2304089,
+      "top_20": [
+        {
+          "columns": [
+            5,
+            35,
+            294,
+            343
+          ],
+          "assigned_shapes": 191314
+        },
+        {
+          "columns": [
+            5,
+            42,
+            294,
+            343
+          ],
+          "assigned_shapes": 147116
+        },
+        {
+          "columns": [
+            5,
+            29,
+            294,
+            343
+          ],
+          "assigned_shapes": 103105
+        },
+        {
+          "columns": [
+            5,
+            35,
+            246,
+            343
+          ],
+          "assigned_shapes": 80060
+        },
+        {
+          "columns": [
+            5,
+            120,
+            343,
+            344
+          ],
+          "assigned_shapes": 70623
+        },
+        {
+          "columns": [
+            4,
+            42,
+            294,
+            343
+          ],
+          "assigned_shapes": 64975
+        },
+        {
+          "columns": [
+            4,
+            120,
+            343,
+            344
+          ],
+          "assigned_shapes": 62890
+        },
+        {
+          "columns": [
+            4,
+            35,
+            294,
+            343
+          ],
+          "assigned_shapes": 60882
+        },
+        {
+          "columns": [
+            5,
+            42,
+            252,
+            343
+          ],
+          "assigned_shapes": 47457
+        },
+        {
+          "columns": [
+            6,
+            120,
+            344,
+            345
+          ],
+          "assigned_shapes": 44205
+        },
+        {
+          "columns": [
+            5,
+            29,
+            246,
+            343
+          ],
+          "assigned_shapes": 43844
+        },
+        {
+          "columns": [
+            5,
+            36,
+            294,
+            344
+          ],
+          "assigned_shapes": 38058
+        },
+        {
+          "columns": [
+            4,
+            29,
+            294,
+            343
+          ],
+          "assigned_shapes": 37985
+        },
+        {
+          "columns": [
+            5,
+            23,
+            294,
+            343
+          ],
+          "assigned_shapes": 37674
+        },
+        {
+          "columns": [
+            5,
+            42,
+            252,
+            344
+          ],
+          "assigned_shapes": 37327
+        },
+        {
+          "columns": [
+            66,
+            108,
+            114,
+            345
+          ],
+          "assigned_shapes": 37125
+        },
+        {
+          "columns": [
+            6,
+            72,
+            120,
+            344
+          ],
+          "assigned_shapes": 34962
+        },
+        {
+          "columns": [
+            6,
+            29,
+            294,
+            343
+          ],
+          "assigned_shapes": 33534
+        },
+        {
+          "columns": [
+            5,
+            42,
+            203,
+            344
+          ],
+          "assigned_shapes": 33369
+        },
+        {
+          "columns": [
+            5,
+            42,
+            210,
+            343
+          ],
+          "assigned_shapes": 29919
+        }
+      ]
+    },
+    "column_categories": [
+      {
+        "point_columns": 3,
+        "weight_bound_columns": 1,
+        "H_lower": false,
+        "H_upper": false,
+        "assigned_shapes": 2946058
+      },
+      {
+        "point_columns": 2,
+        "weight_bound_columns": 2,
+        "H_lower": false,
+        "H_upper": false,
+        "assigned_shapes": 654873
+      },
+      {
+        "point_columns": 2,
+        "weight_bound_columns": 1,
+        "H_lower": false,
+        "H_upper": true,
+        "assigned_shapes": 93155
+      },
+      {
+        "point_columns": 1,
+        "weight_bound_columns": 3,
+        "H_lower": false,
+        "H_upper": false,
+        "assigned_shapes": 31484
+      },
+      {
+        "point_columns": 1,
+        "weight_bound_columns": 2,
+        "H_lower": false,
+        "H_upper": true,
+        "assigned_shapes": 16471
+      }
+    ],
+    "unique_point_columns": 72
+  }
+}

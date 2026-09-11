@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "status": "complete exact enumeration",
+  "target": "max(U(T),G(T)) >= |T|",
+  "files": {
+    "independent_closed_form.cpp": "07006e14ba6622fce0304b75d3f22e41a484c3d727cff8d5dd6f6073da2d7c31",
+    "independent_verification.jsonl": "9afc532743ac903803c4b70831da050c72229f128372ed801bdec96e7fd2417f",
+    "verify_complete_closed_form.py": "b7feaa1f00ead0c6047588282a986ac76b15d9afd2fd528d3b87bb34c1f3c85b",
+    "verify_fixtures.py": "744f5c7db1dcdab6123f9446053e184ae73c14772114250a9326ef29f947f617",
+    "upgrade_failures.jsonl": "e9d3be0cff514a787d4bd3fe1f21cf79b5c274715ec010c7035f6d963d578a1b",
+    "axis_fallbacks_strong.jsonl": "5edaf85ce77393f2b1fadf428936f2c1daa9ad9f668192fc39e412f1b5945591",
+    "line_upgrade_and_axis_theorem.md": "c86d060fb69cb699227e76e0868dedaee819a5abfabb9dfe3831af694a8d4384"
+  }
+}

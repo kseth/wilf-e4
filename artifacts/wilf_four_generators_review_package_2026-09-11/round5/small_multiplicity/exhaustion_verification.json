@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "multiplicity_interval_inclusive": [
+    20,
+    29
+  ],
+  "all_embedding_dimension_four": true,
+  "depends_on_proved_conductor_reduction": true,
+  "algorithms": [
+    "cyclic residue shortest paths",
+    "integer semigroup membership"
+  ],
+  "totals": {
+    "raw_triples": 301098092,
+    "minimal_four_generator_semigroups": 180719029,
+    "maximum_apery_within_bound": 7326992,
+    "negative_wilf_count": 0
+  },
+  "sources_sha256": {
+    "exhaust_small_multiplicity.cpp": "bb86d9e78f2f3af7c9f0a916a5122b2af3a5f0d4cc290e403c0f23d393d098f3",
+    "independent_membership_check.cpp": "115ece54e56c69dbc60087d3c8e024ee323bff2f85c9618de6f58a01ad58b518"
+  },
+  "compiled_and_reran_this_invocation": true
+}

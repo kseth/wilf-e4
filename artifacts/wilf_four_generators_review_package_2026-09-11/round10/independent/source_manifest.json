@@ -1,0 +1,8 @@
+{
+  "description": "Inputs for full degree-six centroid verification; no LP registry or assignment dependency.",
+  "sha256": {
+    "verify_two_centroids.cpp": "576a6c6d7e4ea17b7354ce57b542ecf6a640544b4447ae14700d82b46bd3ed24",
+    "verify_complete_centroid.py": "27c6edfe850f864fa2a932f0119d6ac1939db9874f05124a733d21d261299b9d",
+    "expected_enumeration_counts.json": "990a7245ded05debf076f4816d875c551be54490f7846f7105a5424e88e5296a"
+  }
+}

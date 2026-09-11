@@ -1,0 +1,47 @@
+{
+  "status": "all exact certificates passed; independent full replay passed",
+  "degree_cap": 6,
+  "height_upper_bound": 7,
+  "height_scope": "genuine normalized height strictly below 7",
+  "basis_registry_count": 5733,
+  "assignment_count": 3361434,
+  "assignment_endianness": "little",
+  "files": {
+    "certify_all.cpp": {
+      "bytes": 6819,
+      "sha256": "38935dff9a846e5693797f9ff2d810f632033d6be77f7f130b3852f58cecf9c8"
+    },
+    "proposing_lp.hpp": {
+      "bytes": 1748,
+      "sha256": "6fc50d112bc904d7ff18bd9b787eafa0af120da8242138df408daf522462f0a7"
+    },
+    "exact_dual.hpp": {
+      "bytes": 2510,
+      "sha256": "08a23113446aa5ac519d7d60dd217d5c5e6c5cbdba932a76f794d655347215cb"
+    },
+    "dual_bases.jsonl": {
+      "bytes": 327815,
+      "sha256": "527c594578d7d97194bf8a8353a204a4ef06d005cb77ba01cb88fd20f23034d5"
+    },
+    "dual_assignments.bin": {
+      "bytes": 13445736,
+      "sha256": "5ef90115f09c42b7747436216f1897ddb2ee9e9b46e97d24e5c58de11f9cb1de"
+    },
+    "certification.jsonl": {
+      "bytes": 5748,
+      "sha256": "eb7304af6d1643c43c87037b0281b30dc088b4fc264439db4dbb269cedd664cb"
+    },
+    "low_height_theorem.md": {
+      "bytes": 11331,
+      "sha256": "bc1c1781a0a753b9210561524a801c8f79d9fb2b3aef33f8ec482335d378e1e8"
+    },
+    "independent_verify.cpp": {
+      "bytes": 10121,
+      "sha256": "d29a113f38dbf478cdf2ec83ddde4bbe5147ba776ccd5b68302abb95fc137a88"
+    },
+    "independent_verification.jsonl": {
+      "bytes": 5259,
+      "sha256": "172e732601bb4646f24d8ce5bf9b0c012c937096de59b7ba940708d57b967366"
+    }
+  }
+}

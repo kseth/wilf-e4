@@ -1,0 +1,1 @@
+{"method":"targeted annealing diagnostic only","interior_necessary_condition_required":true,"seed":74619243,"attempts":324000,"valid_candidates":295291,"best_generators":[1213,1214,2478,4952],"maximum_apery":63074,"sum_apery":49733000,"exact_failure_numerator":-18122220,"normalizing_denominator":86993934,"positive_counterexample_found":false}

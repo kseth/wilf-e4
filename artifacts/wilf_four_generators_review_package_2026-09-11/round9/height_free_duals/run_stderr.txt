@@ -1,0 +1,43 @@
+profiles 1429
+progress pid=0 checked=100000 proposals=3817 bases=1462
+progress pid=0 checked=200000 proposals=6440 bases=2154
+progress pid=0 checked=300000 proposals=8112 bases=2437
+progress pid=0 checked=400000 proposals=10191 bases=2691
+progress pid=0 checked=500000 proposals=11240 bases=2975
+progress pid=0 checked=600000 proposals=12260 bases=3098
+progress pid=0 checked=700000 proposals=13577 bases=3228
+pid=0 compatible=4112203 degree=2680955 m30=2634873 erosion=2165275 qok=708617 six=127801 remaining=708617 proposals=13767 bases=3238 unitfails=0 margin10=169
+progress pid=1 checked=100000 proposals=3339 bases=4164
+progress pid=1 checked=200000 proposals=6186 bases=4619
+progress pid=1 checked=300000 proposals=7882 bases=4891
+progress pid=1 checked=400000 proposals=9726 bases=5034
+progress pid=1 checked=500000 proposals=11413 bases=5229
+progress pid=1 checked=600000 proposals=12609 bases=5398
+progress pid=1 checked=700000 proposals=13532 bases=5486
+progress pid=1 checked=800000 proposals=14475 bases=5552
+progress pid=1 checked=900000 proposals=15496 bases=5615
+pid=1 compatible=5796538 degree=3659949 m30=3633042 erosion=2987253 qok=976430 six=126406 remaining=976430 proposals=16354 bases=5662 unitfails=0 margin10=169
+progress pid=2 checked=100000 proposals=2508 bases=5965
+progress pid=2 checked=200000 proposals=3615 bases=6003
+progress pid=2 checked=300000 proposals=5155 bases=6094
+progress pid=2 checked=400000 proposals=5784 bases=6135
+progress pid=2 checked=500000 proposals=6684 bases=6163
+pid=2 compatible=5862929 degree=2395217 m30=2388434 erosion=1700471 qok=571100 six=47309 remaining=571100 proposals=7273 bases=6189 unitfails=0 margin10=129
+progress pid=3 checked=100000 proposals=2163 bases=6335
+progress pid=3 checked=200000 proposals=3502 bases=6377
+progress pid=3 checked=300000 proposals=4632 bases=6414
+progress pid=3 checked=400000 proposals=5359 bases=6426
+progress pid=3 checked=500000 proposals=6494 bases=6433
+pid=3 compatible=8772820 degree=2999148 m30=2998420 erosion=1941231 qok=519716 six=33383 remaining=519716 proposals=6758 bases=6436 unitfails=0 margin10=49
+progress pid=4 checked=100000 proposals=2428 bases=6567
+progress pid=4 checked=200000 proposals=3764 bases=6599
+progress pid=4 checked=300000 proposals=5664 bases=6642
+progress pid=4 checked=400000 proposals=6429 bases=6651
+progress pid=4 checked=500000 proposals=7864 bases=6664
+pid=4 compatible=13325338 degree=3879064 m30=3879014 erosion=2306872 qok=533570 six=28338 remaining=533570 proposals=8373 bases=6670 unitfails=0 margin10=69
+progress pid=5 checked=100000 proposals=697 bases=6759
+pid=5 compatible=2252380 degree=551334 m30=550982 erosion=411216 qok=150481 six=6246 remaining=150481 proposals=831 bases=6763 unitfails=0 margin10=369
+progress pid=6 checked=100000 proposals=295 bases=6795
+pid=6 compatible=3589363 degree=515956 m30=515955 erosion=351528 qok=100341 six=4276 remaining=100341 proposals=296 bases=6795 unitfails=0 margin10=339
+pid=7 compatible=4014473 degree=510514 m30=510514 erosion=331194 qok=90696 six=3579 remaining=90696 proposals=204 bases=6815 unitfails=0 margin10=339
+pid=8 compatible=7473254 degree=615876 m30=615876 erosion=380481 qok=91090 six=3269 remaining=91090 proposals=20 bases=6816 unitfails=0 margin10=409

@@ -1,0 +1,54 @@
+{
+  "certify_sixmax.cpp": {
+    "sha256": "74de4ca2dba644c7a3275ed2a72f5c884809249c8545508784f0855e220c6f37",
+    "bytes": 6818
+  },
+  "exact_dual.hpp": {
+    "sha256": "08a23113446aa5ac519d7d60dd217d5c5e6c5cbdba932a76f794d655347215cb",
+    "bytes": 2510
+  },
+  "proposing_lp.hpp": {
+    "sha256": "6fc50d112bc904d7ff18bd9b787eafa0af120da8242138df408daf522462f0a7",
+    "bytes": 1748
+  },
+  "independent_verify_sixmax.cpp": {
+    "sha256": "fb7311d6f834dfc887ae1013275d928ee3d837173323f0fd9e0d59248fa3b6ed",
+    "bytes": 10135
+  },
+  "dual_bases.jsonl": {
+    "sha256": "6854aea40b7880928bcffb3e5c192be2814d9ac9568226dfa7d41a9193f103ba",
+    "bytes": 257697
+  },
+  "dual_assignments.bin": {
+    "sha256": "446a0722435fca4b1fc3e6455923a805533f3eefb80dfe313255ba598a5a21c8",
+    "bytes": 1522428
+  },
+  "certification.jsonl": {
+    "sha256": "a095e3460520d5cf867a6dbc6a6cdc20bf33aeab755993dd1c9df4cfb4ca9799",
+    "bytes": 5009
+  },
+  "independent_verification.jsonl": {
+    "sha256": "3a044bbfaeef1a5b87e7e12154f1126c6a741f4310cbb979bf61050c125b34e8",
+    "bytes": 4531
+  },
+  "independent_result.json": {
+    "sha256": "f06097ecbe63f207a45f3d107038d86652e647830c17d2a4f259dab99e88b8b5",
+    "bytes": 107
+  },
+  "complete_checks.json": {
+    "sha256": "bb31a77dcb7c45c8a41dda8730b0d8e664ffd8f677a1b3a8149383600eb27189",
+    "bytes": 548
+  },
+  "low_height_sixmax_simplification.md": {
+    "sha256": "3487dc75d348d89d23f9cfe548551b46c53bae8b2bf6513812d070ececb56caf",
+    "bytes": 6526
+  },
+  "verify_certificate.py": {
+    "sha256": "968254baffbf277a6f818827a88058a25529d5ad4e4427fcdfdd48fd65aa3b9d",
+    "bytes": 2550
+  },
+  "source_difference_audit.md": {
+    "sha256": "728b25ca351db8afb39a65e36708b2222b874719f0d149d243b1139ed9a3cb08",
+    "bytes": 2632
+  }
+}

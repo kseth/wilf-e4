@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "scope": "Exhaustive validation of exact dilation identities on all nonempty lower ideals in {0,1,2}^3; universal theorem has a separate symbolic proof",
+  "ideals": 979,
+  "two_direction_identities": 2937,
+  "three_direction_identities": 979
+}

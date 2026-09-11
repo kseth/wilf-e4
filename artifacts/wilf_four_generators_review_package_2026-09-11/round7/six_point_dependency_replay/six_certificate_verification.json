@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "scope": "Finite certificates for the |Z|=6 theorem",
+  "normalized_certificates": 67,
+  "ordered_certificates": 24,
+  "residue_labelings": 930,
+  "modular_cut_checks": 23002,
+  "minimum_modular_slack": 0
+}

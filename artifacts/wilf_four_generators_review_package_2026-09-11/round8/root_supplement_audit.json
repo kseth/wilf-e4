@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scope": "Root source-difference and exact complementary-coverage audit; full rational replay recorded separately",
+  "all_nine_corner_preselection_counts_match": true,
+  "complementary_maxima_partition": true,
+  "new_assignments": 380607,
+  "combined_assignments": 3742041,
+  "only_expected_source_changes": true,
+  "all_supplement_manifest_hashes_match": true
+}

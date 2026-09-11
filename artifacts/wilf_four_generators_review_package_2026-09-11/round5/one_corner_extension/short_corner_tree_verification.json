@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "scope": "all real 1<=b<=c<=M with 6<=M<=42, full corner a permutation of 211, score m-D<=1",
+  "nodes": 110865,
+  "kinds": {
+    "split": 55432,
+    "dp": 54978,
+    "planar": 455
+  },
+  "largest_bound_numerator": 4096,
+  "scale": 4096,
+  "seconds": 10.336057186126709
+}

@@ -1,0 +1,10 @@
+{
+  "registry_bases": 6816,
+  "coordinate_symmetry_types": 2723,
+  "height_upper_columns": 0,
+  "point_constraint_counts": {
+    "3": 5989,
+    "2": 816,
+    "1": 11
+  }
+}

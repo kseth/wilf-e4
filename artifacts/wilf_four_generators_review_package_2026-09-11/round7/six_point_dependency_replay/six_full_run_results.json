@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "scope": "Computer-assisted Wilf theorem for e=4 and |Z|<=6; analytic sufficient column theorem for e>=4",
+  "python": "3.12.14",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "stages": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "verify_final_window.py"
+      ],
+      "log": "verification-run.log",
+      "seconds": 6.912130913002329
+    },
+    {
+      "stage": "compressed-six",
+      "seconds": 28.816139817001385
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "wilf_six_point.py"
+      ],
+      "log": "six_expansion_run.log",
+      "seconds": 1.966915885997878
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "extend_six_point.py"
+      ],
+      "log": "six_extension_run.log",
+      "seconds": 4.19771861800109
+    },
+    {
+      "command": [
+        "./check_six_residue_labels"
+      ],
+      "log": "six_residue_labels.json",
+      "seconds": 3.306990102002601
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "certify_six_point.py"
+      ],
+      "log": "six_arithmetic_run.log",
+      "seconds": 0.7463811900015571
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "verify_six_certificates.py"
+      ],
+      "log": "six_certificate_verification.log",
+      "seconds": 0.714359001001867
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "verify_corner_completion.py"
+      ],
+      "log": "corner_completion_verification.log",
+      "seconds": 0.20182548699813196
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "wilf_column_bound.py"
+      ],
+      "log": "column_bound_run.log",
+      "seconds": 0.06243118199927267
+    }
+  ],
+  "seconds": 48.515304002998164
+}

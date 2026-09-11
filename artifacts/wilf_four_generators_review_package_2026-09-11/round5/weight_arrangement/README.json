@@ -1,0 +1,12 @@
+{
+  "theorem": "For every finite no-interior lower ideal T in N^3 containing coordinate unit vectors, |T|>=30 implies D>=a_min(|T|-1).",
+  "certificate_domain": "Every real 1<=b<=c<=M, 5<=M<=24, normalized weights (1,b,c).",
+  "proof": "weighted_no_interior_theorem.md",
+  "generator": "interval_certificate.py",
+  "certificate": "full_interval_certificate.json",
+  "independent_checker": "verify_interval_certificate.py",
+  "independent_output": "independent_interval_verification.json",
+  "secondary_independent_audit_directory": "../structural_audit",
+  "runtime_dependencies": "Python standard library only",
+  "scope_limit": "Does not address full-support excluded corners or cardinality below 30."
+}

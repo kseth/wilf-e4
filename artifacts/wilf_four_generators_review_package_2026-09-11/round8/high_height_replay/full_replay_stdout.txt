@@ -1,0 +1,62 @@
+{"tree_coverage": "PASS", "scope": "complete tree", "counts": {"split": 47229, "dp": 47088, "empty": 142, "pending": 0, "unresolved": 0}}
+{"job": 3, "leaves": 1000, "corner_cases": 579383, "seconds": 68.54548788070679}
+{"job": 1, "leaves": 1000, "corner_cases": 582160, "seconds": 70.34676432609558}
+{"job": 7, "leaves": 1000, "corner_cases": 588104, "seconds": 73.2649462223053}
+{"job": 2, "leaves": 1000, "corner_cases": 596561, "seconds": 75.63773441314697}
+{"job": 5, "leaves": 1000, "corner_cases": 591604, "seconds": 76.30003905296326}
+{"job": 4, "leaves": 1000, "corner_cases": 595728, "seconds": 76.42361259460449}
+{"job": 0, "leaves": 1000, "corner_cases": 594607, "seconds": 78.44535756111145}
+{"job": 6, "leaves": 1000, "corner_cases": 604082, "seconds": 78.72333860397339}
+{"job": 3, "leaves": 2000, "corner_cases": 1248007, "seconds": 170.05377960205078}
+{"job": 4, "leaves": 2000, "corner_cases": 1249515, "seconds": 171.99149227142334}
+{"job": 1, "leaves": 2000, "corner_cases": 1252606, "seconds": 172.66885590553284}
+{"job": 2, "leaves": 2000, "corner_cases": 1260340, "seconds": 174.47445487976074}
+{"job": 5, "leaves": 2000, "corner_cases": 1252424, "seconds": 176.0663185119629}
+{"job": 7, "leaves": 2000, "corner_cases": 1253899, "seconds": 176.43774008750916}
+{"job": 6, "leaves": 2000, "corner_cases": 1260625, "seconds": 178.59740042686462}
+{"job": 0, "leaves": 2000, "corner_cases": 1264052, "seconds": 180.6060767173767}
+{"job": 3, "leaves": 3000, "corner_cases": 1949395, "seconds": 308.4685366153717}
+{"job": 1, "leaves": 3000, "corner_cases": 1948684, "seconds": 312.4269709587097}
+{"job": 2, "leaves": 3000, "corner_cases": 1966454, "seconds": 315.00613236427307}
+{"job": 7, "leaves": 3000, "corner_cases": 1946378, "seconds": 315.8225312232971}
+{"job": 4, "leaves": 3000, "corner_cases": 1961430, "seconds": 316.46693301200867}
+{"job": 0, "leaves": 3000, "corner_cases": 1969714, "seconds": 320.48630595207214}
+{"job": 5, "leaves": 3000, "corner_cases": 1961796, "seconds": 326.0676085948944}
+{"job": 6, "leaves": 3000, "corner_cases": 1964815, "seconds": 338.46837043762207}
+{"job": 3, "leaves": 4000, "corner_cases": 2838198, "seconds": 499.62037801742554}
+{"job": 4, "leaves": 4000, "corner_cases": 2847269, "seconds": 504.73358058929443}
+{"job": 1, "leaves": 4000, "corner_cases": 2831908, "seconds": 505.0880856513977}
+{"job": 2, "leaves": 4000, "corner_cases": 2866649, "seconds": 509.3497850894928}
+{"job": 0, "leaves": 4000, "corner_cases": 2879703, "seconds": 514.95951795578}
+{"job": 5, "leaves": 4000, "corner_cases": 2840533, "seconds": 516.9913282394409}
+{"job": 7, "leaves": 4000, "corner_cases": 2834313, "seconds": 523.7969241142273}
+{"job": 6, "leaves": 4000, "corner_cases": 2861387, "seconds": 532.5228335857391}
+{"job": 4, "leaves": 5000, "corner_cases": 3987672, "seconds": 772.1132462024689}
+{"job": 0, "leaves": 5000, "corner_cases": 4025519, "seconds": 787.9929037094116}
+{"job": 2, "leaves": 5000, "corner_cases": 4024125, "seconds": 790.3430404663086}
+{"job": 6, "leaves": 5000, "corner_cases": 3999971, "seconds": 795.6445052623749}
+{"job": 3, "leaves": 5000, "corner_cases": 4032356, "seconds": 798.7559580802917}
+{"job": 1, "leaves": 5000, "corner_cases": 4024100, "seconds": 807.621829032898}
+{"job": 5, "leaves": 5000, "corner_cases": 4030216, "seconds": 814.0147728919983}
+{"job": 7, "leaves": 5000, "corner_cases": 4021286, "seconds": 821.0128457546234}
+{
+  "status": "PASS",
+  "scope": "complete tree",
+  "certificate_sha256": "173fe6ec196b3d2adabad313749482542ad3492b5f6b4e398e76bbe6e52e405c",
+  "coverage": {
+    "split": 47229,
+    "dp": 47088,
+    "empty": 142,
+    "pending": 0,
+    "unresolved": 0
+  },
+  "dp_leaves_replayed": 47088,
+  "independent_corner_cases": 35852138,
+  "sampled": false,
+  "cached_verified_leaves": 0,
+  "cached_corner_cases": 0,
+  "total_verified_leaves": 47088,
+  "selected_worker": "specialized",
+  "coverage_only": false,
+  "seconds": 886.3458862304688
+}

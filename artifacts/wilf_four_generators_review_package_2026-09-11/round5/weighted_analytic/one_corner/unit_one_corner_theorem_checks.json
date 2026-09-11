@@ -1,0 +1,23 @@
+{
+  "status": "all exact finite certificate checks passed",
+  "unit_target_heights": [
+    7,
+    16
+  ],
+  "decimation_strip_heights": [
+    14,
+    34
+  ],
+  "decimation_base": 17,
+  "unbounded_theorem": "at most one interior corner and unit weights: m>=65 implies D>=m",
+  "sharp_obstruction": {
+    "m": 64,
+    "R": 6,
+    "sigma": 273,
+    "D": 60
+  },
+  "python_cpp_overlap_heights": [
+    3,
+    8
+  ]
+}

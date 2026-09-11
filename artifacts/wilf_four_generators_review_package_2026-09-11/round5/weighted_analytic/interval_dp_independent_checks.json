@@ -1,0 +1,101 @@
+{
+  "scope": "independent exact finite implementation audit; height-array enumeration, not horn recurrence",
+  "cases": [
+    {
+      "scale": 1,
+      "lo": [
+        1,
+        1,
+        3
+      ],
+      "hi": [
+        1,
+        1,
+        3
+      ],
+      "enumerated_nonempty_no_interior_ideals": 1382,
+      "maximum_score": 8,
+      "agreement": true
+    },
+    {
+      "scale": 1,
+      "lo": [
+        1,
+        1,
+        4
+      ],
+      "hi": [
+        1,
+        1,
+        4
+      ],
+      "enumerated_nonempty_no_interior_ideals": 27530,
+      "maximum_score": 5,
+      "agreement": true
+    },
+    {
+      "scale": 10,
+      "lo": [
+        10,
+        11,
+        30
+      ],
+      "hi": [
+        12,
+        15,
+        39
+      ],
+      "enumerated_nonempty_no_interior_ideals": 1382,
+      "maximum_score": 440,
+      "agreement": true
+    },
+    {
+      "scale": 1,
+      "lo": [
+        2,
+        4,
+        6
+      ],
+      "hi": [
+        3,
+        5,
+        7
+      ],
+      "enumerated_nonempty_no_interior_ideals": 1933,
+      "maximum_score": 144,
+      "agreement": true
+    },
+    {
+      "scale": 3,
+      "lo": [
+        5,
+        7,
+        12
+      ],
+      "hi": [
+        6,
+        9,
+        15
+      ],
+      "enumerated_nonempty_no_interior_ideals": 924,
+      "maximum_score": 222,
+      "agreement": true
+    },
+    {
+      "scale": 3,
+      "lo": [
+        4,
+        4,
+        9
+      ],
+      "hi": [
+        6,
+        8,
+        12
+      ],
+      "enumerated_nonempty_no_interior_ideals": 1930,
+      "maximum_score": 452,
+      "agreement": true
+    }
+  ]
+}

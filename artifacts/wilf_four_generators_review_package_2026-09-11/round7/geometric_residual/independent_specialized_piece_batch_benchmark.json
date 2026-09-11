@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "same_compiler_flags": "g++ -std=c++17 -O3 -march=native",
+  "rows": [
+    {
+      "q": 4096,
+      "lo": [
+        4096,
+        4096,
+        28672
+      ],
+      "hi": [
+        4097,
+        4097,
+        28673
+      ],
+      "repetitions": 100,
+      "workers": {
+        "point": {
+          "result": [
+            -81920,
+            1,
+            1,
+            3,
+            52
+          ],
+          "seconds_total": 0.09717969100165647,
+          "seconds_per_box": 0.0009717969100165646
+        },
+        "specialized_pieces": {
+          "result": [
+            -81920,
+            1,
+            1,
+            3,
+            52
+          ],
+          "seconds_total": 0.03714383199985605,
+          "seconds_per_box": 0.00037143831999856045
+        }
+      },
+      "speedup": 2.616307628196065
+    },
+    {
+      "q": 16,
+      "lo": [
+        20,
+        28,
+        128
+      ],
+      "hi": [
+        21,
+        29,
+        129
+      ],
+      "repetitions": 100,
+      "workers": {
+        "point": {
+          "result": [
+            -368,
+            1,
+            1,
+            3,
+            23
+          ],
+          "seconds_total": 0.019179183997039218,
+          "seconds_per_box": 0.00019179183997039217
+        },
+        "specialized_pieces": {
+          "result": [
+            -368,
+            1,
+            1,
+            3,
+            23
+          ],
+          "seconds_total": 0.008126231994538102,
+          "seconds_per_box": 8.126231994538103e-05
+        }
+      },
+      "speedup": 2.360157082634381
+    },
+    {
+      "q": 16,
+      "lo": [
+        16,
+        20,
+        112
+      ],
+      "hi": [
+        16,
+        21,
+        113
+      ],
+      "repetitions": 100,
+      "workers": {
+        "point": {
+          "result": [
+            -320,
+            1,
+            1,
+            3,
+            30
+          ],
+          "seconds_total": 0.025167783998767845,
+          "seconds_per_box": 0.00025167783998767844
+        },
+        "specialized_pieces": {
+          "result": [
+            -320,
+            1,
+            1,
+            3,
+            30
+          ],
+          "seconds_total": 0.011263082997174934,
+          "seconds_per_box": 0.00011263082997174934
+        }
+      },
+      "speedup": 2.2345377375875293
+    },
+    {
+      "q": 16,
+      "lo": [
+        16,
+        16,
+        112
+      ],
+      "hi": [
+        17,
+        17,
+        113
+      ],
+      "repetitions": 100,
+      "workers": {
+        "point": {
+          "result": [
+            884,
+            2,
+            2,
+            2,
+            52
+          ],
+          "seconds_total": 0.06613436200132128,
+          "seconds_per_box": 0.0006613436200132128
+        },
+        "specialized_pieces": {
+          "result": [
+            884,
+            2,
+            2,
+            2,
+            52
+          ],
+          "seconds_total": 0.024412706996372435,
+          "seconds_per_box": 0.00024412706996372436
+        }
+      },
+      "speedup": 2.709013875894566
+    },
+    {
+      "q": 4096,
+      "lo": [
+        4096,
+        5552,
+        96129
+      ],
+      "hi": [
+        4200,
+        5760,
+        99534
+      ],
+      "repetitions": 3,
+      "workers": {
+        "point": {
+          "result": [
+            -284291,
+            1,
+            1,
+            3,
+            1606
+          ],
+          "seconds_total": 1.5625807399992482,
+          "seconds_per_box": 0.5208602466664161
+        },
+        "specialized_pieces": {
+          "result": [
+            -284291,
+            1,
+            1,
+            3,
+            1606
+          ],
+          "seconds_total": 0.5234227260007174,
+          "seconds_per_box": 0.17447424200023912
+        }
+      },
+      "speedup": 2.9853131367419965
+    }
+  ]
+}

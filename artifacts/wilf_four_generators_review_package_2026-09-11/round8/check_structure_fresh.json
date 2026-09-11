@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "all no-interior ideals contained in {0,1,2,3}^3",
+  "plane_profiles": 70,
+  "plane_triples": 343000,
+  "distinct_nonempty_ideals": 18212,
+  "largest_ideal": 64,
+  "largest_maximal_antichain": 7,
+  "minimum_number_of_valid_centers": 1,
+  "clipped_dp_checks": [
+    {
+      "corner": [
+        1,
+        1,
+        1
+      ],
+      "height": 3,
+      "score": 73,
+      "exhaustive_feasible_closures": 1768
+    },
+    {
+      "corner": [
+        1,
+        1,
+        2
+      ],
+      "height": 3,
+      "score": 66,
+      "exhaustive_feasible_closures": 1480
+    }
+  ],
+  "proof_limitation": "Finite enumeration supports but does not replace the universal structural proof.",
+  "source_sha256": "97c127f44b7b7d972bf47941fdfbe94949403a52bc1483abe5ac8d58e5c66c42",
+  "seconds": 6.137
+}

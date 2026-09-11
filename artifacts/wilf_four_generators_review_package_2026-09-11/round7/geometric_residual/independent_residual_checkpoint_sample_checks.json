@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "partial checkpoint",
+  "certificate_sha256": "f7fb162f60c67b15c801699db1289c184267ae6313bc101aa9c777ca71836c40",
+  "coverage": {
+    "split": 1508,
+    "dp": 1492,
+    "empty": 0,
+    "pending": 17,
+    "unresolved": 0
+  },
+  "dp_leaves_replayed": 100,
+  "independent_corner_cases": 44513,
+  "sampled": true,
+  "coverage_only": false,
+  "seconds": 20.949690103530884
+}

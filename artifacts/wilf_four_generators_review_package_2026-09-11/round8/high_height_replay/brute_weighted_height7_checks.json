@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "scope": "H=7 weighted independent plane-cylinder challenge",
+  "rows": [
+    {
+      "input": [
+        1,
+        1,
+        2,
+        7,
+        1,
+        2,
+        7,
+        2,
+        2,
+        1
+      ],
+      "brute_best": -20,
+      "horn_bound": -20,
+      "compatible": 3269358,
+      "feasible": 1557446,
+      "point_scores": 65687971,
+      "profile_counts": [
+        4068,
+        198,
+        198
+      ]
+    },
+    {
+      "input": [
+        1,
+        2,
+        3,
+        7,
+        2,
+        3,
+        7,
+        3,
+        1,
+        1
+      ],
+      "brute_best": -16,
+      "horn_bound": -16,
+      "compatible": 1587,
+      "feasible": 966,
+      "point_scores": 22230,
+      "profile_counts": [
+        144,
+        27,
+        10
+      ]
+    },
+    {
+      "input": [
+        2,
+        3,
+        4,
+        13,
+        4,
+        5,
+        14,
+        2,
+        1,
+        2
+      ],
+      "brute_best": 311,
+      "horn_bound": 311,
+      "compatible": 42897,
+      "feasible": 14064,
+      "point_scores": 429840,
+      "profile_counts": [
+        513,
+        90,
+        28
+      ]
+    },
+    {
+      "input": [
+        2,
+        3,
+        4,
+        13,
+        4,
+        5,
+        14,
+        3,
+        2,
+        1
+      ],
+      "brute_best": 303,
+      "horn_bound": 303,
+      "compatible": 30056,
+      "feasible": 5434,
+      "point_scores": 179920,
+      "profile_counts": [
+        171,
+        144,
+        35
+      ]
+    }
+  ],
+  "seconds": 0.5634918212890625
+}

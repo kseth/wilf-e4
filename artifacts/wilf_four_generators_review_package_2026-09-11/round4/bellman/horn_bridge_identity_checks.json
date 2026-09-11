@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact Fraction polynomial coefficient arithmetic",
+  "identities_checked": 6,
+  "checks": {
+    "tight_slab_transition": true,
+    "constant_side_jump_gain": true,
+    "constant_side_gain_merge": true,
+    "cross_turn_gain": true,
+    "cross_turn_endpoint_derivative": true,
+    "balanced_ending_jump_derivative": true
+  },
+  "scope": "Polynomial identities only; the written argument supplies the inequality and profile reductions."
+}

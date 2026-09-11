@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "scope": "Auxiliary geometric counterexample, excluded from Ap\u00e9ry ideals",
+  "heights": [
+    [
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    [
+      4,
+      4,
+      2,
+      2
+    ],
+    [
+      3,
+      3,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2
+    ],
+    [
+      1
+    ]
+  ],
+  "weights": [
+    1,
+    1,
+    1
+  ],
+  "full_corner": [
+    1,
+    2,
+    2
+  ],
+  "size": 48,
+  "maximum": 5,
+  "moment": 170,
+  "D": 40,
+  "size_minus_D": 8,
+  "corners": [
+    [
+      0,
+      0,
+      6
+    ],
+    [
+      0,
+      1,
+      5
+    ],
+    [
+      0,
+      2,
+      4
+    ],
+    [
+      0,
+      3,
+      3
+    ],
+    [
+      0,
+      4,
+      2
+    ],
+    [
+      0,
+      5,
+      1
+    ],
+    [
+      0,
+      6,
+      0
+    ],
+    [
+      1,
+      0,
+      4
+    ],
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      1,
+      4,
+      0
+    ],
+    [
+      2,
+      0,
+      3
+    ],
+    [
+      2,
+      3,
+      0
+    ],
+    [
+      3,
+      0,
+      2
+    ],
+    [
+      3,
+      2,
+      0
+    ],
+    [
+      4,
+      1,
+      0
+    ],
+    [
+      5,
+      0,
+      1
+    ],
+    [
+      6,
+      0,
+      0
+    ]
+  ],
+  "planes": [
+    {
+      "omitted_axis": 0,
+      "mixed_count": 5,
+      "mixed_allowed": 3,
+      "dominating_count": 3,
+      "dominating_allowed": 1
+    },
+    {
+      "omitted_axis": 1,
+      "mixed_count": 4,
+      "mixed_allowed": 3,
+      "dominating_count": 3,
+      "dominating_allowed": 2
+    },
+    {
+      "omitted_axis": 2,
+      "mixed_count": 4,
+      "mixed_allowed": 3,
+      "dominating_count": 3,
+      "dominating_allowed": 2
+    }
+  ],
+  "erosion": {
+    "A": 23,
+    "A_minus_B": 55,
+    "T": 48
+  },
+  "residue_checks": {
+    "modulus": 48,
+    "tested_full_corner_labelings": 2304,
+    "intersecting_corner_pairs": 120,
+    "passing_corner_distinctness": 192,
+    "passing_full_bijection": 0,
+    "example_corner_labeling": [
+      42,
+      1,
+      2
+    ]
+  }
+}

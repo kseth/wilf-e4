@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "certificate_sha256": "173fe6ec196b3d2adabad313749482542ad3492b5f6b4e398e76bbe6e52e405c",
+  "frozen_cache_sha256": "1cf1a33b466fbd0a11406da0dc2b2c80ca46fe9f7f18c1dc7d35abb32ff696e7",
+  "frozen_cache_file": "verified_residual_leaves_frozen.jsonl",
+  "total_verified_leaves": 47088,
+  "total_corner_cases": 35852138,
+  "sampled": false,
+  "coverage_only": false,
+  "coverage": {
+    "split": 47229,
+    "dp": 47088,
+    "empty": 142,
+    "pending": 0,
+    "unresolved": 0
+  },
+  "reconciliation_new_leaves": 97,
+  "reconciliation_cached_leaves": 46991,
+  "reconciliation_new_corner_cases": 4488,
+  "reconciliation_cached_corner_cases": 35847650,
+  "provenance": [
+    {
+      "leaves": 1689,
+      "corner_cases": 1137928,
+      "source": "independent_residual_worker.cpp",
+      "sha256": "4c8772f74ef8006f54652837e5537e1b9b2d22ea5dfa523bae2314e17000e3b3"
+    },
+    {
+      "leaves": 6845,
+      "corner_cases": 4831956,
+      "source": "independent_residual_point_worker.cpp",
+      "sha256": "0ef19f58caf9d279628b1efce574794920c3919ef00ed6030c74b04eea6d36a4"
+    },
+    {
+      "leaves": 38554,
+      "corner_cases": 29882254,
+      "source": "independent_specialized_piece_worker.cpp",
+      "sha256": "5e793c961673653b0245c774c70d8860cb9c53b2ab14087c3f18a581670b3c01"
+    }
+  ],
+  "frozen_cache_exact_dp_ids_verified": true,
+  "frozen_cache_read_after_writer_exit_verified": true,
+  "stable_reconciliation_checks": "independent_full_tree_reconciliation_checks.json",
+  "first_complete_replay_checks": "independent_full_tree_replay_47088_checks.json"
+}

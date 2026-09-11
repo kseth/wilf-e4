@@ -1,0 +1,58 @@
+{
+  "degree4_central_triples": 35,
+  "degree4_max_cardinality": 29,
+  "maximizers": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      2,
+      1,
+      1
+    ]
+  ],
+  "sharp_secondary_m35_example": {
+    "generators": [
+      35,
+      40,
+      48,
+      49
+    ],
+    "side_A": {
+      "a": 5,
+      "b": 6,
+      "quotient_divisor": 7,
+      "quotient_gaps": [
+        1,
+        2
+      ],
+      "interior_violations": []
+    },
+    "side_B": {
+      "a": 5,
+      "b": 7,
+      "quotient_divisor": 8,
+      "quotient_gaps": [
+        1,
+        2
+      ],
+      "interior_violations": []
+    },
+    "multiplicity": 35,
+    "Frobenius": 205,
+    "genus": 127,
+    "W4": 110
+  }
+}

@@ -1,0 +1,23 @@
+{"completed": 2000, "moment": 1612, "cardinality": 388, "maximum_normalized_bound": -6.133331, "seconds": 22.263856410980225}
+{"completed": 4000, "moment": 3242, "cardinality": 758, "maximum_normalized_bound": -6.133331, "seconds": 43.91936016082764}
+{"completed": 6000, "moment": 4925, "cardinality": 1075, "maximum_normalized_bound": -6.133331, "seconds": 65.15320920944214}
+{"completed": 8000, "moment": 6590, "cardinality": 1410, "maximum_normalized_bound": -6.133331, "seconds": 86.37912511825562}
+{"completed": 10000, "moment": 8250, "cardinality": 1750, "maximum_normalized_bound": -6.133331, "seconds": 108.42600011825562}
+{"completed": 12000, "moment": 9900, "cardinality": 2100, "maximum_normalized_bound": -6.133331, "seconds": 129.55314779281616}
+{"completed": 14000, "moment": 11639, "cardinality": 2361, "maximum_normalized_bound": -4.714279, "seconds": 151.03051042556763}
+{"completed": 16000, "moment": 13438, "cardinality": 2562, "maximum_normalized_bound": -4.714279, "seconds": 171.10996294021606}
+{"completed": 18000, "moment": 15196, "cardinality": 2804, "maximum_normalized_bound": -4.714279, "seconds": 190.90178203582764}
+{"completed": 20000, "moment": 16864, "cardinality": 3136, "maximum_normalized_bound": -4.714279, "seconds": 211.60320162773132}
+{"completed": 22000, "moment": 18560, "cardinality": 3440, "maximum_normalized_bound": -4.714279, "seconds": 232.46241450309753}
+{"completed": 24000, "moment": 20189, "cardinality": 3811, "maximum_normalized_bound": -4.714279, "seconds": 253.67946362495422}
+{"completed": 26000, "moment": 21834, "cardinality": 4166, "maximum_normalized_bound": -4.714279, "seconds": 274.71024894714355}
+{"completed": 28000, "moment": 23834, "cardinality": 4166, "maximum_normalized_bound": -1.199999, "seconds": 294.55265712738037}
+{"completed": 30000, "moment": 25834, "cardinality": 4166, "maximum_normalized_bound": -1.199999, "seconds": 315.12606287002563}
+{"completed": 32000, "moment": 27834, "cardinality": 4166, "maximum_normalized_bound": -0.999992, "seconds": 335.8824248313904}
+{"completed": 34000, "moment": 29834, "cardinality": 4166, "maximum_normalized_bound": -0.999992, "seconds": 355.2159335613251}
+{"completed": 36000, "moment": 31834, "cardinality": 4166, "maximum_normalized_bound": -0.999992, "seconds": 374.6208040714264}
+{"completed": 38000, "moment": 33834, "cardinality": 4166, "maximum_normalized_bound": -0.999992, "seconds": 393.95458912849426}
+{"completed": 40000, "moment": 35834, "cardinality": 4166, "maximum_normalized_bound": -0.999992, "seconds": 413.23538279533386}
+{"completed": 42000, "moment": 37834, "cardinality": 4166, "maximum_normalized_bound": -0.999992, "seconds": 433.3134124279022}
+{"completed": 44000, "moment": 39834, "cardinality": 4166, "maximum_normalized_bound": -0.999992, "seconds": 455.062566280365}
+{"status": "passed", "cases": 44281, "moment_cases": 40115, "cardinality_cases": 4166, "max_normalized_numerator": -999992, "max_normalized_denominator": 1000000, "seconds": 457.99262976646423, "scipy_used_for_proposals_only": true, "exact_integer_inequality_acceptance": true}

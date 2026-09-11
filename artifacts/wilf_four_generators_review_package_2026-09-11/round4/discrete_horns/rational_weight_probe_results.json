@@ -1,0 +1,8 @@
+{
+  "scope": "structured finite rational grid, not a universal weighted theorem",
+  "normalization_denominator": 10,
+  "tested": 8976,
+  "size_dp_calls": 1,
+  "worst_constrained": null,
+  "counterexample_parameters": null
+}

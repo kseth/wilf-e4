@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "payloads": 42,
+  "archive_bytes": 1119192,
+  "archive_sha256": "38450bae5be8ec64a687a37d1311870a951133d76d34eb9da725e7004fc76517",
+  "all_payload_hashes_checked": true,
+  "full_certificate_replayed_during_packaging": false,
+  "full_replay_record": "round9/height_free_duals/portable_full_replay_result.json"
+}

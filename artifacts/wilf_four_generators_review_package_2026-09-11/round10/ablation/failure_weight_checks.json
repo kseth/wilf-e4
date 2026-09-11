@@ -1,0 +1,28 @@
+[
+  {
+    "fixture": "only_surface_weak_first_failure.json",
+    "m": 33,
+    "weights": [
+      "5/4",
+      "1",
+      "1"
+    ],
+    "H": "5",
+    "exact_D": "63",
+    "D_minus_m": "30",
+    "exact_counterexample_to_strong_centroid": false
+  },
+  {
+    "fixture": "only_surface_first_failure.json",
+    "m": 33,
+    "weights": [
+      "5/4",
+      "1",
+      "1"
+    ],
+    "H": "5",
+    "exact_D": "62",
+    "D_minus_m": "29",
+    "exact_counterexample_to_strong_centroid": false
+  }
+]

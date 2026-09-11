@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "complete tree",
+  "certificate_sha256": "173fe6ec196b3d2adabad313749482542ad3492b5f6b4e398e76bbe6e52e405c",
+  "coverage": {
+    "split": 47229,
+    "dp": 47088,
+    "empty": 142,
+    "pending": 0,
+    "unresolved": 0
+  },
+  "dp_leaves_replayed": 47088,
+  "independent_corner_cases": 35852138,
+  "sampled": false,
+  "cached_verified_leaves": 0,
+  "cached_corner_cases": 0,
+  "total_verified_leaves": 47088,
+  "selected_worker": "specialized",
+  "coverage_only": false,
+  "seconds": 886.3458862304688
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "independent leaf-bound replay; no tree coverage claim",
+  "sampled": true,
+  "checks": {
+    "dp": 97,
+    "continuous": 3,
+    "empty": 0
+  },
+  "degree_four_no_interior_cardinality_bound": 29,
+  "seconds": 0.26935744285583496
+}

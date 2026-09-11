@@ -1,0 +1,417 @@
+{
+  "slack_expansion_identity": true,
+  "slack_linear_endpoint_identities": true,
+  "small_cap_derivative_identity": true,
+  "large_cap_derivative_identity": true,
+  "diagonal_derivative_identity": true,
+  "positive_certificate_counts": {
+    "canonical_x_le_a": 16,
+    "canonical_x_ge_a": 12,
+    "active_gain": 16
+  },
+  "printed_grouped_formula_identities": true,
+  "certificates": {
+    "canonical_x_le_a": [
+      {
+        "exponents": [
+          0,
+          2,
+          0,
+          2
+        ],
+        "coefficient": "1/4"
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          1,
+          1
+        ],
+        "coefficient": "1"
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          0,
+          1
+        ],
+        "coefficient": "2/3"
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          1,
+          0
+        ],
+        "coefficient": "4/3"
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "coefficient": "1"
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "5/2"
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "3/4"
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "3/2"
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "3/4"
+      }
+    ],
+    "canonical_x_ge_a": [
+      {
+        "exponents": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          3,
+          0
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          0,
+          2
+        ],
+        "coefficient": "1/4"
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          1,
+          1
+        ],
+        "coefficient": "1"
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "5/4"
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          0,
+          1
+        ],
+        "coefficient": "1/3"
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          1,
+          0
+        ],
+        "coefficient": "2/3"
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "1/6"
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "3/4"
+      }
+    ],
+    "active_gain": [
+      {
+        "exponents": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "coefficient": "1/4"
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          3,
+          1
+        ],
+        "coefficient": "11/6"
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          4,
+          0
+        ],
+        "coefficient": "31/12"
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "coefficient": "1"
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "coefficient": "7"
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          3,
+          0
+        ],
+        "coefficient": "34/3"
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          0,
+          2
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          1,
+          1
+        ],
+        "coefficient": "7"
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "33/2"
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          0,
+          1
+        ],
+        "coefficient": "7/3"
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          1,
+          0
+        ],
+        "coefficient": "31/3"
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "31/12"
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "coefficient": "1/2"
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "3/2"
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "3/4"
+      }
+    ]
+  }
+}

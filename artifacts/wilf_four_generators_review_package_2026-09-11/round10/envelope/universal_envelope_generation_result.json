@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "cases": 44281,
+  "moment_cases": 40115,
+  "cardinality_cases": 4166,
+  "max_normalized_numerator": -999992,
+  "max_normalized_denominator": 1000000,
+  "seconds": 457.99262976646423,
+  "scipy_used_for_proposals_only": true,
+  "exact_integer_inequality_acceptance": true
+}

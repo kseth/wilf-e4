@@ -1,0 +1,13 @@
+{
+  "certify_height_free.cpp": "0e2fec1cc97ccf8d9a34e90daedb8ac8901c74b7c2ceebcb35725bc37eb1b9b3",
+  "proposing_lp.hpp": "6fc50d112bc904d7ff18bd9b787eafa0af120da8242138df408daf522462f0a7",
+  "exact_dual.hpp": "08a23113446aa5ac519d7d60dd217d5c5e6c5cbdba932a76f794d655347215cb",
+  "independent_verify_height_free.cpp": "0dacc4b52dd1f4f7d50cc7f464b256fea53966fa60b6f49020845272dfb175eb",
+  "verify_complete_certificate.py": "ea13a9e1d07e2c6b2d3734ea6cb091efaba943d76e0865cfb81510b81704b3e6",
+  "dual_bases.jsonl": "e3324346974516bdcbfbb0c09b7f6e3878efedd1c2ca63c11ffb2171b456d621",
+  "dual_assignments.bin": "7f1fe86605deb1fee2943648a41a29ed3ae3bdd45b3735641943c0346b017cdf",
+  "certification.jsonl": "c50736ad2b075950383894f7a836ac3f7de238c47aaf17e52557049b2acb5a30",
+  "independent_verification.jsonl": "0308ddcc2c74f638c8891aaef98462202f542d6dbc1dd6e6f1e8e45cebb4a1db",
+  "height_free_centroid_theorem.md": "aa558760ca7f153b76273e0ca5e54ca1b4abafa0e8403350c73bae4d079db0e7",
+  "registry_statistics.json": "46641e3388e725d728fb2730a284f9938c1a2fba83acd40b019cc65cdfe2347c"
+}

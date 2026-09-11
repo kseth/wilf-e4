@@ -1,0 +1,65 @@
+{
+  "scope": "bounded heuristic probe, possible repetitions; not exhaustive",
+  "seed": 2026091110,
+  "attempts_completed": 30000,
+  "accepted": 3166,
+  "best": {
+    "trial": 17869,
+    "N": 7,
+    "corner": [
+      1,
+      4,
+      1
+    ],
+    "axis_lengths": [
+      5,
+      5,
+      4
+    ],
+    "profiles": [
+      [
+        5,
+        5,
+        4,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        3,
+        2,
+        2,
+        0,
+        0
+      ]
+    ],
+    "m": 36,
+    "s": [
+      32,
+      51,
+      33
+    ],
+    "degree": 5,
+    "erosion": 34,
+    "surfaces": [
+      8,
+      10,
+      10
+    ],
+    "upgrade": 61,
+    "axis": "-76",
+    "margin": "25"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "An auxiliary geometric counterexample, not a Wilf counterexample",
+  "base": {
+    "m": 4246,
+    "maximum": 32,
+    "moment": 92724
+  },
+  "scale": 6,
+  "scaled": {
+    "m": 917136,
+    "maximum": 207,
+    "moment": 127048824,
+    "full_corner": [
+      24,
+      24,
+      24
+    ],
+    "normalized_continuous_mean": "99093/148610",
+    "centroid_failure_numerator": 152928
+  },
+  "planes": [
+    {
+      "omitted_axis": 0,
+      "mixed_count": 29,
+      "dominating_count": 23,
+      "maximum_mod2_class": 23,
+      "capacity_if_axis_weight_odd": 12
+    },
+    {
+      "omitted_axis": 1,
+      "mixed_count": 29,
+      "dominating_count": 23,
+      "maximum_mod2_class": 23,
+      "capacity_if_axis_weight_odd": 12
+    },
+    {
+      "omitted_axis": 2,
+      "mixed_count": 29,
+      "dominating_count": 23,
+      "maximum_mod2_class": 23,
+      "capacity_if_axis_weight_odd": 12
+    }
+  ],
+  "excluded_by_prime2_capacity": true,
+  "independent_erosion": {
+    "A": 700056,
+    "A_minus_B": 981936,
+    "T": 917136
+  }
+}

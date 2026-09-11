@@ -1,0 +1,38 @@
+{
+  "certificates_using_row_type": {
+    "lower": 42212,
+    "surface_local": 44008,
+    "no_full_corner": 32505,
+    "surface_global": 44007,
+    "corner_upper_global": 21586,
+    "corner_local": 23766,
+    "erosion_local": 20849,
+    "erosion_global": 1463,
+    "cardinality": 2836,
+    "corner_global": 863
+  },
+  "by_certificate_kind": {
+    "moment": {
+      "no_full_corner": 28683,
+      "surface_local": 40103,
+      "surface_global": 40102,
+      "lower": 40114,
+      "corner_upper_global": 20756,
+      "corner_local": 22850,
+      "erosion_local": 19647,
+      "erosion_global": 263,
+      "cardinality": 2836,
+      "corner_global": 863
+    },
+    "cardinality": {
+      "lower": 2098,
+      "surface_local": 3905,
+      "no_full_corner": 3822,
+      "surface_global": 3905,
+      "corner_local": 916,
+      "corner_upper_global": 830,
+      "erosion_local": 1202,
+      "erosion_global": 1200
+    }
+  }
+}

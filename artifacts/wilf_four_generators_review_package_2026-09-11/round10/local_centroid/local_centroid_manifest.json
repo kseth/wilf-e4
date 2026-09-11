@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "target": "max(U_2(T),G(T)) >= |T|",
+  "class_size": 5574644,
+  "files": {
+    "independent_two_step.cpp": "114417d8754bf11db6b070e988f4d89c3d833837033e06a6cfc29ceceeac0a03",
+    "two_step_verification.jsonl": "2938fbc38d6d44e0f066d73f4082cebc94aed264fdce64d1fc7b0bff16826489",
+    "verify_complete_local_centroid.py": "0e8cfb4c3a206a94532a2216c4f13178d1ba515de8d5a5550b9eb650e09bc0de",
+    "local_centroid_theorem.md": "cc4d2237476dee5e0440b98754574512757e5f3721b878559aa92e04dc399041"
+  }
+}

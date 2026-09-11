@@ -1,0 +1,148 @@
+{
+  "status": "passed",
+  "scope": "Editorial artifact and stored-record consistency only; no new exhaustive mathematical replay",
+  "equation_tags": [
+    "G1",
+    "G2",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "G3",
+    "HD1",
+    "HD2",
+    "HD3",
+    "HD4",
+    "HD5",
+    "HD6",
+    "HD7",
+    "HD8",
+    "HD9",
+    "HD10",
+    "HD11",
+    "HD12",
+    "HD13",
+    "A1"
+  ],
+  "references_resolve": true,
+  "pdf_pages": 19,
+  "pdf_bookmarks": 9,
+  "toc_links": 9,
+  "text_outside_safe_page_box": [],
+  "tex_overfull_or_missing_character_warnings": [],
+  "stored_manifest_hashes_checked": 13,
+  "page_details": [
+    {
+      "page": 1,
+      "words": 91,
+      "links": 0
+    },
+    {
+      "page": 2,
+      "words": 267,
+      "links": 9
+    },
+    {
+      "page": 3,
+      "words": 395,
+      "links": 0
+    },
+    {
+      "page": 4,
+      "words": 310,
+      "links": 0
+    },
+    {
+      "page": 5,
+      "words": 280,
+      "links": 0
+    },
+    {
+      "page": 6,
+      "words": 357,
+      "links": 0
+    },
+    {
+      "page": 7,
+      "words": 333,
+      "links": 2
+    },
+    {
+      "page": 8,
+      "words": 433,
+      "links": 0
+    },
+    {
+      "page": 9,
+      "words": 377,
+      "links": 0
+    },
+    {
+      "page": 10,
+      "words": 292,
+      "links": 0
+    },
+    {
+      "page": 11,
+      "words": 295,
+      "links": 0
+    },
+    {
+      "page": 12,
+      "words": 305,
+      "links": 0
+    },
+    {
+      "page": 13,
+      "words": 346,
+      "links": 0
+    },
+    {
+      "page": 14,
+      "words": 413,
+      "links": 0
+    },
+    {
+      "page": 15,
+      "words": 440,
+      "links": 0
+    },
+    {
+      "page": 16,
+      "words": 384,
+      "links": 0
+    },
+    {
+      "page": 17,
+      "words": 458,
+      "links": 0
+    },
+    {
+      "page": 18,
+      "words": 464,
+      "links": 0
+    },
+    {
+      "page": 19,
+      "words": 274,
+      "links": 5
+    }
+  ],
+  "files": {
+    "deliverables/wilf_four_generators_review_manuscript_2026-09-11.md": "6ba1b6f9afbb51db2b1a043a81eb8a3cabbd8ff6a5898468ca8aef6c20932b73",
+    "deliverables/wilf_four_generators_review_manuscript_2026-09-11.pdf": "4bf64717e74afceae2c98941d841e89c3e0357fd5ef026d9ccf7ffc8fbb8afbe"
+  },
+  "visual_review": {
+    "all_19_pages_inspected": true,
+    "full_size_checks": [
+      "case partition and conductor bound",
+      "higher-dimensional moment and centroid identities",
+      "universal envelope and comparison table"
+    ],
+    "clipping_overlap_or_missing_glyphs_observed": false
+  }
+}

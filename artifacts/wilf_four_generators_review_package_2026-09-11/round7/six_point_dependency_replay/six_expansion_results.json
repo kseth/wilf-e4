@@ -1,0 +1,20 @@
+{
+  "raw_negative_compressed": 2264,
+  "completion_counts": {
+    "feasible": 891,
+    "distinct_required_heights": 1182,
+    "incompatible_corner_coordinates": 115,
+    "corner_would_remove_Z": 76
+  },
+  "feasible_compressed": 891,
+  "negative_expanded": 4406,
+  "score_histogram": {
+    "-3": 476,
+    "-1": 2781,
+    "-6": 4,
+    "-4": 104,
+    "-2": 1008,
+    "-5": 33
+  },
+  "maximum_U_size": 56
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "full_independent_recomputation_this_run": true,
+  "run_summary": {
+    "status": "passed",
+    "profiles": 1429,
+    "bases": 6816,
+    "exact_weighted_duals": 3742041,
+    "floating_point_used": false
+  },
+  "all_coverage_fields_and_histograms_match": true,
+  "totals": {
+    "compatible": 55199298,
+    "degree_ok": 17808013,
+    "m30": 17727110,
+    "erosion_ok": 12575521,
+    "q_ok": 3742041,
+    "six_maxima": 380607,
+    "remaining": 3742041
+  },
+  "exact_weighted_target": "D >= m-29/10 for all b_i>=1, no upper bound on H",
+  "centroid_witness_uses_at_most_three_points": true,
+  "manifest_files_checked": 11
+}

@@ -1,0 +1,9 @@
+{
+  "status": "independent exact coverage and dual replay passed",
+  "degree4_shapes": 3928,
+  "degree4_max_cardinality": 29,
+  "degree5_shapes": 70175,
+  "degree5_max_cardinality": 43,
+  "exact_duals_replayed": 28499,
+  "minimum_margin": "19"
+}

@@ -1,0 +1,95 @@
+{
+  "status": "exact sharpness and disjoint-witness checks passed",
+  "checks": [
+    {
+      "R": 3,
+      "cardinality": 18,
+      "formula": 18
+    },
+    {
+      "R": 4,
+      "cardinality": 31,
+      "formula": 31
+    },
+    {
+      "R": 5,
+      "cardinality": 48,
+      "formula": 48
+    },
+    {
+      "R": 6,
+      "cardinality": 69,
+      "formula": 69
+    },
+    {
+      "R": 7,
+      "cardinality": 94,
+      "formula": 94
+    },
+    {
+      "R": 8,
+      "cardinality": 123,
+      "formula": 123
+    },
+    {
+      "R": 9,
+      "cardinality": 156,
+      "formula": 156
+    },
+    {
+      "R": 10,
+      "cardinality": 193,
+      "formula": 193
+    },
+    {
+      "R": 11,
+      "cardinality": 234,
+      "formula": 234
+    },
+    {
+      "R": 12,
+      "cardinality": 279,
+      "formula": 279
+    },
+    {
+      "R": 13,
+      "cardinality": 328,
+      "formula": 328
+    },
+    {
+      "R": 14,
+      "cardinality": 381,
+      "formula": 381
+    },
+    {
+      "R": 15,
+      "cardinality": 438,
+      "formula": 438
+    },
+    {
+      "R": 16,
+      "cardinality": 499,
+      "formula": 499
+    },
+    {
+      "R": 17,
+      "cardinality": 564,
+      "formula": 564
+    },
+    {
+      "R": 18,
+      "cardinality": 633,
+      "formula": 633
+    },
+    {
+      "R": 19,
+      "cardinality": 706,
+      "formula": 706
+    },
+    {
+      "R": 20,
+      "cardinality": 783,
+      "formula": 783
+    }
+  ]
+}

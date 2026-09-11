@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "multiplicity_interval_inclusive": [
+    30,
+    48
+  ],
+  "all_embedding_dimension_four_satisfying_p211_congruence_union": true,
+  "depends_on_proved_conductor_reduction": true,
+  "algorithms": [
+    "cyclic residue shortest paths",
+    "integer semigroup membership"
+  ],
+  "totals": {
+    "raw_relation_triples": 803005632,
+    "minimal_four_generator_semigroups": 508199476,
+    "maximum_apery_within_bound": 14416025,
+    "negative_wilf_count": 0
+  },
+  "sources_sha256": {
+    "exhaust_p211_relations.cpp": "200a7ee4e7c44240fcb4ff26261b6c04e15dee7ddd338a1f68301d854f0fa5ab",
+    "independent_p211_membership.cpp": "ef79f78f942c095f6d8f4503b6a0934fe848aa796845cae5d94fc6fa0d9625f1"
+  },
+  "compiled_and_reran_this_invocation": false
+}

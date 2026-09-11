@@ -1,0 +1,41 @@
+{
+  "description": "Universal centroid envelope proof payload; independent replay uses only verifier plus compressed certificates. The external high-height theorem remains a mathematical dependency.",
+  "files": {
+    "universal_centroid_envelope.md": {
+      "bytes": 10131,
+      "sha256": "7055b981c1d797f68a45286f6177225b95a3377f3b04ac2a16e17177e374c528"
+    },
+    "verify_universal_envelope.py": {
+      "bytes": 5808,
+      "sha256": "30e00e05dafc1abd9cb374d3fd4339984fa8b85f05b2141d1103ee4c2cc061c8"
+    },
+    "certify_universal_envelope.py": {
+      "bytes": 2458,
+      "sha256": "0b1bd50f20f478a5c2ba8e9f7b80e9af20d356d9cc488c78616c7f3c95dd1b8b"
+    },
+    "probe_envelope.py": {
+      "bytes": 3938,
+      "sha256": "5d316ec19af8fa98a5a977be5f66c70379c8dd86a84f3d419968d3fe3fcf40bd"
+    },
+    "generate_normal_cases.py": {
+      "bytes": 1651,
+      "sha256": "83cfe315ddaf3dea79b213581f4e2209df5775b0d5d690a3c2b80d5ea2ff1baa"
+    },
+    "universal_envelope_certificates.jsonl.gz": {
+      "bytes": 14417583,
+      "sha256": "cb5c67b9b0a0f1e7a8ac797190f2b520fd72d5b01e5074bed43ca3c82f4b30c6"
+    },
+    "universal_envelope_generation_result.json": {
+      "bytes": 298,
+      "sha256": "4f0b60ea1e003d411731dbd173985f9f358ab49f17246f37cf1241a715a27311"
+    },
+    "universal_envelope_independent_result.json": {
+      "bytes": 403,
+      "sha256": "ada8ed40f6442e4b5b6b3e6919ec7251186408f239e62bc8b75013e6859bd7a0"
+    },
+    "universal_envelope_constraint_usage.json": {
+      "bytes": 918,
+      "sha256": "2e1b347cd1bfc4687caee2f3aba2d0eb68c7148194d0ea552e78ed87666aaf2b"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "exact_fixtures": 388,
+  "minimum_two_step_gain_minus_m": 0,
+  "maximum_two_step_gain_minus_m": 17,
+  "scope": "Local constructive verification of all recorded failures of cheap bound plus axis witness; combined with complete enumeration implies local two-step or axis suffices on the original residual class."
+}

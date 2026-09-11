@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "fixtures": 388,
+  "no_erosion_fixture_set_equal_to_original": true,
+  "maximal_dominator_search_used": false,
+  "direct_neighbor_distances_checked": [
+    0,
+    1,
+    2
+  ],
+  "minimum_U2_minus_m": 0,
+  "input_sha256": {
+    "round10/line_upgrade/cheap_bound_exceptions_strong.jsonl": "69467dcb2537cba66fe51c68a4b1a1ca8c7017654b141a5bd93759f103e642d3",
+    "round10/ablation/cheap_bound_exceptions_strong.jsonl": "69467dcb2537cba66fe51c68a4b1a1ca8c7017654b141a5bd93759f103e642d3"
+  }
+}

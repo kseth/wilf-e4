@@ -1,0 +1,186 @@
+{
+  "status": "PASS",
+  "comparison_count": 5,
+  "rows": [
+    {
+      "q": 4096,
+      "lo": [
+        4096,
+        4096,
+        28672
+      ],
+      "hi": [
+        4097,
+        4097,
+        28673
+      ],
+      "workers": {
+        "independent_residual_point_worker": {
+          "result": [
+            -81920,
+            1,
+            1,
+            3,
+            52
+          ],
+          "seconds": 0.0026404710006318055
+        },
+        "independent_specialized_piece_worker": {
+          "result": [
+            -81920,
+            1,
+            1,
+            3,
+            52
+          ],
+          "seconds": 0.004014150006696582
+        }
+      },
+      "speedup": 0.6577908140520049
+    },
+    {
+      "q": 16,
+      "lo": [
+        20,
+        28,
+        128
+      ],
+      "hi": [
+        21,
+        29,
+        129
+      ],
+      "workers": {
+        "independent_residual_point_worker": {
+          "result": [
+            -368,
+            1,
+            1,
+            3,
+            23
+          ],
+          "seconds": 0.001446957998268772
+        },
+        "independent_specialized_piece_worker": {
+          "result": [
+            -368,
+            1,
+            1,
+            3,
+            23
+          ],
+          "seconds": 0.0013948409978183918
+        }
+      },
+      "speedup": 1.0373641157177729
+    },
+    {
+      "q": 16,
+      "lo": [
+        16,
+        20,
+        112
+      ],
+      "hi": [
+        16,
+        21,
+        113
+      ],
+      "workers": {
+        "independent_residual_point_worker": {
+          "result": [
+            -320,
+            1,
+            1,
+            3,
+            30
+          ],
+          "seconds": 0.001527718995930627
+        },
+        "independent_specialized_piece_worker": {
+          "result": [
+            -320,
+            1,
+            1,
+            3,
+            30
+          ],
+          "seconds": 0.001632833998883143
+        }
+      },
+      "speedup": 0.9356241950961245
+    },
+    {
+      "q": 16,
+      "lo": [
+        16,
+        16,
+        112
+      ],
+      "hi": [
+        17,
+        17,
+        113
+      ],
+      "workers": {
+        "independent_residual_point_worker": {
+          "result": [
+            884,
+            2,
+            2,
+            2,
+            52
+          ],
+          "seconds": 0.0018677839980227873
+        },
+        "independent_specialized_piece_worker": {
+          "result": [
+            884,
+            2,
+            2,
+            2,
+            52
+          ],
+          "seconds": 0.0015475179970962927
+        }
+      },
+      "speedup": 1.2069546212240698
+    },
+    {
+      "q": 4096,
+      "lo": [
+        4096,
+        5552,
+        96129
+      ],
+      "hi": [
+        4200,
+        5760,
+        99534
+      ],
+      "workers": {
+        "independent_residual_point_worker": {
+          "result": [
+            -284291,
+            1,
+            1,
+            3,
+            1606
+          ],
+          "seconds": 0.5282094909998705
+        },
+        "independent_specialized_piece_worker": {
+          "result": [
+            -284291,
+            1,
+            1,
+            3,
+            1606
+          ],
+          "seconds": 0.1994319709992851
+        }
+      },
+      "speedup": 2.6485697772187384
+    }
+  ]
+}

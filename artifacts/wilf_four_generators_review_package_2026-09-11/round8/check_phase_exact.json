@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "bounded exact analytic sanity checks; not the finite strip or final DP replay",
+  "counts": {
+    "ideals": 980,
+    "ideals_with_units": 930,
+    "weighted_ideals": 59520,
+    "individual_phase_inequalities": 167400,
+    "summed_phase_inequalities": 59520,
+    "thickening_identities": 59520,
+    "sawtooth_intervals": 16121,
+    "remainder_fibers": 343
+  },
+  "script_sha256": "24bcd46859476bdd616d090d596b6a9badaa2cd869ba07cf44f17d56248b2797"
+}

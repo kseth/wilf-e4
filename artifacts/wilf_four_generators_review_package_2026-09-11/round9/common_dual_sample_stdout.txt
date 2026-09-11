@@ -1,0 +1,16 @@
+{
+  "scope": "Existing deterministic diagnostic sample, filtered by the same pairwise surface restrictions; not exhaustive and not randomized holdout.",
+  "input_rows": 34808,
+  "sampled_eligible_shapes": 34807,
+  "basis_orbits_tested": 100,
+  "oriented_bases_tested": 574,
+  "exact_integer_retest_coverage": {
+    "1": 11156,
+    "5": 24606,
+    "10": 28510,
+    "20": 30217,
+    "50": 33022,
+    "100": 34084
+  },
+  "arithmetic": "All determinants, adjugates, objectives, multipliers, membership, and bounds tested in signed int64; entries are small degree-six integers."
+}
