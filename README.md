@@ -15,6 +15,8 @@ analytic arguments and finite verifications have been independently checked.
   spine and dependency ledger. Start here.
 - [`paper/foundations.md`](paper/foundations.md) proves the common Apéry,
   residue, exclusion, and moment lemmas used by every proof branch.
+- [`paper/case-partition.md`](paper/case-partition.md) proves that the
+  retained branches are exhaustive and mutually exclusive.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the

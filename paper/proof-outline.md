@@ -146,6 +146,10 @@ degree-three type is ((1,1,1)), and the only degree-four type is
 (p-e_i\in T) gives (|p|_1\le7) in the first alternative, while
 (H\ge R\ge7) in the second.
 
+The complete elementary proof, including mutual exclusivity and the boundary
+between routing hypotheses and branch-entry lemmas, is in the
+[case-partition note](case-partition.md).
+
 ## 3. Branch contracts
 
 This section records exactly what each branch must establish. A publishable
@@ -395,7 +399,7 @@ The following is the minimal presently retained proof interface.
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
-| C | Case exhaustion and final arithmetic | [A] | Present as the main theorem's short final proof |
+| C | Case exhaustion and final arithmetic | [A] | Exhaustion is reconstructed in `case-partition.md`; audit the final arithmetic |
 
 ## 6. Material excluded from the main proof
 
@@ -416,15 +420,16 @@ example from them should appear in the main paper.
 
 1. Obtain independent review of the reconstructed upstream lemmas in
    `foundations.md`.
-2. Audit the final arithmetic that applies the moment identity.
-3. Isolate and audit the conductor reduction B1b.
-4. Seek an analytic proof that the corner/axis incompatibility found in all
+2. Obtain independent review of `case-partition.md`.
+3. Audit the final arithmetic that applies the moment identity.
+4. Isolate and audit the conductor reduction B1b.
+5. Seek an analytic proof that the corner/axis incompatibility found in all
    431 B5 fallback shapes forces (5); retain (G) unless this succeeds.
-5. Reconstruct B3 and B4 as standalone lemmas with explicit finite contracts.
-6. Reconstruct the no-corner and high-height analytic reductions.
-7. Decide which computations remain essential and design their minimal
+6. Reconstruct B3 and B4 as standalone lemmas with explicit finite contracts.
+7. Reconstruct the no-corner and high-height analytic reductions.
+8. Decide which computations remain essential and design their minimal
    certificate/checker interfaces.
-8. Only then write the definitive TeX manuscript and formal-verification layer.
+9. Only then write the definitive TeX manuscript and formal-verification layer.
 
 ## Source convention
 
