@@ -34,6 +34,9 @@ analytic arguments and finite verifications have been independently checked.
 - [`verification/trust-policy.md`](verification/trust-policy.md) defines the
   evidentiary standard, exactness rules, independent-check requirement, and
   replay records for every retained computation.
+- [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md)
+  verifies the exact published statements that remove (m\le19), their
+  scope, computational dependencies, and version-of-record citations.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the

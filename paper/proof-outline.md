@@ -170,8 +170,16 @@ finite task, not merely cite a successful run.
 
 ### B1. Multiplicity at most 29 [E], [A], [C]
 
-Published work supplies (W_4\ge0) for (m\le19). For (20\le m\le29), the
-analytic conductor reduction is
+Bruns--García-Sánchez--O'Neill--Wilburne, Theorem 4.3, prove Wilf's
+inequality for every numerical semigroup of multiplicity at most (18).
+Kliem--Stump, Proposition 6.9 in the published version, prove it for every
+numerical semigroup of multiplicity (19). Thus the external input has no
+embedding-dimension or subclass restriction and supplies (W_4\ge0) for
+(m\le19). Exact statements, computational dependencies, version numbering,
+and bibliographic data are in the
+[multiplicity-through-19 source audit](../literature/multiplicity-through-19-audit.md).
+
+For (20\le m\le29), the analytic conductor reduction is
 
 \[
 W_4<0\quad\Longrightarrow\quad M\le m(m-2).
@@ -422,7 +430,7 @@ The following is the minimal presently retained proof interface.
 | ID | Dependency | Form | Main simplification target |
 |---|---|---|---|
 | F1–F3 | Apéry ideal, moment identity, exclusion structure | [E]+[A] | Reconstructed in `foundations.md`; obtain independent review |
-| B1a | Published multiplicity (\le19) theorem | [E] | Verify statement and bibliography |
+| B1a | Published multiplicity (\le19) theorem | [E] | Audited in `literature/multiplicity-through-19-audit.md` |
 | B1b | Negative-case conductor reduction | [A] | Isolate from historical global reduction |
 | B1c | Multiplicities (20\)–(29) | [C] | Retain two small exact kernels or find a literature replacement |
 | B2 | No-corner weighted theorem | [A]+[C] | Seek an analytic horn inequality |

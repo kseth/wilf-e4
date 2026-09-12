@@ -94,9 +94,13 @@ Eliahou and Marín-Aragón settle the case of at most twelve left elements.
 [^left12]
 
 The fixed-multiplicity computation uses Kunz polyhedra, their face structure,
-and Apéry posets. Bruns et al. prove the result for (m\le18); Kliem and Stump
-use a more efficient face iterator to settle (m=19).[^bruns][^kliem] These
-are exactly the external results needed to justify the present cutoff at 20.
+and Apéry posets. Bruns et al., Theorem 4.3, prove the result for every
+numerical semigroup with (m\le18). Kliem and Stump, Proposition 6.9 in the
+published version, use a more efficient face iterator to settle every
+numerical semigroup with (m=19).[^bruns][^kliem] These statements have no
+embedding-dimension or other subclass restriction and together justify the
+present cutoff at 20. The theorem-level source and scope check is recorded in
+the [multiplicity-through-19 audit](multiplicity-through-19-audit.md).
 
 The genus-100 verification is a separate tree-enumeration computation and is
 valuable corroborating context, not a substitute for the proposed uniform
@@ -409,12 +413,14 @@ against final pagination when the bibliography is converted to BibTeX.
 
 [^bruns]: Winfried Bruns, Pedro A. García-Sánchez, Christopher O'Neill, and
     Dane Wilburne, “Wilf's conjecture in fixed multiplicity,” *International
-    Journal of Algebra and Computation* **30** (2020), 861--882.
+    Journal of Algebra and Computation* **30** (2020), no. 4, 861--882.
+    [doi:10.1142/S021819672050023X](https://doi.org/10.1142/S021819672050023X);
     [arXiv:1903.04342](https://arxiv.org/abs/1903.04342).
 
 [^kliem]: Jonathan Kliem and Christian Stump, “A New Face Iterator for
     Polyhedra and for More General Finite Locally Branched Lattices,”
     *Discrete & Computational Geometry* **67** (2022), 1147--1173.
+    [doi:10.1007/s00454-021-00344-x](https://doi.org/10.1007/s00454-021-00344-x);
     [arXiv:1905.01945](https://arxiv.org/abs/1905.01945).
 
 [^genus100]: Manuel Delgado, Shalom Eliahou, and Jean Fromentin, “A
