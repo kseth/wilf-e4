@@ -31,6 +31,9 @@ analytic arguments and finite verifications have been independently checked.
 - [`paper/conductor-reduction.md`](paper/conductor-reduction.md) proves that a
   negative Wilf number forces bounded Apéry maximum, conductor, and
   nonmultiplicity generators.
+- [`verification/trust-policy.md`](verification/trust-policy.md) defines the
+  evidentiary standard, exactness rules, independent-check requirement, and
+  replay records for every retained computation.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the
@@ -52,6 +55,8 @@ analytic arguments and finite verifications have been independently checked.
 5. Do not edit the historical archive while reconstructing the proof.
 6. Attribute inherited constructions at the point of use and reserve novelty
    claims for the precise surplus estimates proved here.
+7. Distinguish complete mathematical replays from provenance checks,
+   record comparisons, and diagnostic experiments.
 
 The current canonical historical synthesis is
 `artifacts/wilf_four_generators_review_manuscript_2026-09-11.md`. It is not the

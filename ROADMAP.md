@@ -63,19 +63,19 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | G3 | Final-window projection inequality and equality audit | [`paper/final-window-projection.md`](paper/final-window-projection.md) |
 | B1.1 | Full-weighted-ideal theorem and six-column exclusion | [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) |
 | B1.2 | Negative-case conductor and generator bounds | [`paper/conductor-reduction.md`](paper/conductor-reduction.md) |
+| V0 | Verification vocabulary, trust boundary, and replay policy | [`verification/trust-policy.md`](verification/trust-policy.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
 
 ## Layer 1: route-wide prerequisites
 
-Three tasks are ready now.
+Two tasks are ready now.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
 | L1 | [L] | Multiplicity-through-19 source audit | LIT0 | Verify the exact Bruns et al. and Kliem--Stump statements, scope, and bibliography |
 | L2 | [L]+[D] | Published-reduction comparison | LIT0, FND | Decide whether Marashdeh or the known \(c\), \(n\), and type reductions shorten any branch |
-| V0 | [C] | Verification trust policy | none | Fix the separation between theorem specification, exhaustive generation, exact checking, independent replay, and diagnostic counts |
 
 ## Layer 2: common analytic tools
 
@@ -200,8 +200,7 @@ packaging.
 
 ## Current ready queue
 
-The topologically available tasks are L1, L2, V0, G4, G5, B3.1, B4.1, B5.1,
-B5.2, and B5.3. Task B1.3 now waits only on L1 and V0. The recommended next
-task is **V0, the verification trust policy**, so that B1.3 and every later
-finite specification are written against one explicit standard; L1 can then
-complete B1.3's external-input prerequisites.
+The topologically available tasks are L1, L2, G4, G5, B3.1, B4.1, B5.1,
+B5.2, and B5.3. Task B1.3 now waits only on L1. The recommended next task is
+**L1, the multiplicity-through-19 source audit**; completing it will make
+B1.3 topologically ready.

@@ -16,6 +16,16 @@ These labels describe the form of the argument, not its review status. Except
 for the external inputs, the present proofs and programs were AI-generated and
 must be audited independently.
 
+Every `[C]` item is governed by the
+[`verification trust policy`](../verification/trust-policy.md). In particular,
+a computed lemma requires a code-independent theorem contract, a mathematical
+coverage proof, exact fail-closed checking, a fresh complete replay, and an
+independent checking path before release. Counts, timings, random probes,
+stored `PASS` records, and manifest checks are diagnostic or provenance
+evidence, not substitutes for those obligations. The later V1 task will decide
+whether any retained components should additionally be formalized in a proof
+assistant.
+
 ## 1. Statement and normalization
 
 Let (S\subseteq\mathbb N) be a numerical semigroup with multiplicity (m),
