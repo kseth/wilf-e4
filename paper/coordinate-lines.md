@@ -230,6 +230,10 @@ mW_4(S)
 \tag{9}
 \]
 
+The exact residue refinement of (9) used by the small-multiplicity and
+six-window routes is proved in
+[`final-window-projection.md`](final-window-projection.md).
+
 ### Corollary 3.2 (predecessor lines)
 
 Let \(p\) be a minimal point of

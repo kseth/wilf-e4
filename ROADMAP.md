@@ -60,6 +60,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | PART | Exhaustive and disjoint branch routing | [`paper/case-partition.md`](paper/case-partition.md) |
 | G1 | Final-arithmetic lemma and conditional branch assembly | [`paper/final-arithmetic.md`](paper/final-arithmetic.md) |
 | G2 | Coordinate-line calculus and weighted-deficit identities | [`paper/coordinate-lines.md`](paper/coordinate-lines.md) |
+| G3 | Final-window projection inequality and equality audit | [`paper/final-window-projection.md`](paper/final-window-projection.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -78,7 +79,6 @@ Three tasks are ready now.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| G3 | [A] | Final-window projection inequality | FND, G2 | Prove the projection/\(E(Z)\) bound, residue accounting, and equality cases |
 | G4 | [A] | Phase and thickening lemma | FND, G2 | Reconstruct the discrete phase inequality, continuous thickening identity, normalization, and endpoints |
 | G5 | [A] | Central-box/three-horn theorem | FND | Give the clique-tree proof, three monotone arms, and one-corner clipping corollary |
 
@@ -200,7 +200,7 @@ packaging.
 
 ## Current ready queue
 
-The topologically available tasks are L1, L2, V0, G3, G4, G5, B3.1, B4.1,
-B5.1, B5.2, and B5.3. The next analytic task is **G3, the final-window
-projection inequality**. It advances both the small-multiplicity conductor
-route and the six-window branch.
+The topologically available tasks are L1, L2, V0, G4, G5, B1.1, B3.1, B4.1,
+B5.1, B5.2, and B5.3. The next branch-facing analytic task is **B1.1, the
+full-weighted-ideal theorem**. It uses G3 and is the remaining prerequisite
+for the conductor reduction B1.2.

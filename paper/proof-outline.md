@@ -222,7 +222,26 @@ Let
 Z=\{x\in T:M-a\cdot x<m\}.
 \]
 
-Every point of (Z) is maximal, so (|Z|\le6). The required finite theorem is:
+Every point of (Z) is maximal, so (|Z|\le6).
+
+Before any finite classification, the
+[final-window projection note](final-window-projection.md) proves
+
+\[
+mW_4\ge m\Phi(T,Z)+E(Z),
+\]
+
+where
+
+\[
+\Phi(T,Z)=\sum_j|\pi_jT|-3|Z|-E(Z),\qquad
+E(Z)=\sum_{z\in Z}|z|_1-\sum_j\max_{z\in Z}z_j.
+\]
+
+Thus only shapes with \(\Phi(T,Z)<0\) require the finite theorem below; the
+equality case \(\Phi=0\) is included analytically.
+
+The remaining finite theorem is:
 
 > If a preferred four-generator Apéry ideal has at most six elements in its
 > final Apéry window (Z), then (W_4\ge0).
@@ -395,6 +414,7 @@ The following is the minimal presently retained proof interface.
 | PART | Case exhaustion | [A] | Reconstructed in `case-partition.md`; obtain independent review |
 | G1 | Final arithmetic | [A] | Reconstructed in `final-arithmetic.md`; obtain independent review |
 | G2 | Coordinate-line calculus | [A] | Reconstructed in `coordinate-lines.md`; obtain independent review |
+| G3 | Final-window projection inequality | [A] | Reconstructed in `final-window-projection.md`; obtain independent review |
 
 ## 6. Material excluded from the main proof
 

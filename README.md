@@ -23,6 +23,8 @@ analytic arguments and finite verifications have been independently checked.
   branch bounds into Wilf's inequality and checks their endpoints.
 - [`paper/coordinate-lines.md`](paper/coordinate-lines.md) proves the
   line-count, line-top, weighted-deficit, and endpoint-upgrade identities.
+- [`paper/final-window-projection.md`](paper/final-window-projection.md)
+  proves the exact residue/projection bound and audits its equality boundary.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the
