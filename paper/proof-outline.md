@@ -418,18 +418,9 @@ example from them should appear in the main paper.
 
 ## 7. Reconstruction order
 
-1. Obtain independent review of the reconstructed upstream lemmas in
-   `foundations.md`.
-2. Obtain independent review of `case-partition.md`.
-3. Audit the final arithmetic that applies the moment identity.
-4. Isolate and audit the conductor reduction B1b.
-5. Seek an analytic proof that the corner/axis incompatibility found in all
-   431 B5 fallback shapes forces (5); retain (G) unless this succeeds.
-6. Reconstruct B3 and B4 as standalone lemmas with explicit finite contracts.
-7. Reconstruct the no-corner and high-height analytic reductions.
-8. Decide which computations remain essential and design their minimal
-   certificate/checker interfaces.
-9. Only then write the definitive TeX manuscript and formal-verification layer.
+The atomic tasks, dependencies, simplification gates, and pre-manuscript exit
+criteria are maintained in [`ROADMAP.md`](../ROADMAP.md). This outline records
+the mathematical spine; the roadmap is the execution plan.
 
 ## Source convention
 

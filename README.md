@@ -11,6 +11,8 @@ analytic arguments and finite verifications have been independently checked.
 
 ## Repository layout
 
+- [`ROADMAP.md`](ROADMAP.md) is the topologically ordered plan through the
+  pre-manuscript proof-architecture freeze.
 - [`paper/proof-outline.md`](paper/proof-outline.md) is the current clean proof
   spine and dependency ledger. Start here.
 - [`paper/foundations.md`](paper/foundations.md) proves the common Apéry,
