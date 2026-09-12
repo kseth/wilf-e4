@@ -104,6 +104,8 @@ for finite downsets supplies the nonnegative baseline for (D_0); the new burden
 is the positive surplus needed to dominate (m(m-1)/A). The identity and
 baseline are proved in the
 [foundational note](foundations.md#4-the-moment-identity-and-baseline-f2).
+The vector and line-slack refinements used by later branches are proved in the
+[coordinate-line note](coordinate-lines.md).
 
 ### F3. Minimal-exclusion structure [E]+[A]
 
@@ -270,7 +272,9 @@ For each coordinate line \(\ell\) of (T), let (L_\ell) be its length and
 \tag{3}
 \]
 
-lead to two explicit centroid witnesses.
+lead to two explicit centroid witnesses. Their conventions, proofs, weighted
+line-slack form, and generic endpoint-upgrade construction are isolated in the
+[coordinate-line note](coordinate-lines.md).
 
 For the local witness, define
 
@@ -390,6 +394,7 @@ The following is the minimal presently retained proof interface.
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
 | PART | Case exhaustion | [A] | Reconstructed in `case-partition.md`; obtain independent review |
 | G1 | Final arithmetic | [A] | Reconstructed in `final-arithmetic.md`; obtain independent review |
+| G2 | Coordinate-line calculus | [A] | Reconstructed in `coordinate-lines.md`; obtain independent review |
 
 ## 6. Material excluded from the main proof
 

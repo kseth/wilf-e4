@@ -59,17 +59,17 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | FND | Apéry lower ideal, moment identity, and exclusion rules | [`paper/foundations.md`](paper/foundations.md) |
 | PART | Exhaustive and disjoint branch routing | [`paper/case-partition.md`](paper/case-partition.md) |
 | G1 | Final-arithmetic lemma and conditional branch assembly | [`paper/final-arithmetic.md`](paper/final-arithmetic.md) |
+| G2 | Coordinate-line calculus and weighted-deficit identities | [`paper/coordinate-lines.md`](paper/coordinate-lines.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
 
 ## Layer 1: route-wide prerequisites
 
-Four tasks are ready now.
+Three tasks are ready now.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| G2 | [A] | Coordinate-line calculus | FND | Prove the line-count, line-top, and weighted-deficit identities with all conventions explicit |
 | L1 | [L] | Multiplicity-through-19 source audit | LIT0 | Verify the exact Bruns et al. and Kliem--Stump statements, scope, and bibliography |
 | L2 | [L]+[D] | Published-reduction comparison | LIT0, FND | Decide whether Marashdeh or the known \(c\), \(n\), and type reductions shorten any branch |
 | V0 | [C] | Verification trust policy | none | Fix the separation between theorem specification, exhaustive generation, exact checking, independent replay, and diagnostic counts |
@@ -200,6 +200,7 @@ packaging.
 
 ## Current ready queue
 
-The topologically available tasks are G2, L1, L2, V0, G5, B3.1, B4.1, B5.1,
-and B5.2. The next analytic task is **G2, the coordinate-line calculus**. It
-is route-wide infrastructure for G3, G4, B1.2, and B5.3.
+The topologically available tasks are L1, L2, V0, G3, G4, G5, B3.1, B4.1,
+B5.1, B5.2, and B5.3. The next analytic task is **G3, the final-window
+projection inequality**. It advances both the small-multiplicity conductor
+route and the six-window branch.

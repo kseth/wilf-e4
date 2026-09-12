@@ -272,6 +272,10 @@ nonnegative baseline: Proposition 4.2 shows that Wilf's inequality requires
 the stronger bound \(D\ge m(m-1)\), or
 \(D_0\ge m(m-1)/A\).
 
+The exact line-slack decomposition, its vector form, and the predecessor-line
+and endpoint-upgrade consequences used later are collected in
+[`coordinate-lines.md`](coordinate-lines.md).
+
 ## 5. Minimal excluded points (F3)
 
 A point \(p\in\mathbb N^3\setminus T\) is *minimal excluded*, or a *corner*,
