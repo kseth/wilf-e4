@@ -61,6 +61,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | G1 | Final-arithmetic lemma and conditional branch assembly | [`paper/final-arithmetic.md`](paper/final-arithmetic.md) |
 | G2 | Coordinate-line calculus and weighted-deficit identities | [`paper/coordinate-lines.md`](paper/coordinate-lines.md) |
 | G3 | Final-window projection inequality and equality audit | [`paper/final-window-projection.md`](paper/final-window-projection.md) |
+| B1.1 | Full-weighted-ideal theorem and six-column exclusion | [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -94,7 +95,6 @@ the historical computations.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B1.1 | [A] | Full-weighted-ideal theorem | G3 | Reconstruct the three-, four-, and impossible six-column cases |
 | B1.2 | [A] | Conductor reduction | G1, G2, B1.1 | Prove \(W_4<0\Rightarrow M\le m(m-2)\), including the non-full corner argument |
 | B1.3 | [C] | Finite generator-box specification | L1, B1.2, V0 | Prove exhaustive coverage of sorted minimal triples for \(20\le m\le29\) |
 
@@ -200,7 +200,8 @@ packaging.
 
 ## Current ready queue
 
-The topologically available tasks are L1, L2, V0, G4, G5, B1.1, B3.1, B4.1,
-B5.1, B5.2, and B5.3. The next branch-facing analytic task is **B1.1, the
-full-weighted-ideal theorem**. It uses G3 and is the remaining prerequisite
-for the conductor reduction B1.2.
+The topologically available tasks are L1, L2, V0, G4, G5, B1.2, B3.1, B4.1,
+B5.1, B5.2, and B5.3. The next branch-facing analytic task is **B1.2, the
+conductor reduction**. Its full-weighted subcase is now B1.1; what remains is
+to extract a low-weight excluded corner in the non-full case and account for
+its predecessor lines.

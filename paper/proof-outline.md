@@ -186,6 +186,13 @@ Historical source:
 `round5/small_multiplicity/exhaustive_m20_m29_theorem.md` in the review
 package.
 
+The full-weighted subcase of the first obligation is now reconstructed in the
+[`full-weighted-ideal note`](full-weighted-ideal.md). It classifies the
+projection along the least-weight coordinate, excludes the only six-column
+possibility by an additive-order argument, and dispatches the remaining
+three- and four-column cases with the final-window projection inequality. No
+finite verification enters that subcase.
+
 ### B2. No full-support corner [A], [C]
 
 The required abstract theorem is:

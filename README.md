@@ -25,6 +25,9 @@ analytic arguments and finite verifications have been independently checked.
   line-count, line-top, weighted-deficit, and endpoint-upgrade identities.
 - [`paper/final-window-projection.md`](paper/final-window-projection.md)
   proves the exact residue/projection bound and audits its equality boundary.
+- [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) classifies
+  full weighted ideals, excludes the six-column triangle analytically, and
+  proves Wilf's inequality for this subcase.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the
