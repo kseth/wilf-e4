@@ -28,6 +28,9 @@ analytic arguments and finite verifications have been independently checked.
 - [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) classifies
   full weighted ideals, excludes the six-column triangle analytically, and
   proves Wilf's inequality for this subcase.
+- [`paper/conductor-reduction.md`](paper/conductor-reduction.md) proves that a
+  negative Wilf number forces bounded Apéry maximum, conductor, and
+  nonmultiplicity generators.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the

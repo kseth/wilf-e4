@@ -1,6 +1,6 @@
 # Pre-manuscript reconstruction roadmap
 
-**Status date:** 2026-09-11
+**Status date:** 2026-09-12
 
 ## Purpose and cutoff
 
@@ -62,6 +62,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | G2 | Coordinate-line calculus and weighted-deficit identities | [`paper/coordinate-lines.md`](paper/coordinate-lines.md) |
 | G3 | Final-window projection inequality and equality audit | [`paper/final-window-projection.md`](paper/final-window-projection.md) |
 | B1.1 | Full-weighted-ideal theorem and six-column exclusion | [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) |
+| B1.2 | Negative-case conductor and generator bounds | [`paper/conductor-reduction.md`](paper/conductor-reduction.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -95,7 +96,6 @@ the historical computations.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B1.2 | [A] | Conductor reduction | G1, G2, B1.1 | Prove \(W_4<0\Rightarrow M\le m(m-2)\), including the non-full corner argument |
 | B1.3 | [C] | Finite generator-box specification | L1, B1.2, V0 | Prove exhaustive coverage of sorted minimal triples for \(20\le m\le29\) |
 
 ### B2: no full-support corner
@@ -200,8 +200,8 @@ packaging.
 
 ## Current ready queue
 
-The topologically available tasks are L1, L2, V0, G4, G5, B1.2, B3.1, B4.1,
-B5.1, B5.2, and B5.3. The next branch-facing analytic task is **B1.2, the
-conductor reduction**. Its full-weighted subcase is now B1.1; what remains is
-to extract a low-weight excluded corner in the non-full case and account for
-its predecessor lines.
+The topologically available tasks are L1, L2, V0, G4, G5, B3.1, B4.1, B5.1,
+B5.2, and B5.3. Task B1.3 now waits only on L1 and V0. The recommended next
+task is **V0, the verification trust policy**, so that B1.3 and every later
+finite specification are written against one explicit standard; L1 can then
+complete B1.3's external-input prerequisites.

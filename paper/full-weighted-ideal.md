@@ -547,7 +547,8 @@ classification:
 > coordinate has three or four columns; the only other formal possibility is
 > a six-column triangle, which residue injectivity excludes.
 
-The immediate contrapositive used in the conductor reduction is
+The immediate contrapositive used in the
+[`conductor reduction`](conductor-reduction.md) is
 
 \[
 W_4(S)<0

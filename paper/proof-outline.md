@@ -186,12 +186,15 @@ Historical source:
 `round5/small_multiplicity/exhaustive_m20_m29_theorem.md` in the review
 package.
 
-The full-weighted subcase of the first obligation is now reconstructed in the
-[`full-weighted-ideal note`](full-weighted-ideal.md). It classifies the
-projection along the least-weight coordinate, excludes the only six-column
-possibility by an additive-order argument, and dispatches the remaining
-three- and four-column cases with the final-window projection inequality. No
-finite verification enters that subcase.
+The first obligation is now fully reconstructed. The
+[`full-weighted-ideal note`](full-weighted-ideal.md) classifies the projection
+along the least-weight coordinate, excludes the only six-column possibility
+by an additive-order argument, and dispatches the remaining three- and
+four-column cases with the final-window projection inequality. The
+[`conductor-reduction note`](conductor-reduction.md) extracts a low-weight
+corner in every non-full ideal and proves from its predecessor lines that
+\(M\le D\le m(m-2)\) in a negative case. Neither step uses finite
+verification or assumes a multiplicity range.
 
 ### B2. No full-support corner [A], [C]
 

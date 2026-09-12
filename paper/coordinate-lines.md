@@ -246,10 +246,19 @@ Q\ge\max_{x\in T}\omega\mathbin\cdot x,
 \omega\mathbin\cdot p\le Q.
 \]
 
-Then
+Then the predecessor lines of \(p\) contribute exactly
 
 \[
-D_T(\omega,Q)\ge\omega\mathbin\cdot p.
+Q+(|p|_1-1)(Q-\omega\mathbin\cdot p).
+\]
+
+Consequently
+
+\[
+D_T(\omega,Q)
+\ge Q+(|p|_1-1)(Q-\omega\mathbin\cdot p)
+\ge Q
+\ge\omega\mathbin\cdot p.
 \tag{10}
 \]
 
@@ -268,11 +277,14 @@ Their contribution to (6) is
 p_i\bigl(Q-\omega\mathbin\cdot(p-e_i)\bigr)
 &=|p|_1\bigl(Q-\omega\mathbin\cdot p\bigr)
   +\omega\mathbin\cdot p\\
-&\ge\omega\mathbin\cdot p.
+&=Q+(|p|_1-1)
+  \bigl(Q-\omega\mathbin\cdot p\bigr).
 \end{aligned}
 \]
 
-All remaining summands in (6) are nonnegative. \(\square\)
+The point \(p\) is nonzero because every nonempty lower ideal contains zero,
+so \(|p|_1\ge1\). The last expression is therefore at least \(Q\). All
+remaining summands in (6) are nonnegative. \(\square\)
 
 ## 4. Replacing line tops by dominating points
 
