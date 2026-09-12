@@ -65,6 +65,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B1.2 | Negative-case conductor and generator bounds | [`paper/conductor-reduction.md`](paper/conductor-reduction.md) |
 | V0 | Verification vocabulary, trust boundary, and replay policy | [`verification/trust-policy.md`](verification/trust-policy.md) |
 | L1 | Multiplicity-through-19 statement, scope, and source audit | [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md) |
+| B1.3 | Finite generator-box specification and coverage proof | [`paper/small-multiplicity-specification.md`](paper/small-multiplicity-specification.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -94,9 +95,8 @@ the historical computations.
 
 ### B1: multiplicity at most 29
 
-| ID | Type | Atomic deliverable | Depends on | Completion test |
-|---|---|---|---|---|
-| B1.3 | [C] | Finite generator-box specification | L1, B1.2, V0 | Prove exhaustive coverage of sorted minimal triples for \(20\le m\le29\) |
+The branch-entry specification is complete. The D1 simplification gate now
+waits only on L2.
 
 ### B2: no full-support corner
 
@@ -200,7 +200,7 @@ packaging.
 
 ## Current ready queue
 
-The topologically available tasks are L2, G4, G5, B1.3, B3.1, B4.1, B5.1,
-B5.2, and B5.3. The recommended next task is **B1.3, the finite
-generator-box specification**. It completes the mathematical interface for
-the small-multiplicity computation before the D1 simplification gate.
+The topologically available tasks are L2, G4, G5, B3.1, B4.1, B5.1, B5.2,
+and B5.3. The recommended next task is **L2, the published-reduction
+comparison**. Completing it will unlock the D1 decision on whether the
+small-multiplicity computation can be removed or reduced before any replay.

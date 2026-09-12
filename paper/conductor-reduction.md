@@ -225,9 +225,12 @@ Because \(e_1,e_2,e_3\in T\), the low-weight corner in Lemma 2.1 has
 only confirm where equality was retained.
 
 Neither the proof nor its conclusion assumes \(m\le29\). The range
-\(20\le m\le29\) enters only in B1.3, where the finite box (10) is to be
-exhausted. No claim about nonnegative cases follows from the bound: a
-semigroup with \(W_4(S)\ge0\) may have arbitrarily larger conductor.
+\(20\le m\le29\) enters only in B1.3. The
+[finite generator-box specification](small-multiplicity-specification.md)
+proves exactly how the finite box (10), together with the bound on \(M\),
+covers every possible counterexample. No claim about nonnegative cases
+follows from the bound: a semigroup with \(W_4(S)\ge0\) may have arbitrarily
+larger conductor.
 
 ## 6. Retained interface
 

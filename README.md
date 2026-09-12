@@ -31,6 +31,10 @@ analytic arguments and finite verifications have been independently checked.
 - [`paper/conductor-reduction.md`](paper/conductor-reduction.md) proves that a
   negative Wilf number forces bounded Apéry maximum, conductor, and
   nonmultiplicity generators.
+- [`paper/small-multiplicity-specification.md`](paper/small-multiplicity-specification.md)
+  specifies the exact finite obligation for \(20\le m\le29\) and proves
+  that its sorted minimal generator tuples cover every possible
+  counterexample.
 - [`verification/trust-policy.md`](verification/trust-policy.md) defines the
   evidentiary standard, exactness rules, independent-check requirement, and
   replay records for every retained computation.

@@ -193,8 +193,12 @@ must occur among
 m<a_1<a_2<a_3\le m(m-2).
 \]
 
-The retained computation exhausts this finite box using two distinct exact
-algorithms. Thus the mathematical obligations are:
+The minimal finite obligation is to check every sorted, minimally generated
+tuple in this box whose Apéry maximum also satisfies \(M\le m(m-2)\).
+The [finite generator-box specification](small-multiplicity-specification.md)
+proves that these tuples contain every possible counterexample and gives
+exact Apéry-distance and ordinary-membership predicates. Thus the
+mathematical obligations are:
 
 1. prove (2), including the full-weighted-ideal subcase;
 2. prove that the enumeration covers precisely every possible counterexample;
@@ -204,7 +208,7 @@ Historical source:
 `round5/small_multiplicity/exhaustive_m20_m29_theorem.md` in the review
 package.
 
-The first obligation is now fully reconstructed. The
+The first two obligations are now fully reconstructed. The
 [`full-weighted-ideal note`](full-weighted-ideal.md) classifies the projection
 along the least-weight coordinate, excludes the only six-column possibility
 by an additive-order argument, and dispatches the remaining three- and
@@ -212,7 +216,11 @@ four-column cases with the final-window projection inequality. The
 [`conductor-reduction note`](conductor-reduction.md) extracts a low-weight
 corner in every non-full ideal and proves from its predecessor lines that
 \(M\le D\le m(m-2)\) in a negative case. Neither step uses finite
-verification or assumes a multiplicity range.
+verification or assumes a multiplicity range. The generator-box note proves
+the canonical-tuple, minimality, gcd, endpoint, and negative-case coverage
+claims without relying on a historical run. The D1 gate will decide whether
+to retain the finite obligation; if retained, R1a and R1b must still audit and
+freshly replay the two independent exact checking paths.
 
 ### B2. No full-support corner [A], [C]
 
@@ -431,8 +439,8 @@ The following is the minimal presently retained proof interface.
 |---|---|---|---|
 | F1–F3 | Apéry ideal, moment identity, exclusion structure | [E]+[A] | Reconstructed in `foundations.md`; obtain independent review |
 | B1a | Published multiplicity (\le19) theorem | [E] | Audited in `literature/multiplicity-through-19-audit.md` |
-| B1b | Negative-case conductor reduction | [A] | Isolate from historical global reduction |
-| B1c | Multiplicities (20\)–(29) | [C] | Retain two small exact kernels or find a literature replacement |
+| B1b | Negative-case conductor reduction | [A] | Reconstructed in `conductor-reduction.md`; obtain independent review |
+| B1c | Multiplicities (20\)–(29) | [C] | Specified in `small-multiplicity-specification.md`; await D1 and any retained replays |
 | B2 | No-corner weighted theorem | [A]+[C] | Seek an analytic horn inequality |
 | B3 | Six-final-window theorem | [A]+[C] | Shrink the shape/completion argument and certificate interface |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
