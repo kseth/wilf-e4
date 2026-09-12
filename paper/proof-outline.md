@@ -351,37 +351,26 @@ Historical sources: `round7/uniform_gap_theorem.md` and
 
 ## 4. Final arithmetic [A]
 
-There are only three conclusions to check after the branch theorems.
-
-If (D_0\ge m-1), then (1) and (A\ge m+1) give
+The [final-arithmetic note](final-arithmetic.md) proves, directly from (1),
 
 \[
-mW_4\ge(A-m)(m-1)>0,
+\begin{array}{rcl}
+D_0\ge m-1 &\Longrightarrow& W_4\ge1,\\
+D_0\ge m   &\Longrightarrow& W_4\ge A-m+1\ge2,\\
+m\ge30,\quad D_0\ge m-\dfrac{29}{10}
+&\Longrightarrow& W_4\ge0.
+\end{array}
 \]
 
-so the integrality of (W_4) gives (W_4\ge1).
-
-If (D_0\ge m), then
+The last implication uses negative integrality. Its worst endpoint is
+\(m=30\), where
 
 \[
-W_4\ge A-m+1\ge2.
+\frac{90}{31}-\frac{29}{10}=\frac1{310}>0.
 \]
 
-Finally, suppose the high-height branch had (W_4<0). Then
-
-\[
-D_0\le\frac{m(m-2)}A
-\le m-3+\frac3{m+1},
-\]
-
-and therefore, for (m\ge30),
-
-\[
-m-D_0\ge\frac{3m}{m+1}\ge\frac{90}{31}>
-\frac{29}{10},
-\]
-
-contradicting B6. Thus every row of the case table gives (W_4\ge0).
+The note also checks the seven rows of the case partition, conditionally on
+their branch theorems.
 
 ## 5. Dependency ledger
 
@@ -399,7 +388,8 @@ The following is the minimal presently retained proof interface.
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
-| C | Case exhaustion and final arithmetic | [A] | Exhaustion is reconstructed in `case-partition.md`; audit the final arithmetic |
+| PART | Case exhaustion | [A] | Reconstructed in `case-partition.md`; obtain independent review |
+| G1 | Final arithmetic | [A] | Reconstructed in `final-arithmetic.md`; obtain independent review |
 
 ## 6. Material excluded from the main proof
 

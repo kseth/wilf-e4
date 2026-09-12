@@ -47,8 +47,8 @@ completed: literature baseline + foundations + case partition
                pre-manuscript freeze
 ```
 
-Tasks in the same layer may be tackled in any order once their stated
-dependencies are complete.
+The layer numbers give a convenient topological order, but they are not
+barriers: any task may begin as soon as its stated dependencies are complete.
 
 ## Completed base
 
@@ -58,17 +58,17 @@ dependencies are complete.
 | CHO | Focused Chomicz comparison | [`research/chomicz-assessment.md`](research/chomicz-assessment.md) |
 | FND | Apéry lower ideal, moment identity, and exclusion rules | [`paper/foundations.md`](paper/foundations.md) |
 | PART | Exhaustive and disjoint branch routing | [`paper/case-partition.md`](paper/case-partition.md) |
+| G1 | Final-arithmetic lemma and conditional branch assembly | [`paper/final-arithmetic.md`](paper/final-arithmetic.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
 
 ## Layer 1: route-wide prerequisites
 
-All five tasks are ready now.
+Four tasks are ready now.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| G1 | [A] | Final-arithmetic lemma | FND, PART | Derive each branch conclusion, including integrality and every endpoint |
 | G2 | [A] | Coordinate-line calculus | FND | Prove the line-count, line-top, and weighted-deficit identities with all conventions explicit |
 | L1 | [L] | Multiplicity-through-19 source audit | LIT0 | Verify the exact Bruns et al. and Kliem--Stump statements, scope, and bibliography |
 | L2 | [L]+[D] | Published-reduction comparison | LIT0, FND | Decide whether Marashdeh or the known \(c\), \(n\), and type reductions shorten any branch |
@@ -200,7 +200,6 @@ packaging.
 
 ## Current ready queue
 
-The topologically available tasks are G1, G2, L1, L2, and V0. The smallest
-and safest next commit is **G1, the final-arithmetic lemma**. It validates the
-three thresholds used by every later branch without committing us to a
-computational route.
+The topologically available tasks are G2, L1, L2, V0, G5, B3.1, B4.1, B5.1,
+and B5.2. The next analytic task is **G2, the coordinate-line calculus**. It
+is route-wide infrastructure for G3, G4, B1.2, and B5.3.

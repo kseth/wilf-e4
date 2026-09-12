@@ -19,6 +19,8 @@ analytic arguments and finite verifications have been independently checked.
   residue, exclusion, and moment lemmas used by every proof branch.
 - [`paper/case-partition.md`](paper/case-partition.md) proves that the
   retained branches are exhaustive and mutually exclusive.
+- [`paper/final-arithmetic.md`](paper/final-arithmetic.md) converts the three
+  branch bounds into Wilf's inequality and checks their endpoints.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the
