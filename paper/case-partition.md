@@ -41,13 +41,13 @@ Exactly one of the following cases holds:
 
 | Case | Routing condition |
 |---|---|
-| B1 via B1a | \(m\le19\) |
-| B1 via B1b--B1c | \(20\le m\le29\) |
+| B1 via L1 | \(m\le19\) |
+| B1 via B1.1--B1.3 | \(20\le m\le29\) |
 | B2 | \(m\ge30\), with no full-support corner |
 | B3 | \(m\ge30\), with full-support corner \(p=(1,1,1)\) |
 | B4 | \(m\ge30\), with \(p\) a coordinate permutation of \((2,1,1)\) |
-| B5 | \(m\ge30\), with \(|p|_1\ge5\) and \(R\le6\) |
-| B6 | \(m\ge30\), with \(|p|_1\ge5\) and \(R\ge7\) |
+| B5 | \(m\ge30\), with \(\lvert p\rvert_1\ge5\) and \(R\le6\) |
+| B6 | \(m\ge30\), with \(\lvert p\rvert_1\ge5\) and \(R\ge7\) |
 
 In B5 one automatically has
 
@@ -64,8 +64,8 @@ H\ge R\ge7.
 #### Proof
 
 First split into \(m\le29\) and \(m\ge30\). The former range divides into
-\(m\le19\), handled by B1a, and \(20\le m\le29\), handled by the B1b
-reduction followed by the B1c verification. Now suppose \(m\ge30\).
+\(m\le19\), handled by L1, and \(20\le m\le29\), handled by the B1.1--B1.2
+reduction followed by the B1.3 verification. Now suppose \(m\ge30\).
 
 If \(T\) has no full-support corner, we are in B2. Otherwise the foundational
 corner lemma gives a unique full-support corner
@@ -103,8 +103,8 @@ both exhaustive and mutually exclusive. ∎
 
 ```text
 all minimally four-generated semigroups
-├── m <= 19 ............................................ B1 via B1a
-├── 20 <= m <= 29 ............................... B1 via B1b--B1c
+├── m <= 19 ............................................. B1 via L1
+├── 20 <= m <= 29 ............................ B1 via B1.1--B1.3
 └── m >= 30
     ├── no full-support corner ................................. B2
     └── unique full-support corner p
@@ -139,7 +139,7 @@ organization.
 
 The remainder of the proof may cite Proposition 2.1 for the following:
 
-1. it is enough to prove the result through B1a, B1b--B1c, and B2--B6;
+1. it is enough to prove the result through L1, B1.1--B1.3, and B2--B6;
 2. the B5 search may assume \(5\le|p|_1\le7\); and
 3. the B6 argument may assume \(H\ge7\).
 

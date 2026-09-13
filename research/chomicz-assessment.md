@@ -30,17 +30,17 @@ it supplied an embedding-dimension-four reduction.
 
 ## Choice-invariance of the quantity being bounded
 
-Let (T) contain one exponent vector (x(w)) for each
-(w\in\operatorname{Ap}(S,m)), where (a\cdot x(w)=w). Then
+Let \(T\) contain one exponent vector \(x(w)\) for each
+\(w\in\operatorname{Ap}(S,m)\), where \(a\cdot x(w)=w\). Then
 
 \[
   a\mathbin\cdot\sum_{x\in T}x
   =\sum_{w\in\operatorname{Ap}(S,m)}w.
 \]
 
-Consequently (b\cdot s), and hence the moment deficit (D_0), is the same for
+Consequently \(b\cdot s\), and hence the moment deficit \(D_0\), is the same for
 every L-shape of this fixed Apéry set. A different L-shape may change
-(R), its minimal excluded points, and the witnesses (U_2) and (G). Thus the
+\(R\), its minimal excluded points, and the witnesses \(U_2\) and \(G\). Thus the
 only plausible simplification from nonuniqueness is to choose a geometry on
 which the invariant bound is easier to certify.
 
@@ -50,11 +50,11 @@ selection lemma without removing an existing obligation.
 
 ## B5 residue probe
 
-The B5 enumeration has 431 shapes for which (U_2(T)<m) and the analytic axis
-witness (G) is used. A separate exact probe applies necessary conditions for a
+The B5 enumeration has 431 shapes for which \(U_2(T)<m\) and the analytic axis
+witness \(G\) is used. A separate exact probe applies necessary conditions for a
 genuine Apéry L-shape:
 
-1. the three generator residues modulo (m) are nonzero and pairwise distinct;
+1. the three generator residues modulo \(m\) are nonzero and pairwise distinct;
 2. the full-support minimal corner has residue zero;
 3. labels on the three coordinate axes are injective; and
 4. the representative sharing a residue with a mixed minimal corner lies on
@@ -76,14 +76,14 @@ the repository root with
 python3 research/check_b5_residue_fallbacks.py
 ```
 
-This is an exploratory audit, not a retained proof dependency. Replacing (G)
+This is an exploratory audit, not a retained proof dependency. Replacing \(G\)
 by this search would not reduce the amount of machine verification. Its value
 is the sharper analytic target:
 
 > Prove that every residue-compatible Apéry L-shape in the B5 domain satisfies
-> (U_2(T)\ge m).
+> \(U_2(T)\ge m\).
 
-One possible route is to show directly that (U_2<m) forces precisely the
+One possible route is to show directly that \(U_2<m\) forces precisely the
 corner/axis incompatibility detected above, phrased in Chomicz's positive-
 relation language. Until then, the existing local-or-axis theorem is the
 cleaner proof interface.

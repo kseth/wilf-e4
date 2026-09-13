@@ -45,10 +45,10 @@ manuscript should be shown privately to specialists in numerical semigroups.
 
 ## 2. The conjecture and the classical boundary
 
-Let (S\subseteq\mathbb N) be a numerical semigroup. Write (e) for its
-embedding dimension, (m) for its multiplicity, (c) for its conductor,
-(g=|\mathbb N\setminus S|) for its genus, and
-(n=|S\cap[0,c)|=c-g). Wilf's 1978 question is equivalent to
+Let \(S\subseteq\mathbb N\) be a numerical semigroup. Write \(e\) for its
+embedding dimension, \(m\) for its multiplicity, \(c\) for its conductor,
+\(g=|\mathbb N\setminus S|\) for its genus, and
+\(n=|S\cap[0,c)|=c-g\). Wilf's 1978 question is equivalent to
 
 \[
   en\ge c.
@@ -59,67 +59,67 @@ The original source is Wilf's *A Circle-of-Lights Algorithm for the
 paper, not only later surveys.
 
 Fröberg, Gottlieb, and Häggkvist established two facts that remain central:
-the conjecture for (e\le3), and the type inequality (g\le tn), where (t)
-is the type.[^fgh] Hence (t\le e-1) implies
-(c=n+g\le(t+1)n\le en). Dobbs and Matthews gave another early treatment of
+the conjecture for \(e\le3\), and the type inequality \(g\le tn\), where \(t\)
+is the type.[^fgh] Hence \(t\le e-1\) implies
+\(c=n+g\le(t+1)n\le en\). Dobbs and Matthews gave another early treatment of
 Wilf's question and several small cases.[^dobbs]
 
 Delgado's survey is the best single orientation source through 2020, but the
 eventual paper should cite the primary papers for every theorem actually used.
 [^delgado-survey]
 
-## 3. Established regions relevant to (e=4)
+## 3. Established regions relevant to \(e=4\)
 
 | Hypothesis known to imply Wilf | Source | Consequence for this project |
 |---|---|---|
-| (e\le3) | Fröberg--Gottlieb--Häggkvist; Dobbs--Matthews | Explains why (e=4) is the first open embedding dimension. |
-| (t\le e-1) | (g\le tn), Fröberg--Gottlieb--Häggkvist | A hard (e=4) case has (t\ge4). |
-| (c\le2m) | Kaplan | Subsumed by the stronger (c\le3m) result below. |
-| (2e\ge m) | Sammartano | For (e=4), handles only (m\le8). |
-| (c\le3m) | Eliahou | A hard case has (c>3m). |
-| (3e\ge m) | Eliahou | For (e=4), handles (m\le12). |
-| (|S\cap[0,c)|\le12) | Eliahou--Marín-Aragón | A hard case has (n\ge13). |
-| fixed (m\le18) | Bruns--García-Sánchez--O'Neill--Wilburne | Computer-assisted Kunz-cone verification. |
-| fixed (m=19) | Kliem--Stump | Extends the verified range to (m\le19). |
-| genus (g\le100) | Delgado--Eliahou--Fromentin | Independent large finite verification; not needed in the present route. |
-| (m\mid c) and (4e\ge m) | Eliahou | For (e=4), gives (m\le16), already inside (m\le19). |
+| \(e\le3\) | Fröberg--Gottlieb--Häggkvist; Dobbs--Matthews | Explains why \(e=4\) is the first open embedding dimension. |
+| \(t\le e-1\) | \(g\le tn\), Fröberg--Gottlieb--Häggkvist | A hard \(e=4\) case has \(t\ge4\). |
+| \(c\le2m\) | Kaplan | Subsumed by the stronger \(c\le3m\) result below. |
+| \(2e\ge m\) | Sammartano | For \(e=4\), handles only \(m\le8\). |
+| \(c\le3m\) | Eliahou | A hard case has \(c>3m\). |
+| \(3e\ge m\) | Eliahou | For \(e=4\), handles \(m\le12\). |
+| \(\lvert S\cap[0,c)\rvert\le12\) | Eliahou--Marín-Aragón | A hard case has \(n\ge13\). |
+| fixed \(m\le18\) | Bruns--García-Sánchez--O'Neill--Wilburne | Computer-assisted Kunz-cone verification. |
+| fixed \(m=19\) | Kliem--Stump | Extends the verified range to \(m\le19\). |
+| genus \(g\le100\) | Delgado--Eliahou--Fromentin | Independent large finite verification; not needed in the present route. |
+| \(m\mid c\) and \(4e\ge m\) | Eliahou | For \(e=4\), gives \(m\le16\), already inside \(m\le19\). |
 | almost symmetric | Barucci; D'Anna--Moscariello[^barucci][^danna] | Removes a structural family, but not the whole hard range. |
 
 Kaplan's result is part of a broader study of numerical semigroups by genus.
 [^kaplan] Sammartano proved the high-embedding-dimension criterion and several
 other families.[^sammartano] Eliahou's Macaulay-theorem paper proves the
-conductor bound (c\le3m), while the later graph-theoretic paper improves the
-embedding-dimension threshold from (m/2) to (m/3).[^macaulay][^graph]
+conductor bound \(c\le3m\), while the later graph-theoretic paper improves the
+embedding-dimension threshold from \(m/2\) to \(m/3\).[^macaulay][^graph]
 Eliahou and Marín-Aragón settle the case of at most twelve left elements.
 [^left12]
 
 The fixed-multiplicity computation uses Kunz polyhedra, their face structure,
 and Apéry posets. Bruns et al., Theorem 4.3, prove the result for every
-numerical semigroup with (m\le18). Kliem and Stump, Proposition 6.9 in the
+numerical semigroup with \(m\le18\). Kliem and Stump, Proposition 6.9 in the
 published version, use a more efficient face iterator to settle every
-numerical semigroup with (m=19).[^bruns][^kliem] These statements have no
+numerical semigroup with \(m=19\).[^bruns][^kliem] These statements have no
 embedding-dimension or other subclass restriction and together justify the
 present cutoff at 20. The theorem-level source and scope check is recorded in
 the [multiplicity-through-19 audit](multiplicity-through-19-audit.md).
 
 The genus-100 verification is a separate tree-enumeration computation and is
 valuable corroborating context, not a substitute for the proposed uniform
-(e=4) proof.[^genus100]
+\(e=4\) proof.[^genus100]
 
 ## 4. Direct lineage of the proposed proof
 
 ### 4.1 Apéry sets and preferred factorizations
 
-For (S=\langle m,a_1,a_2,a_3\rangle), the repository chooses one
-factorization by (a_1,a_2,a_3) for each element of
-(\operatorname{Ap}(S,m)), using a fixed lexicographic rule, and calls the set
-of exponent vectors (T\subseteq\mathbb N^3).
+For \(S=\langle m,a_1,a_2,a_3\rangle\), the repository chooses one
+factorization by \(a_1,a_2,a_3\) for each element of
+\(\operatorname{Ap}(S,m)\), using a fixed lexicographic rule, and calls the set
+of exponent vectors \(T\subseteq\mathbb N^3\).
 
 This construction must not be presented as novel. Zhai chooses preferred
 factorizations of Apéry elements and observes that their exponent vectors form
 a finite downset. He then proves a weighted mean inequality for arbitrary
-finite downsets in (\mathbb N^d).[^zhai] In the current notation and with
-(d=3), that inequality supplies the nonnegative baseline for the moment
+finite downsets in \(\mathbb N^d\).[^zhai] In the current notation and with
+\(d=3\), that inequality supplies the nonnegative baseline for the moment
 deficit. The proposed proof needs a quantified improvement over that baseline.
 
 Hellus, Rechenauer, and Waldi explicitly recast the preferred representatives
@@ -169,10 +169,10 @@ stronger, F3 should be a cited proposition rather than a new lemma.
 
 Kunz coordinates and Kunz polyhedra provide a different finite-dimensional
 model of numerical semigroups of fixed multiplicity. Bruns et al. connect
-faces to Apéry posets and reduce fixed-(m) verification to rational
-polyhedral feasibility.[^bruns] That route supplies the (m\le19) boundary
+faces to Apéry posets and reduce fixed-\(m\) verification to rational
+polyhedral feasibility.[^bruns] That route supplies the \(m\le19\) boundary
 but is not the same computation as the repository's enumeration of generator
-triples for (20\le m\le29). The eventual paper must explain why the latter
+triples for \(20\le m\le29\). The eventual paper must explain why the latter
 search is exhaustive and why extending the published Kunz-cone computation
 was not used instead.
 
@@ -188,7 +188,7 @@ in geometry and timing that it must be discussed and compared explicitly.
 ### 4.5 What Chomicz changes in the present strategy
 
 Chomicz describes an Apéry set by deleting upper orthants in
-(\mathbb N^3) along relations whose labels are positive multiples of a
+\(\mathbb N^3\) along relations whose labels are positive multiples of a
 distinguished generator. Theorem 2.2 gives a universal relation-deletion
 description. Propositions 2.5 and 2.8 construct three-dimensional L-shapes in
 the main and exceptional relation configurations, and Proposition 2.11
@@ -203,13 +203,13 @@ the proposed proof:
    every Apéry residue. Zhai and Hellus--Rechenauer--Waldi provide a shorter,
    more direct source for those precise facts.
 2. Chomicz's relation dichotomy may require rearranging all four generators.
-   The proof here must distinguish the multiplicity (m), since
-   (|\operatorname{Ap}(S,m)|=m),
-   (\max\operatorname{Ap}(S,m)=c+m-1), and (A\ge m+1) drive the moment
-   normalization. Reordering away from (m) would therefore cost more than it
+   The proof here must distinguish the multiplicity \(m\), since
+   \(|\operatorname{Ap}(S,m)|=m\),
+   \(\max\operatorname{Ap}(S,m)=c+m-1\), and \(A\ge m+1\) drive the moment
+   normalization. Reordering away from \(m\) would therefore cost more than it
    saves.
 3. Choosing a different L-shape cannot change the weighted moment:
-   (a\cdot\sum_{x\in T}x) is the sum of the Apéry elements for every choice of
+   \(a\cdot\sum_{x\in T}x\) is the sum of the Apéry elements for every choice of
    their factorizations. It can change the corners and the auxiliary centroid
    witnesses, so nonuniqueness remains a possible way to simplify a future
    geometric proof, not the current numerical inequality itself.
@@ -228,31 +228,31 @@ check are in [`research/chomicz-assessment.md`](../research/chomicz-assessment.m
 ## 5. Other reductions and recent work
 
 Moscariello and Sammartano prove an asymptotic result for fixed
-(\lceil m/e\rceil), subject to restrictions on prime divisors of (m).
+\(\lceil m/e\rceil\), subject to restrictions on prime divisors of \(m\).
 [^mosc-samm] Chatterjee and Narula's 2026 paper replaces that arithmetic
-condition by (\gcd(m,a_2)=1) and improves the numerical threshold.[^chatterjee]
-These results cover substantial infinite families but not every (e=4)
+condition by \(\gcd(m,a_2)=1\) and improves the numerical threshold.[^chatterjee]
+These results cover substantial infinite families but not every \(e=4\)
 semigroup.
 
-Spirito treats semigroups whose second generator is large relative to (c)
-and (m).[^spirito] D'Anna and Moscariello give bounds in terms of (e) and
-(n), as well as another proof for almost-symmetric semigroups.[^danna]
-Eliahou's divset method proves Wilf under (m\mid c) and (4e\ge m).
+Spirito treats semigroups whose second generator is large relative to \(c\)
+and \(m\).[^spirito] D'Anna and Moscariello give bounds in terms of \(e\) and
+\(n\), as well as another proof for almost-symmetric semigroups.[^danna]
+Eliahou's divset method proves Wilf under \(m\mid c\) and \(4e\ge m\).
 [^divsets] Divsets are especially relevant conceptually because they are
-divisor-closed monomial models, but for (e=4) their published numerical
-threshold lies within the already known (m\le19) range.
+divisor-closed monomial models, but for \(e=4\) their published numerical
+threshold lies within the already known \(m\le19\) range.
 
 Delgado, Kumar, and Marion derive sufficient conditions from the number of
 elements in the first Kunz layer and study asymptotics by maximum primitive.
 [^maximum-primitive] Yang and Zhang's April 2026 preprint develops first- and
 cumulative-Kunz-layer criteria.[^first-layer] If
-(\eta=|S\cap(m,2m)|), then (\eta\le3) when (e=4), since every element of
+\(\eta=|S\cap(m,2m)|\), then \(\eta\le3\) when \(e=4\), since every element of
 that interval is primitive. Consequently the broad first-layer criteria do
-not reach the hard range (m\ge20).
+not reach the hard range \(m\ge20\).
 
 Marashdeh's August 2026 preprint gives new type bounds and an exact
 conductor-free decomposition of the Wilf number.[^marashdeh] It does not claim
-the (e=4) case, but its reduction should be compared directly with the
+the \(e=4\) case, but its reduction should be compared directly with the
 moment identity before the architecture of the final proof is frozen. It may
 shorten the front end or eliminate some high-type subcases.
 
@@ -270,7 +270,7 @@ claim.
 | Preferred representatives form a finite lower ideal | Attribute to Zhai; also cite the monomial-ideal formulation of Hellus--Rechenauer--Waldi. |
 | Weighted mean inequality for a finite lower ideal | Attribute to Zhai. |
 | Residue-lattice tiling and support/exclusion lemma | Attribute to Hellus--Rechenauer--Waldi. |
-| Kunz/Apéry-poset verification through (m=19) | Bruns et al.; Kliem--Stump. |
+| Kunz/Apéry-poset verification through \(m=19\) | Bruns et al.; Kliem--Stump. |
 | Three-dimensional L-shape context and relation-deletion construction | Aguiló-Gost--García-Sánchez--Llena; Chomicz. The proof retains the canonical lexicographic L-shape. |
 | Exact moment-deficit reformulation | Short derived lemma; cite its classical and Zhai inputs. |
 | Positive surplus estimates for three-dimensional lower ideals | Proposed new content; audit branch by branch. |
@@ -286,8 +286,8 @@ written:
    `paper/foundations.md`, retaining only any genuinely new strengthening.
 2. Use Proposition 4.4 of `paper/foundations.md` as the baseline and formulate
    one “surplus theorem” that contains exactly the new burden.
-3. Apply all known reductions first: (m\ge20), (c>3m), (n\ge13), and
-   (t\ge4). Test whether the Marashdeh decomposition gives more.
+3. Apply all known reductions first: \(m\ge20\), \(c>3m\), \(n\ge13\), and
+   \(t\ge4\). Test whether the Marashdeh decomposition gives more.
 4. Re-examine the seven cases for overlap. In particular, look for a single
    structural inequality that replaces several shape enumerations.
 5. Keep the fixed-multiplicity search and the lower-ideal searches as separate

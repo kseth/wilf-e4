@@ -154,8 +154,8 @@ Assume the branch results recorded in the proof outline:
 | B2: no full-support corner | \(D_0\ge m-1\) | \(W_4(S)\ge1\) by Proposition 2.1(1) |
 | B3: \(p=(1,1,1)\) | \(W_4(S)\ge0\) | direct |
 | B4: \(p\sim(2,1,1)\) | \(D_0\ge m-1\) | \(W_4(S)\ge1\) by Proposition 2.1(1) |
-| B5: \(|p|_1\ge5,\ R\le6\) | \(D_0\ge m\) | \(W_4(S)\ge A-m+1\ge2\) by Proposition 2.1(2) |
-| B6: \(|p|_1\ge5,\ R\ge7\) | \(D_0\ge m-29/10\) | \(W_4(S)\ge0\) by Proposition 2.1(3) |
+| B5: \(\lvert p\rvert_1\ge5,\ R\le6\) | \(D_0\ge m\) | \(W_4(S)\ge A-m+1\ge2\) by Proposition 2.1(2) |
+| B6: \(\lvert p\rvert_1\ge5,\ R\ge7\) | \(D_0\ge m-29/10\) | \(W_4(S)\ge0\) by Proposition 2.1(3) |
 
 Then every minimally four-generated numerical semigroup satisfies
 \(W_4(S)\ge0\).

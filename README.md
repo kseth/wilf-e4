@@ -9,6 +9,21 @@ They are evidence and source material, not a substitute for external
 mathematical review. The theorem should be regarded as **proposed** until the
 analytic arguments and finite verifications have been independently checked.
 
+## Proof maturity
+
+| Component | Current state |
+|---|---|
+| Main theorem | Proposed; the B2--B6 branch arguments remain to be reconstructed and audited |
+| Shared foundations and routing | Reconstructed in Markdown and internally checked; not independently reviewed |
+| Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
+| Multiplicity \(20\le m\le29\) | Analytic reduction and finite contract complete; the D1 gate and any retained replays remain |
+| Computational verification | Trust policy fixed; no historical success record is treated as a proof result |
+| Release artifact | Definitive TeX, proof code, and PDF intentionally deferred until the roadmap freeze |
+
+Here “reconstructed” means that a clean argument has been extracted from the
+historical archive; it does not mean independently verified. `ROADMAP.md` is the
+canonical source for task status and dependencies.
+
 ## Repository layout
 
 - [`ROADMAP.md`](ROADMAP.md) is the topologically ordered plan through the
@@ -39,7 +54,7 @@ analytic arguments and finite verifications have been independently checked.
   evidentiary standard, exactness rules, independent-check requirement, and
   replay records for every retained computation.
 - [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md)
-  verifies the exact published statements that remove (m\le19), their
+  verifies the exact published statements that remove \(m\le19\), their
   scope, computational dependencies, and version-of-record citations.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
@@ -64,6 +79,8 @@ analytic arguments and finite verifications have been independently checked.
    claims for the precise surplus estimates proved here.
 7. Distinguish complete mathematical replays from provenance checks,
    record comparisons, and diagnostic experiments.
+8. Use `\(...\)` for inline mathematics and `\[...\]` for display
+   mathematics; use roadmap task identifiers consistently across notes.
 
 The current canonical historical synthesis is
 `artifacts/wilf_four_generators_review_manuscript_2026-09-11.md`. It is not the

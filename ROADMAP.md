@@ -42,7 +42,11 @@ completed: literature baseline + foundations + case partition
                          |
        branch dossiers + literature refresh
                          |
-        end-to-end composition and trust audit
+        end-to-end composition + artifact inventory
+                         |
+             preliminary package checkpoint
+                         |
+        verification decision + external review
                          |
                pre-manuscript freeze
 ```
@@ -66,6 +70,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | V0 | Verification vocabulary, trust boundary, and replay policy | [`verification/trust-policy.md`](verification/trust-policy.md) |
 | L1 | Multiplicity-through-19 statement, scope, and source audit | [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md) |
 | B1.3 | Finite generator-box specification and coverage proof | [`paper/small-multiplicity-specification.md`](paper/small-multiplicity-specification.md) |
+| DOC0 | Reader-facing notation, status, and milestone normalization | [`README.md`](README.md), [`paper/proof-outline.md`](paper/proof-outline.md), and this roadmap |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -109,7 +114,7 @@ waits only on L2.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B3.1 | [A] | Six-maxima entry lemma | FND | Prove one mixed corner per plane, at most six maxima, and \(|Z|\le6\) |
+| B3.1 | [A] | Six-maxima entry lemma | FND | Prove one mixed corner per plane, at most six maxima, and \(\lvert Z\rvert\le6\) |
 | B3.2 | [A]+[C] | Shape-generation specification | G3, B3.1, V0 | Prove rank compression, completion, insertion growth, extension completeness, and termination |
 | B3.3 | [A]+[C] | Modular-cut specification | B3.2 | Prove coverage of all residue labelings, integer lifts, cuts, and equality walls |
 
@@ -126,8 +131,8 @@ waits only on L2.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B5.1 | [A] | Plane-corner restriction | FND, PART | Prove the per-plane bound \(|p|_1-2\), without summing across planes |
-| B5.2 | [A] | Surface-injection restriction | FND, PART | Prove \(|F_i\cap F_j|\le2n_k\), including slice boundaries |
+| B5.1 | [A] | Plane-corner restriction | FND, PART | Prove the per-plane bound \(\lvert p\rvert_1-2\), without summing across planes |
+| B5.2 | [A] | Surface-injection restriction | FND, PART | Prove \(\lvert F_i\cap F_j\rvert\le2n_k\), including slice boundaries |
 | B5.3 | [A] | Local and axis centroid witnesses | G2 | Prove \(D_0\ge U_2\) and, when applicable, \(D_0\ge G\) |
 | B5.4 | [C] | Degree-six profile specification | B5.1, B5.2, V0 | Prove exhaustive profiles, shared-axis conditions, corner cuts, and filters |
 
@@ -190,13 +195,15 @@ proves a replacement and removes that computation.
 | S1 | [A]+[C] | Clean branch dossiers | B1--B6 specifications, D1--D6, and all retained replays | Each B1--B6 dossier has one theorem, proof, finite contract if any, and no historical alternatives |
 | S2 | [A] | End-to-end composition audit | G1, L1, S1 | Check every hypothesis transfer and prove the main theorem once in Markdown |
 | S3 | [C] | Minimal computation inventory | V0, all decisions and replays | List exactly what the final proof package must contain and why |
-| V1 | [D] | Proof-verification scope decision | S2, S3 | Choose independent replay, targeted formalization, or broader formalization; name the trusted boundary |
-| H1 | [H] | Architecture-review cycle | L3, S2, S3 | Send the proof notes, finite contracts, and checklist to appropriate specialists; triage every response received by the agreed cutoff |
+| PRELIM | [D] | Preliminary-package readiness checkpoint | L3, S1, S2, S3 | The end-to-end Markdown proof, retained replay evidence, and minimal artifact inventory are stable enough for private circulation and TeX planning |
+| V1 | [D] | Proof-verification scope decision | PRELIM | Choose independent replay, targeted formalization, or broader formalization; name the trusted boundary |
+| H1 | [H] | Architecture-review cycle | PRELIM | Send the proof notes, finite contracts, and checklist to appropriate specialists; triage every response received by the agreed cutoff |
 | FREEZE | [D] | Pre-manuscript architecture freeze | H1, V1 | No unresolved dependency, review issue, route, attribution, or finite specification remains |
 
-After `FREEZE`, and not before, begin the definitive TeX manuscript,
-curated proof-code package, any chosen formalization, and PDF/release
-packaging.
+`PRELIM` marks a coherent preliminary research package, not a public theorem
+claim. It permits private circulation and concrete TeX/artifact planning.
+After `FREEZE`, and not before, begin the definitive TeX manuscript, curated
+proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
