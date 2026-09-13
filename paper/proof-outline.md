@@ -238,9 +238,11 @@ corner in every non-full ideal and proves from its predecessor lines that
 \(M\le D\le m(m-2)\) in a negative case. Neither step uses finite
 verification or assumes a multiplicity range. The generator-box note proves
 the canonical-tuple, minimality, gcd, endpoint, and negative-case coverage
-claims without relying on a historical run. The D1 gate will decide whether
-to retain the finite obligation; if retained, R1a and R1b must still audit and
-freshly replay the two independent exact checking paths.
+claims without relying on a historical run. The
+[D1 simplification gate](../research/b1-simplification-decision.md) found no
+smaller analytic or published replacement and retains this exact finite
+obligation. R1a and R1b must still audit and freshly replay the two independent
+exact checking paths.
 
 ### B2. No full-support corner [A], [C]
 

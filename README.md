@@ -16,7 +16,7 @@ analytic arguments and finite verifications have been independently checked.
 | Main theorem | Proposed; the B2--B6 branch arguments remain to be reconstructed and audited |
 | Shared foundations and routing | Reconstructed in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
-| Multiplicity \(20\le m\le29\) | Analytic reduction and finite contract complete; the D1 gate and any retained replays remain |
+| Multiplicity \(20\le m\le29\) | Analytic reduction, finite contract, and D1 retention decision complete; the two fresh replays remain |
 | Computational verification | Trust policy fixed; no historical success record is treated as a proof result |
 | Release artifact | Definitive TeX, proof code, and PDF intentionally deferred until the roadmap freeze |
 
@@ -59,6 +59,9 @@ canonical source for task status and dependencies.
 - [`literature/published-reduction-comparison.md`](literature/published-reduction-comparison.md)
   decides how the known conductor, left-element, and type reductions and
   Marashdeh's defect decomposition affect the retained branches.
+- [`research/b1-simplification-decision.md`](research/b1-simplification-decision.md)
+  records why the exact \(20\le m\le29\) finite obligation and its two
+  independent checking paths are retained.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the

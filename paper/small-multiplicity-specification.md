@@ -9,7 +9,7 @@ semantics for two independent checking paths.
 
 This is a **specification and coverage proof**, not a replay result. It does
 not promote the historical programs or their stored outputs into the proof.
-If the D1 simplification gate retains this computation, R1a and R1b must still
+The D1 simplification gate retained this computation. R1a and R1b must still
 audit and freshly run implementations satisfying the contract below.
 
 ## 1. The finite obligation
@@ -363,8 +363,7 @@ arbitrary-precision integers.
 
 ## 6. Independent checking paths
 
-If D1 retains (FV), the planned replays have distinct mathematical
-interfaces.
+D1 retains (FV). The planned replays have distinct mathematical interfaces.
 
 ### R1a: residue distances
 
@@ -417,9 +416,9 @@ obligation for the small-multiplicity branch. Together with B1.2 it proves
 that (FV) is sufficient.
 
 It does **not** establish (FV), validate stored counts, audit source code, or
-record a fresh replay. The D1 gate may still find an analytic or published
-replacement. If it does not, R1a and R1b must implement and replay the two
-checking paths under the
+record a fresh replay. The
+[D1 gate](../research/b1-simplification-decision.md) retained (FV), so R1a and
+R1b must implement and replay the two checking paths under the
 [verification trust policy](../verification/trust-policy.md).
 
 ## 8. Historical sources

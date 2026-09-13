@@ -69,9 +69,10 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B1.2 | Negative-case conductor and generator bounds | [`paper/conductor-reduction.md`](paper/conductor-reduction.md) |
 | V0 | Verification vocabulary, trust boundary, and replay policy | [`verification/trust-policy.md`](verification/trust-policy.md) |
 | L1 | Multiplicity-through-19 statement, scope, and source audit | [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md) |
-| L2 | Published conductor, left-element, type, and Marashdeh comparison | [`literature/published-reduction-comparison.md`](literature/published-reduction-comparison.md) |
 | B1.3 | Finite generator-box specification and coverage proof | [`paper/small-multiplicity-specification.md`](paper/small-multiplicity-specification.md) |
 | DOC0 | Reader-facing notation, status, and milestone normalization | [`README.md`](README.md), [`paper/proof-outline.md`](paper/proof-outline.md), and this roadmap |
+| L2 | Published conductor, left-element, type, and Marashdeh comparison | [`literature/published-reduction-comparison.md`](literature/published-reduction-comparison.md) |
+| D1 | Retain the exact B1 finite obligation and two independent checking paths | [`research/b1-simplification-decision.md`](research/b1-simplification-decision.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -100,8 +101,8 @@ the historical computations.
 
 ### B1: multiplicity at most 29
 
-The branch-entry specification and L2 comparison are complete. The D1
-simplification gate is now ready.
+The branch-entry specification, L2 comparison, and D1 gate are complete. D1
+retains B1.3-FV and both exact replay paths; R1a is now ready.
 
 ### B2: no full-support corner
 
@@ -153,15 +154,15 @@ final code design.
 
 | ID | Type | Question | Depends on | Fallback |
 |---|---|---|---|---|
-| D1 | [D] | Can a published or analytic result remove or shrink the \(20\le m\le29\) search? | L2, B1.2, B1.3 | Retain both exact B1 algorithms |
 | D2 | [D] | Can a direct horn inequality replace B2's interval tree? | B2.1, B2.2 | Retain the exact B2 tree |
 | D3 | [D] | Can the six-window conclusion be proved without full shape and cut enumeration? | B3.1--B3.3 | Retain the compressed B3 search |
 | D4 | [D] | Can symbolic classification replace either B4 certificate family? | B4.2--B4.4 | Retain the high-height tree and 28,499 low-height duals |
 | D5 | [D] | Can residue compatibility prove \(U_2(T)\ge m\) for genuine B5 shapes? | CHO, B5.1--B5.4 | Retain local-or-axis enumeration and \(G\) |
 | D6 | [D] | Can a direct weighted argument remove the B6 strip or interval tree? | B6.1--B6.4 | Retain both exact B6 computations |
 
-No computed component is promoted into the final architecture until its gate
-has closed.
+D1 is complete and retains B1.3-FV with both independent checking paths. No
+other computed component is promoted into the final architecture until its
+gate has closed.
 
 ## Layer 5: audit and replay retained computations
 
@@ -207,8 +208,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are D1, G4, G5, B3.1, B4.1, B5.1, B5.2,
-and B5.3. The recommended next task is **D1, the B1 simplification gate**.
-L2 found that the published hard-case reductions do not remove or materially
-shrink the finite obligation; D1 should now check for an analytic replacement
-and otherwise close the gate in favor of the two exact replay paths.
+The topologically available tasks are R1a, G4, G5, B3.1, B4.1, B5.1, B5.2,
+and B5.3. The recommended next task is **R1a, the B1 residue-distance audit
+and fresh replay**. It begins closure of the retained small-multiplicity
+branch while its specification and decision record are current.

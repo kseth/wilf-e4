@@ -116,9 +116,10 @@ The published restrictions do not reduce the raw generator box:
 Consequently none of these conditions reduces the dominant traversal or
 arithmetic of either proposed B1 checker. Importing them into the formal
 finite domain would add external dependencies and predicates without removing
-a proof obligation. The D1 gate should not narrow the B1 contract on their
-account. Conditions (3) and (4) may be logged as diagnostics, but they should
-not be acceptance criteria.
+a proof obligation. The subsequent
+[D1 gate](../research/b1-simplification-decision.md) therefore retains the B1
+contract unchanged. Conditions (3) and (4) may be logged as diagnostics, but
+they are not acceptance criteria.
 
 ## 3. Effect on the geometric branches
 
@@ -229,8 +230,8 @@ The outcome of L2 is therefore:
 3. retain all B2--B6 routes, allowing later specifications to discard
    generated shapes with at most three coordinatewise maxima;
 4. decline a Marashdeh-defect or Chomicz-presentation reroute;
-5. pass D1 the recommendation that published reductions do not remove or
-   materially shrink the exact B1 finite obligation.
+5. recommend retaining the exact B1 finite obligation; the subsequent D1 gate
+   accepted that recommendation after also checking the analytic alternatives.
 
 This is a theorem-level comparison of the sources named above, not a renewed
 claim that the entire literature is exhausted. The branch-level search L3
