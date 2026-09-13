@@ -2,7 +2,7 @@
 
 **Status:** working research record, not a priority or completeness claim
 
-**Search date:** 2026-09-11
+**Search dates:** broad survey 2026-09-11; focused reduction refresh 2026-09-12
 
 **Scope:** Wilf's conjecture, with emphasis on results that either dispose of
 cases in embedding dimension four or supply machinery used by the proposed
@@ -252,9 +252,21 @@ not reach the hard range \(m\ge20\).
 
 Marashdeh's August 2026 preprint gives new type bounds and an exact
 conductor-free decomposition of the Wilf number.[^marashdeh] It does not claim
-the \(e=4\) case, but its reduction should be compared directly with the
-moment identity before the architecture of the final proof is frozen. It may
-shorten the front end or eliminate some high-type subcases.
+the \(e=4\) case. A direct comparison with the moment identity finds that its
+proved type bound does not supply the required factor of \(n\) in the
+high-type range, while
+the conjectural inequality that would close the gap is pointwise stronger
+than Wilf's inequality. The classical type result does nevertheless give a
+free geometric preprocessing rule: a preferred exponent ideal with at most
+three coordinatewise maxima has type at most three and is already settled.
+The [focused L2 audit](published-reduction-comparison.md) records the exact
+calculation and its consequences for every branch.
+
+Chomicz's September 2026 preprint relates the type \(t\) and minimal-
+presentation cardinality \(\eta\) in embedding dimension four by
+\(4t+5\ge\eta\ge t-11\).[^chomicz-type] The present route has no independent
+bound on \(\eta\), so this result does not yield a new Wilf subcase or alter
+the earlier L-shape assessment.
 
 ## 6. Attribution and novelty map
 
@@ -271,6 +283,7 @@ claim.
 | Weighted mean inequality for a finite lower ideal | Attribute to Zhai. |
 | Residue-lattice tiling and support/exclusion lemma | Attribute to Hellus--Rechenauer--Waldi. |
 | Kunz/Apéry-poset verification through \(m=19\) | Bruns et al.; Kliem--Stump. |
+| Disposal of exponent ideals with at most three maxima | Fröberg--Gottlieb--Häggkvist, plus the elementary comparison between Apéry-poset and coordinatewise maxima. |
 | Three-dimensional L-shape context and relation-deletion construction | Aguiló-Gost--García-Sánchez--Llena; Chomicz. The proof retains the canonical lexicographic L-shape. |
 | Exact moment-deficit reformulation | Short derived lemma; cite its classical and Zhai inputs. |
 | Positive surplus estimates for three-dimensional lower ideals | Proposed new content; audit branch by branch. |
@@ -486,6 +499,10 @@ against final pagination when the bibliography is converted to BibTeX.
 [^marashdeh]: Mohammad F. Marashdeh, “An upper bound for the type of a
     numerical semigroup, and a reduction of Wilf's conjecture,”
     [arXiv:2608.12531](https://arxiv.org/abs/2608.12531), 2026.
+
+[^chomicz-type]: Kazimierz Chomicz, “The type and cardinality of minimal
+    presentations of numerical semigroups with embedding dimension four,”
+    [arXiv:2609.04000](https://arxiv.org/abs/2609.04000), version 1, 2026.
 
 [^rocq]: Massimo Bartoletti, Stefano Bonzio, and Marco Ferrara, “Certified
     Algorithms for Numerical Semigroups in Rocq,” in *CICM 2025*, LNCS 16136,

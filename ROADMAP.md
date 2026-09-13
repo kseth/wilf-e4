@@ -69,6 +69,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B1.2 | Negative-case conductor and generator bounds | [`paper/conductor-reduction.md`](paper/conductor-reduction.md) |
 | V0 | Verification vocabulary, trust boundary, and replay policy | [`verification/trust-policy.md`](verification/trust-policy.md) |
 | L1 | Multiplicity-through-19 statement, scope, and source audit | [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md) |
+| L2 | Published conductor, left-element, type, and Marashdeh comparison | [`literature/published-reduction-comparison.md`](literature/published-reduction-comparison.md) |
 | B1.3 | Finite generator-box specification and coverage proof | [`paper/small-multiplicity-specification.md`](paper/small-multiplicity-specification.md) |
 | DOC0 | Reader-facing notation, status, and milestone normalization | [`README.md`](README.md), [`paper/proof-outline.md`](paper/proof-outline.md), and this roadmap |
 
@@ -77,11 +78,10 @@ external-review packet.
 
 ## Layer 1: route-wide prerequisites
 
-One route-wide task remains.
-
-| ID | Type | Atomic deliverable | Depends on | Completion test |
-|---|---|---|---|---|
-| L2 | [L]+[D] | Published-reduction comparison | LIT0, FND | Decide whether Marashdeh or the known \(c\), \(n\), and type reductions shorten any branch |
+All route-wide prerequisites are complete. L2 retains the moment-deficit
+architecture, adds the analytic disposal
+\(|\operatorname{Max}(T)|\le3\), and finds no published reduction that removes
+the B1 finite obligation or any of B2--B6.
 
 ## Layer 2: common analytic tools
 
@@ -100,8 +100,8 @@ the historical computations.
 
 ### B1: multiplicity at most 29
 
-The branch-entry specification is complete. The D1 simplification gate now
-waits only on L2.
+The branch-entry specification and L2 comparison are complete. The D1
+simplification gate is now ready.
 
 ### B2: no full-support corner
 
@@ -207,7 +207,8 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are L2, G4, G5, B3.1, B4.1, B5.1, B5.2,
-and B5.3. The recommended next task is **L2, the published-reduction
-comparison**. Completing it will unlock the D1 decision on whether the
-small-multiplicity computation can be removed or reduced before any replay.
+The topologically available tasks are D1, G4, G5, B3.1, B4.1, B5.1, B5.2,
+and B5.3. The recommended next task is **D1, the B1 simplification gate**.
+L2 found that the published hard-case reductions do not remove or materially
+shrink the finite obligation; D1 should now check for an analytic replacement
+and otherwise close the gate in favor of the two exact replay paths.

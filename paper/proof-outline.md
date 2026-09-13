@@ -135,6 +135,26 @@ This support/exclusion structure is substantially present in Proposition 2.6
 of Hellus, Rechenauer, and Waldi. The foundational note distinguishes that
 cited result from the elementary representative-disjointness corollary.
 
+### F4. Low-maxima disposal [E]+[A]
+
+Let \(K=\operatorname{Max}(T)\) be the coordinatewise maximal points of the
+preferred exponent ideal. A maximal element of the Apéry poset must be labeled
+by a point of \(K\): if \(x+e_i\in T\), then its label exceeds the label of
+\(x\) by the nonzero semigroup element \(a_i\). Since the maximal Apéry-poset
+elements are the pseudo-Frobenius numbers translated by \(m\),
+
+\[
+\operatorname{type}(S)\le |K|.
+\]
+
+The Fröberg--Gottlieb--Häggkvist inequality settles Wilf's conjecture when the
+type is at most \(e-1=3\). Hence every geometric branch may assume
+\(|K|\ge4\). The conductor and left-element theorems also allow the global
+assumptions \(c>3m\) and \(n\ge13\), but they do not shorten the present
+branch parameters or the B1 computation. The exact source comparison and the
+decision not to use Marashdeh's defect decomposition as a replacement are in
+the [published-reduction comparison](../literature/published-reduction-comparison.md).
+
 ## 2. The complete case partition
 
 After treating \(m\le29\), suppose \(m\ge30\). First split according to whether
@@ -251,6 +271,14 @@ Historical source:
 Residue injectivity implies that each coordinate plane has at most one mixed
 excluded corner. Since every point of \(T\) lies in a coordinate plane, \(T\)
 has at most six maximal points.
+
+By F4, only the range
+
+\[
+4\le |\operatorname{Max}(T)|\le6
+\]
+
+remains in this branch.
 
 Let
 

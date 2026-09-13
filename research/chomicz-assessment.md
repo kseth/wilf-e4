@@ -28,6 +28,26 @@ The paper contains no Wilf-conjecture result. Its closing problems also mark
 limits of the current relation analysis, so it should not be cited as though
 it supplied an embedding-dimension-four reduction.
 
+## September 2026 type/presentation supplement
+
+Chomicz subsequently proved, for embedding dimension four,
+
+\[
+4\operatorname{type}(S)+5\ge\eta(S)\ge\operatorname{type}(S)-11,
+\]
+
+where \(\eta(S)\) is the cardinality of a minimal presentation. See
+“The type and cardinality of minimal presentations of numerical semigroups
+with embedding dimension four,”
+[arXiv:2609.04000v1](https://arxiv.org/abs/2609.04000).
+
+This relates the two invariants. The retained proof has no independent upper
+bound on \(\eta\), so the result gives neither an absolute
+type bound nor a new Wilf subcase. It does not change the verdict above. The
+full comparison with the classical type reduction and Marashdeh's defect
+decomposition is recorded in the
+[published-reduction comparison](../literature/published-reduction-comparison.md).
+
 ## Choice-invariance of the quantity being bounded
 
 Let \(T\) contain one exponent vector \(x(w)\) for each

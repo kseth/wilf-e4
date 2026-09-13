@@ -56,6 +56,9 @@ canonical source for task status and dependencies.
 - [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md)
   verifies the exact published statements that remove \(m\le19\), their
   scope, computational dependencies, and version-of-record citations.
+- [`literature/published-reduction-comparison.md`](literature/published-reduction-comparison.md)
+  decides how the known conductor, left-element, and type reductions and
+  Marashdeh's defect decomposition affect the retained branches.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the
