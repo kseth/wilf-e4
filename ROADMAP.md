@@ -68,6 +68,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | G4 | Phase inequality, rectangular thickening, and endpoint audit | [`paper/phase-and-thickening.md`](paper/phase-and-thickening.md) |
 | G5 | Central-box/three-horn decomposition and clipping corollary | [`paper/central-box-horns.md`](paper/central-box-horns.md) |
 | B2.1 | Continuous no-corner inequality and compactness reduction | [`paper/no-corner-compactness.md`](paper/no-corner-compactness.md) |
+| B2.2 | No-corner horn-DP and interval-tree specification | [`paper/no-corner-interval-specification.md`](paper/no-corner-interval-specification.md) |
 | B1.1 | Full-weighted-ideal theorem and six-column exclusion | [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) |
 | B1.2 | Negative-case conductor and generator bounds | [`paper/conductor-reduction.md`](paper/conductor-reduction.md) |
 | V0 | Verification vocabulary, trust boundary, and replay policy | [`verification/trust-policy.md`](verification/trust-policy.md) |
@@ -107,16 +108,15 @@ replays are complete. B1.3-FV is established under V0.
 
 ### B2: no full-support corner
 
-The analytic entry is complete. B2.1 proves the continuous no-corner moment
-inequality for the finite-step geometry supplied by G5, the degree-four
-cardinality bound \(29\), the compact failure region
-\(1\le b\le c\le H\), \(5\le H\le24\), and the weak whole-box analytic
-acceptance rule. The remaining task is the exact finite certificate on that
-region.
+The analytic entry and finite specification are complete. B2.1 proves the
+continuous no-corner moment inequality, degree-four cardinality bound,
+compact failure region, and analytic leaf rule. B2.2 states the stronger
+allowance-height finite obligation and proves the exact horn recurrence,
+whole-box integer domination, and closed interval-tree coverage theorem.
 
-| ID | Type | Atomic deliverable | Depends on | Completion test |
-|---|---|---|---|---|
-| B2.2 | [C] | Horn-DP and interval-tree specification | B2.1, V0 | Prove exhaustive recurrence and whole-box rational bounds |
+B2.2 is a specification milestone, not a verification result. Its finite
+obligation remains open under V0 until D2 decides whether to retain it and,
+if retained, R2 supplies fresh complete and independent checking paths.
 
 ### B3: the corner \((1,1,1)\)
 
@@ -217,8 +217,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are B2.2, B3.1, B4.1, B5.1, B5.2, B5.3,
-and B6.1. The recommended next task is **B2.2, the no-corner horn-DP and
-interval-tree specification**. B2.1 now supplies its exact closed parameter
-domain and analytic leaf rule; completing B2.2 will expose the D2
-simplification gate.
+The topologically available tasks are D2, B3.1, B4.1, B5.1, B5.2, B5.3,
+and B6.1. The recommended next task is **D2, the no-corner simplification
+gate**: seek a direct inequality on the now-explicit nested-horn score, or
+retain the exact tree and proceed to R2.

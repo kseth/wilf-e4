@@ -744,20 +744,37 @@ H^2-24H+7<0.
 The upper root is \(12+\sqrt{137}\), while the lower root is below one.
 Together with (48), this proves (4) and Theorem 1.1. \(\square\)
 
-For later analytic leaves, the weak G4 formula with the same
-\(\gamma=1/3\) also gives
+For later analytic leaves, let \(H\) be any allowance at least the actual
+weighted height, and define
+
+\[
+D_H=3mH-4(1,b,c)\mathbin\cdot\sum_{x\in T}x.
+\]
+
+Thickening with denominator \(H+1+b+c\), rather than the attained height plus
+the weight sum, still produces a box-horn set inside the unit simplex. If
+\(K_H\) denotes this thickening, the same coordinate-sum calculation as in
+G4 gives the exact identity
+
+\[
+3-4\mathbb E_{K_H}(Y_1+Y_2+Y_3)
+=\frac{D_H/m+1+b+c}{H+1+b+c}.
+\]
+
+The continuous no-corner estimate (43) bounds the left side below by
+\(1/3\). Rearrangement gives
 
 \[
 \boxed{
-\frac{D_0}{m}\ge\frac{H-2(1+b+c)}3.
+\frac{D_H}{m}\ge\frac{H-2(1+b+c)}3.
 }
 \tag{52}
 \]
 
-In particular,
+Thus, even when the allowance is not attained,
 
 \[
-H\ge2(1+b+c)+3\quad\Longrightarrow\quad D_0\ge m,
+H\ge2(1+b+c)+3\quad\Longrightarrow\quad D_H\ge m,
 \tag{53}
 \]
 

@@ -13,11 +13,11 @@ analytic arguments and finite verifications have been independently checked.
 
 | Component | Current state |
 |---|---|
-| Main theorem | Proposed; the B2.2--B6 branch arguments remain to be reconstructed and audited |
-| Shared foundations, routing, G1--G5, and B2.1 | Reconstructed in Markdown and internally checked; not independently reviewed |
+| Main theorem | Proposed; the B2 finite obligation and B3--B6 branch arguments remain to be simplified and audited |
+| Shared foundations, routing, G1--G5, B2.1, and the B2.2 finite specification | Reconstructed in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
-| Computational verification | B1 is complete under the trust policy; computations retained by B2.2--B6 remain to be specified, simplified, and replayed |
+| Computational verification | B1 is complete under the trust policy; B2 is specified but awaits D2 and, if retained, R2; B3--B6 remain to be specified |
 | Release artifact | Definitive TeX, proof code, and PDF intentionally deferred until the roadmap freeze |
 
 Here “reconstructed” means that a clean argument has been extracted from the
@@ -47,6 +47,9 @@ canonical source for task status and dependencies.
 - [`paper/no-corner-compactness.md`](paper/no-corner-compactness.md) proves the
   continuous no-corner moment inequality, the degree-four cardinality
   bound, and the compact real parameter domain for B2.
+- [`paper/no-corner-interval-specification.md`](paper/no-corner-interval-specification.md)
+  states B2's finite theorem contract and proves the horn recurrence,
+  whole-box bounds, and closed interval-tree coverage semantics.
 - [`paper/final-window-projection.md`](paper/final-window-projection.md)
   proves the exact residue/projection bound and audits its equality boundary.
 - [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) classifies

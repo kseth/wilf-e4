@@ -351,10 +351,22 @@ The lower endpoint uses the explicit degree-four cardinality bound
 \(|T|\le29\). The later certificate may harmlessly cover the larger closed
 box ending at \(H=24\). Thus B2.1 contains no computed assertion.
 
-The retained finite task consists of 24,912 dynamic-programming leaves and 531
-analytic leaves. B2.2 must specify the exact score, prove simultaneous
-whole-box domination for every real parameter, and prove coverage of the
-closed interval tree before any historical counts are accepted.
+The [B2.2 finite specification](no-corner-interval-specification.md) defines
+the allowance-height obligation
+
+\[
+m-D_H\le1
+\]
+
+for every nonempty no-corner ideal throughout the closed parameter box. It
+derives the additive point score, proves the exact nested-rectangle
+recurrence, proves simultaneous whole-box domination for every real
+parameter, and specifies fail-closed coverage of a closed interval tree.
+
+The historical candidate reports 24,912 dynamic-programming leaves and 531
+analytic leaves. Those counts are diagnostic, not acceptance criteria.
+B2.2-FV remains open until D2 retains the computation and R2 completes the
+required exact and independent replays.
 
 Historical source chain:
 `round3/horns_optimization/fullcap_boundary_theorem.md`,
@@ -568,7 +580,7 @@ The following is the minimal presently retained proof interface.
 | L1 | Published multiplicity \(\le19\) theorem | [E] | Audited in `literature/multiplicity-through-19-audit.md` |
 | B1.1--B1.2 | Negative-case conductor reduction | [A] | Reconstructed in `full-weighted-ideal.md` and `conductor-reduction.md`; obtain independent review |
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
-| B2 | No-corner weighted theorem | [A]+[C] | B2.1 reconstructed in `no-corner-compactness.md`; specify and simplify the B2.2 interval certificate |
+| B2 | No-corner weighted theorem | [A]+[C] | B2.1 and the B2.2 contract reconstructed; close D2 and, if retained, R2 |
 | B3 | Six-final-window theorem | [A]+[C] | Shrink the shape/completion argument and certificate interface |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
