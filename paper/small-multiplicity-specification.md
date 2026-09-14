@@ -9,8 +9,9 @@ semantics for two independent checking paths.
 
 This is a **specification and coverage proof**, not a replay result. It does
 not promote the historical programs or their stored outputs into the proof.
-The D1 simplification gate retained this computation. R1a and R1b must still
-audit and freshly run implementations satisfying the contract below.
+The D1 simplification gate retained this computation. R1a has audited and
+freshly run the residue-distance implementation; R1b must still audit and run
+the independent ordinary-membership path.
 
 ## 1. The finite obligation
 
@@ -363,7 +364,7 @@ arbitrary-precision integers.
 
 ## 6. Independent checking paths
 
-D1 retains (FV). The planned replays have distinct mathematical interfaces.
+D1 retains (FV). The two replay paths have distinct mathematical interfaces.
 
 ### R1a: residue distances
 
@@ -382,6 +383,9 @@ applies (5), (10), and (11).
 
 R1a must prove that its concrete shortest-path update, infinity convention,
 loop bounds, and integer types implement this abstract graph calculation.
+The completed
+[R1a audit and replay](../verification/b1/r1a-residue-distance-audit.md)
+discharges this path without treating stored historical output as proof.
 
 ### R1b: ordinary membership
 
@@ -417,9 +421,10 @@ that (FV) is sufficient.
 
 It does **not** establish (FV), validate stored counts, audit source code, or
 record a fresh replay. The
-[D1 gate](../research/b1-simplification-decision.md) retained (FV), so R1a and
-R1b must implement and replay the two checking paths under the
-[verification trust policy](../verification/trust-policy.md).
+[D1 gate](../research/b1-simplification-decision.md) retained (FV), so the two
+checking paths must be implemented and replayed under the
+[verification trust policy](../verification/trust-policy.md). R1a is complete;
+R1b and the final agreement audit remain.
 
 ## 8. Historical sources
 

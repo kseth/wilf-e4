@@ -241,8 +241,11 @@ the canonical-tuple, minimality, gcd, endpoint, and negative-case coverage
 claims without relying on a historical run. The
 [D1 simplification gate](../research/b1-simplification-decision.md) found no
 smaller analytic or published replacement and retains this exact finite
-obligation. R1a and R1b must still audit and freshly replay the two independent
-exact checking paths.
+obligation. The
+[R1a audit](../verification/b1/r1a-residue-distance-audit.md) proves the cyclic
+update and records a fresh complete replay with no negative case. R1b must
+still supply the independent ordinary-membership audit and replay before the
+finite lemma is complete under V0.
 
 ### B2. No full-support corner [A], [C]
 

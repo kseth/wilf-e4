@@ -24,9 +24,10 @@ architecture is therefore the direct one:
 \text{two exact exhaustive checks}.
 \]
 
-This decision retains a computation; it does not establish its result. R1a
-and R1b must still audit, curate, and freshly replay the two implementations
-under the verification trust policy.
+This decision retains a computation; it does not by itself establish its
+result. R1a has since audited and freshly replayed the residue-distance path.
+R1b must still curate and replay the ordinary-membership path under the
+verification trust policy.
 
 ## 1. The retained finite statement
 
@@ -201,6 +202,9 @@ abstract shortest-path specification. Freshly traverse every \(\mathcal R_m\),
 account exactly for the disjoint classification, establish \(M\) for every
 valid tuple and the Apéry sum for every tuple with \(M\le B_m\), and reject if
 such a tuple has \(W_4<0\).
+
+This path is now complete; see the
+[R1a audit and replay](../verification/b1/r1a-residue-distance-audit.md).
 
 ### R1b: ordinary membership
 

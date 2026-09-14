@@ -73,6 +73,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | DOC0 | Reader-facing notation, status, and milestone normalization | [`README.md`](README.md), [`paper/proof-outline.md`](paper/proof-outline.md), and this roadmap |
 | L2 | Published conductor, left-element, type, and Marashdeh comparison | [`literature/published-reduction-comparison.md`](literature/published-reduction-comparison.md) |
 | D1 | Retain the exact B1 finite obligation and two independent checking paths | [`research/b1-simplification-decision.md`](research/b1-simplification-decision.md) |
+| R1a | B1 cyclic-residue algorithm audit and fresh complete replay | [`verification/b1/r1a-residue-distance-audit.md`](verification/b1/r1a-residue-distance-audit.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -101,8 +102,9 @@ the historical computations.
 
 ### B1: multiplicity at most 29
 
-The branch-entry specification, L2 comparison, and D1 gate are complete. D1
-retains B1.3-FV and both exact replay paths; R1a is now ready.
+The branch-entry specification, L2 comparison, D1 gate, and R1a
+residue-distance replay are complete. R1b is now ready and remains necessary
+as the independent checking path.
 
 ### B2: no full-support corner
 
@@ -171,7 +173,6 @@ replaced or curated in the final verification package.
 
 | ID | Type | Atomic replay/audit | Depends on |
 |---|---|---|---|
-| R1a | [C] | B1 cyclic-residue shortest-path algorithm | D1 retaining computation |
 | R1b | [C] | B1 ordinary-membership algorithm and agreement | R1a |
 | R2 | [C] | B2 interval coverage and horn-DP leaves | D2 retaining computation |
 | R3 | [C] | B3 compressed shapes, 930 labelings, and 23,002 cuts | D3 retaining computation |
@@ -187,6 +188,10 @@ flags.
 
 A conditional replay edge is satisfied automatically if its decision gate
 proves a replacement and removes that computation.
+
+R1a is complete. Its fresh run establishes B1.3-FV through the audited
+residue-distance implementation; B1 remains open under V0 until R1b supplies
+the independent ordinary-membership path.
 
 ## Layer 6: synthesis and pre-manuscript freeze
 
@@ -208,7 +213,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are R1a, G4, G5, B3.1, B4.1, B5.1, B5.2,
-and B5.3. The recommended next task is **R1a, the B1 residue-distance audit
-and fresh replay**. It begins closure of the retained small-multiplicity
-branch while its specification and decision record are current.
+The topologically available tasks are R1b, G4, G5, B3.1, B4.1, B5.1, B5.2,
+and B5.3. The recommended next task is **R1b, the independent B1 membership
+audit and fresh replay**. It will either complete the small-multiplicity
+finite lemma under V0 or expose a disagreement with R1a before synthesis.
