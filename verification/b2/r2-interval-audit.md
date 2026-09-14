@@ -199,8 +199,8 @@ complete leaf-result digest
 after independently validating every entry. Digest agreement is a regression
 diagnostic, not an acceptance shortcut.
 
-On the recorded machine, Path A took about 9.2 seconds, Path B about 20.6
-seconds, and the combined runner about 30.7 seconds. Timings have no
+On the recorded machine, Path A took about 9.6 seconds, Path B about 20.8
+seconds, and the combined runner about 30.9 seconds. Timings have no
 mathematical role. Exact timestamps, commands, source hashes, negative-test
 records, and environment details are in `r2-replay.json`.
 
