@@ -28,7 +28,7 @@
   "component": "R1a",
   "decision": {
     "path": "research/b1-simplification-decision.md",
-    "sha256": "2313343ad491f88360ac2fa093661e5a7f47121d5ecf51d55fe5a2e9bb10a68a"
+    "sha256": "4df28fb35767328de8baf64585153717af6b2c4aa3d45235a0041f49e20bdb24"
   },
   "does_not_establish": [
     "independence from the residue-distance derivation (reserved for R1b)",
@@ -36,24 +36,24 @@
     "proof-assistant formalization",
     "strict positivity outside the necessary bounded-Ap\u00e9ry domain"
   ],
-  "elapsed_seconds": 13.853917750006076,
+  "elapsed_seconds": 13.142236874962691,
   "environment": {
     "compiler_path": "/usr/bin/g++",
     "compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
     "machine": "arm64",
     "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
   },
-  "finished_utc": "2026-09-14T16:47:28.112152Z",
+  "finished_utc": "2026-09-14T17:23:40.537096Z",
   "fresh": true,
   "process": {
     "compile_exit_status": 0,
     "compile_stderr": "",
     "run_exit_status": 0,
     "run_stderr": "",
-    "stdout_sha256": "4cca6967395098641ee07d3797d1b79c7368e18fb542280e020dc2ee73dc3067"
+    "stdout_sha256": "1b915c14027d046f22d27bacf6d167b8318cd0b05894fbbb78dbac47c4302e72"
   },
   "record_path": "verification/b1/r1a-replay.json",
-  "repository_input_commit": "5d0ba3791f91f337fcb7d7eb31fdd9cc11a074b0",
+  "repository_input_commit": "49ce96c3d5427f4c45e4f5f950fa3d06c99c002f",
   "result": {
     "cycle_schedule_diagnostic": {
       "edge_relaxations": 6883916,
@@ -68,7 +68,7 @@
           29,
           57
         ],
-        "elapsed_seconds": 0.170649,
+        "elapsed_seconds": 0.173812,
         "generator_bound_inclusive": 360,
         "largest_redundant": 1590406,
         "m": 20,
@@ -97,7 +97,7 @@
           37,
           49
         ],
-        "elapsed_seconds": 0.269345,
+        "elapsed_seconds": 0.259743,
         "generator_bound_inclusive": 399,
         "largest_redundant": 2199440,
         "m": 21,
@@ -126,7 +126,7 @@
           27,
           28
         ],
-        "elapsed_seconds": 0.376901,
+        "elapsed_seconds": 0.356792,
         "generator_bound_inclusive": 440,
         "largest_redundant": 2890697,
         "m": 22,
@@ -155,7 +155,7 @@
           28,
           35
         ],
-        "elapsed_seconds": 0.594694,
+        "elapsed_seconds": 0.573976,
         "generator_bound_inclusive": 483,
         "largest_redundant": 3924428,
         "m": 23,
@@ -184,7 +184,7 @@
           29,
           30
         ],
-        "elapsed_seconds": 0.662466,
+        "elapsed_seconds": 0.633318,
         "generator_bound_inclusive": 528,
         "largest_redundant": 4689527,
         "m": 24,
@@ -213,7 +213,7 @@
           30,
           31
         ],
-        "elapsed_seconds": 1.11382,
+        "elapsed_seconds": 1.07602,
         "generator_bound_inclusive": 575,
         "largest_redundant": 6366747,
         "m": 25,
@@ -242,7 +242,7 @@
           31,
           34
         ],
-        "elapsed_seconds": 1.33054,
+        "elapsed_seconds": 1.27283,
         "generator_bound_inclusive": 624,
         "largest_redundant": 7846938,
         "m": 26,
@@ -271,7 +271,7 @@
           32,
           35
         ],
-        "elapsed_seconds": 1.87971,
+        "elapsed_seconds": 1.7875,
         "generator_bound_inclusive": 675,
         "largest_redundant": 9893933,
         "m": 27,
@@ -300,7 +300,7 @@
           33,
           54
         ],
-        "elapsed_seconds": 2.23872,
+        "elapsed_seconds": 2.17176,
         "generator_bound_inclusive": 728,
         "largest_redundant": 11921775,
         "m": 28,
@@ -329,7 +329,7 @@
           34,
           55
         ],
-        "elapsed_seconds": 3.52866,
+        "elapsed_seconds": 3.45392,
         "generator_bound_inclusive": 783,
         "largest_redundant": 15486281,
         "m": 29,
@@ -376,7 +376,7 @@
     "path": "artifacts/wilf_four_generators_review_package_2026-09-11/round5/small_multiplicity/exhaust_small_multiplicity.cpp",
     "sha256": "bb86d9e78f2f3af7c9f0a916a5122b2af3a5f0d4cc290e403c0f23d393d098f3"
   },
-  "started_utc": "2026-09-14T16:47:14.258243Z",
+  "started_utc": "2026-09-14T17:23:27.392908Z",
   "status": "PASS",
   "theorem_contract": {
     "multiplicity_interval_inclusive": [
@@ -384,7 +384,7 @@
       29
     ],
     "path": "paper/small-multiplicity-specification.md",
-    "sha256": "fa87a1c5bf4c341536e89fbd4e4e88b8e77e857db9f4c922f347ce82420dc7db",
+    "sha256": "e684ea51d7892ee8a29199c33574bd9acb24904da12a451cf9b0a522fad8d1fa",
     "statement": "B1.3-FV"
   },
   "tracked_worktree_clean_before_replay": true,
