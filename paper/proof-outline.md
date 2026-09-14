@@ -380,9 +380,12 @@ Historical source chain:
 
 ### B3. Corner \(p=(1,1,1)\) [A], [C]
 
-Residue injectivity implies that each coordinate plane has at most one mixed
-excluded corner. Since every point of \(T\) lies in a coordinate plane, \(T\)
-has at most six maximal points.
+The [B3.1 entry lemma](six-maxima-entry.md) proves that every mixed corner in
+a coordinate plane must be represented by the top point of the opposite
+coordinate axis. The collision rule therefore permits at most one such
+corner per plane. A planar lower ideal with at most one mixed corner has at
+most two maximal points; since every point of \(T\) lies in a coordinate
+plane, \(T\) has at most six maximal points.
 
 By F4, only the range
 
@@ -585,7 +588,7 @@ The following is the minimal presently retained proof interface.
 | B1.1--B1.2 | Negative-case conductor reduction | [A] | Reconstructed in `full-weighted-ideal.md` and `conductor-reduction.md`; obtain independent review |
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
-| B3 | Six-final-window theorem | [A]+[C] | Shrink the shape/completion argument and certificate interface |
+| B3 | Six-final-window theorem | [A]+[C] | B3.1 complete in `six-maxima-entry.md`; specify and simplify the shape and modular-cut checks |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |

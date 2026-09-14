@@ -81,6 +81,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | R1a | B1 cyclic-residue algorithm audit and fresh complete replay | [`verification/b1/r1a-residue-distance-audit.md`](verification/b1/r1a-residue-distance-audit.md) |
 | R1b | B1 ordinary-membership audit, fresh replay, and R1a agreement | [`verification/b1/r1b-membership-audit.md`](verification/b1/r1b-membership-audit.md) |
 | R2 | B2 interval-tree audit and two fresh complete checking paths | [`verification/b2/r2-interval-audit.md`](verification/b2/r2-interval-audit.md) |
+| B3.1 | One mixed corner per plane, six global maxima, and \(\lvert Z\rvert\le6\) | [`paper/six-maxima-entry.md`](paper/six-maxima-entry.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -123,9 +124,14 @@ under V0.
 
 ### B3: the corner \((1,1,1)\)
 
+B3.1 is complete. Its opposite-axis forcing lemma gives at most one mixed
+corner in each coordinate plane; a planar-frontier argument then gives at
+most six global maxima and hence at most six final-window points. The
+remaining tasks specify the finite theorem to which this analytic entry
+lemma reduces the branch.
+
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B3.1 | [A] | Six-maxima entry lemma | FND | Prove one mixed corner per plane, at most six maxima, and \(\lvert Z\rvert\le6\) |
 | B3.2 | [A]+[C] | Shape-generation specification | G3, B3.1, V0 | Prove rank compression, completion, insertion growth, extension completeness, and termination |
 | B3.3 | [A]+[C] | Modular-cut specification | B3.2 | Prove coverage of all residue labelings, integer lifts, cuts, and equality walls |
 
@@ -220,7 +226,8 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are B3.1, B4.1, B5.1, B5.2, B5.3, and
-B6.1. The recommended next task is **B3.1, the six-maxima entry lemma**:
-prove the mixed-corner and maximal-point bounds before specifying the B3
-shape computation.
+The topologically available tasks are B3.2, B4.1, B5.1, B5.2, B5.3, and
+B6.1. The recommended next task is **B3.2, the shape-generation
+specification**: prove the compression, completion, insertion-growth,
+extension-coverage, and termination claims before specifying the modular
+arithmetic check.
