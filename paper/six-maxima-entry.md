@@ -272,8 +272,9 @@ Later B3 tasks may cite Theorem 1.1 for exactly the following facts:
 3. the final-window classification needs to cover only \(|Z|\le6\).
 
 The lower bound \(|K|\ge4\) comes from the published type reduction recorded
-in the proof outline; it is not part of B3.1. Likewise, this note does not
-prove the six-final-window theorem. B3.2 and B3.3 must still specify the
-finite shape and modular-cut reductions before the D3 simplification gate can
-decide whether that computation remains necessary. The branch assumption
-\(m\ge30\) is not used in the entry lemma.
+in the proof outline; it is not part of B3.1. The
+[B3.2 shape specification](six-window-shape-specification.md) now supplies the
+finite geometric reduction, while B3.3 must still specify the modular
+arithmetic before the D3 simplification gate can decide whether that
+computation remains necessary. The branch assumption \(m\ge30\) is not used
+in the entry lemma.

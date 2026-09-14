@@ -82,6 +82,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | R1b | B1 ordinary-membership audit, fresh replay, and R1a agreement | [`verification/b1/r1b-membership-audit.md`](verification/b1/r1b-membership-audit.md) |
 | R2 | B2 interval-tree audit and two fresh complete checking paths | [`verification/b2/r2-interval-audit.md`](verification/b2/r2-interval-audit.md) |
 | B3.1 | One mixed corner per plane, six global maxima, and \(\lvert Z\rvert\le6\) | [`paper/six-maxima-entry.md`](paper/six-maxima-entry.md) |
+| B3.2 | Rank compression, one-corner completion, strict insertion growth, and exhaustive finite shape generation | [`paper/six-window-shape-specification.md`](paper/six-window-shape-specification.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -124,15 +125,15 @@ under V0.
 
 ### B3: the corner \((1,1,1)\)
 
-B3.1 is complete. Its opposite-axis forcing lemma gives at most one mixed
-corner in each coordinate plane; a planar-frontier argument then gives at
-most six global maxima and hence at most six final-window points. The
-remaining tasks specify the finite theorem to which this analytic entry
-lemma reduces the branch.
+B3.1 and B3.2 are complete. The opposite-axis forcing lemma gives at most six
+final-window points. The shape specification gives an exact one-corner
+completion criterion, replaces the old projected-height argument by a short
+forced-successor obstruction, proves strict insertion growth, and proves
+finite exhaustive extension. B3.3 remains to specify the arithmetic check on
+the resulting shape family.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B3.2 | [A]+[C] | Shape-generation specification | G3, B3.1, V0 | Prove rank compression, completion, insertion growth, extension completeness, and termination |
 | B3.3 | [A]+[C] | Modular-cut specification | B3.2 | Prove coverage of all residue labelings, integer lifts, cuts, and equality walls |
 
 ### B4: the corner \((2,1,1)\)
@@ -226,8 +227,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are B3.2, B4.1, B5.1, B5.2, B5.3, and
-B6.1. The recommended next task is **B3.2, the shape-generation
-specification**: prove the compression, completion, insertion-growth,
-extension-coverage, and termination claims before specifying the modular
-arithmetic check.
+The topologically available tasks are B3.3, B4.1, B5.1, B5.2, B5.3, and
+B6.1. The recommended next task is **B3.3, the modular-cut specification**:
+prove that the finite shape family is checked over every ordered
+residue-bijective labeling, modular cut, integer lift, and equality case.

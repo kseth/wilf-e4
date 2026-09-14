@@ -420,16 +420,24 @@ E(Z)=\sum_{z\in Z}|z|_1-\sum_j\max_{z\in Z}z_j.
 Thus only shapes with \(\Phi(T,Z)<0\) require the finite theorem below; the
 equality case \(\Phi=0\) is included analytically.
 
+The [B3.2 shape specification](six-window-shape-specification.md) proves that
+every such pair occurs in a finite canonical family. Its one-corner
+completion criterion is invariant under rank compression; a
+forced-successor obstruction excludes the only neutral six-point insertion;
+and all negative lower-ideal extensions are reached without a coordinate or
+cardinality cutoff. This is a coverage theorem, not yet a replay result.
+
 The remaining finite theorem is:
 
 > If a preferred four-generator Apéry ideal has at most six elements in its
 > final Apéry window \(Z\), then \(W_4\ge0\).
 
-The current proof compresses all possible antichains \(Z\), proves that every
-negative completion can be reached by finitely many insertions and extensions,
-checks every residue-bijective labeling, and checks all modular cuts. The
-recorded arithmetic core has 930 ordered residue labelings and 23,002 cuts;
-the complete generator also covers \(|Z|\le5\).
+The historical candidate compresses all possible antichains \(Z\), enumerates
+the insertion and extension family specified in B3.2, then checks every
+residue-bijective labeling and modular cut. Its recorded arithmetic core has
+930 ordered residue labelings and 23,002 cuts; the historical complete runner
+also covers \(|Z|\le5\). These are diagnostics pending B3.3, D3, and, if the
+computation is retained, R3.
 
 Historical source: `round8/audit_sixpoint.md` together with
 `round7/six_point_dependency_replay/`.
@@ -588,7 +596,7 @@ The following is the minimal presently retained proof interface.
 | B1.1--B1.2 | Negative-case conductor reduction | [A] | Reconstructed in `full-weighted-ideal.md` and `conductor-reduction.md`; obtain independent review |
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
-| B3 | Six-final-window theorem | [A]+[C] | B3.1 complete in `six-maxima-entry.md`; specify and simplify the shape and modular-cut checks |
+| B3 | Six-final-window theorem | [A]+[C] | B3.1--B3.2 complete; specify the residue-label and all-cut arithmetic in B3.3 |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
