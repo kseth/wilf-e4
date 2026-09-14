@@ -427,17 +427,29 @@ forced-successor obstruction excludes the only neutral six-point insertion;
 and all negative lower-ideal extensions are reached without a coordinate or
 cardinality cutoff. This is a coverage theorem, not yet a replay result.
 
-The remaining finite theorem is:
+The [B3.3 modular specification](six-window-modular-specification.md) now
+states the exact remaining finite obligation. For each distinct generated
+ideal \(T\), each ordered residue triple \(A\) for which
+\(x\mapsto A\cdot x\pmod m\) bijects \(T\) with
+\(\mathbb Z/m\mathbb Z\), and each cut \(0\le f<m\), it requires
 
-> If a preferred four-generator Apéry ideal has at most six elements in its
-> final Apéry window \(Z\), then \(W_4\ge0\).
+\[
+\sum_{\ell\in\mathcal L(T)}
+L_\ell[f-A\cdot t_\ell]_m\ge m(m-1).
+\]
 
-The historical candidate compresses all possible antichains \(Z\), enumerates
-the insertion and extension family specified in B3.2, then checks every
-residue-bijective labeling and modular cut. Its recorded arithmetic core has
-930 ordered residue labelings and 23,002 cuts; the historical complete runner
-also covers \(|Z|\le5\). These are diagnostics pending B3.3, D3, and, if the
-computation is retained, R3.
+Every actual generator triple supplies one of these ordered labelings, and
+the actual maximum supplies one of the cuts. Each nonnegative integer line
+deficit is at least its least residue, so the displayed inequality covers all
+integer generator lifts without bounding or enumerating them. All comparisons
+are weak, hence equality is included.
+
+The historical candidate reports 930 ordered labelings and 23,002 cuts in its
+six-point core; its separate \(|Z|\le5\) path reports another 48 labelings and
+536 cuts. These remain diagnostics pending D3 and, if computation is retained,
+R3. B3.3 also shows that the historical real-weight linear programs and their
+rational dual certificates are redundant to this route and should not be a
+dependency of the retained checker.
 
 Historical source: `round8/audit_sixpoint.md` together with
 `round7/six_point_dependency_replay/`.
@@ -596,7 +608,7 @@ The following is the minimal presently retained proof interface.
 | B1.1--B1.2 | Negative-case conductor reduction | [A] | Reconstructed in `full-weighted-ideal.md` and `conductor-reduction.md`; obtain independent review |
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
-| B3 | Six-final-window theorem | [A]+[C] | B3.1--B3.2 complete; specify the residue-label and all-cut arithmetic in B3.3 |
+| B3 | Six-final-window theorem | [A]+[C] | B3.1--B3.3 specifications complete; run D3 before retaining and replaying B3.3-FV |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |

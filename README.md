@@ -14,10 +14,10 @@ analytic arguments and finite verifications have been independently checked.
 | Component | Current state |
 |---|---|
 | Main theorem | Proposed; B1 and B2 are complete under the internal trust policy, while B3--B6 remain to be simplified and audited |
-| Shared foundations, routing, G1--G5, B2.1, B2.2, D2, B3.1, and B3.2 | Reconstructed in Markdown and internally checked; not independently reviewed |
+| Shared foundations, routing, G1--G5, B2.1, B2.2, D2, and B3.1--B3.3 | Reconstructed in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
-| Computational verification | B1 and B2 are complete under the trust policy; B3 shape generation is specified, while its arithmetic/replay and B4--B6 remain open |
+| Computational verification | B1 and B2 are complete under the trust policy; B3 shape generation and modular arithmetic are specified, while D3/replay and B4--B6 remain open |
 | Release artifact | Definitive TeX, proof code, and PDF intentionally deferred until the roadmap freeze |
 
 Here “reconstructed” means that a clean argument has been extracted from the
@@ -58,6 +58,10 @@ canonical source for task status and dependencies.
 - [`paper/six-window-shape-specification.md`](paper/six-window-shape-specification.md)
   proves the completion, compression, insertion-growth, extension, symmetry,
   and termination claims behind B3's finite shape family.
+- [`paper/six-window-modular-specification.md`](paper/six-window-modular-specification.md)
+  specifies every ordered residue labeling and modular cut, proves coverage
+  of arbitrary integer lifts and equality, and removes the historical
+  linear-program certificates from the retained B3 route.
 - [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) classifies
   full weighted ideals, excludes the six-column triangle analytically, and
   proves Wilf's inequality for this subcase.

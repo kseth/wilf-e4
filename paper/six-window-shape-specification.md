@@ -26,8 +26,9 @@ theorems below are proved directly; see the
 [focused assessment](../research/chomicz-assessment.md).
 
 This is a **specification and coverage proof**, not a replay result. It does
-not establish the modular arithmetic predicate deferred to B3.3, endorse the
-historical output counts, or promote the archived generator under V0.
+not establish the modular arithmetic predicate specified in the
+[B3.3 note](six-window-modular-specification.md), endorse the historical
+output counts, or promote the archived generator under V0.
 
 ## 1. The geometric target
 
@@ -574,8 +575,8 @@ Define the family \(\mathcal G_{\le6}\) by the following exact procedure.
 
 This uniform specification safely applies the completion filter for every
 \(k\le6\). A conforming implementation may enumerate a declared superset—for
-example, by omitting that filter when \(k\le5\)—provided B3.3 checks every
-extra candidate as well.
+example, by omitting that filter when \(k\le5\)—provided the B3.3 modular
+predicate is checked on every extra candidate as well.
 
 ### Theorem 5.1 (B3.2 shape coverage)
 
@@ -647,11 +648,12 @@ specification must:
    incomplete queues, or inconsistent duplicate records.
 
 Counts and stored candidate lists may be used for regression and provenance,
-but cannot be acceptance predicates. B3.3 must state the residue-label and
-all-cut predicate on the distinct lower ideals underlying the generated
-pairs. If D3 retains this computation, R3 must freshly regenerate the whole
-family and provide an independent path that checks generation and lifting,
-not only the surviving arithmetic certificates.
+but cannot be acceptance predicates. The
+[B3.3 specification](six-window-modular-specification.md) states the
+residue-label and all-cut predicate on the distinct lower ideals underlying
+the generated pairs. If D3 retains this computation, R3 must freshly
+regenerate the whole family and provide an independent path that checks
+generation and lifting, not only the surviving arithmetic certificates.
 
 ## 7. Audit of the historical candidate
 
@@ -716,8 +718,10 @@ B3.2 supplies B3.3 with the following exact statement:
 > permutation, a pair \((T,Z)\) in the finite family
 > \(\mathcal G_{\le6}\).
 
-B3.3 must now specify and prove the finite arithmetic implication for every
-distinct ideal underlying that family, including all ordered residue-bijective
-labels, every modular cut, every integer lift, and equality. Until B3.3 and
-the later D3/R3 gates are complete, no computed six-window lemma is promoted
-under V0.
+The [B3.3 note](six-window-modular-specification.md) now proves the finite
+arithmetic implication for every distinct ideal underlying that family,
+including all ordered residue-bijective labels, every modular cut, every
+integer lift, and equality. It also removes the historical real-weight
+linear-program certificates from the retained dependency chain. Until the
+D3 gate and, if needed, R3 are complete, no computed six-window lemma is
+promoted under V0.

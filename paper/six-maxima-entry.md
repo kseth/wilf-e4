@@ -274,7 +274,8 @@ Later B3 tasks may cite Theorem 1.1 for exactly the following facts:
 The lower bound \(|K|\ge4\) comes from the published type reduction recorded
 in the proof outline; it is not part of B3.1. The
 [B3.2 shape specification](six-window-shape-specification.md) now supplies the
-finite geometric reduction, while B3.3 must still specify the modular
-arithmetic before the D3 simplification gate can decide whether that
-computation remains necessary. The branch assumption \(m\ge30\) is not used
-in the entry lemma.
+finite geometric reduction, and the
+[B3.3 modular specification](six-window-modular-specification.md) supplies
+the all-label, all-cut, and integer-lift implication. The D3 simplification
+gate must now decide whether the finite predicate itself remains necessary.
+The branch assumption \(m\ge30\) is not used in the entry lemma.
