@@ -9,9 +9,9 @@ semantics for two independent checking paths.
 
 This is a **specification and coverage proof**, not a replay result. It does
 not promote the historical programs or their stored outputs into the proof.
-The D1 simplification gate retained this computation. R1a has audited and
-freshly run the residue-distance implementation; R1b must still audit and run
-the independent ordinary-membership path.
+The D1 simplification gate retained this computation. R1a and R1b have now
+audited and freshly run the residue-distance and ordinary-membership paths,
+respectively, and their common bounded-domain diagnostics agree.
 
 ## 1. The finite obligation
 
@@ -410,6 +410,11 @@ accepted-tuple list, Apéry data, classifications, or cached successes.
 Agreement statistics between the two paths are useful diagnostics, but each
 path must establish its own coverage and predicate.
 
+The completed
+[R1b audit and replay](../verification/b1/r1b-membership-audit.md)
+discharges this path and performs the agreement check only after independent
+R1b validation has passed.
+
 The two paths need to agree only on the required domain \(\mathcal Q_m\). A
 residue implementation may additionally evaluate every valid boxed tuple
 with \(M>B_m\); that stronger historical check is not part of (FV).
@@ -423,9 +428,9 @@ that (FV) is sufficient.
 It does **not** establish (FV), validate stored counts, audit source code, or
 record a fresh replay. The
 [D1 gate](../research/b1-simplification-decision.md) retained (FV), so the two
-checking paths must be implemented and replayed under the
-[verification trust policy](../verification/trust-policy.md). R1a is complete;
-R1b and the final agreement audit remain.
+checking paths had to be implemented and replayed under the
+[verification trust policy](../verification/trust-policy.md). R1a and R1b,
+including their downstream agreement audit, are now complete.
 
 ## 8. Historical sources
 

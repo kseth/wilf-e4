@@ -16,8 +16,8 @@ analytic arguments and finite verifications have been independently checked.
 | Main theorem | Proposed; the B2--B6 branch arguments remain to be reconstructed and audited |
 | Shared foundations and routing | Reconstructed in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
-| Multiplicity \(20\le m\le29\) | Analytic reduction, finite contract, D1 decision, and R1a residue replay complete; independent R1b remains |
-| Computational verification | Trust policy fixed; R1a has a fresh fail-closed replay, while no historical success record is treated as a proof result |
+| Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
+| Computational verification | B1 is complete under the trust policy; computations retained by B2--B6 remain to be specified, simplified, and replayed |
 | Release artifact | Definitive TeX, proof code, and PDF intentionally deferred until the roadmap freeze |
 
 Here “reconstructed” means that a clean argument has been extracted from the
@@ -56,6 +56,9 @@ canonical source for task status and dependencies.
 - [`verification/b1/r1a-residue-distance-audit.md`](verification/b1/r1a-residue-distance-audit.md)
   proves the residue-cycle update, audits the first B1 implementation, and
   records its fresh complete replay.
+- [`verification/b1/r1b-membership-audit.md`](verification/b1/r1b-membership-audit.md)
+  proves the ordinary-membership path, records its independent replay, and
+  audits agreement with R1a.
 - [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md)
   verifies the exact published statements that remove \(m\le19\), their
   scope, computational dependencies, and version-of-record citations.

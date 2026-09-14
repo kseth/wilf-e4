@@ -243,9 +243,11 @@ claims without relying on a historical run. The
 smaller analytic or published replacement and retains this exact finite
 obligation. The
 [R1a audit](../verification/b1/r1a-residue-distance-audit.md) proves the cyclic
-update and records a fresh complete replay with no negative case. R1b must
-still supply the independent ordinary-membership audit and replay before the
-finite lemma is complete under V0.
+update and records a fresh complete residue-distance replay. The
+[R1b audit](../verification/b1/r1b-membership-audit.md) proves the ordinary
+membership calculation, records its independent fresh replay, and checks the
+common diagnostics only after R1b passes on its own. Both paths find no
+negative case, so the finite lemma is complete under V0.
 
 ### B2. No full-support corner [A], [C]
 
@@ -473,7 +475,7 @@ The following is the minimal presently retained proof interface.
 | F1–F3 | Apéry ideal, moment identity, exclusion structure | [E]+[A] | Reconstructed in `foundations.md`; obtain independent review |
 | L1 | Published multiplicity \(\le19\) theorem | [E] | Audited in `literature/multiplicity-through-19-audit.md` |
 | B1.1--B1.2 | Negative-case conductor reduction | [A] | Reconstructed in `full-weighted-ideal.md` and `conductor-reduction.md`; obtain independent review |
-| B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification and D1 complete; R1a replay complete; R1b remains |
+| B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | Seek an analytic horn inequality |
 | B3 | Six-final-window theorem | [A]+[C] | Shrink the shape/completion argument and certificate interface |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |

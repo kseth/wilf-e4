@@ -25,9 +25,8 @@ architecture is therefore the direct one:
 \]
 
 This decision retains a computation; it does not by itself establish its
-result. R1a has since audited and freshly replayed the residue-distance path.
-R1b must still curate and replay the ordinary-membership path under the
-verification trust policy.
+result. R1a and R1b have since audited and freshly replayed the two paths
+under the verification trust policy.
 
 ## 1. The retained finite statement
 
@@ -71,8 +70,8 @@ The raw traversal size is the exact combinatorial count
 \]
 
 The much smaller number of tuples surviving \(M\le B_m\) in the historical
-records is useful performance evidence, but it is not an input to (FV) and
-will not be treated as established until the fresh replays.
+records was useful performance evidence, but it was not an input to (FV).
+The fresh replays independently regenerate that domain.
 
 ## 2. Why the generator bound is not presently smaller
 
@@ -212,6 +211,9 @@ Independently regenerate every raw tuple. Use ordinary bounded-integer
 membership, not R1a's tuple stream or Apéry data. Prove \(M\le B_m\) through
 the final window \([B_m-m+1,B_m]\), then obtain the complete conductor \(C\)
 and genus and reject if \(3C-4g<0\).
+
+This path is now complete; see the
+[R1b audit and replay](../verification/b1/r1b-membership-audit.md).
 
 The two paths may compare per-multiplicity partitions, extremal diagnostics,
 and checksums, but neither may accept because the other did. Both must be

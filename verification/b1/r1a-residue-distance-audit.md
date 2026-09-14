@@ -9,9 +9,10 @@ mathematical update has been reconstructed below, and a fresh complete replay
 passes the B1.3-FV contract for all multiplicities \(20\le m\le29\).
 
 The replay establishes the retained result through the residue-distance path.
-It does **not** supply an independent derivation of the semigroup invariants;
-that is the separate R1b ordinary-membership task. Under the repository trust
-policy, the B1 computed lemma remains incomplete until R1b also passes.
+It does **not** by itself supply an independent derivation of the semigroup
+invariants. That derivation is now supplied by the separate
+[R1b ordinary-membership audit](r1b-membership-audit.md), so the combined B1
+computed lemma is complete under the repository trust policy.
 
 The audited immutable source is
 
@@ -216,15 +217,16 @@ statuses, and exact timestamps are in `r1a-replay.json`. A read-only comparison
 after the run found every nontiming field identical to the archived record;
 that agreement is a regression diagnostic, not a replay input.
 
-## 6. Trust boundary and remaining obligation
+## 6. Trust boundary and independent completion
 
 R1a trusts the mathematical arguments in the B1.2 conductor reduction and
 B1.3 specification, the inspected C++ source, the fail-closed Python runner,
 the C++17 and Python language implementations, the compiler, operating system,
 and hardware. It does not trust historical output.
 
-R1a alone is not the independent check required by V0. R1b must independently
-generate the tuple domain and calculate membership, conductor, genus, and
-\(W_4\) without importing the residue distances, classifications, accepted
-tuple list, or success result from this replay. Only after R1b passes may the
-B1 finite lemma be marked complete under the repository policy.
+R1a alone is not the independent check required by V0. The completed
+[R1b path](r1b-membership-audit.md) independently generates the tuple domain
+and calculates membership, conductor, genus, and \(W_4\) without importing
+the residue distances, classifications, accepted tuple list, or success
+result from this replay. The two paths together complete the B1 finite lemma
+under the repository policy.
