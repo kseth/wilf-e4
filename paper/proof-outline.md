@@ -155,6 +155,39 @@ branch parameters or the B1 computation. The exact source comparison and the
 decision not to use Marashdeh's defect decomposition as a replacement are in
 the [published-reduction comparison](../literature/published-reduction-comparison.md).
 
+### G4. Phase and rectangular thickening [A]
+
+Let \(X\) be uniform on \(T\). For normalized positive weights
+\(u_i=a_i/M\), put
+
+\[
+v=\min_i u_i,\qquad \sigma=\sum_i u_i,
+\qquad \kappa=3-4\mathbb E_T(u\cdot X).
+\]
+
+Coordinate-line slacks and a one-dimensional sawtooth integral give
+
+\[
+\boxed{
+\sigma(1-3\kappa)
+\le4\kappa+5v-3\kappa v+4v^2.
+}
+\]
+
+The rectangular thickening of \(T\), rescaled into the unit simplex, has
+continuous deficit
+
+\[
+\boxed{\kappa_c=\frac{\kappa+\sigma}{1+\sigma}.}
+\]
+
+Its excluded upper-orthant vertices have exactly the supports of the discrete
+minimal excluded points. The
+[`phase-and-thickening note`](phase-and-thickening.md) proves both identities
+without residue hypotheses and records every strict endpoint later used to
+obtain \(H<24\), \(H<42\), and \(H<78\). The older coarse phase estimate in
+the archive is not retained.
+
 ## 2. The complete case partition
 
 After treating \(m\le29\), suppose \(m\ge30\). First split according to whether
@@ -486,6 +519,7 @@ The following is the minimal presently retained proof interface.
 | G1 | Final arithmetic | [A] | Reconstructed in `final-arithmetic.md`; obtain independent review |
 | G2 | Coordinate-line calculus | [A] | Reconstructed in `coordinate-lines.md`; obtain independent review |
 | G3 | Final-window projection inequality | [A] | Reconstructed in `final-window-projection.md`; obtain independent review |
+| G4 | Phase and rectangular thickening | [A] | Reconstructed in `phase-and-thickening.md`; obtain independent review |
 
 ## 6. Material excluded from the main proof
 

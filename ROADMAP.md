@@ -65,6 +65,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | G1 | Final-arithmetic lemma and conditional branch assembly | [`paper/final-arithmetic.md`](paper/final-arithmetic.md) |
 | G2 | Coordinate-line calculus and weighted-deficit identities | [`paper/coordinate-lines.md`](paper/coordinate-lines.md) |
 | G3 | Final-window projection inequality and equality audit | [`paper/final-window-projection.md`](paper/final-window-projection.md) |
+| G4 | Phase inequality, rectangular thickening, and endpoint audit | [`paper/phase-and-thickening.md`](paper/phase-and-thickening.md) |
 | B1.1 | Full-weighted-ideal theorem and six-column exclusion | [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) |
 | B1.2 | Negative-case conductor and generator bounds | [`paper/conductor-reduction.md`](paper/conductor-reduction.md) |
 | V0 | Verification vocabulary, trust boundary, and replay policy | [`verification/trust-policy.md`](verification/trust-policy.md) |
@@ -90,11 +91,10 @@ the B1 finite obligation or any of B2--B6.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| G4 | [A] | Phase and thickening lemma | FND, G2 | Reconstruct the discrete phase inequality, continuous thickening identity, normalization, and endpoints |
 | G5 | [A] | Central-box/three-horn theorem | FND | Give the clique-tree proof, three monotone arms, and one-corner clipping corollary |
 
-G3 feeds B1 and B3. G4 feeds B2, B4, and B6. G5 feeds the finite
-recurrences in B2 and B6.
+G3 feeds B1 and B3. The completed G4 note feeds B2, B4, and B6. G5 feeds
+the finite recurrences in B2 and B6.
 
 ## Layer 3: branch-entry lemmas and route specifications
 
@@ -212,7 +212,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are G4, G5, B3.1, B4.1, B5.1, B5.2, and
-B5.3. The recommended next task is **G4, the phase and thickening lemma**.
-It is a shared analytic prerequisite for B2, B4, and B6 and will expose the
-normalization and endpoint conventions used by three later branches.
+The topologically available tasks are G5, B3.1, B4.1, B5.1, B5.2, and B5.3.
+The recommended next task is **G5, the central-box/three-horn theorem**. It is
+the last unfinished common analytic tool and will expose the structural
+recurrence later specified in B2 and B6.
