@@ -393,9 +393,10 @@ clipping condition
 
 The three later applications are as follows.
 
-1. **B2 (no full-support corner).** The continuous gap is
-   \(\gamma=1/3\). If \(H\le3\), then \(H<24\) already. If \(H>3\), combine
-   (19) and (21) to obtain
+1. **B2 (no full-support corner).** The
+   [B2.1 compactness note](no-corner-compactness.md) proves the continuous
+   gap \(\gamma=1/3\). If \(H\le3\), then \(H<24\) already. If \(H>3\),
+   combine (19) and (21) to obtain
 
    \[
    H^2-24H+7<0,

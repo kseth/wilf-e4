@@ -396,7 +396,8 @@ Later notes may use G5 through the following statements only:
 3. exact one-corner removal and slice clipping (11)--(13);
 4. exhaustive nested-cap recurrence (14).
 
-The clique tree is a proof device. Its nonuniqueness, the unused tree
-inclusion--exclusion formulas in the historical archive, and earlier
-continuous horn-optimization variants are not part of the retained proof
-interface.
+The clique tree is a proof device. Its nonuniqueness and the unused tree
+inclusion--exclusion formulas in the historical archive are not part of the
+retained proof interface. The continuous horn inequality needed by B2 is a
+separate analytic consequence of this structure, reconstructed in
+[`no-corner-compactness.md`](no-corner-compactness.md).

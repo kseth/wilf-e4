@@ -324,17 +324,42 @@ The required abstract theorem is:
 > \ge a_{\min}(m-1).
 > \]
 
-The current proof has an analytic reduction to
-\(1\le b\le c\le H\), \(5\le H\le24\), followed by an exact interval tree.
-The leaf bound uses a structural decomposition of a no-corner ideal into a
-central box and at most three nested rectangular horns, proved in the
-[G5 structural note](central-box-horns.md).
+The analytic entry is now reconstructed in the
+[B2.1 compactness note](no-corner-compactness.md). The G5 decomposition and
+an explicit boundary-potential argument first prove the continuous
+no-corner inequality
+
+\[
+\kappa_c\ge\frac13.
+\]
+
+Only the finite-step horn geometry arising from rectangular thickening is
+needed. Combining this inequality with G4 gives
+
+\[
+\frac{D_0}{m}\ge\frac{H-2(1+b+c)}3
+\]
+
+and sends every possible failure to
+
+\[
+1\le b\le c\le H,\qquad
+5\le H<12+\sqrt{137}<24.
+\]
+
+The lower endpoint uses the explicit degree-four cardinality bound
+\(|T|\le29\). The later certificate may harmlessly cover the larger closed
+box ending at \(H=24\). Thus B2.1 contains no computed assertion.
 
 The retained finite task consists of 24,912 dynamic-programming leaves and 531
-analytic leaves. The priority is to simplify the structural and compactness
-arguments before preserving the interval certificate as essential.
+analytic leaves. B2.2 must specify the exact score, prove simultaneous
+whole-box domination for every real parameter, and prove coverage of the
+closed interval tree before any historical counts are accepted.
 
-Historical source:
+Historical source chain:
+`round3/horns_optimization/fullcap_boundary_theorem.md`,
+`round4/bellman/arbitrary_horn_bridge.md`,
+`round4/joint_horns/joint_effective_cap_theorem.md`, and
 `round5/weight_arrangement/weighted_no_interior_theorem.md`.
 
 ### B3. Corner \(p=(1,1,1)\) [A], [C]
@@ -543,7 +568,7 @@ The following is the minimal presently retained proof interface.
 | L1 | Published multiplicity \(\le19\) theorem | [E] | Audited in `literature/multiplicity-through-19-audit.md` |
 | B1.1--B1.2 | Negative-case conductor reduction | [A] | Reconstructed in `full-weighted-ideal.md` and `conductor-reduction.md`; obtain independent review |
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
-| B2 | No-corner weighted theorem | [A]+[C] | Seek an analytic horn inequality |
+| B2 | No-corner weighted theorem | [A]+[C] | B2.1 reconstructed in `no-corner-compactness.md`; specify and simplify the B2.2 interval certificate |
 | B3 | Six-final-window theorem | [A]+[C] | Shrink the shape/completion argument and certificate interface |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
