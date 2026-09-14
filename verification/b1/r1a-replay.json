@@ -1,0 +1,392 @@
+{
+  "cache_free": true,
+  "claim_established_by_this_replay": "The audited residue-distance implementation freshly traversed every sorted generator tuple in the B1 box for 20 <= m <= 29 and found no negative Wilf number; in particular it establishes B1.3-FV for this implementation.",
+  "commands": {
+    "compile": [
+      "/usr/bin/g++",
+      "-O3",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "artifacts/wilf_four_generators_review_package_2026-09-11/round5/small_multiplicity/exhaust_small_multiplicity.cpp",
+      "-o",
+      "<temporary-directory>/exhaust_small_multiplicity"
+    ],
+    "replay": [
+      "python3",
+      "verification/b1/replay_r1a.py"
+    ],
+    "run": [
+      "<temporary-directory>/exhaust_small_multiplicity",
+      "20",
+      "29"
+    ]
+  },
+  "complete": true,
+  "component": "R1a",
+  "decision": {
+    "path": "research/b1-simplification-decision.md",
+    "sha256": "2313343ad491f88360ac2fa093661e5a7f47121d5ecf51d55fe5a2e9bb10a68a"
+  },
+  "does_not_establish": [
+    "independence from the residue-distance derivation (reserved for R1b)",
+    "external peer review",
+    "proof-assistant formalization",
+    "strict positivity outside the necessary bounded-Ap\u00e9ry domain"
+  ],
+  "elapsed_seconds": 13.101616500003729,
+  "environment": {
+    "compiler_path": "/usr/bin/g++",
+    "compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+    "machine": "arm64",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "finished_utc": "2026-09-14T16:27:33.774139Z",
+  "fresh": true,
+  "process": {
+    "compile_exit_status": 0,
+    "compile_stderr": "",
+    "run_exit_status": 0,
+    "run_stderr": "",
+    "stdout_sha256": "e2d590e4eff79c269a68147f239b67e7fd166798d4f2a583f4dc26421ea5ad26"
+  },
+  "record_path": "verification/b1/r1a-replay.json",
+  "repository_input_commit": "0d2133bc456c08b727328f2755838c1a0acd2899",
+  "result": {
+    "cycle_schedule_diagnostic": {
+      "edge_relaxations": 6883916,
+      "one_source_basis_cases": 134870
+    },
+    "per_multiplicity": [
+      {
+        "bounded_checksum_fnv1a64": "12718211932128665265",
+        "bounded_minimum_example": [
+          20,
+          21,
+          29,
+          57
+        ],
+        "elapsed_seconds": 0.192519,
+        "generator_bound_inclusive": 360,
+        "largest_redundant": 1590406,
+        "m": 20,
+        "maximum_apery_within_bound": 162507,
+        "middle_redundant": 899267,
+        "minimal_four_generator_semigroups": 3443090,
+        "minimum_wilf": 31,
+        "minimum_wilf_example": [
+          20,
+          21,
+          29,
+          57
+        ],
+        "minimum_wilf_with_bounded_apery": 31,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 262377,
+        "raw_triples": 6492980,
+        "smallest_redundant": 297840,
+        "zero_wilf_count": 0
+      },
+      {
+        "bounded_checksum_fnv1a64": "13001845727112634692",
+        "bounded_minimum_example": [
+          21,
+          22,
+          37,
+          49
+        ],
+        "elapsed_seconds": 0.245986,
+        "generator_bound_inclusive": 399,
+        "largest_redundant": 2199440,
+        "m": 21,
+        "maximum_apery_within_bound": 245781,
+        "middle_redundant": 1221146,
+        "minimal_four_generator_semigroups": 5062582,
+        "minimum_wilf": 35,
+        "minimum_wilf_example": [
+          21,
+          22,
+          37,
+          49
+        ],
+        "minimum_wilf_with_bounded_apery": 35,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 55222,
+        "raw_triples": 8930376,
+        "smallest_redundant": 391986,
+        "zero_wilf_count": 0
+      },
+      {
+        "bounded_checksum_fnv1a64": "6626864668134884351",
+        "bounded_minimum_example": [
+          22,
+          23,
+          27,
+          28
+        ],
+        "elapsed_seconds": 0.343035,
+        "generator_bound_inclusive": 440,
+        "largest_redundant": 2890697,
+        "m": 22,
+        "maximum_apery_within_bound": 308356,
+        "middle_redundant": 1622524,
+        "minimal_four_generator_semigroups": 6572752,
+        "minimum_wilf": 32,
+        "minimum_wilf_example": [
+          22,
+          23,
+          27,
+          28
+        ],
+        "minimum_wilf_with_bounded_apery": 32,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 490746,
+        "raw_triples": 12085216,
+        "smallest_redundant": 508497,
+        "zero_wilf_count": 0
+      },
+      {
+        "bounded_checksum_fnv1a64": "12102797832157142584",
+        "bounded_minimum_example": [
+          23,
+          25,
+          28,
+          35
+        ],
+        "elapsed_seconds": 0.553066,
+        "generator_bound_inclusive": 483,
+        "largest_redundant": 3924428,
+        "m": 23,
+        "maximum_apery_within_bound": 469286,
+        "middle_redundant": 2144557,
+        "minimal_four_generator_semigroups": 9396905,
+        "minimum_wilf": 25,
+        "minimum_wilf_example": [
+          23,
+          25,
+          28,
+          35
+        ],
+        "minimum_wilf_with_bounded_apery": 25,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 0,
+        "raw_triples": 16117020,
+        "smallest_redundant": 651130,
+        "zero_wilf_count": 0
+      },
+      {
+        "bounded_checksum_fnv1a64": "16470417131048339624",
+        "bounded_minimum_example": [
+          24,
+          25,
+          29,
+          30
+        ],
+        "elapsed_seconds": 0.598612,
+        "generator_bound_inclusive": 528,
+        "largest_redundant": 4689527,
+        "m": 24,
+        "maximum_apery_within_bound": 457322,
+        "middle_redundant": 2548181,
+        "minimal_four_generator_semigroups": 11916965,
+        "minimum_wilf": 24,
+        "minimum_wilf_example": [
+          24,
+          25,
+          29,
+          30
+        ],
+        "minimum_wilf_with_bounded_apery": 24,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 1231791,
+        "raw_triples": 21210504,
+        "smallest_redundant": 824040,
+        "zero_wilf_count": 0
+      },
+      {
+        "bounded_checksum_fnv1a64": "1456708182701377936",
+        "bounded_minimum_example": [
+          25,
+          26,
+          30,
+          31
+        ],
+        "elapsed_seconds": 1.0322,
+        "generator_bound_inclusive": 575,
+        "largest_redundant": 6366747,
+        "m": 25,
+        "maximum_apery_within_bound": 734594,
+        "middle_redundant": 3390679,
+        "minimal_four_generator_semigroups": 16773245,
+        "minimum_wilf": 20,
+        "minimum_wilf_example": [
+          25,
+          26,
+          30,
+          31
+        ],
+        "minimum_wilf_with_bounded_apery": 20,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 15629,
+        "raw_triples": 27578100,
+        "smallest_redundant": 1031800,
+        "zero_wilf_count": 0
+      },
+      {
+        "bounded_checksum_fnv1a64": "5799196201952319081",
+        "bounded_minimum_example": [
+          26,
+          27,
+          31,
+          34
+        ],
+        "elapsed_seconds": 1.21076,
+        "generator_bound_inclusive": 624,
+        "largest_redundant": 7846938,
+        "m": 26,
+        "maximum_apery_within_bound": 828230,
+        "middle_redundant": 4243685,
+        "minimal_four_generator_semigroups": 20415122,
+        "minimum_wilf": 32,
+        "minimum_wilf_example": [
+          26,
+          27,
+          31,
+          34
+        ],
+        "minimum_wilf_with_bounded_apery": 32,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 1677430,
+        "raw_triples": 35462596,
+        "smallest_redundant": 1279421,
+        "zero_wilf_count": 0
+      },
+      {
+        "bounded_checksum_fnv1a64": "1708433661237283912",
+        "bounded_minimum_example": [
+          27,
+          28,
+          32,
+          35
+        ],
+        "elapsed_seconds": 1.72258,
+        "generator_bound_inclusive": 675,
+        "largest_redundant": 9893933,
+        "m": 27,
+        "maximum_apery_within_bound": 1098827,
+        "middle_redundant": 5206000,
+        "minimal_four_generator_semigroups": 28032547,
+        "minimum_wilf": 28,
+        "minimum_wilf_example": [
+          27,
+          28,
+          32,
+          35
+        ],
+        "minimum_wilf_with_bounded_apery": 28,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 435044,
+        "raw_triples": 45139896,
+        "smallest_redundant": 1572372,
+        "zero_wilf_count": 0
+      },
+      {
+        "bounded_checksum_fnv1a64": "2976021888830687498",
+        "bounded_minimum_example": [
+          28,
+          31,
+          33,
+          54
+        ],
+        "elapsed_seconds": 2.02721,
+        "generator_bound_inclusive": 728,
+        "largest_redundant": 11921775,
+        "m": 28,
+        "maximum_apery_within_bound": 1201133,
+        "middle_redundant": 6272144,
+        "minimal_four_generator_semigroups": 33786843,
+        "minimum_wilf": 45,
+        "minimum_wilf_example": [
+          28,
+          31,
+          33,
+          54
+        ],
+        "minimum_wilf_with_bounded_apery": 45,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 3024538,
+        "raw_triples": 56921900,
+        "smallest_redundant": 1916600,
+        "zero_wilf_count": 0
+      },
+      {
+        "bounded_checksum_fnv1a64": "14948879517117836914",
+        "bounded_minimum_example": [
+          29,
+          33,
+          34,
+          55
+        ],
+        "elapsed_seconds": 3.29176,
+        "generator_bound_inclusive": 783,
+        "largest_redundant": 15486281,
+        "m": 29,
+        "maximum_apery_within_bound": 1820956,
+        "middle_redundant": 8035695,
+        "minimal_four_generator_semigroups": 45318978,
+        "minimum_wilf": 59,
+        "minimum_wilf_example": [
+          29,
+          33,
+          34,
+          55
+        ],
+        "minimum_wilf_with_bounded_apery": 59,
+        "negative_wilf_count": 0,
+        "nontrivial_gcd": 0,
+        "raw_triples": 71159504,
+        "smallest_redundant": 2318550,
+        "zero_wilf_count": 0
+      }
+    ],
+    "totals": {
+      "largest_redundant": 66810172,
+      "maximum_apery_within_bound": 7326992,
+      "middle_redundant": 35583878,
+      "minimal_four_generator_semigroups": 180719029,
+      "negative_wilf_count": 0,
+      "nontrivial_gcd": 7192777,
+      "raw_triples": 301098092,
+      "smallest_redundant": 10792236,
+      "zero_wilf_count": 0
+    },
+    "unresolved": 0,
+    "unsupported": 0
+  },
+  "runner": {
+    "path": "verification/b1/replay_r1a.py",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "sha256": "2b91b90e838dec96b7455b80403e74b4fbd0e4725a2ac001fa8f86ef5d8d7cc7"
+  },
+  "schema_version": 1,
+  "source": {
+    "historical_archive_modified": false,
+    "path": "artifacts/wilf_four_generators_review_package_2026-09-11/round5/small_multiplicity/exhaust_small_multiplicity.cpp",
+    "sha256": "bb86d9e78f2f3af7c9f0a916a5122b2af3a5f0d4cc290e403c0f23d393d098f3"
+  },
+  "started_utc": "2026-09-14T16:27:20.672116Z",
+  "status": "PASS",
+  "theorem_contract": {
+    "multiplicity_interval_inclusive": [
+      20,
+      29
+    ],
+    "path": "paper/small-multiplicity-specification.md",
+    "sha256": "bf35b9b0ffaf6c7e3f94f0d9753189023e6e53f7a85e5a5bcc4c3d34d14b6b8d",
+    "statement": "B1.3-FV"
+  },
+  "tracked_worktree_clean_before_replay": true,
+  "working_directory_repository_relative": "."
+}
