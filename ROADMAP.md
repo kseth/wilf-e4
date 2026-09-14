@@ -77,6 +77,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | DOC0 | Reader-facing notation, status, and milestone normalization | [`README.md`](README.md), [`paper/proof-outline.md`](paper/proof-outline.md), and this roadmap |
 | L2 | Published conductor, left-element, type, and Marashdeh comparison | [`literature/published-reduction-comparison.md`](literature/published-reduction-comparison.md) |
 | D1 | Retain the exact B1 finite obligation and two independent checking paths | [`research/b1-simplification-decision.md`](research/b1-simplification-decision.md) |
+| D2 | Retain the exact B2 interval tree and two independent checking paths | [`research/b2-simplification-decision.md`](research/b2-simplification-decision.md) |
 | R1a | B1 cyclic-residue algorithm audit and fresh complete replay | [`verification/b1/r1a-residue-distance-audit.md`](verification/b1/r1a-residue-distance-audit.md) |
 | R1b | B1 ordinary-membership audit, fresh replay, and R1a agreement | [`verification/b1/r1b-membership-audit.md`](verification/b1/r1b-membership-audit.md) |
 
@@ -114,9 +115,9 @@ compact failure region, and analytic leaf rule. B2.2 states the stronger
 allowance-height finite obligation and proves the exact horn recurrence,
 whole-box integer domination, and closed interval-tree coverage theorem.
 
-B2.2 is a specification milestone, not a verification result. Its finite
-obligation remains open under V0 until D2 decides whether to retain it and,
-if retained, R2 supplies fresh complete and independent checking paths.
+B2.2 is a specification milestone, not a verification result. D2 retains its
+finite obligation and exact interval tree. The obligation remains open under
+V0 until R2 supplies fresh complete and independent checking paths.
 
 ### B3: the corner \((1,1,1)\)
 
@@ -161,15 +162,15 @@ final code design.
 
 | ID | Type | Question | Depends on | Fallback |
 |---|---|---|---|---|
-| D2 | [D] | Can a direct horn inequality replace B2's interval tree? | B2.1, B2.2 | Retain the exact B2 tree |
 | D3 | [D] | Can the six-window conclusion be proved without full shape and cut enumeration? | B3.1--B3.3 | Retain the compressed B3 search |
 | D4 | [D] | Can symbolic classification replace either B4 certificate family? | B4.2--B4.4 | Retain the high-height tree and 28,499 low-height duals |
 | D5 | [D] | Can residue compatibility prove \(U_2(T)\ge m\) for genuine B5 shapes? | CHO, B5.1--B5.4 | Retain local-or-axis enumeration and \(G\) |
 | D6 | [D] | Can a direct weighted argument remove the B6 strip or interval tree? | B6.1--B6.4 | Retain both exact B6 computations |
 
-D1 is complete and retains B1.3-FV with both independent checking paths. No
-other computed component is promoted into the final architecture until its
-gate has closed.
+D1 is complete and retains B1.3-FV with both independent checking paths. D2
+is complete and retains the B2.2-FV contract with the exact interval tree and
+both R2 checking paths. No other computed component is promoted into the
+final architecture until its gate has closed.
 
 ## Layer 5: audit and replay retained computations
 
@@ -217,7 +218,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are D2, B3.1, B4.1, B5.1, B5.2, B5.3,
-and B6.1. The recommended next task is **D2, the no-corner simplification
-gate**: seek a direct inequality on the now-explicit nested-horn score, or
-retain the exact tree and proceed to R2.
+The topologically available tasks are R2, B3.1, B4.1, B5.1, B5.2, B5.3,
+and B6.1. The recommended next task is **R2, the no-corner interval replay**:
+curate the immutable tree, build the compact exact checker and materially
+independent recurrence/coverage path, and run both under V0.

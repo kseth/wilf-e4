@@ -364,9 +364,11 @@ recurrence, proves simultaneous whole-box domination for every real
 parameter, and specifies fail-closed coverage of a closed interval tree.
 
 The historical candidate reports 24,912 dynamic-programming leaves and 531
-analytic leaves. Those counts are diagnostic, not acceptance criteria.
-B2.2-FV remains open until D2 retains the computation and R2 completes the
-required exact and independent replays.
+analytic leaves. Those counts are diagnostic, not acceptance criteria. The
+[D2 simplification gate](../research/b2-simplification-decision.md) found
+exact obstructions to the natural direct reductions and retained the tree.
+B2.2-FV remains open until R2 completes the required exact and independent
+replays.
 
 Historical source chain:
 `round3/horns_optimization/fullcap_boundary_theorem.md`,
@@ -580,7 +582,7 @@ The following is the minimal presently retained proof interface.
 | L1 | Published multiplicity \(\le19\) theorem | [E] | Audited in `literature/multiplicity-through-19-audit.md` |
 | B1.1--B1.2 | Negative-case conductor reduction | [A] | Reconstructed in `full-weighted-ideal.md` and `conductor-reduction.md`; obtain independent review |
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
-| B2 | No-corner weighted theorem | [A]+[C] | B2.1 and the B2.2 contract reconstructed; close D2 and, if retained, R2 |
+| B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, and D2 complete; close the retained computation through R2 |
 | B3 | Six-final-window theorem | [A]+[C] | Shrink the shape/completion argument and certificate interface |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |

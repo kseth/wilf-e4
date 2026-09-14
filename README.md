@@ -13,11 +13,11 @@ analytic arguments and finite verifications have been independently checked.
 
 | Component | Current state |
 |---|---|
-| Main theorem | Proposed; the B2 finite obligation and B3--B6 branch arguments remain to be simplified and audited |
-| Shared foundations, routing, G1--G5, B2.1, and the B2.2 finite specification | Reconstructed in Markdown and internally checked; not independently reviewed |
+| Main theorem | Proposed; the B2 finite obligation awaits replay, and the B3--B6 branch arguments remain to be simplified and audited |
+| Shared foundations, routing, G1--G5, B2.1, B2.2, and D2 | Reconstructed in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
-| Computational verification | B1 is complete under the trust policy; B2 is specified but awaits D2 and, if retained, R2; B3--B6 remain to be specified |
+| Computational verification | B1 is complete under the trust policy; D2 retains the specified B2 tree, which awaits R2; B3--B6 remain to be specified |
 | Release artifact | Definitive TeX, proof code, and PDF intentionally deferred until the roadmap freeze |
 
 Here “reconstructed” means that a clean argument has been extracted from the
@@ -80,6 +80,9 @@ canonical source for task status and dependencies.
 - [`research/b1-simplification-decision.md`](research/b1-simplification-decision.md)
   records why the exact \(20\le m\le29\) finite obligation and its two
   independent checking paths are retained.
+- [`research/b2-simplification-decision.md`](research/b2-simplification-decision.md)
+  records why D2 retains the B2 interval tree after the direct horn
+  simplification gate.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the

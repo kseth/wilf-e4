@@ -10,9 +10,10 @@ in the compact B2.1 domain.
 
 This is a **specification and coverage proof**, not a replay result. It does
 not promote the archived interval tree, its producer, or its saved success
-records into the proof. The next D2 gate asks whether the finite certificate
-can be replaced analytically. If D2 retains it, R2 must audit and freshly
-replay the exact checking paths required here.
+records into the proof. The subsequent D2 gate retained the finite certificate
+after finding exact obstructions to the natural direct reductions. R2 must now
+audit and freshly replay the exact checking paths required here; see the
+[D2 decision](../research/b2-simplification-decision.md).
 
 ## 1. The finite obligation
 
@@ -510,7 +511,7 @@ acceptance predicates.
 
 ## 10. Required checking paths
 
-If D2 retains this certificate, R2 must provide both of the following.
+D2 retained this certificate. R2 must provide both of the following.
 
 ### Path A: compact exact checker
 
@@ -576,7 +577,7 @@ yet a conforming release component:
    outputs, and proof checkers have not yet been reduced to a minimal
    post-D2 package.
 
-These are R2 and S3 packaging obligations if D2 retains the computation. They
+These are R2 and S3 packaging obligations for the retained computation. They
 do not invalidate the mathematical specification, and no archived result is
 used here as proof of (FV).
 
@@ -588,6 +589,6 @@ The later proof may use B2.2 only through the following implication:
 > 3--10 proves B2.2-FV, and B2.1 plus B2.2-FV proves the B2 weighted theorem.
 
 At the present roadmap stage, the contract and its coverage theorem are
-complete, but B2.2-FV itself remains unproved under V0. It will become a proof
-dependency only if D2 retains the interval tree and R2 completes the required
-fresh and independent checks.
+complete, and D2 has retained the interval tree. B2.2-FV itself remains
+unproved under V0 until R2 completes the required fresh and independent
+checks.
