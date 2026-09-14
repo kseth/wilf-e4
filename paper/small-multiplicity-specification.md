@@ -90,10 +90,11 @@ The finite statement that a retained checker must establish is
 > \tag{FV}
 > \]
 
-The weak inequality is essential: equality is an acceptable outcome.
-Both endpoints \(m=20\), \(m=29\), and \(c=B_m\) are included. A checker may prove
-the stronger statement for every valid triple in \(\mathcal R_m\), but only
-(FV) is required by the global proof.
+The weak inequality is essential: equality is an acceptable outcome. The
+multiplicity endpoints \(m=20\) and \(m=29\), and the largest-generator
+endpoint \(c=B_m\), are included. A checker may prove the stronger statement
+for every valid triple in \(\mathcal R_m\), but only (FV) is required by the
+global proof.
 
 ## 2. Canonical tuples and minimal generation
 

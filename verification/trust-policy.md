@@ -231,8 +231,11 @@ The following states must not be conflated:
    that the historical computation has been freshly reproduced.
 2. A simplification gate D1--D6 decides whether the computation remains a
    proof dependency at all.
-3. A replay task R1--R6 is complete only after the retained component meets
-   Sections 2.3--2.5 and has a conforming replay record.
+3. A retained computed lemma clears the replay stage only after it meets
+   Sections 2.3--2.5 and has conforming replay records. An individual path
+   task such as R1a may close after its own audit and fresh replay, but that
+   does not complete the lemma until its required independent path also
+   closes.
 4. S1 may incorporate the computed lemma into a clean branch dossier only
    after its specification, decision gate, and required replay are complete.
 5. S2 may use that dossier in the end-to-end proof only with the trust boundary

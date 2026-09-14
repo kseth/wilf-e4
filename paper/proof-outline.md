@@ -473,7 +473,7 @@ The following is the minimal presently retained proof interface.
 | F1–F3 | Apéry ideal, moment identity, exclusion structure | [E]+[A] | Reconstructed in `foundations.md`; obtain independent review |
 | L1 | Published multiplicity \(\le19\) theorem | [E] | Audited in `literature/multiplicity-through-19-audit.md` |
 | B1.1--B1.2 | Negative-case conductor reduction | [A] | Reconstructed in `full-weighted-ideal.md` and `conductor-reduction.md`; obtain independent review |
-| B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specified in `small-multiplicity-specification.md`; await D1 and any retained replays |
+| B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification and D1 complete; R1a replay complete; R1b remains |
 | B2 | No-corner weighted theorem | [A]+[C] | Seek an analytic horn inequality |
 | B3 | Six-final-window theorem | [A]+[C] | Shrink the shape/completion argument and certificate interface |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |

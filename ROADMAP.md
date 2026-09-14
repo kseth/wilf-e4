@@ -1,6 +1,6 @@
 # Pre-manuscript reconstruction roadmap
 
-**Status date:** 2026-09-12
+**Status date:** 2026-09-14
 
 ## Purpose and cutoff
 
