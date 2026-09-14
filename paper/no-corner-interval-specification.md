@@ -11,9 +11,10 @@ in the compact B2.1 domain.
 This is a **specification and coverage proof**, not a replay result. It does
 not promote the archived interval tree, its producer, or its saved success
 records into the proof. The subsequent D2 gate retained the finite certificate
-after finding exact obstructions to the natural direct reductions. R2 must now
-audit and freshly replay the exact checking paths required here; see the
-[D2 decision](../research/b2-simplification-decision.md).
+after finding exact obstructions to the natural direct reductions. R2 has now
+audited and freshly replayed both checking paths required here; see the
+[D2 decision](../research/b2-simplification-decision.md) and
+[R2 audit](../verification/b2/r2-interval-audit.md).
 
 ## 1. The finite obligation
 
@@ -511,33 +512,35 @@ acceptance predicates.
 
 ## 10. Required checking paths
 
-D2 retained this certificate. R2 must provide both of the following.
+D2 retained this certificate, and R2 provides both of the following.
 
 ### Path A: compact exact checker
 
-A small checker must parse the complete tree, reconstruct the expected raw
-box at every node from its parent, check the closed coverage rules, recompute
-every DP leaf by (17)--(20), and check every analytic and empty leaf. It must
-not import the discovery producer.
+A [small checker](../verification/b2/check_interval_prefix.py) parses the
+complete tree, reconstructs the expected raw box at every node from its
+parent, checks the closed coverage rules, recomputes every DP leaf by
+(17)--(20), and checks every analytic and empty leaf. It does not import the
+discovery producer.
 
 ### Path B: separated coverage and recurrence checks
 
-A materially separate path must:
+A [materially separate path](../verification/b2/check_interval_direct.py)
+has two parts:
 
-1. walk the tree independently and establish the root-to-leaf closed-box
-   coverage without trusting Path A's traversal state; and
-2. recompute every DP leaf from the direct rectangle recurrence (16), rather
-   than Path A's prefix recurrence (17).
+1. an independent tree walk establishing root-to-leaf closed-box coverage
+   without trusting Path A's traversal state; and
+2. fresh recomputation of every DP leaf from the direct rectangle recurrence
+   (16), rather than Path A's prefix recurrence (17).
 
 The two parts may share the immutable certificate and basic integer/JSON
 facilities, but not producer-generated acceptance decisions or cached leaf
 bounds. The recurrence replay alone does not establish tree coverage, and the
 coverage walk alone does not establish a leaf inequality.
 
-A fresh runner must reject sample or prefix modes, require all leaves, reject
-optimized execution that disables correctness checks, record the hashes of
-the specification, certificate, and checker sources, and emit the environment
-and count fields required by V0.
+A [fresh runner](../verification/b2/replay_r2.py) rejects sample or partial-run
+modes, requires all leaves, rejects optimized execution that disables
+correctness checks, records the hashes of the specification, certificate, and
+checker sources, and emits the environment and count fields required by V0.
 
 The discovery producer is outside the trusted boundary. Once the tree is
 declared immutable proof data, correctness requires complete fresh checking of
@@ -551,7 +554,7 @@ roles.
 | Historical file | Candidate role | Present status |
 |---|---|---|
 | [interval_certificate.py](../artifacts/wilf_four_generators_review_package_2026-09-11/round5/weight_arrangement/interval_certificate.py) | Discovery producer and prefix-DP tree generator | Untrusted producer |
-| [full_interval_certificate.json](../artifacts/wilf_four_generators_review_package_2026-09-11/round5/weight_arrangement/full_interval_certificate.json) | Immutable candidate proof data | Not yet promoted |
+| [full_interval_certificate.json](../artifacts/wilf_four_generators_review_package_2026-09-11/round5/weight_arrangement/full_interval_certificate.json) | Immutable candidate proof data | Promoted by exact manifest and R2 replay |
 | [verify_interval_certificate.py](../artifacts/wilf_four_generators_review_package_2026-09-11/round5/weight_arrangement/verify_interval_certificate.py) | Combined tree and flat prefix-DP checker | Candidate Path A |
 | [independent_interval_dp.py](../artifacts/wilf_four_generators_review_package_2026-09-11/round5/structural_audit/independent_interval_dp.py) | Explicit-transition leaf checker | Candidate recurrence part of Path B |
 | [independent_interval_coverage.py](../artifacts/wilf_four_generators_review_package_2026-09-11/round5/structural_audit/independent_interval_coverage.py) | Independent tree walk | Candidate coverage part of Path B |
@@ -561,11 +564,11 @@ The archived tree reports \(50{,}885\) nodes: \(25{,}442\) splits,
 accepted numerator is \(4096\). These are provenance and regression
 diagnostics only.
 
-The candidate architecture matches the mathematical contract, but it is not
-yet a conforming release component:
+The archived checker architecture matches the mathematical contract, but was
+not a conforming release component:
 
 1. its essential checks use Python assertions, which optimized execution can
-   disable, and no current runner rejects that mode;
+   disable, and its runner does not reject that mode;
 2. its records lack the V0 schema version, specification hash, repository
    commit, complete command, environment, and explicit fresh/cache-free
    fields;
@@ -577,9 +580,11 @@ yet a conforming release component:
    outputs, and proof checkers have not yet been reduced to a minimal
    post-D2 package.
 
-These are R2 and S3 packaging obligations for the retained computation. They
-do not invalidate the mathematical specification, and no archived result is
-used here as proof of (FV).
+R2 remedies these issues with an external schema manifest, two fail-closed
+checkers, complete fresh recomputation, and a V0 replay record. The historical
+producer and success records remain outside the proof boundary. S3 may later
+relocate the identical certificate when assembling the final minimal package;
+its hash and checking semantics must remain fixed.
 
 ## 12. Retained interface
 
@@ -588,7 +593,7 @@ The later proof may use B2.2 only through the following implication:
 > an exact, fail-closed acceptance of a complete tree satisfying Sections
 > 3--10 proves B2.2-FV, and B2.1 plus B2.2-FV proves the B2 weighted theorem.
 
-At the present roadmap stage, the contract and its coverage theorem are
-complete, and D2 has retained the interval tree. B2.2-FV itself remains
-unproved under V0 until R2 completes the required fresh and independent
-checks.
+The contract and its coverage theorem are complete, D2 retained the interval
+tree, and R2 completed the required fresh and independent checks. Therefore
+B2.2-FV is established under V0. Together with B2.1, it proves the B2 weighted
+theorem within the proposed proof architecture.

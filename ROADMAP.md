@@ -80,6 +80,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | D2 | Retain the exact B2 interval tree and two independent checking paths | [`research/b2-simplification-decision.md`](research/b2-simplification-decision.md) |
 | R1a | B1 cyclic-residue algorithm audit and fresh complete replay | [`verification/b1/r1a-residue-distance-audit.md`](verification/b1/r1a-residue-distance-audit.md) |
 | R1b | B1 ordinary-membership audit, fresh replay, and R1a agreement | [`verification/b1/r1b-membership-audit.md`](verification/b1/r1b-membership-audit.md) |
+| R2 | B2 interval-tree audit and two fresh complete checking paths | [`verification/b2/r2-interval-audit.md`](verification/b2/r2-interval-audit.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet.
@@ -115,9 +116,10 @@ compact failure region, and analytic leaf rule. B2.2 states the stronger
 allowance-height finite obligation and proves the exact horn recurrence,
 whole-box integer domination, and closed interval-tree coverage theorem.
 
-B2.2 is a specification milestone, not a verification result. D2 retains its
-finite obligation and exact interval tree. The obligation remains open under
-V0 until R2 supplies fresh complete and independent checking paths.
+B2.2 supplies the specification and coverage theorem, D2 retains its finite
+obligation and exact interval tree, and R2 supplies two fresh complete and
+independent checking paths. B2.2-FV and the B2 computed lemma are complete
+under V0.
 
 ### B3: the corner \((1,1,1)\)
 
@@ -179,7 +181,6 @@ replaced or curated in the final verification package.
 
 | ID | Type | Atomic replay/audit | Depends on |
 |---|---|---|---|
-| R2 | [C] | B2 interval coverage and horn-DP leaves | D2 retaining computation |
 | R3 | [C] | B3 compressed shapes, 930 labelings, and 23,002 cuts | D3 retaining computation |
 | R4a | [C] | B4 high-height interval certificate | D4 retaining it |
 | R4b | [C] | B4 28,499 low-height rational duals | D4 retaining them |
@@ -195,8 +196,9 @@ A conditional replay edge is satisfied automatically if its decision gate
 proves a replacement and removes that computation.
 
 R1a and R1b are complete. Each path independently establishes B1.3-FV, and
-their common classification and bounded-domain diagnostics agree. The B1
-finite lemma is complete under V0.
+their common classification and bounded-domain diagnostics agree. R2 is also
+complete: both paths independently establish B2 tree coverage and every leaf
+bound. The B1 and B2 finite lemmas are complete under V0.
 
 ## Layer 6: synthesis and pre-manuscript freeze
 
@@ -218,7 +220,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are R2, B3.1, B4.1, B5.1, B5.2, B5.3,
-and B6.1. The recommended next task is **R2, the no-corner interval replay**:
-curate the immutable tree, build the compact exact checker and materially
-independent recurrence/coverage path, and run both under V0.
+The topologically available tasks are B3.1, B4.1, B5.1, B5.2, B5.3, and
+B6.1. The recommended next task is **B3.1, the six-maxima entry lemma**:
+prove the mixed-corner and maximal-point bounds before specifying the B3
+shape computation.

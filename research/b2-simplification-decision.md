@@ -20,6 +20,10 @@ impossible. It fixes the present proof architecture so that R2 can audit and
 freshly replay one finite object instead of leaving B2 conditional on further
 open-ended simplification.
 
+R2 has since completed this retained route through two fresh independent
+checking paths; see the
+[`R2 audit`](../verification/b2/r2-interval-audit.md).
+
 ## 1. The replacement that would be needed
 
 For
@@ -246,7 +250,7 @@ D2 is closed with the fallback route:
 
 - retain the analytic and compactness results of B2.1;
 - retain the exact B2.2 interval-tree contract unchanged;
-- proceed to the complete and independent R2 replays;
+- complete the retained computation through the independent R2 replays;
 - keep bipartite, low-type, and other free filters as explanatory subcases,
   not executable certificate predicates; and
 - revisit the decision only if a proved discrete joint horn potential removes
