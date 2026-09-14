@@ -14,7 +14,7 @@ analytic arguments and finite verifications have been independently checked.
 | Component | Current state |
 |---|---|
 | Main theorem | Proposed; the B2--B6 branch arguments remain to be reconstructed and audited |
-| Shared foundations, routing, and G1--G4 | Reconstructed in Markdown and internally checked; not independently reviewed |
+| Shared foundations, routing, and G1--G5 | Reconstructed in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
 | Computational verification | B1 is complete under the trust policy; computations retained by B2--B6 remain to be specified, simplified, and replayed |
@@ -41,6 +41,9 @@ canonical source for task status and dependencies.
 - [`paper/phase-and-thickening.md`](paper/phase-and-thickening.md) proves the
   summed sawtooth phase inequality, exact rectangular-thickening identity,
   support preservation, and the compactness endpoints used by B2, B4, and B6.
+- [`paper/central-box-horns.md`](paper/central-box-horns.md) proves the
+  clique-tree decomposition into a central box and three monotone horns, its
+  one-corner clipping corollary, and the exact nested-cap recurrence interface.
 - [`paper/final-window-projection.md`](paper/final-window-projection.md)
   proves the exact residue/projection bound and audits its equality boundary.
 - [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) classifies

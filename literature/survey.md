@@ -2,7 +2,8 @@
 
 **Status:** working research record, not a priority or completeness claim
 
-**Search dates:** broad survey 2026-09-11; focused reduction refresh 2026-09-12
+**Search dates:** broad survey 2026-09-11; focused reduction refresh 2026-09-12;
+structural-source check 2026-09-14
 
 **Scope:** Wilf's conjecture, with emphasis on results that either dispose of
 cases in embedding dimension four or supply machinery used by the proposed
@@ -225,6 +226,25 @@ the manuscript should retain the analytic axis witness instead of adding a
 second modular enumeration. The exact assessment and reproducible exploratory
 check are in [`research/chomicz-assessment.md`](../research/chomicz-assessment.md).
 
+### 4.6 Chordal graphs and clique trees
+
+The no-full-corner decomposition uses the standard fact that the maximal
+cliques of a finite connected chordal graph can be arranged in a tree so that
+the cliques containing any fixed graph vertex form a connected subtree. This
+is the clique-tree form of the classical subtree characterization of chordal
+graphs associated with Gavril.[^gavril] The survey did not find the
+repository's application—building the compatibility graph of coordinate
+levels and deriving a central box with at most three monotone horns—in the
+reviewed numerical-semigroup or chordal-graph sources. It remains proposed new
+content pending the L3 refresh and must not yet be presented as a priority
+claim.
+
+The reconstructed
+[`central-box/three-horn note`](../paper/central-box-horns.md) includes a
+short proof of the finite clique-tree lemma. The published graph theorem is
+therefore attributed as an upstream structural source, while the lower-ideal
+decomposition is proved within the artifact.
+
 ## 5. Other reductions and recent work
 
 Moscariello and Sammartano prove an asymptotic result for fixed
@@ -285,6 +305,8 @@ claim.
 | Kunz/Apéry-poset verification through \(m=19\) | Bruns et al.; Kliem--Stump. |
 | Disposal of exponent ideals with at most three maxima | Fröberg--Gottlieb--Häggkvist, plus the elementary comparison between Apéry-poset and coordinatewise maxima. |
 | Three-dimensional L-shape context and relation-deletion construction | Aguiló-Gost--García-Sánchez--Llena; Chomicz. The proof retains the canonical lexicographic L-shape. |
+| Clique-tree theorem for chordal graphs | Attribute the standard graph theorem to Gavril; retain a self-contained proof of the needed finite form. |
+| Central-box/three-horn decomposition | Proposed new lower-ideal application of the clique-tree theorem; prove it explicitly and avoid a priority claim before L3. |
 | Exact moment-deficit reformulation | Short derived lemma; cite its classical and Zhai inputs. |
 | Positive surplus estimates for three-dimensional lower ideals | Proposed new content; audit branch by branch. |
 | Seven-case geometric partition | Proposed new content; search terminology and adjacent extremal results before claiming novelty. |
@@ -503,6 +525,11 @@ against final pagination when the bibliography is converted to BibTeX.
 [^chomicz-type]: Kazimierz Chomicz, “The type and cardinality of minimal
     presentations of numerical semigroups with embedding dimension four,”
     [arXiv:2609.04000](https://arxiv.org/abs/2609.04000), version 1, 2026.
+
+[^gavril]: Fănică Gavril, “The intersection graphs of subtrees in trees are
+    exactly the chordal graphs,” *Journal of Combinatorial Theory, Series B*
+    **16** (1974), 47--56.
+    [doi:10.1016/0095-8956(74)90094-X](https://doi.org/10.1016/0095-8956(74)90094-X).
 
 [^rocq]: Massimo Bartoletti, Stefano Bonzio, and Marco Ferrara, “Certified
     Algorithms for Numerical Semigroups in Rocq,” in *CICM 2025*, LNCS 16136,

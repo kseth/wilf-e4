@@ -66,6 +66,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | G2 | Coordinate-line calculus and weighted-deficit identities | [`paper/coordinate-lines.md`](paper/coordinate-lines.md) |
 | G3 | Final-window projection inequality and equality audit | [`paper/final-window-projection.md`](paper/final-window-projection.md) |
 | G4 | Phase inequality, rectangular thickening, and endpoint audit | [`paper/phase-and-thickening.md`](paper/phase-and-thickening.md) |
+| G5 | Central-box/three-horn decomposition and clipping corollary | [`paper/central-box-horns.md`](paper/central-box-horns.md) |
 | B1.1 | Full-weighted-ideal theorem and six-column exclusion | [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) |
 | B1.2 | Negative-case conductor and generator bounds | [`paper/conductor-reduction.md`](paper/conductor-reduction.md) |
 | V0 | Verification vocabulary, trust boundary, and replay policy | [`verification/trust-policy.md`](verification/trust-policy.md) |
@@ -89,12 +90,9 @@ the B1 finite obligation or any of B2--B6.
 
 ## Layer 2: common analytic tools
 
-| ID | Type | Atomic deliverable | Depends on | Completion test |
-|---|---|---|---|---|
-| G5 | [A] | Central-box/three-horn theorem | FND | Give the clique-tree proof, three monotone arms, and one-corner clipping corollary |
-
-G3 feeds B1 and B3. The completed G4 note feeds B2, B4, and B6. G5 feeds
-the finite recurrences in B2 and B6.
+All common analytic tools are complete. G3 feeds B1 and B3; G4 feeds B2, B4,
+and B6; and G5 supplies the structural recurrence interface used by B2 and
+B6.
 
 ## Layer 3: branch-entry lemmas and route specifications
 
@@ -212,7 +210,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are G5, B3.1, B4.1, B5.1, B5.2, and B5.3.
-The recommended next task is **G5, the central-box/three-horn theorem**. It is
-the last unfinished common analytic tool and will expose the structural
-recurrence later specified in B2 and B6.
+The topologically available tasks are B2.1, B3.1, B4.1, B5.1, B5.2, B5.3,
+and B6.1. The recommended next task is **B2.1, the no-corner compactness
+reduction**. G4 and G5 now supply its two shared inputs, and completing it
+will expose the exact bounded domain later specified in B2.2.

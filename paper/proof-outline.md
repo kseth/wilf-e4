@@ -188,6 +188,36 @@ without residue hypotheses and records every strict endpoint later used to
 obtain \(H<24\), \(H<42\), and \(H<78\). The older coarse phase estimate in
 the archive is not retained.
 
+### G5. Central box and three monotone horns [A]
+
+If a finite lower ideal \(U\subseteq\mathbb N^3\) has no full-support
+minimal exclusion, a chordal compatibility graph and its clique tree give a
+disjoint decomposition
+
+\[
+U=\mathcal B(c)\mathbin{\dot\cup}A_1
+ \mathbin{\dot\cup}A_2\mathbin{\dot\cup}A_3.
+\]
+
+Here \(\mathcal B(c)\) is an anchored central box. Horn \(A_i\) lies beyond
+the \(i\)-th face of that box, and its sections perpendicular to coordinate
+\(i\) are rectangles whose two transverse caps are nonincreasing. The tree
+has at most three leaves; choosing the median of the three coordinate maxima
+produces the center and proves the monotonicity.
+
+If \(T\) has one full-support minimal exclusion \(p\), removing that generator
+from the complement produces a finite no-full-corner ideal \(U\) with
+
+\[
+T=U\setminus(p+\mathbb N^3).
+\]
+
+Clipping the central box and each horn slice preserves the disjoint
+decomposition. The
+[`central-box/three-horn note`](central-box-horns.md) includes a self-contained
+proof of the needed clique-tree lemma, attributes the classical chordal-graph
+input, and proves the exact nested-cap recurrence used later by B2 and B6.
+
 ## 2. The complete case partition
 
 After treating \(m\le29\), suppose \(m\ge30\). First split according to whether
@@ -297,7 +327,8 @@ The required abstract theorem is:
 The current proof has an analytic reduction to
 \(1\le b\le c\le H\), \(5\le H\le24\), followed by an exact interval tree.
 The leaf bound uses a structural decomposition of a no-corner ideal into a
-central box and at most three nested rectangular horns.
+central box and at most three nested rectangular horns, proved in the
+[G5 structural note](central-box-horns.md).
 
 The retained finite task consists of 24,912 dynamic-programming leaves and 531
 analytic leaves. The priority is to simplify the structural and compactness
@@ -464,7 +495,10 @@ Since \(H\ge R\), this branch has \(H\ge7\). The required abstract theorem is:
 > \]
 
 No residue or exposed-surface restriction is used by this abstract theorem.
-Its current proof has two computational layers:
+The G5 [structural note](central-box-horns.md) now proves that its clipped-horn
+recurrence covers every ideal in the class; B6.1 must still establish the
+finite degree allowances and the exact score specification.
+The branch proof still has two computational layers:
 
 1. a 1,029-case finite strip used to prove the continuous gap \(5/42\);
 2. a closed real-parameter interval certificate with 47,088 accepted leaves.
@@ -520,6 +554,7 @@ The following is the minimal presently retained proof interface.
 | G2 | Coordinate-line calculus | [A] | Reconstructed in `coordinate-lines.md`; obtain independent review |
 | G3 | Final-window projection inequality | [A] | Reconstructed in `final-window-projection.md`; obtain independent review |
 | G4 | Phase and rectangular thickening | [A] | Reconstructed in `phase-and-thickening.md`; obtain independent review |
+| G5 | Central box, three horns, and clipping | [A] | Reconstructed in `central-box-horns.md`; obtain independent review |
 
 ## 6. Material excluded from the main proof
 
