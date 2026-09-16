@@ -88,6 +88,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B4.1 | Sharp short-corner degree bound and exact remaining height/cardinality ranges | [`paper/short-corner-height-split.md`](paper/short-corner-height-split.md) |
 | B4.2 | Planar mean bounds, improved high-height failure region \(H<36\), and analytic leaf rules | [`paper/short-corner-compactness.md`](paper/short-corner-compactness.md) |
 | B4.3 | Necessary per-plane residue filters, exhaustive low-height profiles, and B4-low-FV contract | [`paper/short-corner-profile-specification.md`](paper/short-corner-profile-specification.md) |
+| B4.4 | Exact centroid-dual soundness, integer predicate, three-maximal-point reduction, and complete-family checking semantics | [`paper/short-corner-centroid-certificates.md`](paper/short-corner-centroid-certificates.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -170,11 +171,19 @@ reduces to at most four row inequalities. A standalone construction
 diagnostic agrees with the historical 70,175 shapes and 28,499 eligible
 keys; no weighted dual is replayed and B4-low-FV remains open.
 
-The remaining B4 specification task is:
+B4.4 is complete as exact certificate semantics and an analytic soundness
+proof. It derives the three-coordinate residual from the point multipliers,
+proves the all-real-weight/height-allowance slack identity, and gives an
+equivalent integer predicate. Any valid witness can be reduced to at most
+three maximal points without weakening its bound.
+R4b must explicitly validate schema dimensions: the historical verifier
+does not enforce a three-entry cached residual before summing it, although
+all saved records have that dimension. No full weighted replay has been
+performed and B4-low-FV remains open.
 
-| ID | Type | Atomic deliverable | Depends on | Completion test |
-|---|---|---|---|---|
-| B4.4 | [C] | Centroid-dual semantics | B4.3, V0 | Prove that each rational dual covers all real normalized weights |
+All B4 entry/specification tasks are now complete. D4 is the next dependency:
+decide whether either certificate family can be replaced analytically before
+running any retained R4a or R4b computation.
 
 ### B5: residual degree at most six
 
@@ -262,7 +271,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are B4.4, B5.1, B5.2, B5.3, and B6.1.
-The recommended next task is **B4.4, the short-corner centroid-dual
-semantics**: specify the exact rational predicate for B4-low-FV and prove
-that each accepted certificate covers all real weights and height allowances.
+The topologically available tasks are D4, B5.1, B5.2, B5.3, and B6.1.
+The recommended next task is **D4, the short-corner symbolic simplification
+gate**: use the proved planar and three-point centroid interfaces to seek an
+analytic replacement, or document why either certificate family is retained.

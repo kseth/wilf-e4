@@ -326,10 +326,10 @@ closed envelope despite the strict failure cutoff.
 
 B4.3 supplies the separate
 [low-height profile/filter specification](short-corner-profile-specification.md);
-B4.4 still owes the centroid-dual semantics. D4 must decide whether either
-B4 certificate family is necessary, and R4a must audit and replay any
-retained high-height certificate. No B4
-weighted theorem is declared complete by this note.
+[B4.4](short-corner-centroid-certificates.md) supplies the centroid-dual
+semantics. D4 must decide whether either B4 certificate family is necessary,
+and R4a must audit and replay any retained high-height certificate.
+No B4 weighted theorem is declared complete by this note.
 
 ## 6. Provenance and attribution boundary
 

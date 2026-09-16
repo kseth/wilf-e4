@@ -14,7 +14,7 @@ analytic arguments and finite verifications have been independently checked.
 | Component | Current state |
 |---|---|
 | Main theorem | Proposed; B1 and B2 are complete under the internal trust policy and B3 is complete analytically; B4--B6 remain to be simplified and audited |
-| Shared foundations, routing, G1--G5, B2.1, B2.2, D2, B3.1, D3, and B4.1--B4.3 | Written in Markdown and internally checked; not independently reviewed |
+| Shared foundations, routing, G1--G5, B2.1, B2.2, D2, B3.1, D3, and B4.1--B4.4 | Written in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
 | Computational verification | B1 and B2 are complete under the trust policy; D3 eliminates B3 computation; B4--B6 remain open |
@@ -73,6 +73,10 @@ canonical source for task status and dependencies.
   and states the open B4-low-FV weighted obligation. Its
   [construction diagnostic](research/check_b4_low_height_profiles.py) is
   research tooling, not release proof code or a dual replay.
+- [`paper/short-corner-centroid-certificates.md`](paper/short-corner-centroid-certificates.md)
+  proves exact centroid-certificate soundness for all real weights, the
+  integer checking predicate, and reduction to three maximal points; it
+  specifies complete-family checking without declaring a full replay.
 - [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) classifies
   full weighted ideals, excludes the six-column triangle analytically, and
   proves Wilf's inequality for this subcase.

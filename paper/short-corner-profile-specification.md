@@ -13,9 +13,10 @@ superset of those genuine ideals, not a classification of realizable
 semigroups. It has no residue-label search, weight grid, or six-maxima skip.
 
 This is a specification and coverage proof, not a replay of the historical
-centroid duals. The finite weighted obligation is stated in Section 6; B4.4
-must supply its exact certificate semantics, D4 must decide whether to retain
-the computation, and R4b must replay it if retained.
+centroid duals. The finite weighted obligation is stated in Section 6;
+[B4.4](short-corner-centroid-certificates.md) now supplies its exact
+certificate semantics. D4 must decide whether to retain the computation,
+and R4b must replay it if retained.
 
 ## 1. The arithmetic frontier restrictions
 
@@ -380,10 +381,11 @@ This is stronger than restricting \(Q<6\) and \(\min_i w_i=1\), but it is
 the all-weight statement targeted by the historical centroid duals. The
 weights are real, not a finite grid, and the allowance need not be attained.
 
-B4.4 must specify and prove the exact rational certificate predicate
-sufficient for (18). A complete retained checker must reconstruct every
-key and its point set and moment, check its certificate exactly, and reject
-missing, duplicate, malformed, or unused records. A success count or
+[B4.4](short-corner-centroid-certificates.md) specifies and proves the exact
+rational certificate predicate sufficient for (18). A complete retained
+checker must reconstruct every key and its point set and moment, check its
+certificate exactly, and reject missing, duplicate, malformed, or unused
+records. A success count or
 floating-point optimization status is not an acceptance predicate.
 
 No dual is replayed in this task, and B4-low-FV is not established by the

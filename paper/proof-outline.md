@@ -478,8 +478,30 @@ inequalities; plane degree bounds alone would not suffice.
 The coverage proof keeps every eligible oriented key, without sorting
 weights or skipping shapes with few maxima.
 
-The historical computations beyond these reductions remain to be specified
-as needed, simplified, and audited:
+B4.4 is complete in the
+[centroid-certificate note](short-corner-centroid-certificates.md).
+A sparse nonnegative rational point combination is sufficient when
+
+\[
+\sum_xy_x=3m,\qquad
+\beta_i:=\sum_xy_x\,x_i-4s_i\ge0,\qquad
+\sum_i\beta_i\ge m-1.
+\]
+
+The identity
+
+\[
+3mQ-4w\cdot s=\sum_xy_x(Q-w\cdot x)+
+\sum_i\beta_i(w_i-1)+\sum_i\beta_i
+\]
+
+proves the target for all real \(w_i\ge1\) and height allowances
+\(Q\ge\max_{x\in T}w\cdot x\).
+Denominator clearing gives an integer predicate, and any valid witness can
+be replaced by one on at most three maximal points.
+
+The historical computations beyond these reductions remain to be simplified
+and audited:
 
 - For \(H\ge6\), the interval certificate is a candidate retained component,
   not an established computed lemma. B4.2 proves analytic acceptance rules
@@ -487,12 +509,14 @@ as needed, simplified, and audited:
   equality.
 - For \(H<6\), the B4-low-FV contract quantifies over every generated
   eligible key and all real weights \(w_i\ge1\), including arbitrary
-  height allowances. B4.4 must prove rational centroid-dual semantics.
+  height allowances. B4.4 proves the exact rational certificate semantics.
   The construction diagnostic matches 28,499 eligible keys, but no
-  dual is replayed and the weighted finite lemma is not established under V0.
+  complete dual replay is performed and the weighted finite lemma is not
+  established under V0. R4b must check schemas as well as the identities;
+  in particular, it must not sum unvalidated extra cached residual entries.
 
 D4 will decide whether either certificate family can be removed; any retained
-computations then require R4a or R4b. B4.1--B4.3 do not establish the weighted
+computations then require R4a or R4b. B4.1--B4.4 do not establish the weighted
 deficit target throughout the remaining domain.
 
 Historical source:
@@ -630,7 +654,7 @@ The following is the minimal presently retained proof interface.
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
 | B3 | Three-plane projection theorem | [A] | B3.1 and D3 complete analytically; no R3 needed; obtain independent review |
-| B4 | Short-corner theorem | [A]+[C] | B4.1--B4.3 complete as analytic reductions/specification; reconstruct B4.4 before the D4 simplification gate |
+| B4 | Short-corner theorem | [A]+[C] | B4.1--B4.4 complete as analytic reductions/specifications; next D4 before any retained R4 replay |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
