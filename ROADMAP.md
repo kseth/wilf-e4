@@ -1,6 +1,6 @@
 # Pre-manuscript reconstruction roadmap
 
-**Status date:** 2026-09-14
+**Status date:** 2026-09-16
 
 ## Purpose and cutoff
 
@@ -82,11 +82,14 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | R1b | B1 ordinary-membership audit, fresh replay, and R1a agreement | [`verification/b1/r1b-membership-audit.md`](verification/b1/r1b-membership-audit.md) |
 | R2 | B2 interval-tree audit and two fresh complete checking paths | [`verification/b2/r2-interval-audit.md`](verification/b2/r2-interval-audit.md) |
 | B3.1 | One mixed corner per plane, six global maxima, and \(\lvert Z\rvert\le6\) | [`paper/six-maxima-entry.md`](paper/six-maxima-entry.md) |
-| B3.2 | Rank compression, one-corner completion, strict insertion growth, and exhaustive finite shape generation | [`paper/six-window-shape-specification.md`](paper/six-window-shape-specification.md) |
-| B3.3 | Ordered residue labels, modular cuts, arbitrary integer lifts, and equality coverage | [`paper/six-window-modular-specification.md`](paper/six-window-modular-specification.md) |
+| B3.2 | Finite shape-generation specification (superseded alternative) | [`paper/six-window-shape-specification.md`](paper/six-window-shape-specification.md) |
+| B3.3 | Modular-cut and integer-lift specification (superseded alternative) | [`paper/six-window-modular-specification.md`](paper/six-window-modular-specification.md) |
+| D3 | Analytic three-plane projection bound; all B3 finite verification removed | [`paper/three-plane-projection.md`](paper/three-plane-projection.md), [`research/b3-simplification-decision.md`](research/b3-simplification-decision.md) |
 
 These items are internally reconstructed but still belong in the later
-external-review packet.
+external-review packet when they are retained proof dependencies. The
+superseded B3 alternatives are preserved research specifications, not required
+components of that packet.
 
 ## Layer 1: route-wide prerequisites
 
@@ -126,16 +129,17 @@ under V0.
 
 ### B3: the corner \((1,1,1)\)
 
-B3.1--B3.3 are complete. The opposite-axis forcing lemma gives at most six
-final-window points. The shape specification gives an exact one-corner
-completion criterion, replaces the old projected-height argument by a short
-forced-successor obstruction, proves strict insertion growth, and proves
-finite exhaustive extension. The modular-cut specification quantifies over
-every ordered residue-bijective labeling and every cut, proves that these
-checks cover arbitrary integer generator lifts and equality, and removes the
-historical real-weight linear programs from the retained dependency chain.
-B3.3-FV itself remains conditional until D3 and, if computation is retained,
-R3.
+B3 is complete analytically. B3.1 proves that the ideal lies in three
+coordinate planes, each with at most one mixed corner. D3's three-plane
+counting theorem proves
+\(\Phi(T,\operatorname{Max}(T))<0\Rightarrow |T|\le29\).
+The routing hypothesis \(m\ge30\), final-window subset monotonicity, and G3
+therefore prove \(W_4\ge0\), without any finite verification.
+
+B3.2 and B3.3 remain completed specifications of the broader six-window
+alternative, but are no longer retained main-proof dependencies. B3.3-FV
+has not been established under V0 and is not needed. D3 discharges R3 by
+removing the computation, not by supplying a replay.
 
 ### B4: the corner \((2,1,1)\)
 
@@ -172,15 +176,16 @@ final code design.
 
 | ID | Type | Question | Depends on | Fallback |
 |---|---|---|---|---|
-| D3 | [D] | Can the six-window conclusion be proved without full shape and cut enumeration? | B3.1--B3.3 | Retain the compressed B3 search |
 | D4 | [D] | Can symbolic classification replace either B4 certificate family? | B4.2--B4.4 | Retain the high-height tree and 28,499 low-height duals |
 | D5 | [D] | Can residue compatibility prove \(U_2(T)\ge m\) for genuine B5 shapes? | CHO, B5.1--B5.4 | Retain local-or-axis enumeration and \(G\) |
 | D6 | [D] | Can a direct weighted argument remove the B6 strip or interval tree? | B6.1--B6.4 | Retain both exact B6 computations |
 
 D1 is complete and retains B1.3-FV with both independent checking paths. D2
 is complete and retains the B2.2-FV contract with the exact interval tree and
-both R2 checking paths. No other computed component is promoted into the
-final architecture until its gate has closed.
+both R2 checking paths. D3 is complete with an analytic replacement for the
+actual B3 routing cell and removes every B3 computed component. No other
+computed component is promoted into the final architecture until its gate
+has closed.
 
 ## Layer 5: audit and replay retained computations
 
@@ -189,7 +194,6 @@ replaced or curated in the final verification package.
 
 | ID | Type | Atomic replay/audit | Depends on |
 |---|---|---|---|
-| R3 | [C] | B3 compressed shapes, 930 labelings, and 23,002 cuts | D3 retaining computation |
 | R4a | [C] | B4 high-height interval certificate | D4 retaining it |
 | R4b | [C] | B4 28,499 low-height rational duals | D4 retaining them |
 | R5 | [C] | B5 5,574,644 shapes and 431 fallbacks | D5 retaining computation |
@@ -202,6 +206,10 @@ flags.
 
 A conditional replay edge is satisfied automatically if its decision gate
 proves a replacement and removes that computation.
+
+R3 is discharged by D3's analytic replacement and is no longer scheduled.
+No B3 shape, residue-label, modular-cut, or linear-program data belongs in the
+required minimal verification inventory.
 
 R1a and R1b are complete. Each path independently establishes B1.3-FV, and
 their common classification and bounded-domain diagnostics agree. R2 is also
@@ -228,8 +236,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are D3, B4.1, B5.1, B5.2, B5.3, and B6.1.
-The recommended next task is **D3, the six-window simplification gate**: seek
-an analytic proof or a substantially smaller exact finite obligation before
-committing to an R3 replay. The modular-cut route is the fallback; its
-historical linear-program layer is already known to be unnecessary.
+The topologically available tasks are B4.1, B5.1, B5.2, B5.3, and B6.1.
+The recommended next task is **B4.1, the short-corner height and cardinality
+split**: prove \(H<6\Rightarrow R\le5\),
+\(m\ge49\Rightarrow H\ge6\), and the exact remaining low-height range.

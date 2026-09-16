@@ -229,7 +229,7 @@ the full-support corner \(p\) exists. If it does, split according to its degree
 | \(m\le19\) | Published bounded-multiplicity results | [E] | \(W_4\ge0\) |
 | \(20\le m\le29\) | Negative-case conductor reduction and finite generator search | [A]+[C] | \(W_4\ge0\) |
 | \(m\ge30\), no full-support corner | No-corner weighted theorem | [A]+[C] | \(D_0\ge m-1\) |
-| \(m\ge30\), \(p=(1,1,1)\) | Six-final-window theorem | [A]+[C] | \(W_4\ge0\) |
+| \(m\ge30\), \(p=(1,1,1)\) | Three-plane projection theorem | [A] | \(W_4\ge0\) |
 | \(m\ge30\), \(p\sim(2,1,1)\) | Short-corner weighted theorem | [A]+[C] | \(D_0\ge m-1\) |
 | \(m\ge30\), \(\lvert p\rvert_1\ge5\), \(R\le6\) | Local-or-axis centroid theorem | [A]+[C] | \(D_0\ge m\) |
 | \(m\ge30\), \(\lvert p\rvert_1\ge5\), \(R\ge7\) | High-height one-corner theorem | [A]+[C] | \(D_0\ge m-29/10\) |
@@ -378,7 +378,7 @@ Historical source chain:
 `round4/joint_horns/joint_effective_cap_theorem.md`, and
 `round5/weight_arrangement/weighted_no_interior_theorem.md`.
 
-### B3. Corner \(p=(1,1,1)\) [A], [C]
+### B3. Corner \(p=(1,1,1)\) [A]
 
 The [B3.1 entry lemma](six-maxima-entry.md) proves that every mixed corner in
 a coordinate plane must be represented by the top point of the opposite
@@ -387,72 +387,41 @@ corner per plane. A planar lower ideal with at most one mixed corner has at
 most two maximal points; since every point of \(T\) lies in a coordinate
 plane, \(T\) has at most six maximal points.
 
-By F4, only the range
+The [D3 three-plane theorem](three-plane-projection.md) uses this stronger
+planar geometry, rather than only the six-window cardinality. Put
+\(K=\operatorname{Max}(T)\), and use
 
 \[
-4\le |\operatorname{Max}(T)|\le6
+P(T)=\sum_j|\pi_jT|,
+\qquad
+E(X)=\sum_{x\in X}|x|_1-\sum_j\max_{x\in X}x_j,
+\]
+\[
+\Phi(T,X)=P(T)-3|X|-E(X).
 \]
 
-remains in this branch.
-
-Let
+A direct count of the three plane frontiers proves
 
 \[
-Z=\{x\in T:M-a\cdot x<m\}.
+\boxed{\Phi(T,K)<0\quad\Longrightarrow\quad |T|\le29.}
 \]
 
-Every point of \(Z\) is maximal, so \(|Z|\le6\).
-
-Before any finite classification, the
-[final-window projection note](final-window-projection.md) proves
+Since B3 is routed only when \(m=|T|\ge30\), this gives \(\Phi(T,K)\ge0\).
+The actual final window \(Z=\{x\in T:M-a\cdot x<m\}\) is a nonempty subset
+of \(K\). Adding points increases \(E\), so
+\(\Phi(T,Z)\ge\Phi(T,K)\). The
+[G3 projection inequality](final-window-projection.md) therefore gives
 
 \[
-mW_4\ge m\Phi(T,Z)+E(Z),
+mW_4(S)\ge m\Phi(T,Z)+E(Z)\ge0.
 \]
 
-where
-
-\[
-\Phi(T,Z)=\sum_j|\pi_jT|-3|Z|-E(Z),\qquad
-E(Z)=\sum_{z\in Z}|z|_1-\sum_j\max_{z\in Z}z_j.
-\]
-
-Thus only shapes with \(\Phi(T,Z)<0\) require the finite theorem below; the
-equality case \(\Phi=0\) is included analytically.
-
-The [B3.2 shape specification](six-window-shape-specification.md) proves that
-every such pair occurs in a finite canonical family. Its one-corner
-completion criterion is invariant under rank compression; a
-forced-successor obstruction excludes the only neutral six-point insertion;
-and all negative lower-ideal extensions are reached without a coordinate or
-cardinality cutoff. This is a coverage theorem, not yet a replay result.
-
-The [B3.3 modular specification](six-window-modular-specification.md) now
-states the exact remaining finite obligation. For each distinct generated
-ideal \(T\), each ordered residue triple \(A\) for which
-\(x\mapsto A\cdot x\pmod m\) bijects \(T\) with
-\(\mathbb Z/m\mathbb Z\), and each cut \(0\le f<m\), it requires
-
-\[
-\sum_{\ell\in\mathcal L(T)}
-L_\ell[f-A\cdot t_\ell]_m\ge m(m-1).
-\]
-
-Every actual generator triple supplies one of these ordered labelings, and
-the actual maximum supplies one of the cuts. Each nonnegative integer line
-deficit is at least its least residue, so the displayed inequality covers all
-integer generator lifts without bounding or enumerating them. All comparisons
-are weak, hence equality is included.
-
-The historical candidate reports 930 ordered labelings and 23,002 cuts in its
-six-point core; its separate \(|Z|\le5\) path reports another 48 labelings and
-536 cuts. These remain diagnostics pending D3 and, if computation is retained,
-R3. B3.3 also shows that the historical real-weight linear programs and their
-rational dual certificates are redundant to this route and should not be a
-dependency of the retained checker.
-
-Historical source: `round8/audit_sixpoint.md` together with
-`round7/six_point_dependency_replay/`.
+This closes B3 analytically, including \(\Phi=0\), without a shape, residue,
+cut, or LP computation. The
+[D3 decision](../research/b3-simplification-decision.md) removes R3 from the
+required replay queue. B3.2 and B3.3 remain specifications of the broader
+six-window alternative, not dependencies of this proof. The replacement
+does not prove that broader theorem at arbitrary multiplicity.
 
 ### B4. Corner \(p\sim(2,1,1)\) [A], [C]
 
@@ -608,7 +577,7 @@ The following is the minimal presently retained proof interface.
 | B1.1--B1.2 | Negative-case conductor reduction | [A] | Reconstructed in `full-weighted-ideal.md` and `conductor-reduction.md`; obtain independent review |
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
-| B3 | Six-final-window theorem | [A]+[C] | B3.1--B3.3 specifications complete; run D3 before retaining and replaying B3.3-FV |
+| B3 | Three-plane projection theorem | [A] | B3.1 and D3 complete analytically; no R3 needed; obtain independent review |
 | B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
@@ -626,6 +595,8 @@ The following material is useful but is not part of the shortest retained
 four-generator proof:
 
 - the universal parameter-envelope alternative;
+- the broader six-window shape, residue-label, and modular-cut route,
+  superseded for B3 by D3's analytic theorem;
 - older per-shape LP registries and erosion filters;
 - the alternative short-corner generator enumeration;
 - higher-dimensional extensions and obstructions;

@@ -1,6 +1,6 @@
 # Published reductions against the retained proof route
 
-**Status date:** 2026-09-12
+**Status date:** 2026-09-16 (route annotations updated; source audit 2026-09-12)
 
 ## Decision
 
@@ -134,9 +134,9 @@ The low-type result has the following limited but genuine effect:
 | Branch | Consequence of \(|K|\ge4\) |
 |---|---|
 | B2 | Available as a free post-generation filter, but it does not simplify the current horn compactness parameters. |
-| B3 | Narrows the entry lemma to \(4\le|K|\le6\); a future minimal shape specification need not retain completed shapes with at most three maxima. |
+| B3 | Gives \(4\le|K|\le6\) as an explanatory hard-case restriction; D3 now closes the branch analytically without needing the lower bound or a shape filter. |
 | B4 | Available for low-height generated shapes, but no analytic height or cardinality bound follows from it. |
-| B5 | No additional reduction: the historical route already sends all shapes with at most six maxima to the stronger B3 theorem. |
+| B5 | Available contextually, but the retained local-or-axis contract checks all shapes in its class, including those with at most six maxima; the older six-window skip is not retained. |
 | B6 | No useful translation to the strip or high-height interval parameters is presently known. |
 
 Thus (2) belongs in the clean proof spine, while the other published

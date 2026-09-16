@@ -229,4 +229,6 @@ runs, or cached leaf results.
 Under V0, R2 is complete and B2.2-FV is established. Combining it with B2.1
 proves the B2 weighted theorem within the proposed proof architecture. That
 analytic combination still requires external mathematical review, and the
-global theorem remains conditional on the unfinished B3--B6 branches.
+global theorem remains conditional on the unfinished B4--B6 branches.
+B3 has since been completed analytically by the
+[D3 three-plane theorem](../../paper/three-plane-projection.md).

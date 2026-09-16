@@ -2,6 +2,12 @@
 
 ## Status and purpose
 
+**Main-proof status:** this is a superseded alternative. The
+[D3 three-plane theorem](three-plane-projection.md) now closes the actual B3
+routing cell analytically. This broader six-window specification is preserved
+for reference, not as a retained main-proof dependency or an established
+computed lemma.
+
 This note completes roadmap task B3.2. It gives a code-independent finite
 shape specification for the case
 
@@ -651,7 +657,7 @@ Counts and stored candidate lists may be used for regression and provenance,
 but cannot be acceptance predicates. The
 [B3.3 specification](six-window-modular-specification.md) states the
 residue-label and all-cut predicate on the distinct lower ideals underlying
-the generated pairs. If D3 retains this computation, R3 must freshly
+the generated pairs. Any future revival of this computation must freshly
 regenerate the whole family and provide an independent path that checks
 generation and lifting, not only the surviving arithmetic certificates.
 
@@ -706,10 +712,11 @@ These totals are useful regression targets only. The archived completion
 diagnostic checks bounded examples but imports the producer's criterion, so
 it is not an independent general proof or an independent checking path under
 V0. The historical runner also uses assertion-driven stage checks and stored
-intermediate files. Those issues are for R3 if D3 retains the computation;
-they do not affect the analytic coverage theorem proved here.
+intermediate files. A future replay of this superseded alternative would
+have to resolve those issues; they do not affect the analytic coverage
+theorem proved here.
 
-## 8. Retained interface
+## 8. Superseded alternative interface
 
 B3.2 supplies B3.3 with the following exact statement:
 
@@ -718,10 +725,12 @@ B3.2 supplies B3.3 with the following exact statement:
 > permutation, a pair \((T,Z)\) in the finite family
 > \(\mathcal G_{\le6}\).
 
-The [B3.3 note](six-window-modular-specification.md) now proves the finite
+The [B3.3 note](six-window-modular-specification.md) proves the finite
 arithmetic implication for every distinct ideal underlying that family,
 including all ordered residue-bijective labels, every modular cut, every
 integer lift, and equality. It also removes the historical real-weight
-linear-program certificates from the retained dependency chain. Until the
-D3 gate and, if needed, R3 are complete, no computed six-window lemma is
-promoted under V0.
+linear-program certificates from this alternative's dependency chain.
+
+D3 has since replaced the B3 branch by an analytic proof and removed R3 from
+the required queue. The broader finite six-window lemma is not promoted under
+V0, and these shape-generation components are not required release artifacts.

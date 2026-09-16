@@ -156,12 +156,13 @@ Two thresholds are structural in the current route:
    arithmetic comparison.
 
 Some individual subcases already have separate routes: full weighted ideals
-are analytic, while the historical six-final-window class has a more
-specialized finite theorem still awaiting reconstruction. Using these routes
-to prune B1 would nevertheless require generating the preferred ideal,
-classifying its corners and windows, and then retaining a residual generator
-search. That hybrid has more dependencies and a larger trusted surface than
-checking (FV) directly.
+are analytic, and D3 has since closed the \((1,1,1)\) corner branch
+analytically at \(m\ge30\). The latter proof deliberately uses that
+multiplicity threshold and does not replace this small-multiplicity check.
+Using the broader historical six-window alternative to prune B1 would still
+require generating the preferred ideal, classifying its corners and windows,
+and retaining a residual generator search. That hybrid has more dependencies
+and a larger trusted surface than checking (FV) directly.
 
 The large-branch machinery may eventually prove statements stronger than
 needed for some small multiplicities. No currently reconstructed combination

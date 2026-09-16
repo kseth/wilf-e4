@@ -122,7 +122,8 @@ Here \(p\sim(2,1,1)\) means equality after a coordinate permutation.
 Proposition 2.1 establishes only the routing conditions. Some retained branch
 theorems use further consequences of being a genuine preferred Apéry ideal:
 
-- B3 uses the [six-maxima entry lemma](six-maxima-entry.md);
+- B3 uses the [six-maxima entry lemma](six-maxima-entry.md) and the analytic
+  [three-plane projection theorem](three-plane-projection.md);
 - B4 uses additional residue restrictions in its low-height subcase; and
 - B5 uses plane-corner and exposed-surface restrictions.
 

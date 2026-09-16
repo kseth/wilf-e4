@@ -13,11 +13,11 @@ analytic arguments and finite verifications have been independently checked.
 
 | Component | Current state |
 |---|---|
-| Main theorem | Proposed; B1 and B2 are complete under the internal trust policy, while B3--B6 remain to be simplified and audited |
-| Shared foundations, routing, G1--G5, B2.1, B2.2, D2, and B3.1--B3.3 | Reconstructed in Markdown and internally checked; not independently reviewed |
+| Main theorem | Proposed; B1 and B2 are complete under the internal trust policy and B3 is complete analytically; B4--B6 remain to be simplified and audited |
+| Shared foundations, routing, G1--G5, B2.1, B2.2, D2, B3.1, and D3 | Written in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
-| Computational verification | B1 and B2 are complete under the trust policy; B3 shape generation and modular arithmetic are specified, while D3/replay and B4--B6 remain open |
+| Computational verification | B1 and B2 are complete under the trust policy; D3 eliminates B3 computation; B4--B6 remain open |
 | Release artifact | Definitive TeX, proof code, and PDF intentionally deferred until the roadmap freeze |
 
 Here “reconstructed” means that a clean argument has been extracted from the
@@ -55,13 +55,13 @@ canonical source for task status and dependencies.
 - [`paper/six-maxima-entry.md`](paper/six-maxima-entry.md) proves that the
   corner \((1,1,1)\) forces at most one mixed corner per coordinate plane,
   at most six maximal points, and at most six final-window points.
-- [`paper/six-window-shape-specification.md`](paper/six-window-shape-specification.md)
-  proves the completion, compression, insertion-growth, extension, symmetry,
-  and termination claims behind B3's finite shape family.
-- [`paper/six-window-modular-specification.md`](paper/six-window-modular-specification.md)
-  specifies every ordered residue labeling and modular cut, proves coverage
-  of arbitrary integer lifts and equality, and removes the historical
-  linear-program certificates from the retained B3 route.
+- [`paper/three-plane-projection.md`](paper/three-plane-projection.md)
+  proves that a negative B3 projection score forces at most 29 points and
+  closes the \(m\ge30\) branch analytically.
+- The superseded [shape specification](paper/six-window-shape-specification.md)
+  and [modular specification](paper/six-window-modular-specification.md)
+  describe the broader six-window alternative; neither is a retained
+  main-proof dependency or an established finite lemma.
 - [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) classifies
   full weighted ideals, excludes the six-column triangle analytically, and
   proves Wilf's inequality for this subcase.
@@ -95,6 +95,9 @@ canonical source for task status and dependencies.
 - [`research/b2-simplification-decision.md`](research/b2-simplification-decision.md)
   records why D2 retains the B2 interval tree after the direct horn
   simplification gate.
+- [`research/b3-simplification-decision.md`](research/b3-simplification-decision.md)
+  records D3's analytic replacement, removal of R3, and downstream dependency
+  audit. Its small diagnostic script is not release proof code.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the
