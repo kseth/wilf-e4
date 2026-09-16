@@ -85,6 +85,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B3.2 | Finite shape-generation specification (superseded alternative) | [`paper/six-window-shape-specification.md`](paper/six-window-shape-specification.md) |
 | B3.3 | Modular-cut and integer-lift specification (superseded alternative) | [`paper/six-window-modular-specification.md`](paper/six-window-modular-specification.md) |
 | D3 | Analytic three-plane projection bound; all B3 finite verification removed | [`paper/three-plane-projection.md`](paper/three-plane-projection.md), [`research/b3-simplification-decision.md`](research/b3-simplification-decision.md) |
+| B4.1 | Sharp short-corner degree bound and exact remaining height/cardinality ranges | [`paper/short-corner-height-split.md`](paper/short-corner-height-split.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -143,9 +144,18 @@ removing the computation, not by supplying a replay.
 
 ### B4: the corner \((2,1,1)\)
 
+B4.1 is complete analytically. The sharp bound
+\(m\le2R^2-R+3\) gives \(m\ge49\Rightarrow H\ge6\) and confines
+the \(H<6\) side to \(30\le m\le48\), with \(R=4\) or \(5\).
+For \(32\le m\le48\), necessarily \(R=5\) and \(5\le H<6\).
+The endpoint \(H=6\) belongs to the high-height side; degree at most five
+alone does not imply low height. No residue filter or weighted deficit
+estimate is established by this split.
+
+The remaining B4 tasks are:
+
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B4.1 | [A] | Height and cardinality split | FND, PART | Prove \(H<6\Rightarrow R\le5\), \(m\ge49\Rightarrow H\ge6\), and the remaining range |
 | B4.2 | [A] | High-height analytic reduction | G4, B4.1 | Prove the planar bound and compact parameter reduction |
 | B4.3 | [A]+[C] | Low-height shape/filter specification | FND, B4.1, V0 | Prove exhaustive profiles and every necessary residue rejection |
 | B4.4 | [C] | Centroid-dual semantics | B4.3, V0 | Prove that each rational dual covers all real normalized weights |
@@ -236,7 +246,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are B4.1, B5.1, B5.2, B5.3, and B6.1.
-The recommended next task is **B4.1, the short-corner height and cardinality
-split**: prove \(H<6\Rightarrow R\le5\),
-\(m\ge49\Rightarrow H\ge6\), and the exact remaining low-height range.
+The topologically available tasks are B4.2, B4.3, B5.1, B5.2, B5.3, and B6.1.
+The recommended next task is **B4.2, the short-corner high-height analytic
+reduction**: prove the planar mean bound and reduce any possible failure with
+\(H\ge6\) to a compact parameter region before considering certificates.

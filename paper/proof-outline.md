@@ -431,17 +431,32 @@ The required theorem is
 D_0\ge m-1\qquad(m\ge30).
 \]
 
-The current proof splits by normalized height.
+B4.1 is complete in the [short-corner height-split note](short-corner-height-split.md).
+The sharp analytic bound
 
-- For \(H\ge6\), a planar mean bound and the phase inequality reduce every
-  possible failure to a compact real parameter box; an interval certificate
-  covers it.
-- For \(H<6\), the degree is at most five. Necessary residue restrictions leave
-  28,499 shapes of cardinality at least 30, each handled by an exact rational
-  centroid dual.
+\[
+m\le2R^2-R+3
+\]
 
-The cardinality observation \(m\ge49\Rightarrow H\ge6\) is analytic, so the
-low-height computation is relevant only for \(30\le m\le48\).
+gives \(m\ge49\Rightarrow H\ge6\). The \(H<6\) side is confined to
+\(30\le m\le48\), with \(R=4\) or \(5\); for \(m\ge32\), necessarily
+\(R=5\) and \(5\le H<6\). The endpoint \(H=6\) belongs to the high-height
+side. Degree at most five alone does not imply low height.
+
+The historical route beyond this proved split remains to be reconstructed
+and audited:
+
+- For \(H\ge6\), B4.2 must prove the planar mean bound and compactness
+  reduction using the phase inequality, before any interval certificate
+  is considered.
+- For \(H<6\), B4.3 and B4.4 must prove the necessary residue restrictions,
+  exhaustive profile generation, and rational centroid-dual semantics.
+  The historical count of 28,499 retained shapes is not yet established
+  under V0.
+
+D4 will decide whether either certificate family can be removed; any retained
+computations then require R4a or R4b. B4.1 does not establish the weighted
+deficit target.
 
 Historical source:
 `round5/one_corner_extension/short_corner_weighted_theorem.md` and its cited
@@ -578,7 +593,7 @@ The following is the minimal presently retained proof interface.
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
 | B3 | Three-plane projection theorem | [A] | B3.1 and D3 complete analytically; no R3 needed; obtain independent review |
-| B4 | Short-corner theorem | [A]+[C] | Classify the low-height duals symbolically |
+| B4 | Short-corner theorem | [A]+[C] | B4.1 complete analytically; reconstruct B4.2--B4.4 before the D4 simplification gate |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
