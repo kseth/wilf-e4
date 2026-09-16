@@ -6,7 +6,7 @@ This note completes roadmap task B4.4. It gives the exact acceptance
 predicate for a centroid certificate and proves that an accepted certificate
 covers every real weight vector \(w_i\ge1\) and every height allowance.
 Together with the [B4.3 profile coverage proof](short-corner-profile-specification.md),
-it specifies what a retained R4b replay must establish.
+it specifies how exact point witnesses prove the low-height target.
 
 The certificate is just a nonnegative rational combination of points.
 Its slack vector is derived, not trusted. Clearing denominators reduces
@@ -15,8 +15,11 @@ one using at most three maximal points.
 
 These are analytic semantics and conditional simplifications. They do not
 prove that every eligible profile has a valid certificate, promote the
-historical archive under V0, or discharge R4b. D4 must first decide whether
-to retain the low-height certificate family.
+historical archive under V0, or discharge R4b.
+[D4](../research/b4-simplification-decision.md) selects deterministic local
+checks and two inline witnesses instead of replaying the archived dual list.
+Sections 5--6 retain the legacy-list checking specification as an alternative,
+not an additional selected proof dependency.
 
 ## 1. The local acceptance predicate
 
@@ -263,7 +266,7 @@ are (2)--(3), not a floating-point success flag or an approximately equal
 coefficient vector. SciPy, an optimum value, and the rational-reconstruction
 heuristic are discovery tools only, not dependencies of an exact checker.
 
-### A schema safeguard for R4b
+### A schema safeguard for the legacy replay alternative
 
 The archived independent verifier checks the first three coordinate
 identities but does not explicitly enforce that the stored
@@ -281,13 +284,14 @@ sum exactly the residual coordinates it has checked.
 
 A structural inspection found exactly three cached residual entries in
 every saved historical record. Thus this is a loader safeguard, not evidence
-that the saved mathematical certificates are invalid. R4b must nevertheless
-check the schema explicitly, alongside the exact identities and coverage;
+that the saved mathematical certificates are invalid. Any reinstated
+legacy replay must nevertheless check the schema explicitly, alongside
+the exact identities and coverage;
 the historical checker is not promoted unchanged by this note.
 
 ## 6. Complete-family acceptance and conditional composition
 
-A retained replay must:
+A replay of the legacy dual-list alternative must:
 
 1. generate every key in \(\mathcal F_5^{\ge30}\) from B4.3, without a
    maxima-count skip or an empirical cardinality cutoff;

@@ -14,7 +14,7 @@ analytic arguments and finite verifications have been independently checked.
 | Component | Current state |
 |---|---|
 | Main theorem | Proposed; B1 and B2 are complete under the internal trust policy and B3 is complete analytically; B4--B6 remain to be simplified and audited |
-| Shared foundations, routing, G1--G5, B2.1, B2.2, D2, B3.1, D3, and B4.1--B4.4 | Written in Markdown and internally checked; not independently reviewed |
+| Shared foundations, routing, G1--G5, B2.1, B2.2, D2, B3.1, D3, B4.1--B4.4, and D4 | Written in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
 | Computational verification | B1 and B2 are complete under the trust policy; D3 eliminates B3 computation; B4--B6 remain open |
@@ -77,6 +77,9 @@ canonical source for task status and dependencies.
   proves exact centroid-certificate soundness for all real weights, the
   integer checking predicate, and reduction to three maximal points; it
   specifies complete-family checking without declaring a full replay.
+- [paper/short-corner-local-certificates.md](paper/short-corner-local-certificates.md)
+  replaces the stored low-height dual family with deterministic two-step
+  checks and two inline witnesses; the finite obligation remains open.
 - [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) classifies
   full weighted ideals, excludes the six-column triangle analytically, and
   proves Wilf's inequality for this subcase.
@@ -113,6 +116,11 @@ canonical source for task status and dependencies.
 - [`research/b3-simplification-decision.md`](research/b3-simplification-decision.md)
   records D3's analytic replacement, removal of R3, and downstream dependency
   audit. Its small diagnostic script is not release proof code.
+- [research/b4-simplification-decision.md](research/b4-simplification-decision.md)
+  records D4's low-height route without a stored dual list and retention
+  of the high-height tree. Its
+  [local diagnostic](research/check_b4_local_route.py) is research tooling,
+  not an independent R4b replay.
 - [`literature/survey.md`](literature/survey.md) records prior results, direct
   technical predecessors, the current-state search, and the attribution plan.
 - [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the

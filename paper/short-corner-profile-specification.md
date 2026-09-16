@@ -15,8 +15,9 @@ semigroups. It has no residue-label search, weight grid, or six-maxima skip.
 This is a specification and coverage proof, not a replay of the historical
 centroid duals. The finite weighted obligation is stated in Section 6;
 [B4.4](short-corner-centroid-certificates.md) now supplies its exact
-certificate semantics. D4 must decide whether to retain the computation,
-and R4b must replay it if retained.
+certificate semantics. [D4](../research/b4-simplification-decision.md)
+selects deterministic local checks and two inline witnesses on the
+unchanged family; R4b must audit and replay that finite route.
 
 ## 1. The arithmetic frontier restrictions
 
@@ -382,11 +383,17 @@ the all-weight statement targeted by the historical centroid duals. The
 weights are real, not a finite grid, and the allowance need not be attained.
 
 [B4.4](short-corner-centroid-certificates.md) specifies and proves the exact
-rational certificate predicate sufficient for (18). A complete retained
-checker must reconstruct every key and its point set and moment, check its
-certificate exactly, and reject missing, duplicate, malformed, or unused
-records. A success count or
-floating-point optimization status is not an acceptance predicate.
+rational certificate predicate sufficient for (18). A complete
+legacy dual-list checker would reconstruct every key and its point set and
+moment, check its certificate exactly, and reject missing, duplicate,
+malformed, or unused records. A success count or floating-point
+optimization status is not an acceptance predicate.
+
+D4 instead selects [B4-low-local-FV](short-corner-local-certificates.md):
+on every key, check that the deterministic two-step gain is at least
+\(m-1\), or that the key is one of two explicitly proved exceptions.
+That sufficient predicate implies (18) without the archived dual list.
+It still requires the R4b audit and independent fresh replays.
 
 No dual is replayed in this task, and B4-low-FV is not established by the
 coverage proof. If it is later established, Theorem 5.1 applies it to the

@@ -89,6 +89,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B4.2 | Planar mean bounds, improved high-height failure region \(H<36\), and analytic leaf rules | [`paper/short-corner-compactness.md`](paper/short-corner-compactness.md) |
 | B4.3 | Necessary per-plane residue filters, exhaustive low-height profiles, and B4-low-FV contract | [`paper/short-corner-profile-specification.md`](paper/short-corner-profile-specification.md) |
 | B4.4 | Exact centroid-dual soundness, integer predicate, three-maximal-point reduction, and complete-family checking semantics | [`paper/short-corner-centroid-certificates.md`](paper/short-corner-centroid-certificates.md) |
+| D4 | Retain the high-height tree; replace the low-height dual list with deterministic local checks and two inline witnesses | [Decision](research/b4-simplification-decision.md), [local contract](paper/short-corner-local-certificates.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -176,14 +177,18 @@ proof. It derives the three-coordinate residual from the point multipliers,
 proves the all-real-weight/height-allowance slack identity, and gives an
 equivalent integer predicate. Any valid witness can be reduced to at most
 three maximal points without weakening its bound.
-R4b must explicitly validate schema dimensions: the historical verifier
-does not enforce a three-entry cached residual before summing it, although
-all saved records have that dimension. No full weighted replay has been
-performed and B4-low-FV remains open.
+Legacy dual-list replay must explicitly validate schema dimensions: the
+historical verifier does not enforce a three-entry cached residual before
+summing it, although all saved records have that dimension.
+D4 does not select that loader or the stored dual list.
 
-All B4 entry/specification tasks are now complete. D4 is the next dependency:
-decide whether either certificate family can be replaced analytically before
-running any retained R4a or R4b computation.
+All B4 entry/specification tasks and D4 are complete. D4 retains the
+high-height tree and replaces the low-height dual data with deterministic
+two-step line-top checks and two inline exceptional witnesses. The new
+B4-low-local-FV contract implies B4-low-FV on the unchanged B4.3 family.
+An enumeration-wide research diagnostic passed 28,497 keys locally and
+handled exactly two exceptions, but neither the high-height finite lemma
+nor the low-height one is established under V0. R4a and revised R4b remain.
 
 ### B5: residual degree at most six
 
@@ -211,26 +216,28 @@ final code design.
 
 | ID | Type | Question | Depends on | Fallback |
 |---|---|---|---|---|
-| D4 | [D] | Can symbolic classification replace either B4 certificate family? | B4.2--B4.4 | Retain the high-height tree and 28,499 low-height duals |
 | D5 | [D] | Can residue compatibility prove \(U_2(T)\ge m\) for genuine B5 shapes? | CHO, B5.1--B5.4 | Retain local-or-axis enumeration and \(G\) |
 | D6 | [D] | Can a direct weighted argument remove the B6 strip or interval tree? | B6.1--B6.4 | Retain both exact B6 computations |
 
 D1 is complete and retains B1.3-FV with both independent checking paths. D2
 is complete and retains the B2.2-FV contract with the exact interval tree and
 both R2 checking paths. D3 is complete with an analytic replacement for the
-actual B3 routing cell and removes every B3 computed component. No other
-computed component is promoted into the final architecture until its gate
-has closed.
+actual B3 routing cell and removes every B3 computed component. No
+computed lemma follows from gate closure alone. D4 is complete with a
+partial simplification: retain the high-height tree, replace the stored
+low-height dual list with local checks and two explicit witnesses, and
+retain the finite low-height profile obligation. D5 and D6 remain open.
 
 ## Layer 5: audit and replay retained computations
 
-These tasks use historical implementations. They establish what must later be
-replaced or curated in the final verification package.
+These tasks audit the retained routes, using historical implementations
+where applicable. They establish what must later be replaced or curated
+in the final verification package.
 
 | ID | Type | Atomic replay/audit | Depends on |
 |---|---|---|---|
 | R4a | [C] | B4 high-height interval certificate | D4 retaining it |
-| R4b | [C] | B4 28,499 low-height rational duals | D4 retaining them |
+| R4b | [C] | B4-low-local-FV: exhaustive two-step checks and two inline exceptional witnesses, with independent paths | D4 retaining the finite profile check |
 | R5 | [C] | B5 5,574,644 shapes and 431 fallbacks | D5 retaining computation |
 | R6a | [C] | B6 1,029 finite-strip configurations | D6 retaining that component |
 | R6b | [C] | B6 47,088 high-height interval leaves | D6 retaining that component |
@@ -245,6 +252,9 @@ proves a replacement and removes that computation.
 R3 is discharged by D3's analytic replacement and is no longer scheduled.
 No B3 shape, residue-label, modular-cut, or linear-program data belongs in the
 required minimal verification inventory.
+
+D4 removes the legacy B4 low-height dual list from that inventory, not the
+R4b finite profile check. The retained high-height tree is unchanged.
 
 R1a and R1b are complete. Each path independently establishes B1.3-FV, and
 their common classification and bounded-domain diagnostics agree. R2 is also
@@ -271,7 +281,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are D4, B5.1, B5.2, B5.3, and B6.1.
-The recommended next task is **D4, the short-corner symbolic simplification
-gate**: use the proved planar and three-point centroid interfaces to seek an
-analytic replacement, or document why either certificate family is retained.
+The topologically available tasks are R4a, R4b, B5.1, B5.2, B5.3, and B6.1.
+The recommended next task is **R4a, the retained short-corner high-height
+audit and replay**. R4b will then audit the smaller local-profile route;
+neither replay requires the legacy low-height dual list.
