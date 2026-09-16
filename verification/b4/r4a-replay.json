@@ -1,0 +1,505 @@
+{
+  "cache_free": true,
+  "claim_established_by_this_replay": "B4-high-FV, conditional on the mathematical specification and its coverage proof.",
+  "complete": true,
+  "component": "R4a",
+  "does_not_establish": [
+    "the B4 low-height finite lemma or R4b",
+    "external mathematical review or proof-assistant formalization",
+    "the global four-generator theorem"
+  ],
+  "elapsed_seconds": 22.82403850002447,
+  "environment": {
+    "dependencies": "Python standard library and a C++17 compiler",
+    "integer_semantics": "Python arbitrary precision; C++ signed values >=64 bits, indices >=32 bits",
+    "machine": "arm64",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python_executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "python_version": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]"
+  },
+  "exit_status": 0,
+  "finished_utc": "2026-09-16T22:07:37.857659Z",
+  "fresh": true,
+  "historical_archive_modified": false,
+  "independent_agreement": {
+    "fields_compared": [
+      "analytic_leaves",
+      "arithmetic",
+      "certificate_bytes",
+      "certificate_sha256",
+      "complete",
+      "corner_bounds_checked",
+      "coverage_checked",
+      "dp_leaves",
+      "empty_leaves",
+      "fresh_leaf_recomputation",
+      "largest_dp_bound_numerator",
+      "leaf_result_sha256",
+      "leaves",
+      "node_kinds",
+      "root",
+      "scale",
+      "schema_version",
+      "smallest_dp_bound_numerator",
+      "status",
+      "tree_nodes",
+      "unresolved",
+      "unsupported"
+    ],
+    "note": "Both paths independently proved coverage and recomputed all bounds before comparison.",
+    "status": "PASS"
+  },
+  "negative_tests": [
+    {
+      "checker": "path_a",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-O",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_prefix.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/certificate-manifest.json"
+      ],
+      "elapsed_seconds": 0.13543070800369605,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.388792Z",
+      "mutation": "optimized_execution",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.253378Z",
+      "stderr": "R4a Path A failed: CheckFailure: optimized Python execution is unsupported\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_b",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-O",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_direct.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/certificate-manifest.json"
+      ],
+      "elapsed_seconds": 0.13592083397088572,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.524824Z",
+      "mutation": "optimized_execution",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.388927Z",
+      "stderr": "R4a Path B failed: VerificationError: optimized interpreter mode is forbidden\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_a",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_prefix.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.05661066697211936,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.583292Z",
+      "mutation": "certificate_hash_mismatch",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.526702Z",
+      "stderr": "R4a Path A failed: CheckFailure: certificate SHA-256 mismatch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_b",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_direct.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.056925499986391515,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.640325Z",
+      "mutation": "certificate_hash_mismatch",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.583422Z",
+      "stderr": "R4a Path B failed: VerificationError: certificate checksum does not match\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_a",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_prefix.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.04395758401369676,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.685329Z",
+      "mutation": "duplicate_manifest_field",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.641391Z",
+      "stderr": "R4a Path A failed: CheckFailure: duplicate JSON field 'schema_version'\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_b",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_direct.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.041937708971090615,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.727362Z",
+      "mutation": "duplicate_manifest_field",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.685442Z",
+      "stderr": "R4a Path B failed: VerificationError: repeated JSON key 'schema_version'\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_a",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_prefix.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.05171654198784381,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.783077Z",
+      "mutation": "unsupported_node_kind",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.731380Z",
+      "stderr": "R4a Path A failed: CheckFailure: unsupported node kind/schema\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_b",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_direct.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.041032333043403924,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.824211Z",
+      "mutation": "unsupported_node_kind",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.783198Z",
+      "stderr": "R4a Path B failed: VerificationError: unrecognized node schema\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_a",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_prefix.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.051347833999898285,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.879136Z",
+      "mutation": "four_cached_corner_bounds",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.827809Z",
+      "stderr": "R4a Path A failed: CheckFailure: DP bounds must be exactly three integers\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_b",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_direct.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.042384291999042034,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.921618Z",
+      "mutation": "four_cached_corner_bounds",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.879251Z",
+      "stderr": "R4a Path B failed: VerificationError: direct DP record must have three integer bounds\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_a",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_prefix.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.0486232090042904,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:15.974463Z",
+      "mutation": "child_boundary_gap",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.925860Z",
+      "stderr": "R4a Path A failed: CheckFailure: wrong child box at node 1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "path_b",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_direct.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/.r4a-negative-i9524iro/manifest.json"
+      ],
+      "elapsed_seconds": 0.040519375004805624,
+      "exit_status": 1,
+      "finished_utc": "2026-09-16T22:07:16.015084Z",
+      "mutation": "child_boundary_gap",
+      "rejected": true,
+      "started_utc": "2026-09-16T22:07:15.974581Z",
+      "stderr": "R4a Path B failed: VerificationError: box propagation failed at node 1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "path_a_result": {
+    "analytic_leaves": 455,
+    "arithmetic": "C++ signed integers >=64 bits; indices >=32 bits; root bounds proved",
+    "backend_path": "artifacts/wilf_four_generators_review_package_2026-09-11/round5/one_corner_extension/corner_interval_worker.cpp",
+    "backend_sha256": "469eca1828ab05bf2f671026dfbcbeccab80110f1bad5a330e71cd60af625bbf",
+    "certificate_bytes": 31363264,
+    "certificate_sha256": "c840c66eae5ade228ef500567e2bd1daa7533be89276cd6a73906abf3dfea1ac",
+    "compiler": {
+      "command": [
+        "/usr/bin/c++",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-pedantic",
+        "-include",
+        "/var/folders/8_/fhmbr12j5wlf8s5z5y9rfflm0000gp/T/wilf_r4a_prefix_ldz7hm4a/widths.hpp",
+        "/Users/ksethura/math/wilf/artifacts/wilf_four_generators_review_package_2026-09-11/round5/one_corner_extension/corner_interval_worker.cpp",
+        "-o",
+        "/var/folders/8_/fhmbr12j5wlf8s5z5y9rfflm0000gp/T/wilf_r4a_prefix_ldz7hm4a/checker"
+      ],
+      "path": "/usr/bin/c++",
+      "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+      "warnings": ""
+    },
+    "complete": true,
+    "component": "R4a-path-a-prefix",
+    "corner_bounds_checked": 164934,
+    "coverage_checked": true,
+    "dp_leaves": 54978,
+    "empty_leaves": 0,
+    "fresh_leaf_recomputation": true,
+    "largest_dp_bound_numerator": 4096,
+    "leaf_result_sha256": "25682c2bcc76cc2a3d3f20670f9919e26e5f81c4bc2dc9488453ccb2ad8c8922",
+    "leaves": 55433,
+    "node_kinds": {
+      "dp": 54978,
+      "planar": 455,
+      "split": 55432
+    },
+    "recurrence": "subtraction statistics and prefix maxima",
+    "root": [
+      [
+        4096,
+        4096,
+        24576
+      ],
+      [
+        172032,
+        172032,
+        172032
+      ]
+    ],
+    "scale": 4096,
+    "schema_version": 1,
+    "smallest_dp_bound_numerator": -492320,
+    "status": "PASS",
+    "tree_nodes": 110865,
+    "unresolved": 0,
+    "unsupported": 0
+  },
+  "path_b_result": {
+    "analytic_leaves": 455,
+    "arithmetic": "C++ signed integers >=64 bits; indices >=32 bits; root bounds proved",
+    "backend_path": "verification/b4/direct_clipped_worker.cpp",
+    "backend_sha256": "0bfb74beb71a45640842c2bbeb03cdca74fdc8d40cbc86340615ca554603d2ab",
+    "certificate_bytes": 31363264,
+    "certificate_sha256": "c840c66eae5ade228ef500567e2bd1daa7533be89276cd6a73906abf3dfea1ac",
+    "compiler": {
+      "command": [
+        "/usr/bin/c++",
+        "-O3",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-pedantic",
+        "/Users/ksethura/math/wilf/verification/b4/direct_clipped_worker.cpp",
+        "-o",
+        "/var/folders/8_/fhmbr12j5wlf8s5z5y9rfflm0000gp/T/wilf_r4a_direct_rnzrip0i/worker"
+      ],
+      "path": "/usr/bin/c++",
+      "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+      "warnings": ""
+    },
+    "complete": true,
+    "component": "R4a-path-b-direct",
+    "corner_bounds_checked": 164934,
+    "coverage_checked": true,
+    "dp_leaves": 54978,
+    "empty_leaves": 0,
+    "fresh_leaf_recomputation": true,
+    "largest_dp_bound_numerator": 4096,
+    "leaf_result_sha256": "25682c2bcc76cc2a3d3f20670f9919e26e5f81c4bc2dc9488453ccb2ad8c8922",
+    "leaves": 55433,
+    "node_kinds": {
+      "dp": 54978,
+      "planar": 455,
+      "split": 55432
+    },
+    "recurrence": "disjoint statistics and explicit rectangle transitions",
+    "root": [
+      [
+        4096,
+        4096,
+        24576
+      ],
+      [
+        172032,
+        172032,
+        172032
+      ]
+    ],
+    "scale": 4096,
+    "schema_version": 1,
+    "smallest_dp_bound_numerator": -492320,
+    "status": "PASS",
+    "tree_nodes": 110865,
+    "unresolved": 0,
+    "unsupported": 0
+  },
+  "processes": {
+    "path_a": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_prefix.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/certificate-manifest.json"
+      ],
+      "elapsed_seconds": 3.0276301249978133,
+      "exit_status": 0,
+      "finished_utc": "2026-09-16T22:07:19.044356Z",
+      "started_utc": "2026-09-16T22:07:16.016851Z",
+      "stderr": "",
+      "stdout_sha256": "70cc81c4c5df2f2566307e502f0a4410859f89561ce3e3025f4c9084a063fef3"
+    },
+    "path_b": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_high_direct.py",
+        "--manifest",
+        "/Users/ksethura/math/wilf/verification/b4/certificate-manifest.json"
+      ],
+      "elapsed_seconds": 18.796215375012252,
+      "exit_status": 0,
+      "finished_utc": "2026-09-16T22:07:37.840458Z",
+      "started_utc": "2026-09-16T22:07:19.044642Z",
+      "stderr": "",
+      "stdout_sha256": "3fc58602b67dec29d9447cb33943b35ff39628f8331a7d2ae1bb015cee00eeeb"
+    }
+  },
+  "record_path": "verification/b4/r4a-replay.json",
+  "replay_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "verification/b4/replay_high.py"
+  ],
+  "repository_input_commit": "349ff58c2a180d97088a8ad5d24a1eb6099e9474",
+  "schema_version": 1,
+  "sources": {
+    "backend_a": {
+      "path": "artifacts/wilf_four_generators_review_package_2026-09-11/round5/one_corner_extension/corner_interval_worker.cpp",
+      "sha256": "469eca1828ab05bf2f671026dfbcbeccab80110f1bad5a330e71cd60af625bbf"
+    },
+    "backend_b": {
+      "path": "verification/b4/direct_clipped_worker.cpp",
+      "sha256": "0bfb74beb71a45640842c2bbeb03cdca74fdc8d40cbc86340615ca554603d2ab"
+    },
+    "certificate": {
+      "path": "artifacts/wilf_four_generators_review_package_2026-09-11/round5/one_corner_extension/short_corner_complete_certificate.json",
+      "sha256": "c840c66eae5ade228ef500567e2bd1daa7533be89276cd6a73906abf3dfea1ac"
+    },
+    "clipping": {
+      "path": "paper/central-box-horns.md",
+      "sha256": "16df4f11d46224ef7c0aa64ea7e43ac83d2b14bacd872d50ac1130da38fa9b48"
+    },
+    "compactness": {
+      "path": "paper/short-corner-compactness.md",
+      "sha256": "d86933276e45173a2c969d1e394f28dcdc729c03ae7e07ab57ccb7acc5aa00a4"
+    },
+    "contract": {
+      "path": "paper/short-corner-interval-specification.md",
+      "sha256": "3e576e51e5c3c5369247da598be92d43b93c0d5016de0f8689c89e26e9dedf7f"
+    },
+    "decision": {
+      "path": "research/b4-simplification-decision.md",
+      "sha256": "2d44fa826c9d7fc4b1f713f7ea16c7be560a801bb28f57d569d9e15976121a16"
+    },
+    "manifest": {
+      "path": "verification/b4/certificate-manifest.json",
+      "sha256": "744b89174f4d831c1519ffd75794ca5e035816374a479d0ff7a13ca68566a446"
+    },
+    "path_a": {
+      "path": "verification/b4/check_high_prefix.py",
+      "sha256": "9257ddf5dbf64257c5219c28ec23f70a8e4dd89ddefd4c01491a5e7532fad835"
+    },
+    "path_b": {
+      "path": "verification/b4/check_high_direct.py",
+      "sha256": "965419f4d2b4398d16372dda890ea6e64b1d464ba8794f78ec8c35cb6a8ef1eb"
+    },
+    "runner": {
+      "path": "verification/b4/replay_high.py",
+      "sha256": "e632e06b70590039ffb891d6c6f239707b2127e1b3653b5ffd2a0472ba406b07"
+    }
+  },
+  "started_utc": "2026-09-16T22:07:15.034152Z",
+  "status": "PASS",
+  "theorem_contract": {
+    "parameter_region": "1 <= b <= c <= Q, 6 <= Q <= 42; all three short-corner positions",
+    "path": "paper/short-corner-interval-specification.md",
+    "sha256": "3e576e51e5c3c5369247da598be92d43b93c0d5016de0f8689c89e26e9dedf7f",
+    "statement": "B4-high-FV"
+  },
+  "tracked_worktree_clean_before_replay": true,
+  "unresolved": 0,
+  "unsupported": 0,
+  "working_directory": "/Users/ksethura/math/wilf"
+}

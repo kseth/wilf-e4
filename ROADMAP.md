@@ -90,6 +90,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B4.3 | Necessary per-plane residue filters, exhaustive low-height profiles, and B4-low-FV contract | [`paper/short-corner-profile-specification.md`](paper/short-corner-profile-specification.md) |
 | B4.4 | Exact centroid-dual soundness, integer predicate, three-maximal-point reduction, and complete-family checking semantics | [`paper/short-corner-centroid-certificates.md`](paper/short-corner-centroid-certificates.md) |
 | D4 | Retain the high-height tree; replace the low-height dual list with deterministic local checks and two inline witnesses | [Decision](research/b4-simplification-decision.md), [local contract](paper/short-corner-local-certificates.md) |
+| R4a | B4 high-height specification, arithmetic/coverage audit, and two fresh complete checking paths | [Specification](paper/short-corner-interval-specification.md), [audit and replay](verification/b4/r4a-high-height-audit.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -161,7 +162,7 @@ confine any high-height target failure to
 \(1\le b\le c\le H,\ 6\le H<36\), retaining all three positions of the
 doubled corner coordinate. Optional weight bounds give \(b<9,\ c<17\).
 The historical certificate's larger closed \(42\)-box remains a compatible
-superset; no certificate has been changed or replayed. Both simple and
+superset; R4a has replayed it without changing the archive. Both simple and
 refined planar acceptance rules include their equality boundaries.
 
 B4.3 is complete as a specification and analytic coverage proof. It proves
@@ -186,9 +187,11 @@ All B4 entry/specification tasks and D4 are complete. D4 retains the
 high-height tree and replaces the low-height dual data with deterministic
 two-step line-top checks and two inline exceptional witnesses. The new
 B4-low-local-FV contract implies B4-low-FV on the unchanged B4.3 family.
-An enumeration-wide research diagnostic passed 28,497 keys locally and
-handled exactly two exceptions, but neither the high-height finite lemma
-nor the low-height one is established under V0. R4a and revised R4b remain.
+R4a's interval specification and two fresh complete independent checking
+paths establish B4-high-FV under V0. Together with B4.2, this closes the
+\(H\ge6\) routing subcase. An enumeration-wide research diagnostic passed
+28,497 low-height keys locally and handled exactly two exceptions, but
+the low-height finite lemma is not established under V0. Revised R4b remains.
 
 ### B5: residual degree at most six
 
@@ -236,7 +239,6 @@ in the final verification package.
 
 | ID | Type | Atomic replay/audit | Depends on |
 |---|---|---|---|
-| R4a | [C] | B4 high-height interval certificate | D4 retaining it |
 | R4b | [C] | B4-low-local-FV: exhaustive two-step checks and two inline exceptional witnesses, with independent paths | D4 retaining the finite profile check |
 | R5 | [C] | B5 5,574,644 shapes and 431 fallbacks | D5 retaining computation |
 | R6a | [C] | B6 1,029 finite-strip configurations | D6 retaining that component |
@@ -259,7 +261,10 @@ R4b finite profile check. The retained high-height tree is unchanged.
 R1a and R1b are complete. Each path independently establishes B1.3-FV, and
 their common classification and bounded-domain diagnostics agree. R2 is also
 complete: both paths independently establish B2 tree coverage and every leaf
-bound. The B1 and B2 finite lemmas are complete under V0.
+bound. The B1 and B2 finite lemmas are complete under V0. R4a is complete:
+both paths independently cover the B4 high-height domain and recompute
+all three corner bounds at every DP leaf. B4-high-FV is established under
+V0; the low-height finite lemma and hence the full B4 branch remain open.
 
 ## Layer 6: synthesis and pre-manuscript freeze
 
@@ -281,7 +286,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are R4a, R4b, B5.1, B5.2, B5.3, and B6.1.
-The recommended next task is **R4a, the retained short-corner high-height
-audit and replay**. R4b will then audit the smaller local-profile route;
-neither replay requires the legacy low-height dual list.
+The topologically available tasks are R4b, B5.1, B5.2, B5.3, and B6.1.
+The recommended next task is **R4b, the short-corner low-height local-profile
+audit and replay**. It will audit the smaller deterministic local route
+and two inline witnesses, without the legacy low-height dual list.

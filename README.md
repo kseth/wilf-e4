@@ -13,11 +13,12 @@ analytic arguments and finite verifications have been independently checked.
 
 | Component | Current state |
 |---|---|
-| Main theorem | Proposed; B1 and B2 are complete under the internal trust policy and B3 is complete analytically; B4--B6 remain to be simplified and audited |
+| Main theorem | Proposed; B1 and B2 are complete under the internal trust policy and B3 is complete analytically; B4 low-height, B5, and B6 obligations remain |
 | Shared foundations, routing, G1--G5, B2.1, B2.2, D2, B3.1, D3, B4.1--B4.4, and D4 | Written in Markdown and internally checked; not independently reviewed |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
-| Computational verification | B1 and B2 are complete under the trust policy; D3 eliminates B3 computation; B4--B6 remain open |
+| B4 high-height subcase | Analytic reduction and two independent fresh complete checking paths establish B4-high-FV under the trust policy |
+| Computational verification | B1, B2, and B4 high-height are complete under the trust policy; D3 eliminates B3 computation; B4 low-height, B5, and B6 remain open |
 | Release artifact | Definitive TeX, proof code, and PDF intentionally deferred until the roadmap freeze |
 
 Here “reconstructed” means that a clean argument has been extracted from the
@@ -68,6 +69,9 @@ canonical source for task status and dependencies.
 - [`paper/short-corner-compactness.md`](paper/short-corner-compactness.md)
   proves the planar mean bounds and improved \(H<36\) high-height failure
   cutoff, with compatibility to the historical \(42\)-box.
+- [paper/short-corner-interval-specification.md](paper/short-corner-interval-specification.md)
+  states B4-high-FV and proves clipped recurrence soundness, whole-box
+  domination, closed coverage, and the fixed-width arithmetic bounds.
 - [`paper/short-corner-profile-specification.md`](paper/short-corner-profile-specification.md)
   proves the low-height residue filters and exhaustive profile construction,
   and states the open B4-low-FV weighted obligation. Its
@@ -101,6 +105,9 @@ canonical source for task status and dependencies.
   audits agreement with R1a.
 - [`verification/b2/r2-interval-audit.md`](verification/b2/r2-interval-audit.md)
   audits the retained B2 tree and records two fresh complete checking paths.
+- [verification/b4/r4a-high-height-audit.md](verification/b4/r4a-high-height-audit.md)
+  audits the retained B4 high-height tree and records two fresh complete
+  paths with separate clipped statistics and recurrence algorithms.
 - [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md)
   verifies the exact published statements that remove \(m\le19\), their
   scope, computational dependencies, and version-of-record citations.

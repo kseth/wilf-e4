@@ -503,8 +503,11 @@ be replaced by one on at most three maximal points.
 [D4](../research/b4-simplification-decision.md) is complete with a partial
 computational simplification:
 
-- For \(H\ge6\), the interval certificate is a candidate retained component,
-  not an established computed lemma. B4.2 proves analytic acceptance rules
+- For \(H\ge6\), the [interval specification](short-corner-interval-specification.md)
+  and [R4a audit and replay](../verification/b4/r4a-high-height-audit.md)
+  establish B4-high-FV under V0 through two fresh complete checking paths.
+  Together with B4.2, this proves the target throughout this subcase.
+  B4.2 also proves analytic acceptance rules
   \(H\ge3+4B\) and \(5H\ge21+16B\), both implying \(D_0\ge m\) and including
   equality.
 - For \(H<6\), the B4-low-FV contract quantifies over every generated
@@ -519,9 +522,9 @@ computational simplification:
   fresh replays of B4-low-local-FV; B4-low-FV is not established under V0.
 
 The legacy 28,499-record dual list and its loader are no longer selected
-proof inputs. R4a and revised R4b remain required. The analytic reductions
-and D4 decision do not establish the weighted deficit target throughout
-the remaining domain.
+proof inputs. R4a is complete; revised R4b remains required. The analytic
+reductions and D4 decision alone do not establish the weighted deficit
+target throughout the remaining low-height domain.
 
 Historical source:
 `round5/one_corner_extension/short_corner_weighted_theorem.md` and its cited
@@ -658,7 +661,7 @@ The following is the minimal presently retained proof interface.
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
 | B3 | Three-plane projection theorem | [A] | B3.1 and D3 complete analytically; no R3 needed; obtain independent review |
-| B4 | Short-corner theorem | [A]+[C] | B4.1--B4.4 and D4 complete; retain R4a tree and revised R4b local checks, not the legacy dual list |
+| B4 | Short-corner theorem | [A]+[C] | B4.1--B4.4, D4, and R4a complete; high-height target established under V0; revised R4b local checks remain, not the legacy dual list |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
