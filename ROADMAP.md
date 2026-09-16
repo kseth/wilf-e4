@@ -12,8 +12,10 @@ and every external input has been checked at theorem level.
 
 Historical programs may be run during reconstruction. Curating and packaging
 the final proof code happens only after this roadmap is complete. Each task
-below should normally produce one reviewable note, decision, or replay record
-and one commit.
+below should normally produce one bounded, reviewable result, updating an
+existing note when possible. Create a new file only for a distinct proof,
+contract, decision, or execution record. Replay inputs may need a source-freeze
+commit before the separate evidence/status commit.
 
 ## Labels
 
@@ -100,15 +102,16 @@ components of that packet.
 ## Layer 1: route-wide prerequisites
 
 All route-wide prerequisites are complete. L2 retains the moment-deficit
-architecture, adds the analytic disposal
+architecture, records the optional analytic disposal
 \(|\operatorname{Max}(T)|\le3\), and finds no published reduction that removes
-the B1 finite obligation or any of B2--B6.
+the B1 finite obligation or any of B2--B6. The selected branch domains
+do not use this optional disposal as a skip rule.
 
 ## Layer 2: common analytic tools
 
 All common analytic tools are complete. G3 feeds B1 and B3; G4 feeds B2, B4,
-and B6; and G5 supplies the structural recurrence interface used by B2 and
-B6.
+and B6; and G5 supplies the structural recurrence interface used by B2,
+B4, and B6.
 
 ## Layer 3: branch-entry lemmas and route specifications
 
@@ -199,7 +202,7 @@ the low-height finite lemma is not established under V0. Revised R4b remains.
 |---|---|---|---|---|
 | B5.1 | [A] | Plane-corner restriction | FND, PART | Prove the per-plane bound \(\lvert p\rvert_1-2\), without summing across planes |
 | B5.2 | [A] | Surface-injection restriction | FND, PART | Prove \(\lvert F_i\cap F_j\rvert\le2n_k\), including slice boundaries |
-| B5.3 | [A] | Local and axis centroid witnesses | G2 | Prove \(D_0\ge U_2\) and, when applicable, \(D_0\ge G\) |
+| B5.3 | [A] | Axis centroid witness and local-interface assembly | G2, D4 local soundness | Cite the existing \(D_0\ge U_2\) theorem; prove the axis mass/sign conditions and \(D_0\ge G\) when applicable, without a new local proof |
 | B5.4 | [C] | Degree-six profile specification | B5.1, B5.2, V0 | Prove exhaustive profiles, shared-axis conditions, corner cuts, and filters |
 
 ### B6: residual degree at least seven
@@ -207,9 +210,15 @@ the low-height finite lemma is not established under V0. Revised R4b remains.
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
 | B6.1 | [C] | Finite-strip theorem specification | G5, V0 | Justify allowances \(18,19,20,21\), the corner range, and horn recurrence |
-| B6.2 | [A] | Finite-to-continuous transfer | B6.1 | Derive the \(5/42\) gap, including boundary, support, Jacobian, and remainder checks |
-| B6.3 | [A] | High-height compactness | G4, B6.2 | Derive \(7\le H<78\) and all closed-box clipping inequalities |
+| B6.2 | [A] | Conditional finite-to-continuous transfer | B6.1 | Prove that the specified strip predicate implies the \(5/42\) gap, including boundary, support, Jacobian, and remainder checks; do not assume a saved success establishes the premise |
+| B6.3 | [A] | Conditional high-height compactness | G4, B6.2 | Assuming the specified gap, derive \(7\le H<78\) and all closed-box clipping inequalities |
 | B6.4 | [C] | High-height interval-tree specification | B6.3, V0 | Prove recurrence, whole-box bounds, outward rounding, and coverage |
+
+B6.2--B6.4 can specify and prove implications before a replay. Their
+computational premises remain explicit: R6a must establish the strip
+predicate and R6b the interval predicate unless D6 proves a replacement.
+This avoids a circular claim that a specification alone proves the gap
+used to justify the retained high-height domain.
 
 ## Layer 4: bounded simplification gates
 
@@ -244,6 +253,10 @@ in the final verification package.
 | R6a | [C] | B6 1,029 finite-strip configurations | D6 retaining that component |
 | R6b | [C] | B6 47,088 high-height interval leaves | D6 retaining that component |
 
+The displayed historical counts are regression expectations, not theorem
+predicates or permission to skip objects. Each replay must establish its
+specified domain independently of agreement with those counts.
+
 Each replay must record source hashes, commands, exact counts, arithmetic
 bounds, environment information, and a result independent of cached success
 flags.
@@ -270,10 +283,10 @@ V0; the low-height finite lemma and hence the full B4 branch remain open.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| L3 | [L] | Branch-level novelty and attribution refresh | D1--D6 | Search the final surplus statements and update citations without broad priority claims |
-| S1 | [A]+[C] | Clean branch dossiers | B1--B6 specifications, D1--D6, and all retained replays | Each B1--B6 dossier has one theorem, proof, finite contract if any, and no historical alternatives |
+| S1 | [A]+[C] | Clean branch dossiers | B1--B6 specifications, D1--D6, and all retained replays | Each B1--B6 dossier has one theorem, proof, finite contract if any, and no historical alternatives; assemble from existing notes, without requiring six additional files |
+| L3 | [L] | Branch-level novelty and attribution refresh | D1--D6; S1 for the final pass | Search the final surplus statements and upstream versions; citations and carefully bounded novelty claims must match the retained dossiers |
 | S2 | [A] | End-to-end composition audit | G1, L1, S1 | Check every hypothesis transfer and prove the main theorem once in Markdown |
-| S3 | [C] | Minimal computation inventory | V0, all decisions and replays | List exactly what the final proof package must contain and why |
+| S3 | [C] | Minimal computation inventory | V0, all decisions and replays | List exactly the retained contracts, data, checkers, commands, source versions, and trust boundary; specify release portability and provenance checks, not a new code framework |
 | PRELIM | [D] | Preliminary-package readiness checkpoint | L3, S1, S2, S3 | The end-to-end Markdown proof, retained replay evidence, and minimal artifact inventory are stable enough for private circulation and TeX planning |
 | V1 | [D] | Proof-verification scope decision | PRELIM | Choose independent replay, targeted formalization, or broader formalization; name the trusted boundary |
 | H1 | [H] | Architecture-review cycle | PRELIM | Send the proof notes, finite contracts, and checklist to appropriate specialists; triage every response received by the agreed cutoff |
@@ -283,6 +296,90 @@ V0; the low-height finite lemma and hence the full B4 branch remain open.
 claim. It permits private circulation and concrete TeX/artifact planning.
 After `FREEZE`, and not before, begin the definitive TeX manuscript, curated
 proof-code package, any chosen formalization, and PDF/release packaging.
+
+## Post-R4a checkpoint
+
+This is a consolidation and provenance assessment, not a new mathematical
+replay, an end-to-end correctness verdict, or external review.
+
+### Remaining work before a coherent full working draft
+
+| Workstream | Dependency order | Closure needed |
+|---|---|---|
+| B4 | R4b, using the unchanged B4.3 family and D4 local contract | Independent complete profile generation and local checks, plus both inline witnesses; combine with R4a to close B4 |
+| B5 | B5.1--B5.3, then B5.4, D5, and R5 if retained | Prove arithmetic restrictions and axis soundness; choose a proved analytic replacement or a fully specified exact profile check |
+| B6 | B6.1, conditional B6.2--B6.4, D6, then each retained R6 component | Establish every finite premise of the continuous-gap and compactness implications; neither historical layer is yet promoted |
+| Synthesis | S1, final L3, S2, S3, then PRELIM | One readable selected proof, complete hypothesis transfers, current attribution, and a precise minimal artifact inventory |
+| Definitive release route | V1 and H1 after PRELIM, then FREEZE | Choose any further formalization and obtain/triage external review before definitive TeX and release packaging |
+
+The B5 and B6 preparation can proceed independently of R4b. S1 can be
+prepared incrementally for closed branches, but cannot be marked complete
+before every selected branch closes. PRELIM means a coherent full working
+Markdown proof suitable for private circulation, not just a collection of
+notes. It precedes H1; the review packet does not have to wait for the
+definitive TeX/PDF. No change to the agreed definitive-manuscript cutoff
+is made here.
+
+### Consolidation decisions
+
+- Keep mathematical proofs and finite contracts in `paper/`, replay
+  evidence in `verification/`, and decisions/diagnostics in `research/`.
+  The main navigation is now a branch reading map rather than a flat file list.
+- Preserve the explicitly superseded B3 specifications as research history;
+  exclude them from S1's selected narrative and S3's required inventory.
+  D4 likewise excludes the old B4 dual list and its loader. B4.4's witness
+  soundness remains useful, but its legacy-list machinery and optional
+  sparsification need not be manuscript dependencies.
+- Reuse G2 and D4's generic two-step soundness in B5.3. An axis residual
+  requires its nonnegative remaining-mass condition; the outline now
+  states that condition rather than claiming both witnesses unconditionally.
+- Keep B5's fallback-residue probe diagnostic. It does not prove that its
+  saved list exhausts all local failures. D5 must supply a symbolic
+  classification or retain the specified finite check; merely adding a
+  modular search is not an analytic simplification.
+- Treat F4's type, conductor, and left-element reductions as optional
+  context unless a later gate actually uses them. They are not additional
+  premises of the currently selected branch domains.
+- Do not merge the independent mathematical evaluators into one shared
+  verification engine for tidiness. A common administrative interface or
+  record envelope can be considered at S3 without sharing proof logic.
+- Leave frozen mathematical replay inputs and saved execution records
+  untouched. D4's R4a handoff describes the obligation at gate closure;
+  live completion status belongs here and in the R4a audit.
+
+### Artifact and evidence assessment
+
+At this checkpoint there were 57 tracked files outside the 580-file
+historical archive. The active material occupied less than 1 MB; roughly
+250 MB of repository payload was historical. No certificate copy,
+committed build binary, or committed bytecode cache was found in the
+active tree. The manifests deliberately reference the existing trees.
+Removing research history is not needed to make the selected reading path
+concise.
+
+All four retained replay records report complete successful runs. All
+28 recorded path/hash identities were checked against their named input
+commits. Every currently checked program, runner, finite contract, and
+certificate still matches its recorded identity. The only current-file
+drift is the D1 decision note in both B1 records: a paragraph was updated
+after D3 to explain why the large-multiplicity analytic replacement does
+not prune the small-multiplicity search. This is an editorial change,
+not a change to B1.3-FV or its executions. Preserve the old records as
+accurate snapshots rather than replacing their hashes.
+
+S1 still needs to normalize manuscript notation, particularly the
+conductor versus the third sorted weight, attained height \(H\) versus
+allowance \(Q\), and degree \(R\) versus height. S2 must explicitly check
+simultaneous coordinate/weight permutations, the \(m=30\) and \(H=6\)
+endpoints, and every computational-premise transfer.
+
+S3 still needs a portable release inventory: current commands correctly
+use historical paths, while record layouts and absolute-path metadata
+differ between components. These are packaging obligations, not reasons
+to refactor valid checkers now. Any later code changes require fresh
+evidence for the released source versions. Literature refresh, human
+responsibility for claims, and external review remain outstanding;
+two AI-assisted checking paths are not two independent human reviews.
 
 ## Current ready queue
 

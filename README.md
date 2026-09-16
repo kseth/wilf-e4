@@ -14,7 +14,7 @@ analytic arguments and finite verifications have been independently checked.
 | Component | Current state |
 |---|---|
 | Main theorem | Proposed; B1 and B2 are complete under the internal trust policy and B3 is complete analytically; B4 low-height, B5, and B6 obligations remain |
-| Shared foundations, routing, G1--G5, B2.1, B2.2, D2, B3.1, D3, B4.1--B4.4, and D4 | Written in Markdown and internally checked; not independently reviewed |
+| Shared analytic interfaces | Written in Markdown and internally checked; not externally reviewed or formalized |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
 | B4 high-height subcase | Analytic reduction and two independent fresh complete checking paths establish B4-high-FV under the trust policy |
@@ -25,117 +25,49 @@ Here “reconstructed” means that a clean argument has been extracted from the
 historical archive; it does not mean independently verified. `ROADMAP.md` is the
 canonical source for task status and dependencies.
 
-## Repository layout
+## Reader's map
 
-- [`ROADMAP.md`](ROADMAP.md) is the topologically ordered plan through the
-  pre-manuscript proof-architecture freeze.
-- [`paper/proof-outline.md`](paper/proof-outline.md) is the current clean proof
-  spine and dependency ledger. Start here.
-- [`paper/foundations.md`](paper/foundations.md) proves the common Apéry,
-  residue, exclusion, and moment lemmas used by every proof branch.
-- [`paper/case-partition.md`](paper/case-partition.md) proves that the
-  retained branches are exhaustive and mutually exclusive.
-- [`paper/final-arithmetic.md`](paper/final-arithmetic.md) converts the three
-  branch bounds into Wilf's inequality and checks their endpoints.
-- [`paper/coordinate-lines.md`](paper/coordinate-lines.md) proves the
-  line-count, line-top, weighted-deficit, and endpoint-upgrade identities.
-- [`paper/phase-and-thickening.md`](paper/phase-and-thickening.md) proves the
-  summed sawtooth phase inequality, exact rectangular-thickening identity,
-  support preservation, and the compactness endpoints used by B2, B4, and B6.
-- [`paper/central-box-horns.md`](paper/central-box-horns.md) proves the
-  clique-tree decomposition into a central box and three monotone horns, its
-  one-corner clipping corollary, and the exact nested-cap recurrence interface.
-- [`paper/no-corner-compactness.md`](paper/no-corner-compactness.md) proves the
-  continuous no-corner moment inequality, the degree-four cardinality
-  bound, and the compact real parameter domain for B2.
-- [`paper/no-corner-interval-specification.md`](paper/no-corner-interval-specification.md)
-  states B2's finite theorem contract and proves the horn recurrence,
-  whole-box bounds, and closed interval-tree coverage semantics.
-- [`paper/final-window-projection.md`](paper/final-window-projection.md)
-  proves the exact residue/projection bound and audits its equality boundary.
-- [`paper/six-maxima-entry.md`](paper/six-maxima-entry.md) proves that the
-  corner \((1,1,1)\) forces at most one mixed corner per coordinate plane,
-  at most six maximal points, and at most six final-window points.
-- [`paper/three-plane-projection.md`](paper/three-plane-projection.md)
-  proves that a negative B3 projection score forces at most 29 points and
-  closes the \(m\ge30\) branch analytically.
-- The superseded [shape specification](paper/six-window-shape-specification.md)
-  and [modular specification](paper/six-window-modular-specification.md)
-  describe the broader six-window alternative; neither is a retained
-  main-proof dependency or an established finite lemma.
-- [`paper/short-corner-height-split.md`](paper/short-corner-height-split.md)
-  proves the sharp short-corner degree bound and confines the \(H<6\) side
-  of B4 to \(30\le m\le48\), analytically.
-- [`paper/short-corner-compactness.md`](paper/short-corner-compactness.md)
-  proves the planar mean bounds and improved \(H<36\) high-height failure
-  cutoff, with compatibility to the historical \(42\)-box.
-- [paper/short-corner-interval-specification.md](paper/short-corner-interval-specification.md)
-  states B4-high-FV and proves clipped recurrence soundness, whole-box
-  domination, closed coverage, and the fixed-width arithmetic bounds.
-- [`paper/short-corner-profile-specification.md`](paper/short-corner-profile-specification.md)
-  proves the low-height residue filters and exhaustive profile construction,
-  and states the open B4-low-FV weighted obligation. Its
-  [construction diagnostic](research/check_b4_low_height_profiles.py) is
-  research tooling, not release proof code or a dual replay.
-- [`paper/short-corner-centroid-certificates.md`](paper/short-corner-centroid-certificates.md)
-  proves exact centroid-certificate soundness for all real weights, the
-  integer checking predicate, and reduction to three maximal points; it
-  specifies complete-family checking without declaring a full replay.
-- [paper/short-corner-local-certificates.md](paper/short-corner-local-certificates.md)
-  replaces the stored low-height dual family with deterministic two-step
-  checks and two inline witnesses; the finite obligation remains open.
-- [`paper/full-weighted-ideal.md`](paper/full-weighted-ideal.md) classifies
-  full weighted ideals, excludes the six-column triangle analytically, and
-  proves Wilf's inequality for this subcase.
-- [`paper/conductor-reduction.md`](paper/conductor-reduction.md) proves that a
-  negative Wilf number forces bounded Apéry maximum, conductor, and
-  nonmultiplicity generators.
-- [`paper/small-multiplicity-specification.md`](paper/small-multiplicity-specification.md)
-  specifies the exact finite obligation for \(20\le m\le29\) and proves
-  that its sorted minimal generator tuples cover every possible
-  counterexample.
-- [`verification/trust-policy.md`](verification/trust-policy.md) defines the
-  evidentiary standard, exactness rules, independent-check requirement, and
-  replay records for every retained computation.
-- [`verification/b1/r1a-residue-distance-audit.md`](verification/b1/r1a-residue-distance-audit.md)
-  proves the residue-cycle update, audits the first B1 implementation, and
-  records its fresh complete replay.
-- [`verification/b1/r1b-membership-audit.md`](verification/b1/r1b-membership-audit.md)
-  proves the ordinary-membership path, records its independent replay, and
-  audits agreement with R1a.
-- [`verification/b2/r2-interval-audit.md`](verification/b2/r2-interval-audit.md)
-  audits the retained B2 tree and records two fresh complete checking paths.
-- [verification/b4/r4a-high-height-audit.md](verification/b4/r4a-high-height-audit.md)
-  audits the retained B4 high-height tree and records two fresh complete
-  paths with separate clipped statistics and recurrence algorithms.
-- [`literature/multiplicity-through-19-audit.md`](literature/multiplicity-through-19-audit.md)
-  verifies the exact published statements that remove \(m\le19\), their
-  scope, computational dependencies, and version-of-record citations.
-- [`literature/published-reduction-comparison.md`](literature/published-reduction-comparison.md)
-  decides how the known conductor, left-element, and type reductions and
-  Marashdeh's defect decomposition affect the retained branches.
-- [`research/b1-simplification-decision.md`](research/b1-simplification-decision.md)
-  records why the exact \(20\le m\le29\) finite obligation and its two
-  independent checking paths are retained.
-- [`research/b2-simplification-decision.md`](research/b2-simplification-decision.md)
-  records why D2 retains the B2 interval tree after the direct horn
-  simplification gate.
-- [`research/b3-simplification-decision.md`](research/b3-simplification-decision.md)
-  records D3's analytic replacement, removal of R3, and downstream dependency
-  audit. Its small diagnostic script is not release proof code.
-- [research/b4-simplification-decision.md](research/b4-simplification-decision.md)
-  records D4's low-height route without a stored dual list and retention
-  of the high-height tree. Its
-  [local diagnostic](research/check_b4_local_route.py) is research tooling,
-  not an independent R4b replay.
-- [`literature/survey.md`](literature/survey.md) records prior results, direct
-  technical predecessors, the current-state search, and the attribution plan.
-- [`research/chomicz-assessment.md`](research/chomicz-assessment.md) records the
-  focused comparison with Chomicz's three-dimensional L-shape construction.
-- `artifacts/` is the frozen research archive: manuscripts, historical routes,
-  exact programs, certificates, and replay records.
-- A definitive TeX paper and a minimal verification package will be added only
-  after the retained proof route has stabilized.
+Start with the [proof spine](paper/proof-outline.md). It gives the
+normalization, disjoint case partition, branch targets, and links to the
+individual mathematical notes. Use the [roadmap](ROADMAP.md) for live
+status, dependencies, and the post-R4a checkpoint.
+
+| Location | Role |
+|---|---|
+| [paper/](paper) | Mathematical proofs and code-independent finite contracts; not yet a full manuscript |
+| [verification/](verification) | Internal audits, exact checking paths, manifests, and records of actual replays |
+| [literature/survey.md](literature/survey.md) | Dated survey and attribution map; [L1](literature/multiplicity-through-19-audit.md) and [L2](literature/published-reduction-comparison.md) audit the external inputs and reduction choices |
+| [research/](research) | Simplification decisions and diagnostic scripts; not release proof code |
+| [artifacts/](artifacts) | Frozen AI-assisted research archive, not the manuscript source or a blanket-certified proof package |
+
+For a branch-level reading path:
+
+| Branch | Mathematical entry | Checking evidence or remaining obligation |
+|---|---|---|
+| B1 | [Generator-box contract](paper/small-multiplicity-specification.md), with its linked analytic reductions | [R1a](verification/b1/r1a-residue-distance-audit.md) and [R1b](verification/b1/r1b-membership-audit.md) |
+| B2 | [Compactness](paper/no-corner-compactness.md) and [interval contract](paper/no-corner-interval-specification.md) | [R2](verification/b2/r2-interval-audit.md) |
+| B3 | [Plane-entry lemma](paper/six-maxima-entry.md) and [analytic projection theorem](paper/three-plane-projection.md) | No retained computation; [D3](research/b3-simplification-decision.md) records the replacement |
+| B4 high-height | [Compactness](paper/short-corner-compactness.md) and [interval contract](paper/short-corner-interval-specification.md) | [R4a](verification/b4/r4a-high-height-audit.md) |
+| B4 low-height | [Profile coverage](paper/short-corner-profile-specification.md) and [local certificates](paper/short-corner-local-certificates.md) | R4b remains; [D4](research/b4-simplification-decision.md) selects local checks and two inline witnesses, not the old dual list |
+| B5 and B6 | [Candidate contracts in the proof spine](paper/proof-outline.md#b5-residual-degree-at-most-six-a-c) | Entry proofs, finite specifications, simplification gates, and any retained replays remain |
+
+The [Chomicz comparison](research/chomicz-assessment.md) informs the
+geometric language and D5 research target; it does not discharge a branch.
+
+Some files preserve alternatives rather than selected dependencies.
+The B3 [shape](paper/six-window-shape-specification.md) and
+[modular](paper/six-window-modular-specification.md) specifications are
+explicitly superseded. The B4 [centroid note](paper/short-corner-centroid-certificates.md)
+provides retained witness soundness, but its legacy-list machinery is not
+selected. These distinctions will be reflected in the S1 branch dossiers
+and S3 minimal inventory; preserving a research argument does not require
+including it in the manuscript.
+
+A coherent full working proof in Markdown is the PRELIM target.
+The definitive TeX manuscript, curated proof-code package, chosen
+formalization, and PDF/release packaging follow FREEZE. External review
+and any additional formalization are separate from the existing internal
+replays.
 
 ## Working principles
 

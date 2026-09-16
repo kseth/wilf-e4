@@ -135,7 +135,7 @@ This support/exclusion structure is substantially present in Proposition 2.6
 of Hellus, Rechenauer, and Waldi. The foundational note distinguishes that
 cited result from the elementary representative-disjointness corollary.
 
-### F4. Low-maxima disposal [E]+[A]
+### F4. Optional published reductions [E]+[A]
 
 Let \(K=\operatorname{Max}(T)\) be the coordinatewise maximal points of the
 preferred exponent ideal. A maximal element of the Apéry poset must be labeled
@@ -148,10 +148,14 @@ elements are the pseudo-Frobenius numbers translated by \(m\),
 \]
 
 The Fröberg--Gottlieb--Häggkvist inequality settles Wilf's conjecture when the
-type is at most \(e-1=3\). Hence every geometric branch may assume
-\(|K|\ge4\). The conductor and left-element theorems also allow the global
-assumptions \(c>3m\) and \(n\ge13\), but they do not shorten the present
-branch parameters or the B1 computation. The exact source comparison and the
+type is at most \(e-1=3\). It permits a preliminary disposal of
+\(|K|\le3\), but the selected branch arguments and checking domains do not
+require that disposal or impose a maxima-count skip. The conductor and
+left-element theorems likewise permit the assumptions \(c>3m\) and \(n\ge13\)
+after disposing of their complements, but neither shortens the present
+branch parameters or the B1 computation. These are contextual reductions,
+not prerequisites of the retained seven-row proof. The exact source
+comparison and the
 decision not to use Marashdeh's defect decomposition as a replacement are in
 the [published-reduction comparison](../literature/published-reduction-comparison.md).
 
@@ -219,7 +223,7 @@ Clipping the central box and each horn slice preserves the disjoint
 decomposition. The
 [`central-box/three-horn note`](central-box-horns.md) includes a self-contained
 proof of the needed clique-tree lemma, attributes the classical chordal-graph
-input, and proves the exact nested-cap recurrence used later by B2 and B6.
+input, and proves the exact nested-cap recurrence used by B2, B4, and B6.
 
 ## 2. The complete case partition
 
@@ -532,6 +536,9 @@ low-height theorem.
 
 ### B5. Residual degree at most six [A], [C]
 
+This branch is not established under V0. The formulas below specify the
+candidate local-or-axis route; B5.1--B5.4, D5, and any retained R5 remain.
+
 For each coordinate line \(\ell\) of \(T\), let \(L_\ell\) be its length and
 \(t_\ell\) its top. The elementary identities
 
@@ -542,9 +549,11 @@ For each coordinate line \(\ell\) of \(T\), let \(L_\ell\) be its length and
 \tag{3}
 \]
 
-lead to two explicit centroid witnesses. Their conventions, proofs, weighted
-line-slack form, and generic endpoint-upgrade construction are isolated in the
-[coordinate-line note](coordinate-lines.md).
+give the common bookkeeping for the candidate centroid witnesses. G2's
+[coordinate-line note](coordinate-lines.md) proves local endpoint-upgrade
+soundness; the [two-step construction](short-corner-local-certificates.md#1-the-two-step-construction)
+already specializes it to \(D_0\ge U_2(T)\). B5.3 should cite these results
+and prove the separate axis construction, not re-prove the local theorem.
 
 For the local witness, define
 
@@ -559,9 +568,14 @@ For the axis witness, with \(q_i=\max_Tx_i\) and \(q_*=\max_iq_i\), define
 G(T)=q_*\left(3m-4\sum_i\frac{s_i}{q_i}\right).
 \]
 
-Both formulas analytically give a point \(z\in\operatorname{conv}(T)\) whose
-residual \(3mz-4s\) is coordinatewise nonnegative and has total surplus
-\(U_2(T)\) or \(G(T)\). The only computed assertion is
+The local formula gives a point \(z\in\operatorname{conv}(T)\) whose residual
+\(3mz-4s\) is coordinatewise nonnegative and has total surplus \(U_2(T)\).
+The proposed axis construction requires \(q_i>0\) and
+\(3m-4\sum_i s_i/q_i\ge0\); that sign condition is automatic when
+\(G(T)\ge m\). B5.3 must prove its residual and soundness under those
+conditions. Without the sign condition, one cannot assert a
+coordinatewise nonnegative residual of total surplus \(G(T)\).
+The candidate finite assertion is
 
 \[
 \boxed{\max\{U_2(T),G(T)\}\ge m.}
@@ -573,15 +587,18 @@ one full-support corner \(5\le|p|_1\le7\), and two necessary arithmetic
 restrictions:
 
 1. each coordinate plane has at most \(|p|_1-2\) mixed corners;
-2. \(|F_i\cap F_j|\le2n_k\) for the exposed surfaces.
+2. \(|F_i\cap F_j|\le2n_k\) for the exposed surfaces, whose exact
+   definitions and boundary conventions must be supplied by B5.2.
 
-The exact enumeration checks 5,574,644 shapes. The local witness handles all
-but 431, and the axis witness handles those 431. Finding a structural proof of
-(4), perhaps by classifying the fallback shapes, is the highest-priority
+The historical enumeration reports 5,574,644 shapes: the local witness
+handles all but 431, and the axis witness handles those 431. Those saved
+counts are not a fresh R5 replay or proof of (4). Finding a structural proof
+of (4), perhaps by classifying the fallback shapes, remains an important
 opportunity to remove a large enumeration.
 
-A focused residue audit found that none of the 431 fallback shapes satisfies
-the necessary residue conditions for an Apéry L-shape. Of these, 199 are
+A focused research diagnostic found that none of the 431 saved fallback
+shapes satisfies the necessary residue conditions for an Apéry L-shape.
+Of these, 199 are
 already excluded by nonzero, pairwise-distinct generator residues, the
 full-corner relation, and injectivity on the three axes; each of the remaining
 232 is excluded by one mixed minimal corner together with the opposite-axis
@@ -594,12 +611,17 @@ support condition from F3. This suggests the sharper structural target
 
 We do not replace (4) by a modular search: that would exchange a short
 analytic witness for another computation rather than reduce verification.
-The present strategy keeps \(G\) and treats (5) as a candidate analytic lemma.
-See the [Chomicz assessment](../research/chomicz-assessment.md).
+The present candidate strategy keeps \(G\) and treats (5) as an unproved
+analytic lemma for the bounded D5 gate. The probe does not establish that
+the saved fallback list exhausts all local failures. See the
+[Chomicz assessment](../research/chomicz-assessment.md).
 
 Historical source: `round10/local_centroid/local_centroid_theorem.md`.
 
 ### B6. Residual degree at least seven [A], [C]
+
+This branch is not established under V0. Its finite contracts, analytic
+transfers, simplification decision, and any retained replays remain open.
 
 Since \(H\ge R\), this branch has \(H\ge7\). The required abstract theorem is:
 
@@ -614,14 +636,18 @@ No residue or exposed-surface restriction is used by this abstract theorem.
 The G5 [structural note](central-box-horns.md) now proves that its clipped-horn
 recurrence covers every ideal in the class; B6.1 must still establish the
 finite degree allowances and the exact score specification.
-The branch proof still has two computational layers:
+The historical candidate route has two computational layers:
 
 1. a 1,029-case finite strip used to prove the continuous gap \(5/42\);
 2. a closed real-parameter interval certificate with 47,088 accepted leaves.
 
-The phase inequality and continuous gap reduce any failure to
-\(1\le b\le c\le H\), \(7\le H<78\); the interval certificate treats this
-compact region.
+B6.2 must prove that the finite-strip predicate implies the continuous
+gap, and B6.3 must prove that this gap and G4 confine any target failure to
+\(1\le b\le c\le H,\ 7\le H<78\). These are conditional analytic
+implications until the strip predicate is established by R6a or a proved
+D6 replacement. B6.4 must specify and justify the interval predicate;
+R6b would then check its full compact region. Historical success records
+and configuration counts do not establish either finite premise.
 
 Historical sources: `round7/uniform_gap_theorem.md` and
 `round7/geometric_residual.md`.

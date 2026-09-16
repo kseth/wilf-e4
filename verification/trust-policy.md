@@ -35,7 +35,7 @@ The following terms are reserved throughout the repository.
 | **Fresh replay** | A complete run rebuilt from declared immutable inputs, without trusted cached successes or precomputed acceptance flags | Reproducibility of the complete run |
 | **Independent check** | A materially separate checker or implementation derived from the mathematical specification rather than the producer's internal state | Reduced risk of a shared implementation error |
 | **Provenance check** | A hash, size, manifest, or package-integrity comparison | Identity and completeness of files, not mathematical truth |
-| **Audit** | Human inspection of mathematics, code, coverage, or records | Review evidence; not a replay unless the computation was actually rerun |
+| **Audit** | Inspection of mathematics, code, coverage, or records, with the reviewer's role declared | Review evidence; not a replay unless the computation was actually rerun |
 | **Formalization** | A proof checked by a proof assistant against an explicitly named trusted kernel and libraries | Only the statements actually formalized |
 
 A document must use the narrowest accurate term. In particular:
@@ -47,6 +47,21 @@ A document must use the narrowest accurate term. In particular:
 - two programs written from the same pseudocode are two implementations, but
   not necessarily independent mathematical derivations;
 - an exact verifier is not a proof-assistant formalization.
+
+The reconstruction audits in this repository are AI-assisted internal
+inspection unless human or external review is explicitly recorded. Calling
+an implementation or derivation independent does not imply independent
+human authorship. V0 completion does not discharge the later H1 review.
+
+Replay records identify historical executions at their named input commits.
+Do not change saved hashes to make a past run appear to cover revised inputs.
+An editorial update to a decision note can be documented without repeating
+an unchanged computation. A change to a checked predicate or checker code
+requires fresh complete replays of the affected paths. A mathematical
+contract change requires renewed applicability analysis and fresh replays
+if it changes the checked domain, inputs, or predicates. At S3, the release
+inventory must identify the exact versions it certifies and distinguish
+editorial snapshot drift from mathematical changes.
 
 ## 2. The five obligations for a computed lemma
 

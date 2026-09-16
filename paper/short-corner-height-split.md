@@ -19,8 +19,10 @@ This is a routing reduction, not a proof of the B4 target \(D_0\ge m-1\).
 The separate [B4.2 compactness note](short-corner-compactness.md) proves the
 high-height analytic reduction. The
 [B4.3 profile specification](short-corner-profile-specification.md) proves
-the low-height arithmetic restrictions and coverage. The weighted target
-on the remaining high- and low-height domains is still open.
+the low-height arithmetic restrictions and coverage.
+[R4a](../verification/b4/r4a-high-height-audit.md) now establishes the
+high-height target under V0. The low-height target remains open pending
+R4b; live task status is maintained in [the roadmap](../ROADMAP.md).
 
 ## 1. Hypotheses and normalization
 
