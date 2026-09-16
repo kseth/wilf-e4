@@ -468,6 +468,16 @@ into \((1,b,c)\), contains all possible high-height failures. All three
 positions of the doubled corner coordinate remain necessary.
 The larger historical \(42\)-box is still a compatible superset.
 
+B4.3 is complete in the
+[low-height profile specification](short-corner-profile-specification.md).
+The residue forcing argument allows at most two mixed corners in each
+plane, and at most one with \(x\ge2\) in each of \(xy,xz\) after orienting
+\(p=(2,1,1)\). Three compatible six-entry profiles reconstruct the ideal
+by removing the \(p\)-orthant. A final degree test needs at most four row
+inequalities; plane degree bounds alone would not suffice.
+The coverage proof keeps every eligible oriented key, without sorting
+weights or skipping shapes with few maxima.
+
 The historical computations beyond these reductions remain to be specified
 as needed, simplified, and audited:
 
@@ -475,14 +485,15 @@ as needed, simplified, and audited:
   not an established computed lemma. B4.2 proves analytic acceptance rules
   \(H\ge3+4B\) and \(5H\ge21+16B\), both implying \(D_0\ge m\) and including
   equality.
-- For \(H<6\), B4.3 and B4.4 must prove the necessary residue restrictions,
-  exhaustive profile generation, and rational centroid-dual semantics.
-  The historical count of 28,499 retained shapes is not yet established
-  under V0.
+- For \(H<6\), the B4-low-FV contract quantifies over every generated
+  eligible key and all real weights \(w_i\ge1\), including arbitrary
+  height allowances. B4.4 must prove rational centroid-dual semantics.
+  The construction diagnostic matches 28,499 eligible keys, but no
+  dual is replayed and the weighted finite lemma is not established under V0.
 
 D4 will decide whether either certificate family can be removed; any retained
-computations then require R4a or R4b. Neither B4.1 nor B4.2 establishes the
-weighted deficit target throughout the remaining domain.
+computations then require R4a or R4b. B4.1--B4.3 do not establish the weighted
+deficit target throughout the remaining domain.
 
 Historical source:
 `round5/one_corner_extension/short_corner_weighted_theorem.md` and its cited
@@ -619,7 +630,7 @@ The following is the minimal presently retained proof interface.
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
 | B3 | Three-plane projection theorem | [A] | B3.1 and D3 complete analytically; no R3 needed; obtain independent review |
-| B4 | Short-corner theorem | [A]+[C] | B4.1 and B4.2 complete analytically; reconstruct B4.3--B4.4 before the D4 simplification gate |
+| B4 | Short-corner theorem | [A]+[C] | B4.1--B4.3 complete as analytic reductions/specification; reconstruct B4.4 before the D4 simplification gate |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |

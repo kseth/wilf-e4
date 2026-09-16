@@ -324,9 +324,11 @@ parameter points only enlarge the proposed finite obligation. The endpoint
 \(H=6\) remains included, while \(H=36\) is harmlessly included in the new
 closed envelope despite the strict failure cutoff.
 
-B4.3 and B4.4 still owe the low-height profile/filter and centroid-dual
-arguments. D4 must decide whether either B4 certificate family is necessary,
-and R4a must audit and replay any retained high-height certificate. No B4
+B4.3 supplies the separate
+[low-height profile/filter specification](short-corner-profile-specification.md);
+B4.4 still owes the centroid-dual semantics. D4 must decide whether either
+B4 certificate family is necessary, and R4a must audit and replay any
+retained high-height certificate. No B4
 weighted theorem is declared complete by this note.
 
 ## 6. Provenance and attribution boundary

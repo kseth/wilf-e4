@@ -87,6 +87,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | D3 | Analytic three-plane projection bound; all B3 finite verification removed | [`paper/three-plane-projection.md`](paper/three-plane-projection.md), [`research/b3-simplification-decision.md`](research/b3-simplification-decision.md) |
 | B4.1 | Sharp short-corner degree bound and exact remaining height/cardinality ranges | [`paper/short-corner-height-split.md`](paper/short-corner-height-split.md) |
 | B4.2 | Planar mean bounds, improved high-height failure region \(H<36\), and analytic leaf rules | [`paper/short-corner-compactness.md`](paper/short-corner-compactness.md) |
+| B4.3 | Necessary per-plane residue filters, exhaustive low-height profiles, and B4-low-FV contract | [`paper/short-corner-profile-specification.md`](paper/short-corner-profile-specification.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -161,11 +162,18 @@ The historical certificate's larger closed \(42\)-box remains a compatible
 superset; no certificate has been changed or replayed. Both simple and
 refined planar acceptance rules include their equality boundaries.
 
-The remaining B4 tasks are:
+B4.3 is complete as a specification and analytic coverage proof. It proves
+the two-corner per-plane bound, with at most one corner at \(x\ge2\) in
+each plane incident to the doubled coordinate, and defines all compatible
+degree-five profiles without a maxima-count skip. The final degree check
+reduces to at most four row inequalities. A standalone construction
+diagnostic agrees with the historical 70,175 shapes and 28,499 eligible
+keys; no weighted dual is replayed and B4-low-FV remains open.
+
+The remaining B4 specification task is:
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B4.3 | [A]+[C] | Low-height shape/filter specification | FND, B4.1, V0 | Prove exhaustive profiles and every necessary residue rejection |
 | B4.4 | [C] | Centroid-dual semantics | B4.3, V0 | Prove that each rational dual covers all real normalized weights |
 
 ### B5: residual degree at most six
@@ -254,7 +262,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are B4.3, B5.1, B5.2, B5.3, and B6.1.
-The recommended next task is **B4.3, the short-corner low-height shape/filter
-specification**: prove exhaustive profiles and every necessary residue
-rejection within \(H<6,\ 30\le m\le48\), before considering centroid duals.
+The topologically available tasks are B4.4, B5.1, B5.2, B5.3, and B6.1.
+The recommended next task is **B4.4, the short-corner centroid-dual
+semantics**: specify the exact rational predicate for B4-low-FV and prove
+that each accepted certificate covers all real weights and height allowances.

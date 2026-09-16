@@ -17,8 +17,10 @@ enumeration, residue filter, or weighted certificate is used.
 
 This is a routing reduction, not a proof of the B4 target \(D_0\ge m-1\).
 The separate [B4.2 compactness note](short-corner-compactness.md) proves the
-high-height analytic reduction. The weighted theorem on its remaining domain
-and the B4.3 low-height arithmetic restrictions are still open obligations.
+high-height analytic reduction. The
+[B4.3 profile specification](short-corner-profile-specification.md) proves
+the low-height arithmetic restrictions and coverage. The weighted target
+on the remaining high- and low-height domains is still open.
 
 ## 1. Hypotheses and normalization
 
@@ -183,10 +185,11 @@ historical enumeration count is promoted into an analytic bound here.
 
 ## 4. Retained interface and provenance
 
-The B4.2 reduction uses \(H\ge6\). B4.3 may restrict its low-height profiles to
+The B4.2 reduction uses \(H\ge6\). B4.3 restricts its low-height profiles to
 degree at most five and cardinality \(30\le m\le48\), using the refinements
-in Corollary 3.1 if useful. Neither interface asserts the weighted deficit
-bound or the validity of any residue filter or centroid dual.
+in Corollary 3.1 if useful. This split alone asserts neither the weighted
+deficit bound nor the validity of any residue filter or centroid dual;
+B4.3 proves the filters separately.
 
 The source argument and extremal family are in the historical
 [short-corner cardinality theorem](../artifacts/wilf_four_generators_review_package_2026-09-11/round5/interior_arithmetic/short_corner_cardinality_theorem.md).
