@@ -329,7 +329,9 @@ B4.3 supplies the separate
 [B4.4](short-corner-centroid-certificates.md) supplies the centroid-dual
 semantics. [D4](../research/b4-simplification-decision.md) retains the
 high-height tree and replaces the stored low-height dual list with local
-checks and two inline witnesses. R4a must audit and replay the retained tree.
+checks and two inline witnesses. The
+[high-height interval specification](short-corner-interval-specification.md)
+defines the tree's finite contract and R4a checking obligation.
 No B4 weighted theorem is declared complete by this note.
 
 ## 6. Provenance and attribution boundary

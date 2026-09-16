@@ -209,6 +209,10 @@ m-(3mQ-4w\cdot s)\le1.
 \tag{5}
 \]
 
+The [high-height interval specification](../paper/short-corner-interval-specification.md)
+derives its exact clipped statistics, recurrence, whole-box domination,
+coverage theorem, and fixed-width arithmetic bounds.
+
 This geometric superset does not require \(p\) to remain minimal,
 multiplicity at least 30, residue labels, or plane-corner filters.
 Its height constraint is on \(T\), **not** \(U\).
@@ -247,6 +251,7 @@ Its legacy record-loader specification is an alternative, not an
 additional selected proof dependency. The archived dual list may remain
 as immutable research history but need not be curated into release data.
 
-R4a is recommended next. The earlier gate decisions remain unchanged.
+At gate closure, R4a was recommended next; the current queue is maintained
+in the [roadmap](../ROADMAP.md). The earlier gate decisions remain unchanged.
 L3 will refresh attribution for the precise retained local and weighted
 statements; this decision makes no novelty or impossibility claim.

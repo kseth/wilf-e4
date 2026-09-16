@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "component": "B4-high-FV",
+  "certificate_format": "wilf-b4-high-interval-tree-historical-v1",
+  "certificate": {
+    "path": "artifacts/wilf_four_generators_review_package_2026-09-11/round5/one_corner_extension/short_corner_complete_certificate.json",
+    "sha256": "c840c66eae5ade228ef500567e2bd1daa7533be89276cd6a73906abf3dfea1ac",
+    "bytes": 31363264
+  },
+  "constants": {
+    "scale": 4096,
+    "root": [
+      [4096, 4096, 24576],
+      [172032, 172032, 172032]
+    ]
+  }
+}
