@@ -256,7 +256,7 @@ def replay(record_path: Path) -> int:
                 "status": "PASS", "fields_compared": fields,
                 "note": "Both paths independently proved coverage and recomputed all bounds before comparison.",
             },
-            "replay_command": [sys.executable, str(SOURCES["runner"])],
+            "replay_command": [sys.executable, *sys.orig_argv[1:]],
             "historical_archive_modified": False,
             "claim_established_by_this_replay": "B4-high-FV, conditional on the mathematical specification and its coverage proof.",
             "does_not_establish": [
