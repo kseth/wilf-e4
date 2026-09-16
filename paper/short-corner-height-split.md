@@ -16,8 +16,9 @@ five whenever \(m\ge32\). All these statements are analytic; no shape
 enumeration, residue filter, or weighted certificate is used.
 
 This is a routing reduction, not a proof of the B4 target \(D_0\ge m-1\).
-The high-height estimate and low-height arithmetic restrictions remain the
-separate tasks B4.2 and B4.3.
+The separate [B4.2 compactness note](short-corner-compactness.md) proves the
+high-height analytic reduction. The weighted theorem on its remaining domain
+and the B4.3 low-height arithmetic restrictions are still open obligations.
 
 ## 1. Hypotheses and normalization
 
@@ -182,7 +183,7 @@ historical enumeration count is promoted into an analytic bound here.
 
 ## 4. Retained interface and provenance
 
-B4.2 may assume \(H\ge6\). B4.3 may restrict its low-height profiles to
+The B4.2 reduction uses \(H\ge6\). B4.3 may restrict its low-height profiles to
 degree at most five and cardinality \(30\le m\le48\), using the refinements
 in Corollary 3.1 if useful. Neither interface asserts the weighted deficit
 bound or the validity of any residue filter or centroid dual.

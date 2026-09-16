@@ -414,8 +414,9 @@ The three later applications are as follows.
    Hence the analytic leaf condition \(H\ge2B+3\) proves \(D_0\ge m\),
    including equality at the endpoint.
 
-2. **B4 (the corner \(p\sim(2,1,1)\)).** The separate planar estimate used
-   in that branch is \(D_0/m\ge(H-4B)/3\). If \(H\ge6\) and \(D_0<m\), it
+2. **B4 (the corner \(p\sim(2,1,1)\)).** The
+   [B4.2 planar note](short-corner-compactness.md) proves the estimate
+   \(D_0/m\ge(H-4B)/3\). If \(H\ge6\) and \(D_0<m\), it
    gives \(H<3+4B\). Combining this strict inequality with (19) gives
 
    \[
@@ -423,6 +424,11 @@ The three later applications are as follows.
    \qquad H<42.
    \tag{24}
    \]
+
+   B4.2 also proves the refined planar bound
+   \(D_0/m\ge H/3-16B/15-2/5\). Combining it with (19) improves (24) to
+   \(5H^2-180H+47<0\), hence \(H<36\). The historical closed \(42\)-box
+   remains a compatible superset.
 
 3. **B6 (residual degree at least seven).** The later finite-to-continuous
    theorem supplies \(\gamma=5/42\), while the branch itself has \(H\ge7\).

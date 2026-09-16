@@ -86,6 +86,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B3.3 | Modular-cut and integer-lift specification (superseded alternative) | [`paper/six-window-modular-specification.md`](paper/six-window-modular-specification.md) |
 | D3 | Analytic three-plane projection bound; all B3 finite verification removed | [`paper/three-plane-projection.md`](paper/three-plane-projection.md), [`research/b3-simplification-decision.md`](research/b3-simplification-decision.md) |
 | B4.1 | Sharp short-corner degree bound and exact remaining height/cardinality ranges | [`paper/short-corner-height-split.md`](paper/short-corner-height-split.md) |
+| B4.2 | Planar mean bounds, improved high-height failure region \(H<36\), and analytic leaf rules | [`paper/short-corner-compactness.md`](paper/short-corner-compactness.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -152,11 +153,18 @@ The endpoint \(H=6\) belongs to the high-height side; degree at most five
 alone does not imply low height. No residue filter or weighted deficit
 estimate is established by this split.
 
+B4.2 is complete analytically. Two planar partitions and the G4 phase cutoff
+confine any high-height target failure to
+\(1\le b\le c\le H,\ 6\le H<36\), retaining all three positions of the
+doubled corner coordinate. Optional weight bounds give \(b<9,\ c<17\).
+The historical certificate's larger closed \(42\)-box remains a compatible
+superset; no certificate has been changed or replayed. Both simple and
+refined planar acceptance rules include their equality boundaries.
+
 The remaining B4 tasks are:
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B4.2 | [A] | High-height analytic reduction | G4, B4.1 | Prove the planar bound and compact parameter reduction |
 | B4.3 | [A]+[C] | Low-height shape/filter specification | FND, B4.1, V0 | Prove exhaustive profiles and every necessary residue rejection |
 | B4.4 | [C] | Centroid-dual semantics | B4.3, V0 | Prove that each rational dual covers all real normalized weights |
 
@@ -246,7 +254,7 @@ proof-code package, any chosen formalization, and PDF/release packaging.
 
 ## Current ready queue
 
-The topologically available tasks are B4.2, B4.3, B5.1, B5.2, B5.3, and B6.1.
-The recommended next task is **B4.2, the short-corner high-height analytic
-reduction**: prove the planar mean bound and reduce any possible failure with
-\(H\ge6\) to a compact parameter region before considering certificates.
+The topologically available tasks are B4.3, B5.1, B5.2, B5.3, and B6.1.
+The recommended next task is **B4.3, the short-corner low-height shape/filter
+specification**: prove exhaustive profiles and every necessary residue
+rejection within \(H<6,\ 30\le m\le48\), before considering centroid duals.

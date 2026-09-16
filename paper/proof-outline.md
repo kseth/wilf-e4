@@ -186,7 +186,10 @@ minimal excluded points. The
 [`phase-and-thickening note`](phase-and-thickening.md) proves both identities
 without residue hypotheses and records every strict endpoint later used to
 obtain \(H<24\), \(H<42\), and \(H<78\). The older coarse phase estimate in
-the archive is not retained.
+the archive is not retained. The
+[B4.2 planar refinement](short-corner-compactness.md) improves the B4
+cutoff to \(H<36\), while preserving the \(42\)-box as a compatible
+certificate superset.
 
 ### G5. Central box and three monotone horns [A]
 
@@ -443,20 +446,43 @@ gives \(m\ge49\Rightarrow H\ge6\). The \(H<6\) side is confined to
 \(R=5\) and \(5\le H<6\). The endpoint \(H=6\) belongs to the high-height
 side. Degree at most five alone does not imply low height.
 
-The historical route beyond this proved split remains to be reconstructed
-and audited:
+B4.2 is complete in the
+[short-corner compactness note](short-corner-compactness.md). Its simple
+planar mean bound is
 
-- For \(H\ge6\), B4.2 must prove the planar mean bound and compactness
-  reduction using the phase inequality, before any interval certificate
-  is considered.
+\[
+\frac{D_0}{m}\ge\frac{H-4B}{3},\qquad B=\sum_i b_i.
+\]
+
+Two planar partitions improve this to
+\(D_0/m\ge H/3-16B/15-2/5\). Together with G4, any target failure on the
+\(H\ge6\) side must satisfy
+
+\[
+B<9+\frac{28}{H-3},\qquad
+5H^2-180H+47<0,\qquad H<36.
+\]
+
+The closed domain \(1\le b\le c\le H,\ 6\le H\le36\), after sorting weights
+into \((1,b,c)\), contains all possible high-height failures. All three
+positions of the doubled corner coordinate remain necessary.
+The larger historical \(42\)-box is still a compatible superset.
+
+The historical computations beyond these reductions remain to be specified
+as needed, simplified, and audited:
+
+- For \(H\ge6\), the interval certificate is a candidate retained component,
+  not an established computed lemma. B4.2 proves analytic acceptance rules
+  \(H\ge3+4B\) and \(5H\ge21+16B\), both implying \(D_0\ge m\) and including
+  equality.
 - For \(H<6\), B4.3 and B4.4 must prove the necessary residue restrictions,
   exhaustive profile generation, and rational centroid-dual semantics.
   The historical count of 28,499 retained shapes is not yet established
   under V0.
 
 D4 will decide whether either certificate family can be removed; any retained
-computations then require R4a or R4b. B4.1 does not establish the weighted
-deficit target.
+computations then require R4a or R4b. Neither B4.1 nor B4.2 establishes the
+weighted deficit target throughout the remaining domain.
 
 Historical source:
 `round5/one_corner_extension/short_corner_weighted_theorem.md` and its cited
@@ -593,7 +619,7 @@ The following is the minimal presently retained proof interface.
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
 | B3 | Three-plane projection theorem | [A] | B3.1 and D3 complete analytically; no R3 needed; obtain independent review |
-| B4 | Short-corner theorem | [A]+[C] | B4.1 complete analytically; reconstruct B4.2--B4.4 before the D4 simplification gate |
+| B4 | Short-corner theorem | [A]+[C] | B4.1 and B4.2 complete analytically; reconstruct B4.3--B4.4 before the D4 simplification gate |
 | B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
