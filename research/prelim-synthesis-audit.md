@@ -48,6 +48,10 @@ conclusion, with the displayed \(1/310\) endpoint gap. No finite family,
 predicate, evaluator, or earlier reconstruction lemma changed.
 The isolated replay is restarted against the corrected document identities.
 
+Final copyediting also corrects Christopher O'Neill's bibliographic initial
+and points the appendix's projection reference explicitly to proof Section 3.
+These textual corrections change no finite contract, evaluator, or data.
+
 A further selected-proof refinement removes allowance 21: for every nonzero
 translation in the mesh cube, the allowance is 18, 19, or 20.
 The zero translation is null and cannot affect the integral. The standalone

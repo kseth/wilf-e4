@@ -780,7 +780,7 @@ E(X)=\sum_{x\in X}|x|_1-\sum_{j=1}^3\max_{x\in X}x_j,
 \Phi(T,X)=P(T)-3|X|-E(X)
 \]
 
-from the final-window note. That note proves \(E(Z)\ge0\), \(Z\subseteq K\),
+from Section 3 of [the proof](proof.md). That section proves \(E(Z)\ge0\), \(Z\subseteq K\),
 and
 
 \[

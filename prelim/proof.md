@@ -958,7 +958,7 @@ external mathematical and bibliographic review.
   the chordal graphs,” *Journal of Combinatorial Theory, Series B*
   **16** (1974), 47–56.
   [Published article](https://doi.org/10.1016/0095-8956(74)90094-X).
-- [B] W. Bruns, P. García-Sánchez, L. O'Neill, D. Wilburne, “Wilf's
+- [B] W. Bruns, P. A. García-Sánchez, C. O'Neill, D. Wilburne, “Wilf's
   conjecture in fixed multiplicity,” *International Journal of Algebra
   and Computation* **30** (2020), 861–882, Theorem 4.3.
   [Published article](https://doi.org/10.1142/S021819672050023X).
