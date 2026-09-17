@@ -210,3 +210,91 @@ satisfy this entire continuous class: finite orthant complements,
 preserved supports, positive volume, and simplex containment.
 Thus (8) applies to a genuine residual ideal as soon as (S) is established.
 No success of an unverified saved program has been assumed.
+
+
+## 3. B6.3: conditional compactness and outward clipping
+
+Assume (S), hence the continuous gap (8). Let \(T\) be a genuine B6
+Apéry ideal, put \(w=(1,b,c)\) after simultaneously sorting coordinates
+and weights, \(H=\max_Tw\cdot x\), and \(B=1+b+c\).
+The unique full-support corner is positive and minimal; its predecessors
+contain the coordinate units. Thus \(1\le b\le c\le H\).
+Since every weight is at least one, \(H\ge R\ge7\).
+
+Suppose the target fails:
+\[
+D_0<m-\frac{29}{10}<m.
+\tag{13}
+\]
+The phase theorem gives \(B<9+28/(H-3)\). Thickening and (8) give
+\[
+D_0/m\ge(5H-37B)/42,\qquad 5H<42+37B.
+\tag{14}
+\]
+Combining the two strict bounds, with \(H-3>0\), yields
+\[
+5H^2-390H+89<0.
+\tag{15}
+\]
+The polynomial is positive at 78 (value 89) and strictly increasing
+thereafter. Hence \(7\le H<78\).
+For any positive minimal corner \(p\), \(p-e_1\in T\) and \(w_1=1\), so
+\[
+|p|_1\ge5,\qquad w\cdot p\le H+1.
+\tag{16}
+\]
+There is no weight-ordering restriction on \(p\); all positions of its
+coordinates must remain covered.
+
+### Closed necessary failure region
+
+Use the closed superset
+\[
+\mathcal F_6=\{(b,c,Q):
+1\le b\le c\le Q,\quad 7\le Q\le78,\quad
+1+b+c\le9+28/(Q-3),\quad
+5Q\le42+37(1+b+c)\}.
+\tag{17}
+\]
+A genuine failure lies in this region at \(Q=H\), and satisfies (16).
+The interval proof need only cover (17), not every ordered point of
+the whole root. This restriction is conditional on the established
+continuous gap, not a conjectural geometric skip.
+
+At scale \(q=4096\), let integer endpoints
+\(L=(B_0,C_0,H_0)\), \(U=(B_1,C_1,H_1)\) enclose a raw closed box.
+Each of the following updates encloses its intersection with (17):
+
+1. Order:
+\[
+L\leftarrow(B_0,\max(B_0,C_0),\max(B_0,C_0,H_0)),\qquad
+U\leftarrow(\min(B_1,C_1,H_1),\min(C_1,H_1),H_1).
+\]
+2. If not inverted, set
+\[
+S_{\max}=9q+\left\lceil\frac{28q^2}{H_0-3q}\right\rceil,
+\quad
+B_1\leftarrow\min\!\left(B_1,\left\lceil\frac{S_{\max}-q}{2}\right\rceil\right),
+\quad
+C_1\leftarrow\min(C_1,S_{\max}-q-B_0).
+\]
+3. Set
+\[
+S_{\rm upper}=\min(q+B_1+C_1,S_{\max}),\qquad
+H_1\leftarrow
+\min\!\left(H_1,\left\lceil\frac{42q+37S_{\rm upper}}5\right\rceil\right).
+\tag{18}
+\]
+
+The denominator is positive throughout this root.
+For update 2, \(q(1+b+c)\le S_{\max}\) follows from \(qQ\ge H_0\);
+\(b\le c\) gives \(2qb\le S_{\max}-q\), and \(qb\ge B_0\)
+gives the second cap. Update 3 follows from the last inequality of (17).
+Every ceiling is outward. No floor may replace these upper ceilings.
+
+Perform these updates in order at most twenty times, stopping on inversion
+or unchanged endpoints. Each finite step preserves every relevant real
+point. Convergence is not needed for soundness. Inversion proves that
+the raw box contains no point of (17). Otherwise the resulting tightened
+box remains a closed enclosure; splitting that enclosure covers every
+relevant point of the raw parent, including boundary walls.
