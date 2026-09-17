@@ -52,6 +52,12 @@ Final copyediting also corrects Christopher O'Neill's bibliographic initial
 and points the appendix's projection reference explicitly to proof Section 3.
 These textual corrections change no finite contract, evaluator, or data.
 
+Native interval replay is scheduled in bounded parallel leaf batches:
+forward stripes on the integer path, reverse stripes on the rational path,
+with independent complete request/response coverage. Each path uses at most
+four processes and half the reported CPU count. Mathematical evaluators,
+predicates, and trees are unchanged; every leaf and corner is still fresh.
+
 A further selected-proof refinement removes allowance 21: for every nonzero
 translation in the mesh cube, the allowance is 18, 19, or 20.
 The zero translation is null and cannot affect the integral. The standalone

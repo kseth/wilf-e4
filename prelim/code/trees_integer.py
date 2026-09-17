@@ -3,9 +3,11 @@
 from __future__ import annotations
 import argparse
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -109,10 +111,23 @@ def cpp(component, leaves):
         flags=["-std=c++17","-O3","-Wall","-Wextra","-pedantic"]
         build=subprocess.run([compiler,*flags,str(source),"-o",executable],capture_output=True,text=True)
         require(build.returncode==0 and not build.stderr,"compile failure/warning: "+build.stderr)
-        request="".join(" ".join(map(str,(Q,*low,*high)))+"\n" for _,low,high in leaves)
-        run=subprocess.run([executable],input=request,capture_output=True,text=True)
-        require(run.returncode==0 and not run.stderr,"worker failure: "+run.stderr)
-        rows=run.stdout.splitlines();require(len(rows)==len(leaves),"partial worker response")
+        workers=min(len(leaves),4,max(1,(os.cpu_count() or 2)//2))
+        def batch(start):
+            positions=range(start,len(leaves),workers)
+            request="".join(" ".join(map(str,(Q,*leaves[i][1],*leaves[i][2])))+"\n"
+                            for i in positions)
+            run=subprocess.run([executable],input=request,capture_output=True,text=True)
+            require(run.returncode==0 and not run.stderr,"worker failure: "+run.stderr)
+            responses=run.stdout.splitlines()
+            require(len(responses)==len(positions),"partial worker response")
+            return list(zip(positions,responses,strict=True))
+        rows=[None]*len(leaves)
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            for answers in pool.map(batch,range(workers)):
+                for position,row in answers:
+                    require(rows[position] is None,"duplicate worker response")
+                    rows[position]=row
+        require(all(type(row) is str for row in rows),"missing worker response")
         values=[]
         for row in rows:
             cells=row.split()
@@ -126,7 +141,7 @@ def cpp(component, leaves):
                 require(cases>=0 and (cases>0 or bound==0),"invalid vacuity")
                 require(not cases or 10*bound<=29*Q,"high-height predicate")
                 values.append((bound if cases else None,cases))
-    return values,dict(version=version,flags=flags,source=source.name)
+    return values,dict(version=version,flags=flags,source=source.name,workers=workers)
 
 def check(component):
     require(not sys.flags.optimize,"optimized Python unsupported")

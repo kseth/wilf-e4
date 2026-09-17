@@ -3,11 +3,13 @@
 from __future__ import annotations
 import argparse
 from collections import Counter,deque
+from concurrent.futures import ThreadPoolExecutor
 from fractions import Fraction
 import hashlib
 import importlib.util
 import json
 import math
+import os
 from pathlib import Path
 import re
 import shutil
@@ -114,10 +116,25 @@ def evaluate_native(component,work):
         program=str(Path(folder)/"check")
         built=subprocess.run([cc,*flags,str(BASE/filename),"-o",program],capture_output=True,text=True)
         ensure(built.returncode==0 and built.stderr=="","compilation failed/warned: "+built.stderr)
-        rows=[" ".join(str(n) for n in (SCALE,*bottom,*top)) for _,bottom,top in work]
-        process=subprocess.run([program],input="\n".join(rows)+"\n",capture_output=True,text=True)
-        ensure(process.returncode==0 and process.stderr=="","evaluator failure: "+process.stderr)
-        output=process.stdout.splitlines();ensure(len(output)==len(work),"truncated evaluator")
+        workers=min(4,len(work),max(1,(os.cpu_count() or 2)//2))
+        # Reverse-order stripes differ from the integer path's forward stripes.
+        identifiers=[list(range(len(work)-1-group,-1,-workers)) for group in range(workers)]
+        ensure(sorted(i for stripe in identifiers for i in stripe)==list(range(len(work))),
+               "batch coverage")
+        def execute(stripe):
+            requests=[" ".join(str(n) for n in (SCALE,*work[i][1],*work[i][2])) for i in stripe]
+            process=subprocess.run([program],input="\n".join(requests)+"\n",capture_output=True,text=True)
+            ensure(process.returncode==0 and process.stderr=="","evaluator failure: "+process.stderr)
+            output=process.stdout.splitlines();ensure(len(output)==len(stripe),"truncated evaluator")
+            return list(zip(stripe,output,strict=True))
+        responses={}
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            for stripe in pool.map(execute,identifiers):
+                for identifier,row in stripe:
+                    ensure(identifier not in responses,"repeated response")
+                    responses[identifier]=row
+        ensure(set(responses)==set(range(len(work))),"missing response")
+        output=[responses[i] for i in range(len(work))]
         bounds=[]
         for response in output:
             parts=response.split()
@@ -135,7 +152,7 @@ def evaluate_native(component,work):
                 else:
                     ensure(maximum==0,"invalid empty enumeration")
                     bounds.append((None,0))
-    return bounds,dict(version=version,flags=flags,source=filename)
+    return bounds,dict(version=version,flags=flags,source=filename,workers=workers)
 
 def check(component):
     ensure(sys.flags.optimize==0,"optimized execution forbidden")

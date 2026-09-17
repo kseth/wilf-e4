@@ -273,7 +273,8 @@ def replay():
             for process,info in runs:
                 record["processes"].append(info);success(process);normalized.append(tree(process.stdout))
             require(normalized[0]==normalized[1],"independent tree disagreement: "+component)
-            record["components"].append(dict(independent_agreement=True,**normalized[0]))
+            record["components"].append(dict(independent_agreement=True,**normalized[0],
+                checking_environments=[decode(process.stdout)["environment"] for process,_ in runs]))
             print(json.dumps(dict(component=component,status="PASS")),flush=True)
         require(inputs()[0]==raw,"inputs/manifest changed during replay")
         record.update(status="PASS",complete=True,independent_agreement=True,unresolved=0,unsupported=0,

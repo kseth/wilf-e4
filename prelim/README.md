@@ -27,7 +27,8 @@ predicates, negative tests, and independent agreement. It writes
 [replay.json](replay.json), replacing any previous replay record.
 No partial mode can certify the packet. The high-height component is the
 longest computation; budget substantial CPU time rather than assuming an
-interactive test. Temporary executables are automatically removed.
+interactive test. Native interval leaves use available cores, with at most
+eight evaluator processes in total. Temporary executables are automatically removed.
 
 ## Minimal inventory
 

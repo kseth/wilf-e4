@@ -2,9 +2,9 @@
   "format": "wilf-four-prelim-v1",
   "inputs": [
     {
-      "bytes": 2286,
+      "bytes": 2379,
       "path": "README.md",
-      "sha256": "e6fce8f0b49bb59c6d6c3afe6c7e57bbe3c53ee9b0675cf57f57839a3a256674"
+      "sha256": "21957030c3c6ae87fb76b091c0f66b0bd3ce24cfac5b5ec53da7a41101d4b140"
     },
     {
       "bytes": 41123,
@@ -82,14 +82,14 @@
       "sha256": "8a548bcc22a36b80c493530d1b4cbe9b3092d87311893e39278da651e2a70e2d"
     },
     {
-      "bytes": 8533,
+      "bytes": 9297,
       "path": "code/trees_integer.py",
-      "sha256": "042f1538bd6c3f1b04c2d3fae8bc26a2b3e59a734d404ff4a338ed49e01b3a92"
+      "sha256": "69a5d07f5235d9e37a46f3fdea8ca9897be4b44ba0c48352321fd78c53427725"
     },
     {
-      "bytes": 9261,
+      "bytes": 10250,
       "path": "code/trees_rational.py",
-      "sha256": "bc1028002d1e795dc9514441b1c75102ec91053d1347a1e7a4285e69240ff646"
+      "sha256": "bfee3e2ec9f66c780f2487dd807ece5582dcdd205cfef4f8d81f3cdb7ca3e53b"
     },
     {
       "bytes": 670164,
@@ -112,14 +112,14 @@
       "sha256": "fbcb32514dd8d380a0629c2602b294da53baf91094b8057672df23a50ee18e43"
     },
     {
-      "bytes": 9110,
+      "bytes": 9500,
       "path": "verification.md",
-      "sha256": "50d61d746a4e87798b078d046c388636c2432a3f379bb4f01f3aa5993f5119c8"
+      "sha256": "eb9d1a2e02cdaac13f89306756abfc3e756b9c22a9862107c14a9b88aa7f87db"
     },
     {
-      "bytes": 17396,
+      "bytes": 17497,
       "path": "verify.py",
-      "sha256": "0d3a5ca80816cc88165fb9036a5695f4932f23ffc08975b23bd9c629246a5b90"
+      "sha256": "bdaa32d097c2524b88f5825c130a932daa7082e4f1668dacc7278044e3803079"
     }
   ],
   "schema_version": 1

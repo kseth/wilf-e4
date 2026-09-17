@@ -111,7 +111,12 @@ Run `python3 -I -B verify.py`. It uses no Git or network service, resolves
 all paths inside this packet, verifies every manifest input, and checks those
 identities again after the run. Programs are freshly compiled with
 `-std=c++17 -O3 -Wall -Wextra -pedantic`; compiler diagnostics reject a run.
-At most two checking paths run concurrently.
+At most two checking paths run concurrently. Each native interval path
+uses at most four evaluator processes, capped at half the reported CPU count
+(at least one). Its independent partition and response-coverage checks
+assign every leaf exactly once; all leaf results are restored to index order.
+This is scheduling only: each evaluator has separate state and recomputes
+every supplied corner and DP state. No cached result is shared.
 
 The replay rejects partial/unsupported arguments and optimized Python mode.
 Checks are unconditional, not removable Python assertions.
