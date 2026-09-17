@@ -880,14 +880,23 @@ For \(m\ge30\), Section 7 routes every ideal to exactly one of Sections
 8--11 or the analytic three-plane case. The three-plane case already gives
 \(W_4\ge0\). On the remaining branches their conclusions give
 \(D_0\ge m-29/10\) (or the stronger \(D_0\ge m-1\) or \(D_0\ge m\)).
-Because \(A\ge m+1\), for \(m\ge30\)
+Suppose, for contradiction, that \(W_4<0\). It is an integer, so
+\(W_4\le-1\), and (1) implies \(AD_0\le m(m-2)\).
+Since \(A\ge m+1\) and \(m\ge30\), this gives
 \[
-A(m-29/10)-m(m-1)
-\ge(m+1)(m-29/10)-m(m-1)
-=m/10-29/10>0.
+D_0\le\frac{m(m-2)}{m+1}=m-3+\frac3{m+1}.
 \]
-Equation (1) proves \(W_4(S)>0\) on these remaining large-multiplicity branches.
-Together with the small-multiplicity result, this proves the proposed theorem
+But
+\[
+\left(m-\frac{29}{10}\right)
+-\left(m-3+\frac3{m+1}\right)
+=\frac1{10}-\frac3{m+1}
+\ge\frac1{310}>0.
+\]
+This contradicts the branch bound. The weakest branch therefore proves
+\(W_4\ge0\), not a general claim of strict positivity.
+Together with the direct analytic three-plane case and the
+small-multiplicity result, this proves the proposed theorem
 conditional on the stated, fully replayed finite lemmas and the published
 multiplicity-at-most-19 result.
 

@@ -30,7 +30,7 @@ The dependency review checks the following:
 | Axis witness | Remaining mass is nonnegative only when its coefficient is; otherwise the independent baseline handles the negative formula |
 | Strip to continuous gap | All four allowances and missing-unit cases are covered; zero supports stay zero; exceptional boundaries are null; the partition Jacobian is one; fiber-average remainders give \(5/42\) |
 | High compactness and coverage | The gap is used only after the strip predicate; every clipping ceiling is outward, including all equality walls; every Cartesian corner in the proved range is evaluated |
-| Final arithmetic | The analytic three-plane branch proves Wilf directly; only the other branches use \(A\ge m+1\) and the uniform deficit; at \(m=30\) the final margin is \(1/10>0\) |
+| Final arithmetic | The analytic three-plane branch proves Wilf directly; the uniform deficit excludes \(W_4\le-1\) using \(D_0\le m(m-2)/(m+1)\); at \(m=30\) the normalized gap is \(1/310>0\) |
 
 The conductor is \(c\), sorted normalized weights are \((1,b,d)\),
 attained height is \(H\), allowance is \(Q\), and total degree is \(R\).
@@ -38,6 +38,13 @@ Appendix variables and local recurrence caps are explicitly scoped.
 The analytic branch is not erroneously assigned a moment bound it did not prove.
 No circular dependence on a finite predicate's unverified historical output
 is used to justify its domain.
+
+The composition pass caught and corrected a preliminary arithmetic
+presentation error: the weakest uniform deficit does not directly imply
+strict positivity. Negative integrality gives the correct nonnegative Wilf
+conclusion, with the displayed \(1/310\) endpoint gap. No finite family,
+predicate, evaluator, or earlier reconstruction lemma changed.
+The isolated replay is restarted against the corrected document identities.
 
 ## S3: exact minimal inventory and portability
 
