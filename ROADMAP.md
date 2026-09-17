@@ -104,6 +104,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B6.2 | Conditional 5/42 continuous gap, support preservation, Jacobian and remainder-average proof | [High-height note](paper/residual-high-height.md#2-b62-conditional-finite-to-continuous-transfer) |
 | B6.3 | Conditional H < 78 failure region, positive-corner allowance, and outward-clipping proof | [High-height note](paper/residual-high-height.md#3-b63-conditional-compactness-and-outward-clipping) |
 | B6.4 | Exact high-height predicate, clipped statistics, recurrence, coverage, and integer envelope | [High-height note](paper/residual-high-height.md#4-b64-high-height-interval-contract-and-coverage) |
+| D6 | Retain the exact strip and high-height tree; exclude producer/checkpoint/leaf-log data from the proof packet | [Decision](research/b6-simplification-decision.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -236,7 +237,6 @@ final code design.
 
 | ID | Type | Question | Depends on | Fallback |
 |---|---|---|---|---|
-| D6 | [D] | Can a direct weighted argument remove the B6 strip or interval tree? | B6.1--B6.4 | Retain both exact B6 computations |
 
 D1 is complete and retains B1.3-FV with both independent checking paths. D2
 is complete and retains the B2.2-FV contract with the exact interval tree and
@@ -246,7 +246,9 @@ computed lemma follows from gate closure alone. D4 is complete with a
 partial simplification: retain the high-height tree, replace the stored
 low-height dual list with local checks and two explicit witnesses, and
 retain the finite low-height profile obligation. D5 is complete, retaining
-only two explicit integer predicates on exhaustive profiles. D6 remains open.
+only two explicit integer predicates on exhaustive profiles. D6 is complete
+and retains the two specified B6 premises, without claiming an analytic
+replacement is impossible. No computed premise follows from that decision.
 
 ## Layer 5: audit and replay retained computations
 
@@ -392,7 +394,7 @@ two AI-assisted checking paths are not two independent human reviews.
 
 ## Current ready queue
 
-The next task is **D6, the bounded route-selection decision**. R4b and B5,
+The next task is **R6a, independent complete strip verification**. R4b and B5,
 including D5 and R5, are complete. The active request continues through
 B6 and synthesis to a standalone PRELIM package.
 
