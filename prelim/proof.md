@@ -1,0 +1,970 @@
+# Wilf's inequality for four generators: preliminary proof
+
+## Reading conventions and theorem
+
+This is a complete proposed computer-assisted argument in Markdown, for
+mathematical review. Its exact finite premises are specified below and
+recomputed by the code in this packet. It is not externally reviewed or
+proof-assistant formalized. AI assisted the discovery, reconstruction,
+writing, and checking; human authors remain responsible for every claim.
+
+Write \(\mathbb N=\{0,1,2,\ldots\}\).
+A numerical semigroup is a cofinite additive submonoid \(S\subseteq\mathbb N\).
+Its multiplicity \(m\) is its least positive member, its conductor \(c\)
+the least integer with \(c+\mathbb N\subseteq S\), and its embedding dimension
+the size of its unique minimal generating set.
+
+> **Proposed theorem.** Every numerical semigroup of embedding dimension four
+> satisfies
+> \[
+> W_4(S):=4|S\cap[0,c)|-c\ge0.
+> \]
+
+Write \(S=\langle m,a_1,a_2,a_3\rangle\), minimally, and put \(A=\min_i a_i\).
+The proof uses an Apéry lower ideal and a weighted moment deficit.
+For small multiplicity it reduces a hypothetical counterexample to a finite
+generator box. For large multiplicity it separates ideals by their unique
+possible three-coordinate excluded corner. One branch is purely analytic;
+the remaining branches use exact geometric upper bounds or finite profiles.
+
+[Analytic details](analytic-details.md) supply the three longer proofs:
+the central-box/horn theorem, the full-weighted-ideal theorem, and the
+continuous no-corner moment inequality. Those are integral parts of this
+packet, not optional source references. All other proofs and finite contracts
+are here. [Verification](verification.md) describes the complete replay and
+trusted boundary. All local links stay within this directory.
+Equation numbers in the detailed proofs are local to the named appendix.
+
+## 1. Apéry representatives, moments, and collisions
+
+The Apéry set
+\[
+\operatorname{Ap}(S,m)=\{w\in S:w-m\notin S\}
+\]
+consists of the least semigroup element in each residue modulo \(m\).
+It has \(m\) elements, every factorization of which avoids \(m\).
+Minimality of the generators gives \(0,a_1,a_2,a_3\in\operatorname{Ap}(S,m)\),
+with the generator factorizations unique. Its largest element is
+\[
+M=c+m-1:
+\]
+every \(w-m\) is at most the largest gap \(c-1\), while \(c-1+m\) is Apéry.
+
+For each Apéry element choose the lexicographically least exponent vector
+\(x\in\mathbb N^3\) with label \(\lambda(x)=a\cdot x=w\).
+Let \(T\) be the chosen vectors. This is the preferred-factorization
+construction of Zhai, with the initial-ideal interpretation of
+Hellus--Rechenauer--Waldi [Z, HRW].
+
+To prove lower closure, take \(y\le x\in T\) and \(v=x-y\).
+If \(\lambda(y)-m\in S\), then \(\lambda(x)-m\in S\), a contradiction.
+Thus \(\lambda(y)\) is Apéry. A lexicographically earlier factorization
+\(y'\) would give \(y'+v<_{\rm lex}x\) of the same label. Consequently
+\(y\in T\). In particular,
+\[
+|T|=m,\quad 0,e_1,e_2,e_3\in T,\quad
+\lambda:T\longrightarrow\operatorname{Ap}(S,m)
+\ \text{is bijective},
+\]
+and the labels on \(T\) are distinct modulo \(m\).
+These ideals are three-dimensional L-shapes, studied in embedding dimension
+four by Aguiló-Gost--García-Sánchez--Llena [L]. The alternative relation-based
+construction of Chomicz [C] provides geometric context but is not a premise.
+Changing the representative geometry cannot change the sum of Apéry labels.
+
+Let \(s=\sum_Tx\), \(w=a/A\), \(H=M/A=\max_Tw\cdot x\), and
+\(R=\max_T|x|_1\). Every \(w_i\ge1\), so \(R\le H\).
+Writing the least representative of residue \(r\) as \(r+k_rm\)
+and counting its \(k_r\) gaps proves the classical genus formula
+(also [Z, Lemma 1])
+\[
+g=\frac1m\sum_{\operatorname{Ap}}w-\frac{m-1}{2}.
+\]
+Since \(W_4=3c-4g\), substitution gives the exact identity
+\[
+\boxed{mW_4=A D_0-m(m-1),\qquad D_0=3mH-4w\cdot s.}
+\tag{1}
+\]
+
+A minimal excluded point, or *corner*, is \(p\notin T\) with
+\(p-e_i\in T\) whenever \(p_i>0\). Let \(\rho(p)\in T\) have its residue.
+If both \(p_i,\rho(p)_i>0\), subtracting \(e_i\) gives distinct included
+points of equal residue, impossible. Likewise two distinct corners
+sharing a positive coordinate cannot have the same residue.
+Hence a positive corner has representative zero, and there is at most one
+positive corner. All other corners have a zero coordinate.
+These are the support/collision consequences of [HRW, Proposition 2.6],
+with their elementary predecessor-subtraction proofs included here.
+
+## 2. Coordinate lines and two centroid bounds
+
+For each of the three coordinate directions partition \(T\) into its
+nonempty coordinate lines. Use an *indexed* line family: intersecting
+geometric lines in different directions remain distinct.
+A line of length \(L_\ell\) starts at coordinate zero and has top \(t_\ell\).
+Arithmetic progression sums give
+\[
+\sum_\ell L_\ell=3m,\qquad
+\sum_\ell L_\ell t_\ell=4s.
+\tag{2}
+\]
+In a fixed direction its varying-coordinate contribution is twice that
+coordinate's moment; the other coordinates contribute their moments once.
+Thus, for any positive weights and any allowance \(Q\ge\max_Tw\cdot x\),
+\[
+D_Q:=3mQ-4w\cdot s
+=\sum_\ell L_\ell(Q-w\cdot t_\ell)\ge0.
+\tag{3}
+\]
+This is the dimension-three weighted downset baseline of [Z, Lemma 3].
+
+Define
+\[
+\rho_2(t)=\max\{|v|_1:v\in\mathbb N^3,\ |v|_1\le2,\ t+v\in T\},
+\qquad U_2=\sum_\ell L_\ell\rho_2(t_\ell).
+\]
+Choose a maximizing destination for each line. The total destination mass
+is \(3m\), and its moment is \(4s+\beta\), with \(\beta\ge0\)
+coordinatewise and \(|\beta|_1=U_2\). Each destination has weight at most
+\(Q\). For weights at least one this proves
+\[
+D_Q\ge U_2.
+\tag{4}
+\]
+Only ten offsets are possible: zero, three units, three doubled units,
+and three sums of distinct units.
+
+More generally, any nonnegative point masses \(\alpha_x\) on \(T\)
+with total \(3m\) and residual
+\(\beta=\sum_x\alpha_xx-4s\ge0\) give \(D_Q\ge|\beta|_1\).
+Indeed
+\(D_Q=\sum_x\alpha_x(Q-w\cdot x)+w\cdot\beta\).
+This identity also proves the explicit exceptional witnesses below.
+
+If \(q_i=\max_Tx_i>0\), \(q_*=\max_iq_i\), put
+\[
+G=q_*\left(3m-4\sum_i s_i/q_i\right).
+\tag{5}
+\]
+When \(C=3m-4\sum_i s_i/q_i\ge0\), assign mass \(4s_i/q_i\)
+to \(q_ie_i\), and mass \(C\) to a longest-axis endpoint.
+The total is \(3m\), with residual \(Cq_*e_j\ge0\), proving \(D_Q\ge G\).
+When \(C<0\), (3) gives \(D_Q\ge0>G\); no negative-mass witness is claimed.
+In all cases \(D_Q\ge\max(U_2,G)\).
+
+## 3. The final-window projection inequality
+
+Let \(\pi_j\) delete coordinate \(j\), and put
+\[
+P(T)=\sum_j|\pi_jT|,\quad
+Z=\{x\in T:M-\lambda(x)<m\},\quad K=\operatorname{Max}(T).
+\]
+The set \(Z\) is nonempty. Its points are maximal, since an included
+successor would increase their labels by \(a_j>m\) beyond \(M\).
+For a nonempty point set \(X\), define
+\[
+E(X)=\sum_X|x|_1-\sum_j\max_Xx_j,\qquad
+\Phi(T,X)=P(T)-3|X|-E(X).
+\]
+Here \(E(X)\ge0\). Adding a point increases each coordinate sum at least
+as much as its coordinate maximum, so \(E(X)\le E(Y)\) for \(X\subseteq Y\).
+Consequently \(\Phi(T,Z)\ge\Phi(T,K)\).
+
+We prove
+\[
+\boxed{mW_4\ge m\Phi(T,Z)+E(Z).}
+\tag{6}
+\]
+Use the unnormalized weights \(a\) in the line formula, and write
+\(M-\lambda(t_\ell)=m d_\ell+\beta_\ell\), \(0\le\beta_\ell<m\).
+For a direction-\(j\) line of length \(L\), define
+\[
+R_j(L)=\sum_{r=0}^{L-1}[ra_j]_m,\quad
+C_\ell=\#\{r<L:\beta_\ell+[ra_j]_m\ge m\},\quad
+\sigma_\ell=mL d_\ell+mC_\ell-R_j(L).
+\]
+Reading the line backward gives
+\[
+L(M-\lambda(t_\ell))
+=\sum_{x\in\ell}[M-\lambda(x)]_m+\sigma_\ell.
+\]
+Each direction partitions all \(m\) residues. Summing and using (1) gives
+\(mW_4=\binom m2+\sum_\ell\sigma_\ell\).
+
+A deep line, whose top is outside \(Z\), has \(d_\ell\ge1\).
+Its positive axis-prefix residues are distinct nonzero residues on \(T\);
+therefore \(R_j(L)\le m(L-1)-\binom L2\) and \(\sigma_\ell\ge m\).
+There are \(P(T)-3|Z|\) deep lines, because every \(z\in Z\) tops exactly
+one line in each direction.
+
+On a final line \(d_\ell=0\), so \(\sigma_\ell\ge-R_j(L)\).
+Across final lines each positive axis-prefix point appears once, with
+exactly \(E(Z)\) repeated occurrences: its multiplicity in direction \(j\)
+is \(\#\{z\in Z:z_j\ge r\}\).
+Distinct axis-prefix points have distinct nonzero residues.
+The sum \(\binom m2\) pays for one copy of each used residue;
+each repeated copy costs at most \(m-1\).
+Thus
+\[
+mW_4\ge m(P(T)-3|Z|)-(m-1)E(Z),
+\]
+which is (6). All inequalities include equality.
+In particular \(\Phi(T,K)\ge0\) suffices to prove Wilf.
+
+## 4. Phase and rectangular thickening
+
+Normalize by attained height: \(u_i=w_i/H\), \(v=\min_i u_i\),
+\(U=\max_i u_i\), \(\sigma=\sum_i u_i\),
+\(\mu_i=\mathbb E_T(u_iX_i)\), and
+\(\kappa=3-4\sum_i\mu_i=D_0/(mH)\).
+Units give \(u_i\le1\). The mean slack of direction \(j\) line tops is
+\[
+\bar\delta_j=(1+\kappa)/4-\mu_j,\qquad
+\sum_j\bar\delta_j=\kappa\ge0.
+\]
+
+Choose coordinate \(k\) of weight \(v\).
+Every interval of length \(h\) has sawtooth integral
+\[
+\int_I[r]_q\,dr\ge\frac{qh^2}{2(h+q)}.
+\]
+To prove this, write \(h=nq+r_0\): \(n\) full periods contribute
+\(nq^2/2\), the remaining arc at least \(r_0^2/2\);
+Cauchy--Schwarz gives \((nq^2+r_0^2)/2\ge h^2/(2(n+1))\),
+and \(n+1\le(h+q)/q\).
+
+On a coordinate-\(k\) line of length \(L\), the direction-\(j\) slacks,
+\(j\ne k\), have residues \([\theta-tv]_{u_j}\).
+Nonnegative slack and
+\([\theta-tv+r]_{u_j}\le\delta_j(t)+r\), \(0\le r\le v\),
+bound the integral over the concatenated intervals of total length \(Lv\).
+Since \(Lv\le1+v\), division gives
+\[
+\operatorname{mean}_{\rm line}\delta_j
+\ge\frac{u_jvL}{2(1+v+u_j)}-\frac v2.
+\]
+Length-weighted averaging uses \(v\sum L^2/m=2\mu_k+v\), hence
+\[
+2\bar\delta_j(1+v+u_j)\ge2u_j\mu_k-v(1+v).
+\]
+Sum over \(j\ne k\), substitute \(\mu_k=(1+\kappa)/4-\bar\delta_k\),
+and use \(U\le\sigma-2v\).
+The remaining slack coefficient is the middle weight minus \(1+v\),
+nonpositive because that weight is at most one. Discarding it gives
+\[
+\boxed{\sigma(1-3\kappa)\le4\kappa+5v-3\kappa v+4v^2.}
+\tag{7}
+\]
+If \(H>3\) and \(D_0<m\), then \(0\le\kappa<v=1/H<1/3\).
+The right side divided by \(1-3\kappa\) is strictly increasing in \(\kappa\),
+with derivative numerator \(4+12v+12v^2>0\).
+Writing \(B=\sum_iw_i\) proves the necessary failure cutoff
+\[
+\boxed{B<9+28/(H-3).}
+\tag{8}
+\]
+
+Thicken \(T\) into equal-volume half-open boxes
+\[
+K_T=\bigcup_{x\in T}\prod_i
+\left[\frac{w_ix_i}{H+B},\frac{w_i(x_i+1)}{H+B}\right).
+\]
+It is a positive-volume downset in the unit simplex.
+Its mean coordinate sum is
+\((w\cdot s/m+B/2)/(H+B)\), giving
+\[
+\boxed{\kappa_c(K_T):=3-4\mathbb E_{K_T}|Y|_1
+=\frac{D_0/m+B}{H+B}.}
+\tag{9}
+\]
+The complement is the union of upper orthants with vertices
+\((w_ip_i/(H+B))_i\), for the discrete minimal exclusions \(p\).
+Positive diagonal scaling preserves their supports and minimality.
+The same identity holds with an allowance \(Q\) in place of \(H\).
+A continuous lower bound \(\kappa_c\ge\gamma\) therefore gives
+\[
+D_0/m\ge\gamma H-(1-\gamma)B,\qquad
+D_0<m\ \Longrightarrow\ \gamma H<1+(1-\gamma)B.
+\tag{10}
+\]
+
+## 5. Structural geometry and a reusable exact interval method
+
+The [central-box/horn theorem](analytic-details.md#appendix-a-central-boxes-and-three-monotone-horns)
+proves that every finite no-full-corner lower ideal \(U\) is a disjoint
+central anchored box \([0,z]\) and at most three outward horns.
+Horn \(i\) consists of rectangles at levels \(t>z_i\), with transverse
+caps at most \(z_j,z_k\), nonincreasing with \(t\).
+The proof constructs a chordal compatibility graph, proves its needed
+clique-tree property, and uses the median of three coordinate maximizers.
+The classical graph-theoretic lineage is [G], but the necessary lemma
+is proved in the appendix.
+
+For a unique positive corner \(p\), deleting its generator from the
+upper-ideal complement gives a finite no-full-corner \(U\) with
+\[
+T=U\setminus(p+\mathbb N^3).
+\tag{11}
+\]
+Pure-axis exclusions remain, so \(U\) is finite and has the same axes.
+Clipping the center and horns preserves their disjointness.
+
+Here is the exact upper-bound method used in the three interval checks.
+At scale \(q=4096\), integer endpoints \(L=(B_0,C_0,Q_0)\),
+\(V=(B_1,C_1,Q_1)\) enclose a closed real parameter box for \((b,d,Q)\).
+Put
+\[
+\ell=(q,B_0,C_0),\quad u=(q,B_1,C_1),\quad
+N_i=\lfloor Q_1/\ell_i\rfloor,\quad
+\psi(x)=4u\cdot x+q-3Q_0.
+\]
+Every relevant retained point satisfies \(\ell\cdot x\le Q_1\).
+Every axis of \(U\) survives clipping, so \(U\subseteq\prod_i[0,N_i]\).
+Pointwise monotonicity gives, for every real parameter in the box,
+\[
+q\bigl(m-(3mQ-4w\cdot s)\bigr)\le\sum_T\psi(x).
+\tag{12}
+\]
+
+For an inclusive box \([a,d]\), its count is \(\prod_i(d_i-a_i+1)\)
+and twice its objective moment is that count times \(\sum_i u_i(a_i+d_i)\).
+For a clipped box subtract the upper box \([\max(a,p),d]\).
+The retained feasibility maximum is
+\[
+\max_{\substack{i\\a_i\le\min(d_i,p_i-1)}}
+\left(\ell_i\min(d_i,p_i-1)+\sum_{j\ne i}\ell_jd_j\right).
+\tag{13}
+\]
+This maximizes over the parts with some coordinate below \(p\).
+An independent formula partitions by the *first* such coordinate,
+summing disjoint boxes with earlier coordinates at least their \(p_j\).
+Their maximum heights and summed moments give the same statistics.
+Without clipping use the full box and its upper-corner height.
+
+Let \(C_i(t,r,s)\) be the exact section score, and call it feasible
+when its retained maximum height is at most \(Q_1\).
+For a possibly empty nested horn use
+\[
+F_i(N_i+1;R,S)=0,\qquad
+F_i(t;R,S)=
+\max\left(0,\max_{\substack{r\le R,\ s\le S\\\text{section feasible}}}
+\{C_i(t,r,s)+F_i(t+1;r,s)\}\right).
+\tag{14}
+\]
+The zero option terminates the horn; its unchanged axis prevents restarting.
+Backward induction proves coverage. The inner maximum may be evaluated
+directly or by monotone prefixes, since every proper subrectangle decreases
+at least one cap. Enumerate every feasible retained central box and add
+its score to \(\sum_iF_i(z_i+1;z_j,z_k)\).
+The structural theorem then proves an upper bound \(V_p(L,V)\) on (12).
+Independent horns may enlarge the class; they never decrease its upper bound.
+
+Order tightening replaces endpoints by
+\[
+L^\sharp=(B_0,\max(B_0,C_0),\max(B_0,C_0,Q_0)),\quad
+V^\sharp=(\min(B_1,C_1,Q_1),\min(C_1,Q_1),Q_1).
+\tag{15}
+\]
+Its ordered intersection is unchanged; inversion proves emptiness.
+Splitting a tightened box at an interior integer wall yields two closed
+children sharing that wall and covering the parent.
+A finite tree reaching every node exactly once and ending only at checked
+empty, analytic, or exact-DP leaves covers all real root parameters.
+This is interval domination, not testing a rational grid.
+
+
+## 6. Small multiplicity
+
+The two published computer-assisted results [B, Theorem 4.3] and
+[KS, Proposition 6.9] settle all numerical semigroups of multiplicity at
+most 18 and exactly 19, respectively, without an embedding-dimension
+restriction. We use them as external theorems; this packet does not replay
+their Kunz-polyhedron computations.
+
+For \(20\le m\le29\) we need an analytic counterexample reduction.
+The [full-weighted theorem](analytic-details.md)
+proves Wilf whenever \(T=\{x:a\cdot x\le M\}\), including an analytic
+residue obstruction to its formal six-column case.
+
+If the ideal is not full weighted, choose an omitted point of weight
+at most \(M\) of least degree. It is a minimal excluded point \(p\)
+with \(a\cdot p\le M\). Its direction-\(i\) predecessor line, for \(p_i>0\),
+has top \(p-e_i\) and length exactly \(p_i\).
+Their contribution to the unnormalized line slack is
+\[
+\sum_{i:p_i>0}p_i(M-a\cdot p+a_i)
+=M+(|p|_1-1)(M-a\cdot p)\ge M.
+\]
+All other slacks are nonnegative. Therefore \(W_4<0\), which implies
+the integer bound \(W_4\le-1\), forces
+\[
+\boxed{M\le3mM-4a\cdot s\le m(m-2).}
+\tag{16}
+\]
+Every generator \(a_i\) is Apéry and at most \(M\).
+After sorting, any counterexample thus belongs to the *inclusive* box
+\[
+m<a_1<a_2<a_3\le B_m:=m(m-2).
+\]
+
+> **Generator-box finite lemma.** For each \(20\le m\le29\), every increasing
+> triple in this box with \(\gcd(m,a_1,a_2,a_3)=1\) and all four generators
+> minimal has either largest Apéry element \(M>B_m\), or \(W_4\ge0\).
+
+Every raw triple is classified by successive exact tests:
+\(a_1\in\langle m\rangle\), \(a_2\in\langle m,a_1\rangle\),
+\(a_3\in\langle m,a_1,a_2\rangle\), then a nontrivial gcd, or validity.
+Larger generators cannot make an earlier one redundant.
+One path computes exact residue shortest distances \(d_r\), adjoining
+a generator by two forward passes around each residue cycle.
+A shortest extension uses fewer than the cycle length many new copies;
+two passes propagate every possible starting residue around the cycle.
+The second path uses increasing ordinary membership:
+\(I_j(n)=I_{j-1}(n)\vee(n\ge a_j\ \&\ I_j(n-a_j))\).
+It tests the complete window \([B_m-m+1,B_m]\), which is full exactly
+when \(M\le B_m\). A full window and closure under \(+m\) prove every
+larger integer is included, so gaps and conductor are fully determined.
+The two paths generate their own entire boxes; no valid list is shared.
+
+The generator-box finite lemma contradicts (16) for any negative example.
+Thus all multiplicities through 29 are settled.
+
+## 7. Large multiplicity: exhaustive routing and the three-plane case
+
+Now \(m\ge30\). If there is no positive corner use Section 8.
+Otherwise let \(p\) be the unique positive corner.
+If \(|p|_1=3\), then \(p=(1,1,1)\) and the following analytic argument applies.
+Degree four gives a permutation of \((2,1,1)\), handled in Section 9.
+For \(|p|_1\ge5\), degree \(R\le6\) uses Section 10; otherwise \(R\ge7\)
+uses Section 11. These are disjoint exhaustive alternatives.
+Minimality gives \(|p|_1-1\le R\); consequently Section 10 has
+\(5\le|p|_1\le7\), while Section 11 has \(H\ge R\ge7\).
+All coordinate permutations are applied simultaneously to weights.
+
+Suppose \(p=(1,1,1)\). Every point of \(T\) lies in a coordinate plane.
+A mixed corner \(q\) in the \(ij\)-plane has representative \(\gamma e_k\),
+\(1\le\gamma\le h_k=\max_Tx_k\). The included point
+\(q-e_i-e_j\) has residue \((\gamma+1)a_k\), since \(a\cdot p\equiv0\).
+If \(\gamma<h_k\) it collides with \((\gamma+1)e_k\).
+Thus all mixed corners in that plane have representative \(h_ke_k\);
+the collision rule permits at most one.
+
+Here is a purely geometric counting proof of \(\Phi(T,K)\ge0\) for \(m\ge30\).
+Write \(h=h_1+h_2+h_3\ge3\).
+Each plane is its full rectangle or that rectangle with one upper-right
+quadrant deleted; it contains \((1,1)\).
+Its frontier has one of the following forms, allowing transpose:
+
+| Type | Mixed maxima | Mixed point count \(c_{ij}\) | Correction \(\beta_{ij}\) | Axis charge \(\nu_{ij}\) |
+|---|---|---|---|---|
+| Rectangle | \((h_i,h_j)\) | \(h_ih_j\) | 0 | 0 |
+| Split, \(b,d\ge1\) | \((b,h_j),(h_i,d)\) | \(bh_j+dh_i-bd\) | \(b+d\) | 0 |
+| Side cap at \(i\), \(1\le b<h_i\) | \((b,h_j)\) | \(bh_j\) | \(b\) | \(h_i\) |
+
+Let \(s_f\) count split planes, \(I\) the globally maximal axis directions,
+\(J=\sum_{i\in I}h_i\), \(\Beta=\sum\beta_{ij}\),
+\(C=\sum(c_{ij}-\beta_{ij})\), and \(N=\sum\nu_{ij}\).
+Every mixed planar maximum is globally maximal. An axis top is globally
+maximal exactly when both incident planes side-cap that axis.
+Thus \(k=|K|=3+s_f+|I|\le6\).
+For a split,
+\(c_{ij}-\beta_{ij}
+=bd+b(h_j-d-1)+d(h_i-b-1)\ge b+d-1\).
+For a side cap \(c_{ij}-\beta_{ij}\ge0\) and \(\beta_{ij}\le\nu_{ij}\).
+Hence
+\[
+\Beta\le C+s_f+N,\qquad N\ge2J.
+\]
+Direct origin/axis/plane counting yields
+\[
+m=1+h+\Beta+C,\quad P(T)=m+h+2,\quad E(K)=h+\Beta-N+J.
+\]
+Set \(Q_*=h+C+N-J\). Then \(\Phi(T,K)=Q_*+3-3k\).
+If this were negative, integrality would give \(Q_*\le3k-4\le14\), and
+\[
+m=1+Q_*+\Beta-N+J
+\le1+2Q_*-h+s_f-N+2J
+\le1+28-3+3=29.
+\]
+This contradicts \(m\ge30\). Therefore (6) proves \(W_4\ge0\).
+No shape, modular, residue-label, or optimization computation is needed.
+
+## 8. No full-support corner
+
+The [continuous no-corner theorem](analytic-details.md#appendix-c-the-continuous-no-corner-moment-inequality)
+proves \(\kappa_c\ge1/3\) for every positive-volume finite-step
+central-box/horn set in the unit simplex.
+The same appendix proves that degree at most four in this discrete class
+implies cardinality at most 29, by eleven explicit central-cap bounds.
+
+If \(D_0<m-1\) at \(m\ge30\), then \(H\ge5\), since \(R\le H<5\)
+would force degree at most four. Sort weights to \((1,b,d)\), so
+\(1\le b\le d\le H\). Equations (8)--(10) give
+\[
+H<3+2B,\qquad H^2-24H+7<0,\qquad H<24.
+\]
+For any allowance \(Q\), the continuous theorem also gives
+\(D_Q/m\ge(Q-2B)/3\).
+
+> **No-corner interval finite lemma.** For all real
+> \(1\le b\le d\le Q\), \(5\le Q\le24\), and every nonempty finite
+> no-full-corner ideal of attained height at most \(Q\),
+> \[
+> m-D_Q\le1.
+> \]
+
+This is stronger than the genuine branch domain: no units, residue
+labels, attained allowance, or cardinality restriction is required.
+Use the method in Section 5, with no clipping.
+A DP leaf requires its exact bound at most \(q\).
+An analytic leaf uses
+\(Q_0\ge2(q+B_1+C_1)+3q\), which implies \(D_Q\ge m\).
+The accompanying two independent coverage walks recompute every DP leaf,
+one by iterative prefix horn maxima, the other by direct recursive
+subrectangle transitions. They cover the closed root from height 5 to 24.
+The finite lemma contradicts the hypothetical failure.
+Thus \(D_0\ge m-1\) throughout this branch.
+
+## 9. The short corner
+
+Orient \(p=(2,1,1)\), without prescribing the least weight's direction.
+For any degree allowance \(r\ge3\),
+\[
+|T|\le2r^2-r+3.
+\tag{17}
+\]
+Indeed the degree-\(r\) simplex minus the \(p\)-orthant has \(2r^2+2\)
+points. For each \(1\le j\le r-1\), the excluded point \((1,j,r-j)\)
+cannot dominate the unique full-support corner.
+It must dominate a planar corner; at least one of
+\((0,j,r-j),(1,0,r-j),(1,j,0)\) is therefore omitted.
+These \(r-1\) triples are pairwise disjoint, forcing (17).
+In particular \(H<6\) gives \(R\le5\) and \(30\le m\le48\).
+The endpoint \(H=6\) belongs to the high-height case.
+
+### High height
+
+For a translated planar lower ideal of offset \(h\) in height \(H\),
+the dimension-two line identity gives mean weight at most \((2H+h)/3\).
+Partition \(T\) into \(y=0\); \(y\ge1,z=0\);
+\(x=0,y,z\ge1\); and \(x=1,y,z\ge1\).
+These are translated planar lower ideals, with offsets respectively
+\(0,w_2,w_2+w_3,B\). Thus \(D_0/m\ge(H-4B)/3\).
+If \(H\ge6\) and \(D_0<m-1\), (8) gives
+\(H<3+4B\), hence \(H^2-42H+5<0\) and \(H<42\).
+We retain the closed height-42 superset; a sharper cutoff is unnecessary.
+
+> **Short-corner high finite lemma.** For all
+> \(1\le b\le d\le Q\), \(6\le Q\le42\), each coordinate permutation of
+> \(p=(2,1,1)\), and every nonempty finite no-full-corner \(U\),
+> the clipped \(T=U\setminus(p+\mathbb N^3)\) of height at most \(Q\)
+> satisfies \(m-D_Q\le1\).
+
+Apply Section 5's retained-height feasibility and clipped scores to all
+three corners. A DP leaf requires every corner bound at most \(q\).
+The planar rule \(Q_0\ge4(q+B_1+C_1)+3q\) is also sound, including equality.
+The independent paths use subtractive/prefix statistics and
+disjoint-box/direct-transition statistics, respectively.
+The complete closed tree establishes the finite lemma, contradicting failure.
+
+### Low height: exact profiles and two inline exceptions
+
+A mixed \(xy\) corner has representative \(\gamma e_3\ne0\).
+If its \(x\)-coordinate is at least two, subtracting \(2e_1+e_2\)
+gives an included point with residue \((\gamma+1)a_3\).
+It forces \(\gamma=h_3\); at most one such corner exists.
+The antichain permits at most one additional corner at \(x=1\).
+The \(xz\) plane is identical. A \(yz\) corner yields residue
+\((\gamma+2)a_1\) on subtracting \(e_2+e_3\), forcing
+\(\gamma\in\{h_1-1,h_1\}\).
+Hence each plane has at most two mixed corners, with the refined incident
+plane restriction, and contains respectively \((2,1),(2,1),(1,1)\).
+
+A degree-five plane profile is \(f=(f_0,\ldots,f_5)\),
+\(0\le f_i\le6-i\), nonincreasing, encoding \(\{(i,j):j<f_i\}\).
+Let \(\ell(f)\) count positive columns and
+\(\Delta(f)=\{i:1\le i<\ell(f),\ f_i<f_{i-1}\}\).
+These, and only these, are mixed corners; a drop to zero is a pure-axis corner.
+
+For \(xy,xz\), require \(f_2\ge2\), \(|\Delta(f)|\le2\), and at most
+one drop at index at least two. For \(yz\), require \(h_1\ge2\)
+and \(|\Delta(h)|\le2\).
+Use all compatible ordered triples \(f,g,h\), with
+\[
+\ell(f)=\ell(g),\quad f_0=\ell(h),\quad g_0=h_0,
+\]
+and reconstruct
+\[
+T=\{(x,y,z):y<f_x,\ z<g_x,\ z<h_y,\ (x,y,z)\not\ge(2,1,1)\}.
+\tag{18}
+\]
+Keep exactly those of degree at most five and \(30\le|T|\le48\).
+Matching axes recover each plane section exactly.
+The required plane entries include all three predecessors of \(p\).
+Any extra reconstructed point in a genuine ideal would dominate a planar
+minimal exclusion, violating its corresponding pair test.
+Thus every genuine low-height ideal is recovered uniquely.
+Profiles alone do not guarantee total degree: the literal degree check is essential.
+
+> **Short-corner low finite lemma.** Every such triple satisfies
+> \(U_2\ge m-1\), except possibly the two keys
+> \[
+> \begin{aligned}
+> E_0&=((4,3,3,2,0,0),(6,3,3,2,0,0),(6,4,2,2,0,0)),\\
+> E_1&=((6,3,3,2,0,0),(4,3,3,2,0,0),(4,4,2,2,1,1)).
+> \end{aligned}
+> \]
+
+For \(E_0\), direct reconstruction gives \(m=30\), \(s=(27,25,34)\).
+The included points \((0,0,5),(2,2,0),(3,1,0)\) with masses \(38,48,4\)
+have total mass 90 and residual
+\((108,100,190)-4s=(0,0,54)\).
+Section 2 therefore gives \(D_Q\ge54\ge29\) for all admissible real weights.
+The second ideal and witness are obtained by interchanging \(y,z\),
+including transposition of the \(yz\) profile.
+
+Two independent complete profile generators check the finite lemma and
+both explicit witnesses: recursive profiles/ten offsets, and Cartesian
+profiles/literal predecessor corners and successor-of-successor gain.
+Together with (4), the finite lemma proves \(D_0\ge m-1\) in low height.
+This completes the short-corner branch without a saved dual list.
+
+## 10. Residual degree at most six
+
+Let \(5\le P=|p|_1\le7\), \(R\le6\).
+In an \(ij\)-plane, distinct mixed corners have distinct representatives
+\(\gamma e_k\ne0\). At most \(p_i-1\) have coordinate \(q_i<p_i\),
+and at most \(p_j-1\) have \(q_j<p_j\), by antichain distinct coordinates.
+For the remaining corners, subtract \(p_ie_i+p_je_j\).
+The included result has residue \((\gamma+p_k)a_k\);
+collision with the \(k\)-axis forces \(\gamma>h_k-p_k\).
+At most \(p_k\) distinct representatives remain. Each plane thus has at most
+\[
+(p_i-1)+(p_j-1)+p_k=P-2
+\tag{19}
+\]
+mixed corners.
+
+Define \(F_i=\{x\in T:x+e_i\notin T\}\), \(n_k=1+\max_Tx_k\).
+For every residue-bijective lower ideal,
+\[
+|F_i\cap F_j|\le2n_k.
+\tag{20}
+\]
+To prove it, let \(C_{ij}\) contain excluded points with both positive
+\(i,j\) coordinates and both respective predecessors included.
+In each nonempty fixed-\(k\) slice, a planar ideal with \(h\) maxima has
+\(h-1\) mixed corners, by its constant positive-height blocks.
+All \(n_k\) slices are nonempty, hence
+\(|C_{ij}|=|F_i\cap F_j|-n_k\).
+Subtracting an included predecessor forces the representative of
+each \(q\in C_{ij}\) onto the \(k\)-axis, and distinct \(q\) have distinct
+representatives by comparing their \(i\)-predecessors.
+This injects \(C_{ij}\) into the \(n_k\) axis points, proving (20).
+Slice corners need not be globally minimal; only these two predecessors are used.
+
+Sort coordinates of \(p\), simultaneously permuting weights.
+The nine corners are
+\[
+(1,1,3),(1,2,2),(1,1,4),(1,2,3),(2,2,2),
+(1,1,5),(1,2,4),(1,3,3),(2,2,3).
+\]
+Use all nonincreasing seven-entry profiles \(0\le f_i\le7-i\).
+In an \(ij\)-plane require \(f_{p_i}\ge p_j+1\) and at most \(P-2\)
+positive height drops. Impose the three shared-axis compatibilities
+as in (18), and reconstruct with its own \(p\)-orthant deleted.
+Keep precisely degree at most six, cardinality at least 30,
+and the three bounds (20). No maxima, realizability, modular, or erosion filter is used.
+The same plane-recovery and excluded-corner argument as for (18)
+proves complete, unique coverage of genuine oriented ideals.
+
+> **Degree-six finite lemma.** On this complete geometric family,
+> \[
+> \max(U_2,G)\ge m.
+> \tag{21}
+> \]
+
+The local integer predicate and the denominator-cleared axis predicate
+are exact. With \(d=q_1q_2q_3>0\), the latter is
+\[
+q_*\left(3md-4\sum_i s_i\prod_{j\ne i}q_j\right)\ge md.
+\]
+The independent generators use recursive profiles and seven-element
+subsets of \(\{0,\ldots,13\}\), respectively.
+The subset bijection is \(f_i=t_i-6+i\) for descending
+\(13\ge t_0>\cdots>t_6\ge0\); its inverse is \(t_i=f_i+6-i\).
+One path uses literal points/bitset tops and masked shifts;
+the other uses columns, adjacent heights, and the six explicit degree-two moves.
+They both check the complete family, not a saved fallback list.
+Sections 2 and (21) give \(D_0\ge m\) for this branch.
+
+## 11. Higher degree: a finite strip and a real interval bound
+
+Assume \(R\ge7\), \(|p|_1\ge5\). We prove \(D_0\ge m-29/10\).
+The first finite premise supplies a continuous inequality; that inequality
+restricts a hypothetical failure to a compact real parameter region.
+The second finite premise excludes the entire region.
+
+### 11.1. The four-allowance strip
+
+> **Strip finite lemma.** For \(r\in\{18,19,20,21\}\), every finite lower
+> ideal \(T'\subseteq\mathbb N^3\) of degree at most \(r\), with at most
+> one positive minimal exclusion, satisfies
+> \[
+> 3r|T'|-4\sum_{x\in T'}|x|_1\ge4|T'|.
+> \tag{22}
+> \]
+> Empty ideals and missing coordinate units are allowed.
+
+Here is its exhaustive, finite reduction. If there is a positive minimal
+corner \(p'\), its predecessors imply \(|p'|_1\le r+1\).
+Remove that exclusion generator to obtain a finite no-corner completion:
+pure-axis exclusions remain, and deleting a positive orthant leaves every
+axis point unchanged. Thus its axis caps are at most \(r\).
+If there is no positive corner, take \(p'=(1,1,r-1)\); its orthant is
+inactive on the degree-\(r\) simplex.
+By symmetry enumerate exactly
+\[
+1\le p'_1\le p'_2\le p'_3,\qquad |p'|_1\le r+1.
+\]
+No minimality filter is imposed on this larger family.
+
+Apply the decomposition of Appendix A, clipped by \(p'\), to the score
+\(f_r(x)=4|x|_1+4-3r\). All center and transverse caps range from zero
+to \(r\). A section or center is feasible when its **retained**
+maximum degree is at most \(r\), not when its removed upper corner is.
+For each axis use the exact recurrence
+\[
+F_i(r+1;b,d)=0,\qquad
+F_i(t;b,d)=\max\left(0,
+ \max_{\substack{u\le b,\ v\le d\\
+                  A_i(t,u,v)\ \mathrm{feasible}}}
+ \left\{\sum_{A_i(t,u,v)}f_r+F_i(t+1;u,v)\right\}\right).
+\tag{23}
+\]
+The maximum of center score plus its three horn bounds is an upper bound
+for \(\sum_{T'}f_r=4|T'|-D_r(T')\). Every configuration must have this
+bound at most zero. This is a search over corner/allowance configurations
+and exact dynamic-programming states, not an enumerated list of ideals.
+One implementation uses subtractive moments and prefix maxima; the other
+uses retained points and every subrectangle transition explicitly.
+Singletons, zero caps, and inactive corners are included.
+
+### 11.2. Transfer to the continuous gap
+
+Let \(K\) be a positive-volume downset in the unit simplex whose complement
+is a finite union of upper orthants with at most one positive minimal vertex.
+Put \(h=1/21\), and for \(z\in[0,h)^3\) define
+\[
+T_z=\{y\in\mathbb N^3:z+hy\in K\},\quad
+r_z=\left\lfloor(1-|z|_1)/h\right\rfloor,\quad
+\epsilon_z=1-|z|_1-hr_z.
+\]
+Then \(r_z\in\{18,19,20,21\}\) and \(0\le\epsilon_z<h\).
+Each excluded vertex \(g\) induces the discrete vertex
+\[
+g'_i=\max(0,\lceil(g_i-z_i)/h\rceil).
+\]
+A zero coordinate stays zero. Consequently at most one induced minimal
+vertex is positive, even after redundant vertices are removed.
+For almost every translation boundary conventions agree; the exceptional
+translations lie in finitely many coordinate hyperplanes modulo \(h\).
+The hypotheses of (22) therefore hold for \(T_z\), including when units
+are absent. Expansion gives
+\[
+\sum_{y\in T_z}(3-4|z+hy|_1)
+ =hD_{r_z}(T_z)+(3\epsilon_z-|z|_1)|T_z|
+ \ge(4h-|z|_1)|T_z|.
+\]
+Integrating the partition \(x=z+hy\), whose Jacobian is one, gives
+\[
+3-4\mathbb E_K|X|_1
+\ge4h-\sum_i\mathbb E_K(X_i\bmod h).
+\]
+A coordinate fiber of a downset is an interval \([0,L]\) up to endpoints.
+Write \(L=qh+t\), \(0\le t<h\). Since
+\[
+\int_0^L(x\bmod h)\,dx=(qh^2+t^2)/2\le hL/2,
+\]
+Fubini implies each remainder average is at most \(h/2\). Hence
+\[
+\boxed{\kappa_c(K)\ge5/42.}
+\tag{24}
+\]
+The averaged remainder estimate is essential; a pointwise estimate alone
+does not give this constant. The rectangular thickening from Section 4
+preserves excluded supports and meets every hypothesis above.
+
+### 11.3. Necessary region for a failure
+
+Sort the normalized weights to \(w=(1,b,d)\), and write \(B=1+b+d\).
+The predecessors of the positive corner contain the units, so
+\(1\le b\le d\le H\), and \(H\ge R\ge7\).
+If \(D_0<m-29/10<m\), Sections 4 and (24) imply
+\[
+B<9+\frac{28}{H-3},\qquad
+\frac{D_0}{m}\ge\frac{5H-37B}{42},\qquad 5H<42+37B.
+\]
+It follows that \(5H^2-390H+89<0\). This polynomial is positive at
+78 and increasing thereafter, so \(H<78\).
+Also \(p-e_1\in T\) gives \(w\cdot p\le H+1\).
+It suffices to cover the closed necessary failure region
+\[
+\mathcal F=\{(b,d,Q):
+1\le b\le d\le Q,\ 7\le Q\le78,\
+1+b+d\le9+28/(Q-3),\
+5Q\le42+37(1+b+d)\}.
+\tag{25}
+\]
+
+> **High-height finite lemma.** For every \((b,d,Q)\in\mathcal F\),
+> every positive integer \(p\) with \(|p|_1\ge5\) and
+> \((1,b,d)\cdot p\le Q+1\), and every nonempty finite no-corner lower ideal \(U\),
+> put \(T'=U\setminus(p+\mathbb N^3)\). If
+> \(\max_{T'}(1,b,d)\cdot x\le Q\), then
+> \[
+> |T'|-\left(3Q|T'|-4(1,b,d)\cdot\sum_{T'}x\right)\le29/10.
+> \tag{26}
+> \]
+
+No residue, cardinality, minimality, unit, or surface restriction is used
+in this enlarged geometric family.
+For reproducibility, the only region-specific interval tightening is as
+follows. At scale \(q=4096\) write endpoints
+\(L=(B_0,C_0,H_0)\), \(U=(B_1,C_1,H_1)\) for \((b,d,Q)\).
+First intersect with order:
+\[
+L\leftarrow(B_0,\max(B_0,C_0),\max(B_0,C_0,H_0)),\quad
+U\leftarrow(\min(B_1,C_1,H_1),\min(C_1,H_1),H_1).
+\]
+If not inverted, compute, in this order,
+\[
+\begin{aligned}
+S_{\max}&=9q+\left\lceil28q^2/(H_0-3q)\right\rceil,\\
+B_1&\leftarrow\min(B_1,\lceil(S_{\max}-q)/2\rceil),\\
+C_1&\leftarrow\min(C_1,S_{\max}-q-B_0),\\
+S_{\mathrm{upper}}&=\min(q+B_1+C_1,S_{\max}),\\
+H_1&\leftarrow\min(H_1,\lceil(42q+37S_{\mathrm{upper}})/5\rceil).
+\end{aligned}
+\tag{27}
+\]
+Perform at most twenty iterations, stopping on inversion or unchanged
+endpoints. Every upper rounding is outward. The inequalities in (25),
+the lower bound \(qQ\ge H_0\), and \(b\le d\) prove that each step retains
+every relevant real point. Convergence is not required for soundness.
+
+For a nonempty tightened box use Section 5 with
+\(\ell=(q,B_0,C_0)\), \(u=(q,B_1,C_1)\), and
+\(\psi(x)=4u\cdot x+q-3H_0\). Enumerate the **full Cartesian** corner list
+\[
+p_i\ge1,\quad5\le|p|_1\le\lfloor H_1/q\rfloor+1,\quad
+\ell\cdot p\le H_1+q.
+\]
+This contains every relevant corner, since \(\ell_i\ge q\).
+An empty list is accepted only as vacuous.
+For every listed corner the retained-center/three-horn bound \(V_p\)
+must satisfy \(10V_p\le29q\). Both paths compute every bound afresh:
+one uses full-box subtraction and three prefix comparisons, the other
+disjoint pieces and row/column prefix maxima.
+The closed root is \(((q,q,7q),(78q,78q,78q))\).
+Each child is derived from its tightened parent; each split is strictly
+interior, and its two children share the split wall. Checked empty leaves
+and checked dynamic-programming leaves exhaust all nodes.
+Induction proves (26) for the entire real region, not a parameter grid.
+At \(Q=H\), it contradicts the proposed failure and proves this branch.
+
+## 12. Conclusion and the computational boundary
+
+The branches are exhaustive. Multiplicity at most 29 is settled by Section 6.
+For \(m\ge30\), Section 7 routes every ideal to exactly one of Sections
+8--11 or the analytic three-plane case. The three-plane case already gives
+\(W_4\ge0\). On the remaining branches their conclusions give
+\(D_0\ge m-29/10\) (or the stronger \(D_0\ge m-1\) or \(D_0\ge m\)).
+Because \(A\ge m+1\), for \(m\ge30\)
+\[
+A(m-29/10)-m(m-1)
+\ge(m+1)(m-29/10)-m(m-1)
+=m/10-29/10>0.
+\]
+Equation (1) proves \(W_4(S)>0\) on these remaining large-multiplicity branches.
+Together with the small-multiplicity result, this proves the proposed theorem
+conditional on the stated, fully replayed finite lemmas and the published
+multiplicity-at-most-19 result.
+
+All finite predicates are exact integer comparisons. Python integers are
+unbounded. C++ evaluators require signed scores with at least 63 value bits,
+indices with at least 31 value bits, and 64-bit bitsets where used.
+For the largest interval root, \(N_i\le78\), \(q=4096\), a conservative
+bound on score/moment/threshold intermediates is
+\[
+16\cdot79^3\bigl(156(3\cdot78q)+235q\bigr)<2^{51}<2^{63}-1.
+\]
+The strip envelope \(8\cdot22^3(9\cdot21+4)<2^{31}\) is smaller.
+Degree-six profiles have \(m\le84\), \(s_i\le504\), axis caps at most six;
+their denominator-cleared margins fit below \(2^{30}\) in magnitude.
+Generator-box distances are at most \((m-1)m(m-2)\le21924\).
+The concrete implementations also check their required integer widths.
+No mathematical operation is performed on a negative-infinity sentinel.
+
+The computation is not a proof-assistant kernel certificate.
+Review must cover the mathematical reductions, finite coverage, each evaluator,
+and its compiler/runtime boundary. Agreement of two programs and hashes
+supports reproducibility and detects many errors; it cannot exclude a common
+mathematical misunderstanding. The precise checks, complete-run evidence,
+negative tests, and remaining external review are specified in
+[verification.md](verification.md).
+
+## 13. Attribution and scope
+
+Wilf's question is [W]. The Apéry preferred-factorization framework and
+weighted-downset baseline come from [Z]; the initial-ideal, tiling, and
+support framework is developed in [HRW]. The proof of each needed elementary
+consequence is included above. The clique-tree ingredient in Appendix A is
+classical [G] and is proved there. The multiplicity-at-most-19 premise uses
+the **published** theorem/proposition in [B, KS], whose computational proof
+is upstream work, not reproduced or claimed as our new verification.
+
+Chomicz [C] independently develops the four-generator L-shape geometry.
+Its relation-deletion and rearrangement results do not justify optimizing
+the Apéry label sum or adding an unproved filter to our finite families;
+we do not use them as premises. His subsequent type/presentation bounds
+[CT], and Marashdeh's type/defect reductions [M], concern related aspects
+but provide no established uniform replacement for our retained branches.
+The attribution survey was refreshed on 2026-09-17. Its searches did not
+locate a prior uniform four-generator proof; this bounded search is not a
+certification of priority. No novelty claim should be finalized before
+external mathematical and bibliographic review.
+
+- [W] H. S. Wilf, “A circle-of-lights algorithm for the ‘money-changing
+  problem’,” *American Mathematical Monthly* **85** (1978), 562–565.
+  [Published article](https://doi.org/10.1080/00029890.1978.11994639).
+- [Z] A. Zhai, “An asymptotic result concerning a question of Wilf.”
+  [Preprint](https://arxiv.org/abs/1111.2779).
+- [HRW] M. Hellus, A. Rechenauer, R. Waldi, “Variants on a question of Wilf.”
+  [Preprint](https://arxiv.org/abs/1804.06141).
+- [G] F. Gavril, “The intersection graphs of subtrees in trees are exactly
+  the chordal graphs,” *Journal of Combinatorial Theory, Series B*
+  **16** (1974), 47–56.
+  [Published article](https://doi.org/10.1016/0095-8956(74)90094-X).
+- [B] W. Bruns, P. García-Sánchez, L. O'Neill, D. Wilburne, “Wilf's
+  conjecture in fixed multiplicity,” *International Journal of Algebra
+  and Computation* **30** (2020), 861–882, Theorem 4.3.
+  [Published article](https://doi.org/10.1142/S021819672050023X).
+- [KS] J. Kliem, C. Stump, “A new face iterator for polyhedra and for more
+  general finite locally branched lattices,” *Discrete & Computational
+  Geometry* **67** (2022), 1147–1173, Proposition 6.9.
+  [Published article](https://doi.org/10.1007/s00454-021-00344-x).
+- [L] F. Aguiló-Gost, P. A. García-Sánchez, D. Llena, “On the number of
+  L-shapes in embedding dimension four numerical semigroups,”
+  *Discrete Mathematics* **338** (2015), 2168–2178.
+  [Preprint](https://arxiv.org/abs/1505.01464).
+- [C] K. Chomicz, “On numerical semigroups with embedding dimension four,”
+  arXiv:2604.25653v3 (2026).
+  [Preprint](https://arxiv.org/abs/2604.25653).
+- [CT] K. Chomicz, “The type and cardinality of minimal presentations of
+  numerical semigroups with embedding dimension four,”
+  arXiv:2609.04000v1 (2026).
+  [Preprint](https://arxiv.org/abs/2609.04000).
+- [M] M. F. Marashdeh, “An upper bound for the type of a numerical semigroup,
+  and a reduction of Wilf's conjecture,” arXiv:2608.12531v1 (2026).
+  [Preprint](https://arxiv.org/abs/2608.12531).
