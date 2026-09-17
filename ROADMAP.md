@@ -39,7 +39,7 @@ not by replaying the superseded shape/modular route.
 | PRELIM | Internally complete; ready for private specialist review | Standalone proof, analytic appendices, comprehensive finite contracts, minimal inventory, and [complete evidence](prelim/replay.json) |
 | T1 | Initial TeX/PDF draft complete | Requested section order; all selected analytic proofs; seven finite assertions; primary-source bibliography; construction history |
 | T2 | PASS; editorial fidelity and isolated source-only build | 186 displays and 941 inline expressions preserved; 153 labels resolve; 15 cited sources; warning-free 38-page PDF; ten-input cold build has identical rendered text without PRELIM/Git/history |
-| T3 | Next author-facing iteration | Review the introduction and overall flow together, then prioritize technical exposition improvements without changing frozen proof premises |
+| T3 | First repetition review complete; tightening proposals await author discussion | Construction history now credits GPT-5.6 Sol via Codex; no proposed proof/prose cuts have been implemented |
 
 The author has authorized a preliminary TeX/PDF draft before FREEZE, in a
 separate directory. This supersedes the earlier drafting order but does not
@@ -47,10 +47,23 @@ discharge specialist review or the formalization decision. PRELIM inputs
 and their source-specific complete replay remain frozen. External coordination
 and a definitive release remain later work.
 
+## Proposed manuscript-tightening order
+
+These are proposals, not completed changes or new mathematical premises.
+PRELIM and all computational contracts remain unchanged.
+
+| Item | Proposed edit | Boundary to preserve |
+|---|---|---|
+| T3.1 | Give attribution, implementation details, and construction history distinct homes; remove repeated review-log language | Keep introductory orientation, citations at point of use, and exact finite-family coverage |
+| T3.2 | State and prove one generic nested-horn recurrence, then instantiate it for intervals and the strip | Preserve retained-point feasibility, termination, central-box enumeration, and every threshold |
+| T3.3 | Reuse the projection inequality; merge the three-/four-column calculations in the full-weighted proof | Restrict the shared calculation to the two classified projections; retain the six-column residue obstruction |
+| T3.4 | Prove one height-cutoff lemma for moment bounds of the form \(D_0/m\ge\alpha H-\beta B\) | State \(H>3\), \(D_0<m\), \(\alpha>0\), \(0\le\beta\le3\); retain closed roots 24, 42, and 78 |
+| T3.5 | Break the long one-slab argument into named steps and consider one geometric illustration | Retain all boundary, jump-merging, and polynomial nonnegativity arguments; clarity takes precedence over page count |
+
 ## Remaining topological order
 
-1. T3: iterate on the draft's exposition with the author, starting with the
-   introduction and overall flow. The extension section claims no uniform result for
+1. T3: discuss the tightening proposals, then implement agreed edits atomically.
+   The extension section claims no uniform result for
    embedding dimension greater than four.
 2. V1: choose the additional proof-verification scope and trusted boundary.
    Targeted formalization is an option, not already completed or mandatory.
