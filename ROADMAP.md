@@ -1,9 +1,10 @@
-# Reconstruction and preliminary-package roadmap
+# Proof and manuscript roadmap
 
 **Status date:** 2026-09-17.
 
-The goal is a self-contained, reviewable proof architecture before definitive
-TeX/PDF production. The selected packet is [prelim/](prelim/README.md).
+The goal is a self-contained, reviewable proof and manuscript before a
+definitive release. The selected frozen packet is [prelim/](prelim/README.md);
+the preliminary TeX/PDF draft is [manuscript/](manuscript/README.md).
 Its source-freeze and complete-run evidence are separate atomic commits.
 Live state belongs here, not in frozen reconstruction inputs.
 
@@ -36,26 +37,32 @@ not by replaying the superseded shape/modular route.
 | S2 | Internally complete; no pending branch premise | End-to-end hypothesis, endpoint, normalization, and negative-integrality composition audit |
 | S3 | PASS; complete replay from a literal copy outside the checkout | All seven finite-premise pairs pass with exact-source matching; all 35 rejection tests pass |
 | PRELIM | Internally complete; ready for private specialist review | Standalone proof, analytic appendices, comprehensive finite contracts, minimal inventory, and [complete evidence](prelim/replay.json) |
+| T1 | Initial TeX/PDF draft complete | Requested section order; all selected analytic proofs; seven finite assertions; primary-source bibliography; construction history |
+| T2 | Editorial fidelity and local build PASS; isolated build pending | All selected displayed/inline mathematics preserved; references resolve; warning-free PDF; compilation from a source-only copy outside the checkout |
 
-The active request authorizes self-contained PRELIM proof code and documents
-before FREEZE. The old code-packaging cutoff is superseded for this preliminary
-packet only. Definitive TeX/PDF, external coordination, and formalization
-remain later work.
+The author has authorized a preliminary TeX/PDF draft before FREEZE, in a
+separate directory. This supersedes the earlier drafting order but does not
+discharge specialist review or the formalization decision. PRELIM inputs
+and their source-specific complete replay remain frozen. External coordination
+and a definitive release remain later work.
 
 ## Remaining topological order
 
-1. V1: choose the additional proof-verification scope and trusted boundary.
+1. T2/T3: finish the draft's isolated-build audit, then iterate on exposition
+   with the author. The extension section claims no uniform result for
+   embedding dimension greater than four.
+2. V1: choose the additional proof-verification scope and trusted boundary.
    Targeted formalization is an option, not already completed or mandatory.
-2. H1: obtain independent specialist review of the mathematics, finite
+3. H1: obtain independent specialist review of the mathematics, finite
    reductions, implementations, and attribution; triage the responses.
    Private circulation is appropriate after PRELIM; no external messages
    are sent without author direction.
-3. FREEZE: resolve review issues and choices, then freeze the architecture.
-4. Prepare the definitive TeX manuscript, chosen final code/certificates,
+4. FREEZE: resolve review issues and choices, then freeze the architecture.
+5. Finalize the TeX manuscript, chosen final code/certificates,
    any agreed formalization, PDF, and release packaging.
 
-PRELIM is a coherent proposed proof suitable for private review and concrete
-TeX planning, not a public correctness or priority certification.
+PRELIM and the initial TeX draft are coherent artifacts suitable for private
+review and exposition work, not public correctness or priority certifications.
 The literature search must be refreshed again before circulation/submission.
 
 ## Inventory discipline

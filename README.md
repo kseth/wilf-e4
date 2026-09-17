@@ -1,10 +1,12 @@
 # Wilf's conjecture in embedding dimension four
 
-The reader-facing artifact is [prelim/](prelim/README.md): a standalone
-preliminary proof, its necessary analytic details, and exact independent
-verification code. Start with [the proof](prelim/proof.md), then its
-[verification specification](prelim/verification.md).
-No historical manuscript or research archive is needed to read or run it.
+Start with the [TeX paper draft](manuscript/wilf-four-generators.pdf), whose
+sources and build instructions are in [manuscript/](manuscript/README.md).
+The frozen [prelim/](prelim/README.md) packet contains the selected Markdown
+proof, its necessary analytic details, and exact independent verification
+code. Its [verification specification](prelim/verification.md) describes
+the complete replay. No historical manuscript or research archive is needed
+to read, compile, or run these artifacts.
 
 The theorem remains proposed: AI-assisted internal checking is not external
 mathematical review or proof-assistant certification. Human authors are
@@ -17,7 +19,8 @@ responsible for the mathematics, computation, and attribution.
 | Branches B1--B6 | Internally complete; B3 is entirely analytic |
 | Standalone PRELIM | Complete isolated replay: all seven finite premises pass on both independent paths |
 | Attribution | Selected-source refresh dated 2026-09-17; bounded novelty assessment, not priority certification |
-| External review, formalization choice, definitive TeX/PDF | Separate subsequent milestones |
+| TeX/PDF draft | Initial self-contained draft; all analytic proofs included; frozen code remains unchanged |
+| External review, formalization choice, definitive release | Separate subsequent milestones |
 
 From `prelim/`, reproduce the whole finite verification with
 `python3 -I -B verify.py`. Only Python standard libraries and a C++17
@@ -31,6 +34,7 @@ includes 35 rejection tests, and confirms execution outside the Git checkout.
 | Location | Role |
 |---|---|
 | [prelim/](prelim/README.md) | Selected standalone reader/replay artifact |
+| [manuscript/](manuscript/README.md) | Preliminary TeX paper and compiled PDF; no historical reading dependencies |
 | [ROADMAP.md](ROADMAP.md) | Live milestone status and remaining order |
 | [paper/](paper) | Detailed reconstruction notes and frozen mathematical replay inputs |
 | [verification/](verification) | Component audits and source-specific reconstruction replays |

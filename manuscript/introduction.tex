@@ -1,0 +1,101 @@
+\section{Introduction}\label{sec:introduction}
+
+A numerical semigroup is a cofinite additive submonoid of
+\(\mathbb N=\{0,1,2,\ldots\}\). Its embedding dimension \(e\) is the
+cardinality of its minimal generating set, its multiplicity \(m\) is its
+least positive element, and its conductor \(c\) is the least integer such
+that \(c+\mathbb N\) is contained in the semigroup. Write
+\(n=|S\cap[0,c)|\). Its genus is \(g=|\mathbb N\setminus S|\),
+so \(n=c-g\). Wilf's question \cite{W} asks whether
+\[
+en\ge c
+\]
+for every numerical semigroup. Fr\"oberg, Gottlieb, and H\"aggkvist
+\cite{FGH} established the inequality in embedding dimension at most
+three. This paper addresses the next dimension.
+
+\begin{theorem}\label{thm:main}
+Every numerical semigroup with four minimal generators satisfies
+\[
+W_4(S):=4|S\cap[0,c)|-c\ge0.
+\]
+\end{theorem}
+
+This is a preliminary computer-assisted proof for independent mathematical
+review. All analytic arguments and finite predicates are stated in the
+paper. The accompanying verification packet contains the exact computations
+used to establish those predicates; no proof-assistant certification is
+claimed.
+
+\subsection{Foundational work}
+
+The proof starts from an established model, not a new representation of
+numerical semigroups. Zhai \cite{Z} selected preferred factorizations of
+Ap\'ery elements and proved a weighted mean inequality for finite lower
+ideals. Hellus, Rechenauer, and Waldi \cite{HRW} developed the monomial
+initial-ideal and residue-lattice interpretation, including restrictions
+on the supports of minimal exclusions. We give the short elementary
+arguments needed for our specialization, with attribution at the point
+of use. The classical Ap\'ery genus formula supplies the exact link from
+weighted moments to Wilf's inequality; see also \cite{Book}.
+
+Two published computer-assisted results dispose of multiplicities through
+19: Bruns, Garc\'ia-S\'anchez, O'Neill, and Wilburne
+\cite[Theorem~4.3]{B}, and Kliem and Stump
+\cite[Proposition~6.9, published version]{KS}. These are external inputs;
+we do not claim to reproduce their computations. Three-dimensional
+L-shapes were studied by Aguil\'o-Gost, Garc\'ia-S\'anchez, and Llena
+\cite{L}. Chomicz's relation-based construction \cite{C} supplies further
+geometric context, discussed in Section~\ref{sec:related}. The clique-tree
+ingredient in our geometric decomposition is classical \cite{G}; its
+needed finite form is proved here.
+
+\subsection{General approach}
+
+Write \(S=\langle m,a_1,a_2,a_3\rangle\), minimally. Choose one
+lexicographically preferred factorization of each Ap\'ery element by
+\(a_1,a_2,a_3\). Their exponent vectors form a lower ideal
+\(T\subseteq\mathbb N^3\) of cardinality \(m\), with labels distinct
+modulo \(m\). Set
+\[
+A=\min_i a_i,\qquad w_i=a_i/A,\qquad
+M=c+m-1,\qquad H=M/A,\qquad s=\sum_{x\in T}x.
+\]
+The genus formula gives
+\[
+mW_4(S)=A(3mH-4w\cdot s)-m(m-1).
+\]
+Thus the weighted mean baseline \(3mH-4w\cdot s\ge0\) does not suffice:
+the proof needs a positive surplus that pays for the correction term.
+
+We pursue this surplus through geometry and residue collisions. A minimal
+excluded vector and its representative have disjoint supports, so there
+is at most one minimal exclusion with all coordinates positive. An ideal
+without such an exclusion is a central anchored box with at most three
+monotone rectangular horns. An ideal with one is obtained from such a
+completion by deleting a single upper orthant. This decomposition makes
+additive extremal bounds accessible to finite, exact dynamic programming.
+
+For small multiplicity, an analytic reduction places every hypothetical
+counterexample inside an explicit bounded generator box. For large
+multiplicity, the degree of the possible positive corner and the degree
+of \(T\) give an exhaustive partition. The corner \((1,1,1)\) is handled
+by a counting and projection argument. Other cases use local centroid
+gains, axis witnesses, or interval domination of all real weights in a
+compact failure region. A finite degree strip also yields a continuous
+moment gap by averaging translated lattice meshes.
+
+The weakest retained conclusion is
+\(3mH-4w\cdot s\ge m-29/10\) for the branches not already settled
+directly. Integrality matters: a negative Wilf number is at most \(-1\),
+not merely a negative real number. For \(m\ge30\), this turns the weakest
+surplus into a contradiction.
+
+\subsection{Organization}
+
+Section~\ref{sec:proof} gives the proof and its seven finite assertions.
+Section~\ref{sec:analytic} supplies three longer analytic arguments integral
+to that proof. Section~\ref{sec:verification} specifies the computational
+artifact and its checks. The final two mathematical sections discuss
+extensions beyond four generators and related work. We conclude with an
+account of how the proof was constructed using AI and exact computation.

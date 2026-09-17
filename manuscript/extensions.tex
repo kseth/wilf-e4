@@ -1,0 +1,113 @@
+\section{Extensions to embedding dimension greater than four}
+\label{sec:extensions}
+
+The Ap\'ery framework extends to all embedding dimensions. The geometric
+surplus argument does not presently do so. We separate these two facts:
+this section gives identities and a conditional transfer principle, but
+does not claim Wilf's conjecture for any unrestricted \(e>4\).
+
+\subsection{Dimension-independent moment and collision identities}
+
+Let \(e=d+1\), \(S=\langle m,a_1,\ldots,a_d\rangle\), and define
+\(A,w,H,T,s\) as before, with \(T\subseteq\mathbb N^d\). Preferred
+factorizations again give \(|T|=m\), lower closure, and distinct residues.
+For the indexed family of coordinate lines, the same progression sums give
+\[
+\sum_\ell L_\ell=dm,\qquad
+\sum_\ell L_\ell t_\ell=(d+1)s.
+\]
+Consequently Zhai's weighted downset baseline \cite{Z} reads
+\[
+D_e:=dmH-(d+1)w\cdot s\ge0.
+\]
+The genus formula and \(W_e=en-c=(e-1)c-eg\) give the exact identity
+\begin{equation}\label{eq:extension-moment}
+mW_e=A D_e-\frac{e-2}{2}\,m(m-1).
+\end{equation}
+The factor \(m(m-1)\) makes the correction integral even when its
+coefficient is a half-integer.
+
+The predecessor-subtraction collision proof also remains valid. A minimal
+excluded point has support disjoint from that of its representative; two
+distinct minimal exclusions with intersecting support have distinct
+residues. In particular there is still at most one full-support corner,
+with representative zero. Unlike in three exponent coordinates, the
+remaining corners can have support three or more.
+
+Finally, if nonnegative masses on \(T\) have total \(dm\) and moment
+\((d+1)s+\beta\), with \(\beta\ge0\), their destinations have weight
+at most \(H\), and \(w_i\ge1\), then
+\[
+D_e=\sum_x\alpha_x(H-w\cdot x)+w\cdot\beta\ge|\beta|_1.
+\]
+Thus the local centroid mechanism extends. What is missing is a uniform
+surplus of the required size for every relevant ideal.
+
+\subsection{A conditional mesh-transfer principle}
+
+The translated-mesh argument has a useful dimension-independent form.
+Let \(K\) be a measurable positive-volume downset in the unit simplex.
+Choose an integer \(N>d\), put \(h=1/N\), and define
+\(T_z=\{y\in\mathbb N^d:z+hy\in K\}\).
+Suppose that, for almost every \(z\in[0,h)^d\), this induced discrete
+ideal satisfies
+\[
+d r_z|T_z|-(d+1)\sum_{y\in T_z}|y|_1\ge\alpha|T_z|,
+\qquad
+r_z=\left\lfloor\frac{1-|z|_1}{h}\right\rfloor.
+\]
+Only allowances \(N-d,\ldots,N-1\) occur almost everywhere. Writing
+\(\epsilon_z=1-|z|_1-hr_z\), the integrand expands as
+\[
+\begin{aligned}
+\sum_{y\in T_z}\bigl(d-(d+1)|z+hy|_1\bigr)
+&=hD_{r_z}(T_z)+(d\epsilon_z-|z|_1)|T_z|\\
+&\ge(\alpha h-|z|_1)|T_z|.
+\end{aligned}
+\]
+After integrating, each coordinate remainder has mean at most \(h/2\)
+by the interval-fiber calculation in Section~\ref{sec:p11}. Hence
+\begin{equation}\label{eq:extension-mesh}
+d-(d+1)\mathbb E_K|X|_1
+\ge\left(\alpha-\frac d2\right)\frac1N.
+\end{equation}
+Our strip transfer is \(d=3\), \(N=21\), \(\alpha=4\), giving \(5/42\).
+In higher dimension this is a conditional tool: the required finite
+inequality and an exhaustive way to check it have not been established
+here. A positive gap needs \(\alpha>d/2\).
+
+\subsection{Why the three-horn decomposition does not extend directly}
+
+The compatibility graph is chordal in three coordinate classes because
+an induced cycle of length at least four repeats a class. With four
+classes, that argument fails, and the failure is real.
+
+Consider the finite lower ideal in \(\mathbb N^4\)
+\[
+U=\{x\in\{0,1\}^4:x_1x_3=0,\ x_2x_4=0\}.
+\]
+Its minimal exclusions are \(2e_i\) for \(1\le i\le4\), and
+\(e_1+e_3,e_2+e_4\). None has full support. The compatibility graph
+on the four positive axis levels has the induced cycle
+\[
+(1,1)\;\text{---}\;(2,1)\;\text{---}\;(3,1)\;\text{---}\;(4,1)\;\text{---}\;(1,1),
+\]
+whose two diagonals are absent.
+
+More directly, no central box \([0,c]\), \(c\in U\), together with
+four horns restricted to exceeding only one central coordinate can
+cover \(U\). The support of \(c\) is empty, a singleton, or an adjacent
+pair of this cycle. In every case there is an adjacent pair disjoint
+from that support. Its vector \(e_i+e_j\) lies in \(U\), exceeds two
+central caps, and belongs to neither the central box nor any such horn.
+
+This is an obstruction for arbitrary lower ideals, not an assertion
+that \(U\) admits an Ap\'ery labeling. A higher-dimensional proof might
+exploit additional arithmetic restrictions or replace the decomposition
+with a richer structural model. The current three-horn recurrence cannot
+simply be reused with more axes.
+
+Known dimension-independent results still cover substantial regions,
+including \(3e\ge m\) \cite{Graph}, \(c\le3m\) \cite{Macaulay}, and
+\(t\le e-1\), where \(t\) is the type \cite{FGH}. They do not supply
+the missing uniform geometric surplus for a fixed \(e>4\).

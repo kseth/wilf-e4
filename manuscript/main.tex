@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+  pdftitle={Wilf's inequality for numerical semigroups with four generators},
+  pdfauthor={Karthik Sethuraman}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\Beta}{\mathrm{B}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{finitelemma}[theorem]{Finite lemma}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\allowdisplaybreaks[2]
+\setcounter{tocdepth}{2}
+\title{Wilf's inequality for numerical semigroups\\with four generators}
+\author{Karthik Sethuraman}
+\date{Preliminary draft --- September 17, 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We present a computer-assisted argument for Wilf's inequality for numerical
+semigroups with four minimal generators. Preferred factorizations of an
+Ap\'ery set give a finite lower ideal in three exponent coordinates. We
+seek a quantitative surplus over the weighted downset mean inequality,
+large enough to absorb the exact correction in the Ap\'ery genus formula.
+Residue collisions allow at most one full-support minimal exclusion.
+We separate the resulting geometric cases, prove a central-box/three-horn
+decomposition, and combine analytic moment inequalities with seven exact
+finite assertions. The three-plane case is entirely analytic. Each retained
+finite assertion is checked by two separate implementations; interval
+certificates cover closed real parameter regions rather than sampled grids.
+We also identify dimension-independent identities and a geometric obstruction
+to directly extending the three-horn method beyond four generators.
+\end{abstract}
+
+\input{introduction}
+\tableofcontents
+\input{proof}
+\input{analytic}
+\input{verification}
+\input{extensions}
+\input{related}
+\input{construction}
+\bibliographystyle{alpha}
+\bibliography{references}
+\end{document}
