@@ -8,8 +8,9 @@ compiling it requires no historical manuscript or research notes.
 Start with [the PDF](wilf-four-generators.pdf) or [main.tex](main.tex).
 The mathematical sections conclude with extensions to embedding dimension
 greater than four and related work. A construction-history section follows,
-covering the initial GPT-6 Astra iterations, reconstruction, attribution,
-and exact computer aids. There is no separate responsibility section.
+covering the initial GPT-6 Astra iterations, subsequent reconstruction
+with GPT-5.6 Sol via Codex, attribution, and exact computer aids. There
+is no separate responsibility section.
 
 Build locally with `make pdf` from this directory, using a standard TeX
 installation with `latexmk`, pdfLaTeX, and BibTeX. No shell escape or downloaded

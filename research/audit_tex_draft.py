@@ -74,6 +74,8 @@ require("artifacts/" not in all_tex and "../paper/" not in all_tex,
 require(not re.search(r"\\(?:sub)*section\{[^}]*responsibility", all_tex, re.I),
         "a separate responsibility section appeared")
 require("GPT-6 Astra" in read("construction.tex"), "initial AI history missing")
+require("GPT-5.6 Sol" in read("construction.tex") and
+        "via Codex" in read("construction.tex"), "reconstruction AI history missing")
 
 labels = re.findall(r"\\label\{([^}]+)\}", all_tex)
 require(len(labels) == len(set(labels)), "duplicate TeX labels")
