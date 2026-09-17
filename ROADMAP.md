@@ -98,6 +98,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B5.2 | Two-direction surface injection, including all nonempty slices | [Residual degree-six note](paper/residual-degree-six.md#2-b52-two-direction-surface-injection) |
 | B5.3 | Local-interface reuse and exact axis-witness soundness, with sign conditions | [Residual degree-six note](paper/residual-degree-six.md#3-b53-local-and-axis-soundness) |
 | B5.4 | Exhaustive degree-six profiles, corner orientation, filters, B5-FV contract, and integer bounds | [Residual degree-six note](paper/residual-degree-six.md#4-b54-exhaustive-finite-profiles) |
+| D5 | Retain exhaustive geometric profiles with two closed-form predicates; no saved fallback or LP data | [Decision](research/b5-simplification-decision.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -231,7 +232,6 @@ final code design.
 
 | ID | Type | Question | Depends on | Fallback |
 |---|---|---|---|---|
-| D5 | [D] | Can residue compatibility prove \(U_2(T)\ge m\) for genuine B5 shapes? | CHO, B5.1--B5.4 | Retain local-or-axis enumeration and \(G\) |
 | D6 | [D] | Can a direct weighted argument remove the B6 strip or interval tree? | B6.1--B6.4 | Retain both exact B6 computations |
 
 D1 is complete and retains B1.3-FV with both independent checking paths. D2
@@ -387,8 +387,8 @@ two AI-assisted checking paths are not two independent human reviews.
 
 ## Current ready queue
 
-The topologically available tasks are D5 and B6.1.
-The next task is **D5, the bounded residual-degree-six simplification gate**.
+The topologically available tasks are R5 and B6.1.
+The next task is **R5, independent complete degree-six profile checks**.
 The active request then continues through D5,
 retained R5, B6, and synthesis to a standalone PRELIM package.
 
