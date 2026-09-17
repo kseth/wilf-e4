@@ -778,145 +778,50 @@ from the full-weighted classification which produces the six-point shape.
 \end{remark}
 \subsubsection{The remaining projection scores}
 
-Let
+By Section~\ref{sec:p3}, it suffices to prove \(\Phi(T,K)\ge0\), where
+\(K=\operatorname{Max}(T)\). The two remaining projections admit one
+calculation.
 
-\[
-Z=\{x\in T:M-\lambda(x)<m\},
-\qquad
-K=\operatorname{Max}(T),
-\]
-
-and use the notation
-
-\[
-P(T)=\sum_{j=1}^3|\pi_j(T)|,
-\qquad
-E(X)=\sum_{x\in X}|x|_1-\sum_{j=1}^3\max_{x\in X}x_j,
-\]
-
-\[
-\Phi(T,X)=P(T)-3|X|-E(X)
-\]
-
-from Section~\ref{sec:p3}. That section proves \(E(Z)\ge0\), \(Z\subseteq K\),
-and
-
-\begin{equation}
-mW_4(S)\ge m\Phi(T,Z)+E(Z).
-\label{eq:b:18}
-\end{equation}
-
-For nonempty \(X\subseteq K\), adding points to \(X\) cannot decrease
-\(|X|\), and it cannot decrease \(E(X)\): in each coordinate the increase
-in the coordinate sum is at least the increase in the coordinate maximum.
-Hence
-
-\begin{equation}
-\Phi(T,Z)\ge\Phi(T,K).
-\label{eq:b:19}
-\end{equation}
-
-We now calculate the right side for the only two remaining projections.
-
-\begin{lemma}[Three columns]\label{lemma:b:4.1}
-
-If \(Q=Q_3\), then \(\Phi(T,K)\ge0\).
-
+\begin{lemma}[Three- and four-column projections]\label{lemma:b:4.1}
+If \(Q=Q_k\), \(k\in\{3,4\}\), then \(\Phi(T,K)\ge0\).
 \end{lemma}
 \begin{proof}
+Let \(\alpha\) be the origin-column length, and index the other lengths
+in the order displayed in \eqref{eq:b:3}. Since \(b,d>a\), the lengths
+decrease strictly along each axis of the projection:
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}lYY@{}}
+\toprule
+Projection & Column lengths & Strict descents \\
+\midrule
+\(Q_3\) & \(\alpha,\beta,\gamma\) & \(\alpha>\beta,\gamma\ge1\) \\
+\(Q_4\) & \(\alpha,\beta,\gamma,\delta\) &
+\(\alpha>\beta>\gamma\ge1,\ \alpha>\delta\ge1\) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+These descents imply \(\alpha\ge k-1\) and make the column tops pairwise
+incomparable, so they are precisely \(K\).
 
-Write the column lengths over \((0,0),(1,0),(0,1)\) as
-\(\alpha,\beta,\gamma\). Then
-
+Every non-origin column lies on exactly one axis of the projection. The
+two projections retaining the column direction therefore count each
+column once and the origin column twice. Hence
 \begin{equation}
-\alpha>\beta,\gamma\ge1,
-\qquad
-m=\alpha+\beta+\gamma.
+|K|=k,\qquad P(T)=k+\alpha+m.
 \label{eq:b:20}
 \end{equation}
-
-The three column tops are pairwise incomparable and every other point is
-below one of them, so they are precisely \(K\). Direct projection counting
-gives
-
+For these two shapes the sum of the projected total degrees is
+\(2k-4\), and the sum of their coordinate maxima is \(k-1\). Thus
+\[
+\sum_{x\in K}|x|_1=m+k-4,\qquad
+\sum_j\max_{x\in K}x_j=\alpha+k-2.
+\]
+It follows that
 \begin{equation}
-P(T)=3+(\alpha+\gamma)+(\alpha+\beta)
-=3+\alpha+m.
+E(K)=m-\alpha-2,\qquad
+\Phi(T,K)=2(\alpha-k+1)\ge0.
 \label{eq:b:21}
 \end{equation}
-
-The sum of the total degrees of the three tops is \(m-1\), while their
-coordinatewise maxima sum to \((\alpha-1)+1+1=\alpha+1\). Therefore
-
-\[
-E(K)=m-\alpha-2
-\]
-
-and
-
-\begin{equation}
-\Phi(T,K)
-=(3+\alpha+m)-9-(m-\alpha-2)
-=2\alpha-4\ge0,
-\label{eq:b:22}
-\end{equation}
-
-because \(\alpha>\beta\ge1\) implies \(\alpha\ge2\).
-\end{proof}
-
-\begin{lemma}[Four columns]\label{lemma:b:4.2}
-
-If \(Q=Q_4\), then \(\Phi(T,K)\ge0\).
-
-\end{lemma}
-\begin{proof}
-
-Write the column lengths over \((0,0),(1,0),(2,0),(0,1)\) as
-\(\alpha,\beta,\gamma,\delta\). Then
-
-\begin{equation}
-\alpha>\beta>\gamma\ge1,
-\qquad
-\alpha>\delta\ge1,
-\qquad
-m=\alpha+\beta+\gamma+\delta.
-\label{eq:b:23}
-\end{equation}
-
-Again, the four column tops are precisely \(K\). The projections have sizes
-
-\[
-4,
-\qquad
-\alpha+\delta,
-\qquad
-\alpha+\beta+\gamma,
-\]
-
-so
-
-\begin{equation}
-P(T)=4+\alpha+m.
-\label{eq:b:24}
-\end{equation}
-
-The total degrees of the four tops sum to \(m\), and their coordinatewise
-maxima sum to \((\alpha-1)+2+1=\alpha+2\). Thus
-
-\[
-E(K)=m-\alpha-2
-\]
-
-and
-
-\begin{equation}
-\Phi(T,K)
-=(4+\alpha+m)-12-(m-\alpha-2)
-=2\alpha-6\ge0,
-\label{eq:b:25}
-\end{equation}
-
-because \(\alpha>\beta>\gamma\ge1\) implies \(\alpha\ge3\).
 \end{proof}
 
 \subsubsection{Proof of the full-weighted theorem}
@@ -924,9 +829,9 @@ because \(\alpha>\beta>\gamma\ge1\) implies \(\alpha\ge3\).
 \begin{proof}[Proof of Theorem~\ref{theorem:b:1.1}]
 
 Lemma~\ref{lemma:b:2.1} lists the three possible \(x\)-column projections. Lemma~\ref{lemma:b:3.1}
-excludes the six-column triangle, and Lemmas~\ref{lemma:b:4.1}--\ref{lemma:b:4.2} give
-\(\Phi(T,K)\ge0\) in the remaining cases. Equation \eqref{eq:b:19} therefore gives
-\(\Phi(T,Z)\ge0\), and \eqref{eq:b:18} proves \(W_4(S)\ge0\).
+excludes the six-column triangle, and Lemma~\ref{lemma:b:4.1} gives
+\(\Phi(T,K)\ge0\) in the remaining cases. The projection inequality
+\eqref{eq:p:6} proves \(W_4(S)\ge0\).
 
 No finite verification is used.
 \end{proof}

@@ -39,7 +39,7 @@ not by replaying the superseded shape/modular route.
 | PRELIM | Internally complete; ready for private specialist review | Standalone proof, analytic appendices, comprehensive finite contracts, minimal inventory, and [complete evidence](prelim/replay.json) |
 | T1 | Initial TeX/PDF draft complete | Requested section order; all selected analytic proofs; seven finite assertions; primary-source bibliography; construction history |
 | T2 | PASS; editorial regression and build checks | Unchanged expressions compared against PRELIM; approved consolidations recorded explicitly; implementation arithmetic envelopes remain in PRELIM; all labels resolve; 15 cited sources; warning-free PDF; source-only cold build to be repeated after tightening |
-| T3 | All six edits authorized; T3.1--T3.2 complete; T3.3--T3.5 next | One generic horn recurrence replaces the interval/strip repetitions; projection and cutoff consolidation next |
+| T3 | T3.1--T3.3 complete; T3.4--T3.5 next | One horn recurrence; one calculation for the classified three-/four-column projections; height-cutoff consolidation next |
 
 The author has authorized a preliminary TeX/PDF draft before FREEZE, in a
 separate directory. This supersedes the earlier drafting order but does not
@@ -61,7 +61,7 @@ PRELIM and all computational contracts remain unchanged.
 |---|---|---|
 | T3.1 | Complete: attribution consolidated; implementation details and repeated checking prose cleaned up | Keep introductory orientation, citations at point of use, and exact finite-family coverage |
 | T3.2 | Complete: one generic nested-horn recurrence, instantiated for intervals and the strip | Preserve retained-point feasibility, termination, central-box enumeration, and every threshold |
-| T3.3 | Reuse the projection inequality; merge the three-/four-column calculations in the full-weighted proof | Restrict the shared calculation to the two classified projections; retain the six-column residue obstruction |
+| T3.3 | Complete: projection inequality reused; three-/four-column calculations merged | Restrict the shared calculation to the two classified projections; retain the six-column residue obstruction |
 | T3.4 | Prove one height-cutoff lemma for moment bounds of the form \(D_0/m\ge\alpha H-\beta B\) | State \(H>3\), \(D_0<m\), \(\alpha>0\), \(0\le\beta\le3\); retain closed roots 24, 42, and 78 |
 | T3.5 | Break the long one-slab argument into named steps and consider one geometric illustration | Retain all boundary, jump-merging, and polynomial nonnegativity arguments; clarity takes precedence over page count |
 

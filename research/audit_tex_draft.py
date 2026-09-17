@@ -3,6 +3,7 @@
 Run after `make pdf` in manuscript/. Requires Poppler's pdftotext.
 The proof spine and analytic mathematics are compared. Implementation
 arithmetic envelopes remain in PRELIM rather than the revised manuscript.
+Approved rewritten mathematics has explicit regression snapshots below.
 This does not verify deductions or establish any computational premise.
 """
 from pathlib import Path
@@ -54,6 +55,38 @@ def without_tagged_displays(source, tags):
     return source
 
 
+def replace_span(source, start, end, replacement):
+    require(source.count(start) == 1 and source.count(end) == 1,
+            "approved rewrite boundaries are missing or ambiguous")
+    left, right = source.index(start), source.index(end)
+    require(left < right, "approved rewrite boundaries are reversed")
+    return source[:left] + replacement + source[right:]
+
+
+# These formulas replace only Appendix B.4--B.5's repeated definitions and
+# parallel calculations. The six-column obstruction remains source-matched.
+PROJECTION_MATH = r"""
+\(\Phi(T,K)\ge0\) \(K=\operatorname{Max}(T)\)
+\(Q=Q_k\) \(k\in\{3,4\}\) \(\Phi(T,K)\ge0\)
+\(\alpha\) \(b,d>a\)
+\(Q_3\) \(\alpha,\beta,\gamma\) \(\alpha>\beta,\gamma\ge1\)
+\(Q_4\) \(\alpha,\beta,\gamma,\delta\)
+\(\alpha>\beta>\gamma\ge1,\ \alpha>\delta\ge1\)
+\(\alpha\ge k-1\) \(K\)
+\[|K|=k,\qquad P(T)=k+\alpha+m.\]
+\(2k-4\) \(k-1\)
+\[
+\sum_{x\in K}|x|_1=m+k-4,\qquad
+\sum_j\max_{x\in K}x_j=\alpha+k-2.
+\]
+\[
+E(K)=m-\alpha-2,\qquad
+\Phi(T,K)=2(\alpha-k+1)\ge0.
+\]
+\(x\) \(\Phi(T,K)\ge0\) \(W_4(S)\ge0\)
+"""
+
+
 spine = (ROOT / "prelim/proof.md").read_text(encoding="utf-8")
 spine = spine[spine.index("## 1. "):
               spine.index("All finite predicates are exact integer comparisons.")]
@@ -65,6 +98,8 @@ b = analytic.index("## Appendix B:")
 c = analytic.index("## Appendix C:")
 # The only mathematical notation change in the import is local w(x) -> lambda(x).
 analytic = analytic[:b] + analytic[b:c].replace("w(", r"\lambda(") + analytic[c:]
+analytic = replace_span(analytic, "### B.4. The remaining projection scores",
+                        "## Appendix C:", PROJECTION_MATH)
 
 # The overflow envelopes are implementation documentation, not part of the
 # selected mathematical proof. They are preserved in the frozen packet.
@@ -76,7 +111,11 @@ for name, (original, tex) in selected.items():
     for display in (True, False):
         expected, actual = expressions(original, display), expressions(tex, display)
         kind = "displays" if display else "inline"
-        require(expected == actual, f"{name} {kind} differ from selected PRELIM")
+        if expected != actual:
+            first = next((i for i, pair in enumerate(zip(expected, actual))
+                          if pair[0] != pair[1]), min(len(expected), len(actual)))
+            require(False, f"{name} {kind} differ at expression {first}: "
+                    f"expected {expected[first:first+1]}, got {actual[first:first+1]}")
         fidelity[name][kind] = len(actual)
 
 main = read("main.tex")
