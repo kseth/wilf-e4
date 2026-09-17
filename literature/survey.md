@@ -3,7 +3,7 @@
 **Status:** working research record, not a priority or completeness claim
 
 **Search dates:** broad survey 2026-09-11; focused reduction refresh 2026-09-12;
-structural-source check 2026-09-14
+structural-source check 2026-09-14; selected-proof refresh 2026-09-17
 
 **Scope:** Wilf's conjecture, with emphasis on results that either dispose of
 cases in embedding dimension four or supply machinery used by the proposed
@@ -392,12 +392,44 @@ the conjecture.”
 
 ## 10. Search method and known limitations
 
+### Selected-proof refresh, 2026-09-17 (L3)
+
+The final selected route was compared with fresh primary-source searches
+for Wilf in embedding dimension four, four generators, weighted lower
+ideals, central boxes/horns, and the finite-to-continuous constant \(5/42\).
+No earlier uniform four-generator proof or directly matching horn/surplus
+statement was located. This is a bounded negative search result, not a
+priority certification.
+
+The refreshed source versions are Zhai's original preprint,
+Hellus--Rechenauer--Waldi v2, Chomicz's L-shape v3 and type/presentation v1,
+Marashdeh v1, and Delgado--Kumar--Marion v2.
+The inherited Apéry, weighted-moment, support, and clique-tree ingredients
+remain explicitly attributed.[^zhai][^hrw][^chomicz][^chomicz-type][^marashdeh][^maximum-primitive][^gavril]
+Published Bruns Theorem 4.3 and Kliem--Stump Proposition 6.9 remain the
+only selected external computational premise.[^bruns][^kliem]
+The first-layer results still lie below the retained hard multiplicity
+range; the unreviewed first-Kunz-layer preprint is not used as a theorem
+input.[^first-layer]
+
+One additional 2026 primary source, Hellus--Hübl--Rechenauer, concerns
+semigroups whose largest minimal generator equals \(2g+1\) and related
+families. Its stated special-family scope supplies no demonstrated uniform
+replacement for this route.[^largest-generator]
+No new skip rule is inferred from that abstract.
+The standalone preliminary proof retains only references relevant to its
+chosen argument; this broader survey remains a research record, not an
+extra reader dependency.
+
+### Earlier search coverage and remaining limitations
+
 The search combined backward references from Delgado's survey and recent Wilf
 papers with forward searches for “Wilf conjecture,” “embedding dimension
 four,” “four generators,” “Apéry set,” “Kunz,” “lower ideal,” “divset,” and
 formal verification. Journal pages, DOI records, arXiv abstracts/full text,
 and author-hosted manuscripts were preferred over secondary summaries. Recent
-searches included arXiv and web-indexed publications through 2026-09-11.
+searches included arXiv and web-indexed publications through 2026-09-11,
+with the focused refreshes dated above.
 
 Limitations remain. MathSciNet and zbMATH citation graphs were not exhaustively
 audited; not every paywalled paper was read line by line; and very recent or
@@ -538,3 +570,7 @@ against final pagination when the bibliography is converted to BibTeX.
 [^fel]: Evan Chen et al., “Fel's Conjecture on Syzygies of Numerical
     Semigroups,” [arXiv:2602.03716](https://arxiv.org/abs/2602.03716), 2026;
     accompanying [Lean repository](https://github.com/AxiomMath/fel-polynomial).
+
+[^largest-generator]: Michael Hellus, Reinhold Hübl, and Anton Rechenauer,
+    “Numerical semigroups with \(a_e=2g+1\),”
+    [arXiv:2604.21948](https://arxiv.org/abs/2604.21948), version 1, 2026.
