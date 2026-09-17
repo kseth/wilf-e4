@@ -123,3 +123,95 @@ The exact axis test uses no rational arithmetic at runtime. With
 G\ge m\quad\Longleftrightarrow\quad
 q_*\left(3md-4\sum_i s_i\prod_{j\ne i}q_j\right)\ge md.
 \]
+
+## 4. B5.4: exhaustive finite profiles
+
+Sort the positive coordinates of \(p\) by a simultaneous permutation of
+coordinates and weights. The canonical corners are
+\[
+\begin{split}
+&(1,1,3),(1,2,2),(1,1,4),(1,2,3),(2,2,2),\\
+&(1,1,5),(1,2,4),(1,3,3),(2,2,3).
+\end{split}
+\]
+There is no ordering requirement on the weights: the conclusion of Section 3
+is symmetric and quantifies over every real \(w_i\ge1\).
+
+A plane profile is \(f=(f_0,\ldots,f_6)\) with
+\[
+0\le f_x\le7-x,\qquad f_0\ge f_1\ge\cdots\ge f_6,
+\]
+encoding \(\{(x,y):0\le y<f_x\}\).
+Let \(\ell(f)\) count the positive columns. Its mixed corners are exactly
+\((x,f_x)\) at the strict drops \(1\le x<\ell(f)\).
+For the \(ij\)-plane retain profiles with
+\[
+f_{p_i}\ge p_j+1,\qquad
+\#\{x:1\le x<\ell(f),\ f_x<f_{x-1}\}\le P-2.
+\]
+The required entry includes the projection of \(p-e_k\).
+
+For \(xy,xz,yz\) profiles \(f,g,h\), impose
+\[
+\ell(f)=\ell(g),\quad f_0=\ell(h),\quad g_0=h_0,
+\]
+and reconstruct
+\[
+T=\{(x,y,z):y<f_x,\ z<g_x,\ z<h_y,\ (x,y,z)\not\ge p\}.
+\]
+All coordinates are in \(\{0,\ldots,6\}\).
+Retain exactly triples for which every reconstructed point has degree at
+most six, \(|T|\ge30\), and the three surface bounds of Section 2 hold.
+No other filter is selected.
+
+### Coverage and uniqueness
+
+The reconstruction has exactly the three input plane sections: matching
+axes ensure that the other pair tests include every point in each
+specified plane, and the positive \(p\)-orthant does not meet that plane.
+The required entries and monotonicity include every \(p-e_i\); hence
+\(p\) is a minimal exclusion. An excluded point violating a pair test
+cannot be a full-support minimal exclusion. Every other excluded point
+dominates \(p\). Thus \(p\) is its sole full-support corner.
+
+Conversely, take any genuine B5 ideal after orienting \(p\).
+Its sections are the displayed profiles by the degree bound and Section 1.
+They have matching axes. If reconstruction added a point outside the
+ideal, that point would dominate a minimal exclusion other than \(p\).
+Such an exclusion lies in a plane, contradicting the corresponding pair
+test. Therefore reconstruction recovers the genuine ideal exactly.
+Sections 1--2 prove that it survives every selected filter.
+Each oriented ideal determines one ordered profile triple.
+
+Enumeration can recursively choose bounded nonincreasing entries.
+A different exhaustive representation chooses seven distinct integers
+\(13\ge t_0>\cdots>t_6\ge0\), and sets
+\[
+f_i=t_i-6+i.
+\]
+This is a bijection with nonincreasing seven-row profiles in a \(7\times7\)
+box: conversely \(t_i=f_i+6-i\) are strictly descending and in the stated
+range. Applying \(f_i\le7-i\) imposes the degree-six planar cap.
+Empty profiles cannot satisfy the required entry.
+Shared-axis indexing removes only incompatible triples.
+All generation is finite, with at most \(1430^3\) triples per corner.
+
+### The finite obligation
+
+> **B5-FV.** For every reconstructed ideal in the family above,
+> \[
+> \boxed{\max\{U_2(T),G(T)\}\ge |T|.}
+> \]
+
+Exact checking can use the scalar local gain and the denominator-cleared
+axis inequality of Section 3. That section proves soundness for all real
+weights and allowances; the coverage theorem transfers B5-FV to every
+genuine B5 ideal. This is a specification, not yet an established finite lemma.
+
+Since \(T\subseteq\Delta_6\), \(m\le84\), \(s_i\le504\), and \(1\le q_i\le6\).
+All local values, axis numerators and rational-margin cross products fit
+below \(2^{30}\) in absolute value. Counts over the crude nine-corner
+generation bound fit below \(2^{35}\). Require signed value types with at
+least 63 value bits and unsigned counters with at least 64 bits.
+Only diagnostic checksums may use defined unsigned modular overflow.
+No floating-point arithmetic or negative-infinity sentinel is needed.
