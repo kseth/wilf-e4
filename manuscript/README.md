@@ -35,11 +35,12 @@ This is an initial manuscript, not a final reviewed release.
 
 ## Draft checks
 
-The editorial comparison preserves the proof-spine and analytic expressions
-from PRELIM, apart from numbering and the local full-weighted label notation.
+The editorial comparison checks unchanged proof-spine and analytic expressions
+against PRELIM, with approved mathematical consolidations recorded explicitly
+in the audit. Numbering and the local full-weighted label notation differ.
 Implementation overflow envelopes are intentionally not repeated in the
 paper; they remain in the frozen packet. The converged 37-page build has no
-warnings, its 153 labels resolve, and all 15 bibliography entries are cited.
+warnings, all cross-references resolve, and all 15 bibliography entries are cited.
 A cold build from just the ten required source/build files outside the
 checkout produces identical rendered text, without PRELIM, Git, or
 historical files present.

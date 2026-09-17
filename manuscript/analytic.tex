@@ -341,7 +341,9 @@ for an upper-bound certificate. In particular, if no point of \(U\) dominates
 \(p\), the clipping is inactive and the representation includes the
 no-full-corner case.
 
-\subsubsection{Exact recurrence interface}
+\subsubsection{The nested-horn recurrence}
+
+\begin{lemma}[Nested-horn recurrence]\label{lemma:horn-recurrence}
 
 Fix an outward coordinate \(i\), a first level \(t_0=c_i+1\), and central
 transverse caps \(b_0=c_j\), \(d_0=c_k\). Suppose a problem assigns an
@@ -362,13 +364,19 @@ F_i(t,b,d)=\max\left\{
 \label{eq:a:14}
 \end{equation}
 
-A terminal level beyond the allowed axis range has value zero. The zero
-option terminates the horn. Every nonempty uncut section contains its axis
+A terminal level beyond the allowed axis range has value zero.
+\end{lemma}
+\begin{proof}
+
+The terminal value is the induction base case. The zero option terminates
+the horn. Every nonempty uncut section contains its axis
 point, which survives clipping because \(p\) is positive; lower closure then
 forbids a later nonempty section after termination. Every other choice in
 \eqref{eq:a:14} selects the current rectangle and passes exactly its caps to the next
 level. Induction on the remaining number of levels proves that \eqref{eq:a:14} covers
-every nested horn and only such sequences.
+every feasible nested horn and only such sequences. There are finitely many
+levels and cap choices, so backward evaluation terminates.
+\end{proof}
 
 Equivalently, a prefix-maximum implementation may compare the state
 \((b,d)\) with \((b-1,d)\) and \((b,d-1)\), because every proper

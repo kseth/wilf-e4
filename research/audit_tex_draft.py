@@ -37,10 +37,29 @@ def expressions(text, display):
             for v in values]
 
 
+def without_tagged_displays(source, tags):
+    """Remove only explicitly approved duplicated PRELIM derivations."""
+    removed = {tag: 0 for tag in tags}
+
+    def replace(match):
+        for tag in tags:
+            if r"\tag{" + tag + "}" in match.group(1):
+                removed[tag] += 1
+                return ""
+        return match.group(0)
+
+    source = re.sub(r"\\\[(.*?)\\\]", replace, source, flags=re.S)
+    require(all(count == 1 for count in removed.values()),
+            "an approved duplicated display is missing or repeated")
+    return source
+
+
 spine = (ROOT / "prelim/proof.md").read_text(encoding="utf-8")
 spine = spine[spine.index("## 1. "):
               spine.index("All finite predicates are exact integer comparisons.")]
 spine = re.sub(r"^> ?", "", spine, flags=re.M)
+# The interval and strip displays now cite the one recurrence in Appendix A.
+spine = without_tagged_displays(spine, {"14", "23"})
 analytic = (ROOT / "prelim/analytic-details.md").read_text(encoding="utf-8")
 b = analytic.index("## Appendix B:")
 c = analytic.index("## Appendix C:")

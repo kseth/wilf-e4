@@ -309,17 +309,8 @@ Without clipping use the full box and its upper-corner height.
 Let \(C_i(t,r,s)\) be the exact section score, and call it feasible
 when its retained maximum height is at most \(Q_1\).
 For a possibly empty nested horn use
-\begin{equation}
-F_i(N_i+1;R,S)=0,\qquad
-F_i(t;R,S)=
-\max\left(0,\max_{\substack{r\le R,\ s\le S\\\text{section feasible}}}
-\{C_i(t,r,s)+F_i(t+1;r,s)\}\right).
-\label{eq:p:14}
-\end{equation}
-The zero option terminates the horn; its unchanged axis prevents restarting.
-Backward induction proves coverage. The inner maximum may be evaluated
-directly or by monotone prefixes, since every proper subrectangle decreases
-at least one cap. Enumerate every feasible retained central box and add
+Lemma~\ref{lemma:horn-recurrence}, terminating beyond its axis cap.
+Enumerate every feasible retained central box and add
 its score to \(\sum_iF_i(z_i+1;z_j,z_k)\).
 The structural theorem then proves an upper bound \(V_p(L,V)\) on \eqref{eq:p:12}.
 Independent horns may enlarge the class; they never decrease its upper bound.
@@ -712,21 +703,13 @@ Apply the decomposition of Section~\ref{sec:analytic-a}, clipped by \(p'\), to t
 \(f_r(x)=4|x|_1+4-3r\). All center and transverse caps range from zero
 to \(r\). A section or center is feasible when its \textbf{retained}
 maximum degree is at most \(r\), not when its removed upper corner is.
-For each axis use the exact recurrence
-\begin{equation}
-F_i(r+1;b,d)=0,\qquad
-F_i(t;b,d)=\max\left(0,
- \max_{\substack{u\le b,\ v\le d\\
-                  A_i(t,u,v)\ \mathrm{feasible}}}
- \left\{\sum_{A_i(t,u,v)}f_r+F_i(t+1;u,v)\right\}\right).
-\label{eq:p:23}
-\end{equation}
+Apply Lemma~\ref{lemma:horn-recurrence} with the section sum of this
+score, retained-degree feasibility, and termination beyond the degree
+allowance.
 The maximum of center score plus its three horn bounds is an upper bound
 for \(\sum_{T'}f_r=4|T'|-D_r(T')\). Every configuration must have this
 bound at most zero. This is a search over corner/allowance configurations
 and exact dynamic-programming states, not an enumerated list of ideals.
-One implementation uses subtractive moments and prefix maxima; the other
-uses retained points and every subrectangle transition explicitly.
 Singletons, zero caps, and inactive corners are included.
 
 \subsubsection{Transfer to the continuous gap}
