@@ -19,7 +19,7 @@ Live state belongs here, not in frozen reconstruction inputs.
 | B3.1--B3.3, D3 | Three-plane branch replaced by an analytic counting/projection proof; finite alternatives superseded | [Analytic theorem](paper/three-plane-projection.md), [decision](research/b3-simplification-decision.md) |
 | B4.1--B4.4, D4, R4a, R4b | High-height interval bound; low-height complete local profiles and two inline exceptions | [R4a](verification/b4/r4a-high-height-audit.md), [R4b](verification/b4/r4b-local-profile-audit.md) |
 | B5.1--B5.4, D5, R5 | Necessary plane/surface restrictions, exhaustive degree-six profiles, and local-or-axis predicates | [Proof/contract](paper/residual-degree-six.md), [R5](verification/b5/r5-degree-six-audit.md) |
-| B6.1--B6.4, D6, R6a | Strip contract and replay; \(5/42\) transfer; compact failure region and exact high contract | [Proof/contract](paper/residual-high-height.md), [decision](research/b6-simplification-decision.md), [R6a](verification/b6/r6a-strip-audit.md) |
+| B6.1--B6.4, D6, R6a, R6b | Strip replay, \(5/42\) transfer, compact failure region, and complete fresh high-height verification | [Proof/contract](paper/residual-high-height.md), [R6a](verification/b6/r6a-strip-audit.md), [R6b](verification/b6/r6b-high-height-audit.md) |
 | DOC0 and consolidation | Historical alternatives separated from selected dependencies; notation and navigation normalized | [Composition/inventory audit](research/prelim-synthesis-audit.md) |
 
 All completion language here means internal reconstruction and verification,
@@ -31,11 +31,11 @@ not by replaying the superseded shape/modular route.
 
 | ID | Current state | Completion test |
 |---|---|---|
-| R6b | Two independent complete fresh high-height paths running | Validate all 94,459 nodes and freshly recompute all 47,088 DP leaves, complete Cartesian corners, exact threshold, and agreement |
-| S1 | Selected branch dossiers synthesized into one proof spine plus three necessary analytic appendices | Promote after all B1--B6 finite premises close |
-| S2 | End-to-end hypothesis, endpoint, normalization, and final-arithmetic audit written | Complete branch composition without an unestablished premise |
+| R6b | PASS; B6 internally closed | Both fresh paths cover all 94,459 nodes and agree on all 47,088 DP leaves and 35,852,138 Cartesian corner evaluations |
+| S1 | Internally complete; all B1--B6 premises closed | Selected branch dossiers synthesized into one proof spine plus three necessary analytic appendices |
+| S2 | Internally complete; no pending branch premise | End-to-end hypothesis, endpoint, normalization, and negative-integrality composition audit |
 | S3 | Standalone minimal code/data/documents frozen; isolated replay running | All seven finite-premise pairs complete with exact-source matching and independent coverage/evaluation |
-| PRELIM | Sources assembled; promotion pending both complete high-height replays | Stable self-contained proof, comprehensive finite contracts, minimal inventory, and complete source-matching evidence |
+| PRELIM | Sources assembled; promotion pending isolated whole-packet replay | Stable self-contained proof, comprehensive finite contracts, minimal inventory, and complete source-matching evidence |
 
 The active request authorizes self-contained PRELIM proof code and documents
 before FREEZE. The old code-packaging cutoff is superseded for this preliminary
@@ -44,7 +44,7 @@ remain later work.
 
 ## Remaining topological order
 
-1. Close R6b and the isolated whole-packet replay; promote S1--S3 and PRELIM.
+1. Complete the isolated whole-packet replay; promote S3 and PRELIM.
 2. V1: choose the additional proof-verification scope and trusted boundary.
    Targeted formalization is an option, not already completed or mandatory.
 3. H1: obtain independent specialist review of the mathematics, finite

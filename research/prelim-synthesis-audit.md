@@ -5,9 +5,11 @@ not external review or a proof-assistant correctness verdict.
 
 The selected reader-facing result is [prelim/](../prelim/README.md).
 Its proof and checking sources are frozen separately from their complete-run
-evidence. At this source checkpoint the six shorter premises passed in a
-literal copy outside the Git checkout; both complete residual high-height
-paths are running. No pending run is promoted to a proved finite premise.
+evidence. All B1--B6 reconstruction premises are now internally closed,
+including [R6b](../verification/b6/r6b-high-height-audit.md).
+The six shorter packet premises passed in a literal copy outside the Git
+checkout; its final high-height pair is running. No pending portable run
+is promoted to completed evidence.
 
 ## S1 and S2: selected proof and hypothesis transfers
 
@@ -95,7 +97,7 @@ Gavril, Bruns and collaborators, Kliem--Stump, the L-shape literature,
 and Chomicz where relevant. Chomicz and Marashdeh are not unproved branch inputs.
 The published multiplicity-through-19 computation is explicitly external.
 
-PRELIM promotion awaits both complete high-height replays and exact-source
-matching of the isolated packet record. V1, H1, and FREEZE are not discharged
+PRELIM promotion awaits completion and exact-source matching of the isolated
+packet record. V1, H1, and FREEZE are not discharged
 by AI-assisted internal agreement. External review, any formalization choice,
 and definitive TeX/PDF production remain separate subsequent milestones.

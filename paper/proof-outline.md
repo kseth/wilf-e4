@@ -578,8 +578,9 @@ Thus \(D_0\ge m\) for every genuine B5 ideal.
 The [selected B6 proof and finite contracts](residual-high-height.md) and
 [D6 decision](../research/b6-simplification-decision.md) are complete.
 [R6a](../verification/b6/r6a-strip-audit.md) establishes the strip and its
-continuous consequence internally. R6b's two complete high-height paths
-are running; B6 is not promoted before that predicate is established.
+continuous consequence internally. [R6b](../verification/b6/r6b-high-height-audit.md)
+establishes the high-height predicate with two complete fresh paths;
+B6 is internally closed.
 
 Since \(H\ge R\), this branch has \(H\ge7\). The required abstract theorem is:
 
@@ -649,7 +650,7 @@ The following is the minimal presently retained proof interface.
 | B4 | Short-corner theorem | [A]+[C] | Both height subcases complete under V0 through R4a and R4b; no legacy dual list |
 | B5 | Local-or-axis theorem | [A]+[C] | Analytic soundness and profile coverage, D5, and independent complete R5 replay established under V0 |
 | B6a | Uniform continuous gap | [A]+[C] | B6.1--B6.2, D6, and R6a complete internally; gap \(5/42\) established |
-| B6b | High-height interval theorem | [A]+[C] | B6.3--B6.4 and D6 complete; independent full R6b replay running |
+| B6b | High-height interval theorem | [A]+[C] | B6.3--B6.4, D6, and independent full R6b replay complete internally |
 | PART | Case exhaustion | [A] | Reconstructed in `case-partition.md`; obtain independent review |
 | G1 | Final arithmetic | [A] | Reconstructed in `final-arithmetic.md`; obtain independent review |
 | G2 | Coordinate-line calculus | [A] | Reconstructed in `coordinate-lines.md`; obtain independent review |
