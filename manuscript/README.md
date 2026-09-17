@@ -39,7 +39,7 @@ The editorial comparison checks unchanged proof-spine and analytic expressions
 against PRELIM, with approved mathematical consolidations recorded explicitly
 in the audit. Numbering and the local full-weighted label notation differ.
 Implementation overflow envelopes are intentionally not repeated in the
-paper; they remain in the frozen packet. The converged 36-page build has no
+paper; they remain in the frozen packet. The converged 37-page build has no
 warnings, all cross-references resolve, and all 15 bibliography entries are cited.
 A cold build from just the ten required source/build files outside the
 checkout produces identical rendered text, without PRELIM, Git, or

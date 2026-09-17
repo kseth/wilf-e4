@@ -38,8 +38,8 @@ not by replaying the superseded shape/modular route.
 | S3 | PASS; complete replay from a literal copy outside the checkout | All seven finite-premise pairs pass with exact-source matching; all 35 rejection tests pass |
 | PRELIM | Internally complete; ready for private specialist review | Standalone proof, analytic appendices, comprehensive finite contracts, minimal inventory, and [complete evidence](prelim/replay.json) |
 | T1 | Initial TeX/PDF draft complete | Requested section order; all selected analytic proofs; seven finite assertions; primary-source bibliography; construction history |
-| T2 | PASS; editorial regression and build checks | Unchanged expressions compared against PRELIM; approved consolidations recorded explicitly; implementation arithmetic envelopes remain in PRELIM; all labels resolve; 15 cited sources; warning-free PDF; source-only cold build to be repeated after tightening |
-| T3 | T3.1--T3.4 complete; T3.5 next | Common height-cutoff lemma retains bounds 24, 42, and 78; long one-slab argument reorganization next |
+| T2 | PASS; editorial regression and isolated source-only build | Unchanged expressions compared against PRELIM; approved consolidations recorded explicitly; implementation arithmetic envelopes remain in PRELIM; 149 labels resolve; 15 cited sources; warning-free 37-page PDF; ten-input cold build gives identical rendered text without PRELIM/Git/history |
+| T3 | All six authorized edits complete; final checks PASS | Attribution and checking prose consolidated; one recurrence; shared projection/cutoff calculations; one-slab proof in named stages with a schematic; all seven finite statements and the six-column obstruction byte-for-byte unchanged |
 
 The author has authorized a preliminary TeX/PDF draft before FREEZE, in a
 separate directory. This supersedes the earlier drafting order but does not
@@ -54,8 +54,12 @@ execution details, diagnostic counts, and overflow envelopes remain in the
 existing packet documentation, while the paper retains exact arithmetic,
 independent checking, and closed interval coverage. Attribution context lives
 in the introduction and related work, with citations at actual points of use.
-The author has also approved T3.2--T3.5, to be implemented in this order.
+T3.2--T3.5 are also complete. The audit explicitly records the approved
+consolidations while comparing the unchanged mathematics against PRELIM.
 PRELIM and all computational contracts remain unchanged.
+Literal projection-count regressions and exact rational cutoff checks also
+pass. These are authoring regressions, not additional computational premises;
+the frozen packet's complete source-matching replay remains unchanged.
 
 | Item | Proposed edit | Boundary to preserve |
 |---|---|---|
@@ -63,11 +67,11 @@ PRELIM and all computational contracts remain unchanged.
 | T3.2 | Complete: one generic nested-horn recurrence, instantiated for intervals and the strip | Preserve retained-point feasibility, termination, central-box enumeration, and every threshold |
 | T3.3 | Complete: projection inequality reused; three-/four-column calculations merged | Restrict the shared calculation to the two classified projections; retain the six-column residue obstruction |
 | T3.4 | Complete: one height-cutoff lemma and three-row parameter table | State \(H>3\), \(D_0<m\), \(\alpha>0\), \(0\le\beta\le3\); retain closed roots 24, 42, and 78 |
-| T3.5 | Break the long one-slab argument into named steps and consider one geometric illustration | Retain all boundary, jump-merging, and polynomial nonnegativity arguments; clarity takes precedence over page count |
+| T3.5 | Complete: named stages and one L-shaped boundary-path schematic | Retain all boundary, jump-merging, and polynomial nonnegativity arguments; clarity takes precedence over page count |
 
 ## Remaining topological order
 
-1. T3: implement the remaining authorized edits atomically, then assess the tightened draft.
+1. Read through the tightened draft and agree any further editorial changes.
    The extension section claims no uniform result for
    embedding dimension greater than four.
 2. V1: choose the additional proof-verification scope and trusted boundary.

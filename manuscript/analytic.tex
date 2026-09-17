@@ -347,8 +347,9 @@ no-full-corner case.
 
 Fix an outward coordinate \(i\), a first level \(t_0=c_i+1\), and central
 transverse caps \(b_0=c_j\), \(d_0=c_k\). Suppose a problem assigns an
-additive score \(C_i(t,r,s)\) to the retained section \eqref{eq:a:13} and has a
-pointwise feasibility predicate \(\mathcal F_i(t,r,s)\). Let
+additive score \(C_i(t,r,s)\) to an uncut rectangular section or the retained
+section \eqref{eq:a:13}, and has a pointwise feasibility predicate
+\(\mathcal F_i(t,r,s)\). Let
 \(F_i(t,b,d)\) be the maximum score of a possibly empty nested sequence
 starting at level \(t\), with first caps at most \(b,d\). Then
 
@@ -1029,6 +1030,10 @@ height allowance \(L\), has contribution at most \(U_L(a;B,C)\).
 \begin{proof}
 
 Scale to \(L=1\), and sort the two transverse coordinates so \(B\le C\).
+We proceed in three stages: make the slabs height-tight, compare them
+with a boundary interpolation, and remove or merge the remaining jumps.
+
+\smallskip\noindent\emph{Step 1: endpoint tightness.}
 First fix the finite list of nested rectangle states and vary only the
 outward endpoints of their slabs. The objective is a separable convex
 quadratic in those endpoints: the quadratic coefficient at an endpoint is
@@ -1038,6 +1043,7 @@ vertex. A block of equal endpoints at such a vertex either begins at \(a\)
 or meets one of its height bounds. Removing zero-length slabs leaves every
 surviving slab tight at its right endpoint.
 
+\smallskip\noindent\emph{Step 2: boundary interpolation.}
 Reverse time by \(r=1-t\), and write
 
 \[
@@ -1084,6 +1090,42 @@ The possibly slack initial position is represented only for bookkeeping by
 the virtual state \((x_0,C)\), where \(x_0=1-a-C\ge B\). The first actual
 jump covers the virtual excess.
 
+\begin{figure}[htbp]
+\centering
+\setlength{\unitlength}{1pt}
+\begin{picture}(270,160)
+\thinlines
+\put(15,15){\vector(1,0){230}}
+\put(15,15){\vector(0,1){135}}
+\put(255,13){\makebox(0,0){\(x\)}}
+\put(13,157){\makebox(0,0){\(y\)}}
+\linethickness{0.8pt}
+\put(125,130){\line(-1,0){65}}
+\put(93,130){\vector(-1,0){15}}
+\put(60,130){\line(0,-1){70}}
+\put(60,106){\vector(0,-1){15}}
+\put(125,130){\circle*{4}}
+\put(60,130){\circle*{4}}
+\put(60,60){\circle*{4}}
+\put(60,142){\makebox(0,0){\((u,C)\)}}
+\put(125,142){\makebox(0,0){\((B,C)\)}}
+\put(60,44){\makebox(0,0){\((u,u)\)}}
+\linethickness{0.4pt}
+\multiput(128,130)(6,0){13}{\line(1,0){3}}
+\put(205,130){\circle{4}}
+\put(205,142){\makebox(0,0){\((x_0,C)\)}}
+\qbezier[18](95,130)(77.5,112.5)(60,95)
+\put(95,130){\circle*{4}}
+\put(60,95){\circle*{4}}
+\put(110,99){\makebox(0,0)[l]{\footnotesize crossing jump}}
+\end{picture}
+\caption{The L-shaped boundary path in \eqref{eq:c:23}. The dashed
+extension represents the virtual initial state; a crossing jump skips
+the turn. The diagram is schematic, not to scale.}
+\label{fig:boundary-path}
+\end{figure}
+
+\smallskip\noindent\emph{Step 3: removing and merging jumps.}
 We now compare a jump on \eqref{eq:c:23} with filling the same part of the boundary
 path continuously. Along a branch with one fixed side \(c\), a jump of
 length \(d\) has gain
@@ -1101,12 +1143,17 @@ G_c(d+e)-G_c(d)-G_c(e)
 \label{eq:c:25}
 \end{equation}
 
-These follow by integrating \(c(r-c)A(r)\). On the second branch of \eqref{eq:c:23},
+These follow by integrating \(c(r-c)A(r)\).
+
+\smallskip\noindent\emph{Jumps after the turn.}
+On the second branch of \eqref{eq:c:23},
 the fixed side is \(u\), and every jump has
 \(d\le C-u\le1-2u\). Thus \(2d+3u-2\le-u\), so \eqref{eq:c:24} is nonpositive and all
 such jumps may be filled.
 
-At most one jump crosses the turn in \eqref{eq:c:23}. Suppose it starts at
+\smallskip\noindent\emph{A jump crossing the turn.}
+At most one jump crosses the turn in \eqref{eq:c:23}, as illustrated in
+Figure~\ref{fig:boundary-path}. Suppose it starts at
 \((u+p,C)\) and ends at \((u,C-q)\). If its gain over the continuous L-path
 is denoted by \(G(p,q;u,C)\), direct integration gives
 
@@ -1147,6 +1194,7 @@ earlier term still lies in the nonpositive part, so the empty horn dominates.
 Thus the crossing jump either disappears or is replaced by an admissible
 one-slab construction.
 
+\smallskip\noindent\emph{Merging jumps before the turn.}
 All remaining jumps lie on the fixed-\(C\) branch. Retain the first jump,
 including any mandatory initial slack, and fill every later jump whose gain
 in \eqref{eq:c:24} is nonpositive. If a later jump of length \(e\) has positive gain,

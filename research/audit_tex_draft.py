@@ -137,6 +137,12 @@ c = analytic.index("## Appendix C:")
 analytic = analytic[:b] + analytic[b:c].replace("w(", r"\lambda(") + analytic[c:]
 analytic = replace_span(analytic, "### B.4. The remaining projection scores",
                         "## Appendix C:", PROJECTION_MATH)
+# The schematic adds only coordinate/state labels; all of Appendix C's
+# inequalities, boundary cases, and polynomial identities remain unchanged.
+analytic = replace_once(analytic, "jump covers the virtual excess.",
+                        r"""jump covers the virtual excess.
+\(x\) \(y\) \((u,C)\) \((B,C)\) \((u,u)\) \((x_0,C)\)
+""")
 
 # The overflow envelopes are implementation documentation, not part of the
 # selected mathematical proof. They are preserved in the frozen packet.
@@ -217,6 +223,8 @@ require(all(h in body for h in headings), "a requested PDF section is missing")
 require(text.count("Finite lemma 2.") == 7, "PDF finite assertion count")
 
 print(json.dumps({"status": "PASS", "math_fidelity": fidelity,
+                  "approved_rewrites": ["shared horn recurrence", "classified projections",
+                                        "height cutoffs", "boundary-path schematic"],
                   "finite_premises": 7, "bibliography_entries": len(cites),
                   "unique_labels": len(labels), "build_diagnostics": 0,
                   "pdf_pages": text.count("\f"),
