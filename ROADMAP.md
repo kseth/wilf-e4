@@ -38,7 +38,8 @@ not by replaying the superseded shape/modular route.
 | S3 | PASS; complete replay from a literal copy outside the checkout | All seven finite-premise pairs pass with exact-source matching; all 35 rejection tests pass |
 | PRELIM | Internally complete; ready for private specialist review | Standalone proof, analytic appendices, comprehensive finite contracts, minimal inventory, and [complete evidence](prelim/replay.json) |
 | T1 | Initial TeX/PDF draft complete | Requested section order; all selected analytic proofs; seven finite assertions; primary-source bibliography; construction history |
-| T2 | Editorial fidelity and local build PASS; isolated build pending | All selected displayed/inline mathematics preserved; references resolve; warning-free PDF; compilation from a source-only copy outside the checkout |
+| T2 | PASS; editorial fidelity and isolated source-only build | 186 displays and 941 inline expressions preserved; 153 labels resolve; 15 cited sources; warning-free 38-page PDF; ten-input cold build has identical rendered text without PRELIM/Git/history |
+| T3 | Next author-facing iteration | Review the introduction and overall flow together, then prioritize technical exposition improvements without changing frozen proof premises |
 
 The author has authorized a preliminary TeX/PDF draft before FREEZE, in a
 separate directory. This supersedes the earlier drafting order but does not
@@ -48,8 +49,8 @@ and a definitive release remain later work.
 
 ## Remaining topological order
 
-1. T2/T3: finish the draft's isolated-build audit, then iterate on exposition
-   with the author. The extension section claims no uniform result for
+1. T3: iterate on the draft's exposition with the author, starting with the
+   introduction and overall flow. The extension section claims no uniform result for
    embedding dimension greater than four.
 2. V1: choose the additional proof-verification scope and trusted boundary.
    Targeted formalization is an option, not already completed or mandatory.

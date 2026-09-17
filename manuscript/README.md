@@ -28,3 +28,18 @@ The accompanying code remains in [../prelim/](../prelim/README.md).
 Run `python3 -I -B verify.py` there to recompute every retained finite premise.
 Its frozen manifest and complete replay have not been changed by TeX drafting.
 This is an initial manuscript, not a final reviewed release.
+
+## Draft checks
+
+The initial draft passes the editorial comparison against PRELIM: 186
+displayed formulas and 941 inline mathematical expressions are preserved,
+apart from numbering and the local full-weighted label notation. Its 153
+labels resolve and all 15 bibliography entries are cited. The converged
+38-page build has no warnings. A cold build from just the ten required
+source/build files outside the checkout produces identical rendered text,
+without PRELIM, Git, or historical files present.
+
+After `make pdf`, the repository-level authoring check is
+`python3 -I -B research/audit_tex_draft.py` (run from the repository root;
+requires Poppler's `pdftotext`). It checks transcription and build hygiene,
+not the correctness of the deductions or computational premises.
