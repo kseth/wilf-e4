@@ -7,9 +7,9 @@ The selected self-contained reader proof is now
 reconstruction ledger; its historical references are not PRELIM dependencies.
 Use [the roadmap](../ROADMAP.md) for live status.
 
-This document extracts the shortest presently claimed proof of Wilf's
-inequality for embedding dimension four from the historical archive. It is a
-map for reconstruction, not yet a self-contained proof.
+This ledger records the selected reconstruction argument and source-specific
+dependencies. The standalone proof, including all analytic details and fresh
+finite verification, is in PRELIM; this ledger is not a reader dependency.
 
 Every dependency is classified as follows:
 

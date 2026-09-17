@@ -7,9 +7,10 @@ The selected reader-facing result is [prelim/](../prelim/README.md).
 Its proof and checking sources are frozen separately from their complete-run
 evidence. All B1--B6 reconstruction premises are now internally closed,
 including [R6b](../verification/b6/r6b-high-height-audit.md).
-The six shorter packet premises passed in a literal copy outside the Git
-checkout; its final high-height pair is running. No pending portable run
-is promoted to completed evidence.
+All seven packet premises also passed on both fresh paths in a literal copy
+outside the Git checkout. The [complete record](../prelim/replay.json)
+matches every frozen input and the manifest; all 35 rejection tests passed.
+There is no pending reconstruction or portable computational premise.
 
 ## S1 and S2: selected proof and hypothesis transfers
 
@@ -71,7 +72,7 @@ they are not required reader references.
 The packet has one proof spine, three longer proofs in one appendix document,
 one verification specification, a README, one administrative runner,
 sixteen independent evaluator/coverage files, three compact trees, a manifest,
-and one complete-run record once replay finishes: 26 files total.
+and one complete-run record: 26 files total.
 The 24 manifest inputs exclude the manifest itself and the generated replay.
 
 The compact trees preserve every split and leaf type after checked
@@ -89,13 +90,19 @@ producer scripts and logs, checkpoints, cached leaf results, old manifests,
 and task-by-task replay records. The two exceptional witnesses are stated
 inline and checked directly.
 
-The literal-copy replay uses no Git checkout or external source paths.
+The successful literal-copy replay uses no Git checkout or external source paths.
 Only Python standard libraries and a C++17 compiler are required.
 The isolated replay and [read-only packet audit](audit_prelim.py) are
 reconstruction QA conveniences, not dependencies of the standalone artifact.
 Frozen reconstruction inputs and records are not rewritten for stylistic
 consistency; the new manifest and fresh run identify the curated versions.
 The existing archive is preserved outside the selected reading/runtime path.
+
+The complete isolated run took 861.005 seconds (about 14 minutes) on the
+recorded toolchain, with four native interval processes per checking path.
+All seven pairs completed, with no unresolved or unsupported cases. The
+post-run audit confirms source/document/data matching and both full coverage
+walks again. This timing is reproduction evidence, not a theorem premise.
 
 ## Attribution and remaining decisions
 
@@ -107,7 +114,10 @@ Gavril, Bruns and collaborators, Kliem--Stump, the L-shape literature,
 and Chomicz where relevant. Chomicz and Marashdeh are not unproved branch inputs.
 The published multiplicity-through-19 computation is explicitly external.
 
-PRELIM promotion awaits completion and exact-source matching of the isolated
-packet record. V1, H1, and FREEZE are not discharged
+PRELIM is promoted with exact-source matching of the complete isolated
+packet record. Its selected sources were frozen at `1ecefb5`; its three-allowance
+strip covers 715 configurations, and its high-height pair freshly evaluates
+35,852,138 Cartesian corners on 47,088 DP leaves with exact agreement.
+V1, H1, and FREEZE are not discharged
 by AI-assisted internal agreement. External review, any formalization choice,
 and definitive TeX/PDF production remain separate subsequent milestones.

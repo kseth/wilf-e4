@@ -34,8 +34,8 @@ not by replaying the superseded shape/modular route.
 | R6b | PASS; B6 internally closed | Both fresh paths cover all 94,459 nodes and agree on all 47,088 DP leaves and 35,852,138 Cartesian corner evaluations |
 | S1 | Internally complete; all B1--B6 premises closed | Selected branch dossiers synthesized into one proof spine plus three necessary analytic appendices |
 | S2 | Internally complete; no pending branch premise | End-to-end hypothesis, endpoint, normalization, and negative-integrality composition audit |
-| S3 | Standalone minimal code/data/documents frozen; isolated replay running | All seven finite-premise pairs complete with exact-source matching and independent coverage/evaluation |
-| PRELIM | Sources assembled; promotion pending isolated whole-packet replay | Stable self-contained proof, comprehensive finite contracts, minimal inventory, and complete source-matching evidence |
+| S3 | PASS; complete replay from a literal copy outside the checkout | All seven finite-premise pairs pass with exact-source matching; all 35 rejection tests pass |
+| PRELIM | Internally complete; ready for private specialist review | Standalone proof, analytic appendices, comprehensive finite contracts, minimal inventory, and [complete evidence](prelim/replay.json) |
 
 The active request authorizes self-contained PRELIM proof code and documents
 before FREEZE. The old code-packaging cutoff is superseded for this preliminary
@@ -44,15 +44,14 @@ remain later work.
 
 ## Remaining topological order
 
-1. Complete the isolated whole-packet replay; promote S3 and PRELIM.
-2. V1: choose the additional proof-verification scope and trusted boundary.
+1. V1: choose the additional proof-verification scope and trusted boundary.
    Targeted formalization is an option, not already completed or mandatory.
-3. H1: obtain independent specialist review of the mathematics, finite
+2. H1: obtain independent specialist review of the mathematics, finite
    reductions, implementations, and attribution; triage the responses.
    Private circulation is appropriate after PRELIM; no external messages
    are sent without author direction.
-4. FREEZE: resolve review issues and choices, then freeze the architecture.
-5. Prepare the definitive TeX manuscript, chosen final code/certificates,
+3. FREEZE: resolve review issues and choices, then freeze the architecture.
+4. Prepare the definitive TeX manuscript, chosen final code/certificates,
    any agreed formalization, PDF, and release packaging.
 
 PRELIM is a coherent proposed proof suitable for private review and concrete

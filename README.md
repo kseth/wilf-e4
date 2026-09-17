@@ -14,10 +14,8 @@ responsible for the mathematics, computation, and attribution.
 
 | Item | State |
 |---|---|
-| Branches B1--B5 | Internally complete; B3 is entirely analytic |
-| B6 analytic reductions and finite strip | Complete internally; \(5/42\) transfer established |
-| B6 high-height verification | Internally complete; both fresh paths agree on all 47,088 leaves |
-| Standalone PRELIM sources | Frozen; six shorter premises passed in an isolated copy, final high-height pair running |
+| Branches B1--B6 | Internally complete; B3 is entirely analytic |
+| Standalone PRELIM | Complete isolated replay: all seven finite premises pass on both independent paths |
 | Attribution | Selected-source refresh dated 2026-09-17; bounded novelty assessment, not priority certification |
 | External review, formalization choice, definitive TeX/PDF | Separate subsequent milestones |
 
@@ -25,6 +23,8 @@ From `prelim/`, reproduce the whole finite verification with
 `python3 -I -B verify.py`. Only Python standard libraries and a C++17
 compiler are required. The packet contains three topology-only trees,
 about 3.4 MB total, and no saved dual/fallback lists or cached leaf bounds.
+The [complete-run record](prelim/replay.json) matches the frozen manifest,
+includes 35 rejection tests, and confirms execution outside the Git checkout.
 
 ## Repository roles
 
