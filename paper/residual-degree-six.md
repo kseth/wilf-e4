@@ -81,3 +81,45 @@ points. The bound follows.
 Slice corners need not be globally minimal exclusions: the proof uses
 only the two displayed predecessor conditions. It does not incorrectly
 apply the full minimal-corner theorem to a slice.
+
+## 3. B5.3: local and axis soundness
+
+Put \(s=\sum_Tx\), \(q_i=\max_Tx_i>0\), and \(q_*=\max_iq_i\).
+The positivity follows from the included predecessors of the full corner.
+For real weights \(w_i\ge1\) and allowance \(Q\ge\max_Tw\cdot x\), write
+\[
+D_Q=3mQ-4w\cdot s,\qquad
+G=q_*\left(3m-4\sum_i\frac{s_i}{q_i}\right).
+\]
+G2's endpoint-upgrade identity and the generic
+[two-step construction](short-corner-local-certificates.md#1-the-two-step-construction)
+already prove \(D_Q\ge U_2(T)\).
+
+If \(C=3m-4\sum_i s_i/q_i\ge0\), assign mass \(4s_i/q_i\) to
+the included axis point \(q_i e_i\), and the remaining mass \(C\)
+to any longest-axis endpoint \(q_*e_j\). These masses are nonnegative
+and total \(3m\). Their weighted point sum is
+\[
+4s+Cq_*e_j,
+\]
+so their residual from \(4s\) is coordinatewise nonnegative and has sum \(G\).
+Every destination has weight at most \(Q\). Consequently
+\[
+D_Q\ge w_jCq_*\ge G.
+\]
+If \(C<0\), the line-slack baseline gives \(D_Q\ge0>G\);
+there is no nonnegative-mass axis witness in that case.
+In either case,
+\[
+\boxed{D_Q\ge\max\{U_2(T),G(T)\}.}
+\]
+This is an analytic all-real-weight statement. A finite proof that the
+right side is at least \(m\) therefore establishes the B5 target
+\(D_0\ge m\), and G1 gives \(W_4\ge A-m+1\ge2\).
+
+The exact axis test uses no rational arithmetic at runtime. With
+\(d=q_1q_2q_3>0\),
+\[
+G\ge m\quad\Longleftrightarrow\quad
+q_*\left(3md-4\sum_i s_i\prod_{j\ne i}q_j\right)\ge md.
+\]

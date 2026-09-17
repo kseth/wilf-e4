@@ -96,6 +96,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | R4b | B4 low-height complete local-profile audit and two independent fresh paths; B4 internally closed | [Audit](verification/b4/r4b-local-profile-audit.md) |
 | B5.1 | Per-plane mixed-corner bound \(P-2\) | [Residual degree-six note](paper/residual-degree-six.md#1-b51-mixed-plane-corners) |
 | B5.2 | Two-direction surface injection, including all nonempty slices | [Residual degree-six note](paper/residual-degree-six.md#2-b52-two-direction-surface-injection) |
+| B5.3 | Local-interface reuse and exact axis-witness soundness, with sign conditions | [Residual degree-six note](paper/residual-degree-six.md#3-b53-local-and-axis-soundness) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -205,7 +206,6 @@ and B4-low-FV are established under V0; with R4a, B4 is internally closed.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B5.3 | [A] | Axis centroid witness and local-interface assembly | G2, D4 local soundness | Cite the existing \(D_0\ge U_2\) theorem; prove the axis mass/sign conditions and \(D_0\ge G\) when applicable, without a new local proof |
 | B5.4 | [C] | Degree-six profile specification | B5.1, B5.2, V0 | Prove exhaustive profiles, shared-axis conditions, corner cuts, and filters |
 
 ### B6: residual degree at least seven
@@ -387,8 +387,8 @@ two AI-assisted checking paths are not two independent human reviews.
 
 ## Current ready queue
 
-The topologically available tasks are B5.3 and B6.1.
-The next task is **B5.3, axis-witness soundness**, followed by B5.4.
+The topologically available tasks are B5.4 and B6.1.
+The next task is **B5.4, exhaustive degree-six profiles**.
 The active request then continues through D5,
 retained R5, B6, and synthesis to a standalone PRELIM package.
 
