@@ -1,8 +1,9 @@
 """Editorial TeX/PRELIM fidelity and build audit, not a proof checker.
 
 Run after `make pdf` in manuscript/. Requires Poppler's pdftotext.
-Only the initial draft's selected mathematics is compared. This does not
-verify its deductions or establish any computational premise.
+The proof spine and analytic mathematics are compared. Implementation
+arithmetic envelopes remain in PRELIM rather than the revised manuscript.
+This does not verify deductions or establish any computational premise.
 """
 from pathlib import Path
 import json
@@ -38,7 +39,7 @@ def expressions(text, display):
 
 spine = (ROOT / "prelim/proof.md").read_text(encoding="utf-8")
 spine = spine[spine.index("## 1. "):
-              spine.index("The computation is not a proof-assistant kernel certificate.")]
+              spine.index("All finite predicates are exact integer comparisons.")]
 spine = re.sub(r"^> ?", "", spine, flags=re.M)
 analytic = (ROOT / "prelim/analytic-details.md").read_text(encoding="utf-8")
 b = analytic.index("## Appendix B:")
@@ -46,10 +47,9 @@ c = analytic.index("## Appendix C:")
 # The only mathematical notation change in the import is local w(x) -> lambda(x).
 analytic = analytic[:b] + analytic[b:c].replace("w(", r"\lambda(") + analytic[c:]
 
-verification = read("verification.tex")
-arithmetic = verification.split("% BEGIN selected PRELIM arithmetic\n", 1)[1]
-arithmetic = arithmetic.split("% END selected PRELIM arithmetic", 1)[0]
-selected = {"spine": (spine, read("proof.tex") + arithmetic),
+# The overflow envelopes are implementation documentation, not part of the
+# selected mathematical proof. They are preserved in the frozen packet.
+selected = {"spine": (spine, read("proof.tex")),
             "analytic": (analytic, read("analytic.tex"))}
 fidelity = {}
 for name, (original, tex) in selected.items():

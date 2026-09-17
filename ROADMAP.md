@@ -38,8 +38,8 @@ not by replaying the superseded shape/modular route.
 | S3 | PASS; complete replay from a literal copy outside the checkout | All seven finite-premise pairs pass with exact-source matching; all 35 rejection tests pass |
 | PRELIM | Internally complete; ready for private specialist review | Standalone proof, analytic appendices, comprehensive finite contracts, minimal inventory, and [complete evidence](prelim/replay.json) |
 | T1 | Initial TeX/PDF draft complete | Requested section order; all selected analytic proofs; seven finite assertions; primary-source bibliography; construction history |
-| T2 | PASS; editorial fidelity and isolated source-only build | 186 displays and 941 inline expressions preserved; 153 labels resolve; 15 cited sources; warning-free 38-page PDF; ten-input cold build has identical rendered text without PRELIM/Git/history |
-| T3 | First repetition review complete; tightening proposals await author discussion | Construction history now credits GPT-5.6 Sol via Codex; no proposed proof/prose cuts have been implemented |
+| T2 | PASS; editorial fidelity and isolated source-only build | All 185 proof/analytic displays and 934 inline expressions preserved; implementation arithmetic envelopes remain in PRELIM; 153 labels resolve; 15 cited sources; warning-free 37-page PDF; ten-input cold build has identical rendered text without PRELIM/Git/history |
+| T3 | Technical prose cleanup complete; remaining tightening proposals await author discussion | Verification gives the general structure of exact checks and certificates; repeated implementation descriptions removed; construction history credits GPT-5.6 Sol via Codex; no proof simplification has been implemented |
 
 The author has authorized a preliminary TeX/PDF draft before FREEZE, in a
 separate directory. This supersedes the earlier drafting order but does not
@@ -47,14 +47,18 @@ discharge specialist review or the formalization decision. PRELIM inputs
 and their source-specific complete replay remain frozen. External coordination
 and a definitive release remain later work.
 
-## Proposed manuscript-tightening order
+## Manuscript-tightening order
 
-These are proposals, not completed changes or new mathematical premises.
-PRELIM and all computational contracts remain unchanged.
+The author-approved implementation-prose cleanup within T3.1 is complete:
+execution details, diagnostic counts, and overflow envelopes remain in the
+existing packet documentation, while the paper retains exact arithmetic,
+independent checking, and closed interval coverage. Attribution consolidation
+and T3.2--T3.5 remain proposals, not completed changes or new mathematical
+premises. PRELIM and all computational contracts remain unchanged.
 
 | Item | Proposed edit | Boundary to preserve |
 |---|---|---|
-| T3.1 | Give attribution, implementation details, and construction history distinct homes; remove repeated review-log language | Keep introductory orientation, citations at point of use, and exact finite-family coverage |
+| T3.1 | Implementation details and repeated checking prose cleaned up; attribution consolidation still proposed | Keep introductory orientation, citations at point of use, and exact finite-family coverage |
 | T3.2 | State and prove one generic nested-horn recurrence, then instantiate it for intervals and the strip | Preserve retained-point feasibility, termination, central-box enumeration, and every threshold |
 | T3.3 | Reuse the projection inequality; merge the three-/four-column calculations in the full-weighted proof | Restrict the shared calculation to the two classified projections; retain the six-column residue obstruction |
 | T3.4 | Prove one height-cutoff lemma for moment bounds of the form \(D_0/m\ge\alpha H-\beta B\) | State \(H>3\), \(D_0<m\), \(\alpha>0\), \(0\le\beta\le3\); retain closed roots 24, 42, and 78 |
@@ -62,7 +66,7 @@ PRELIM and all computational contracts remain unchanged.
 
 ## Remaining topological order
 
-1. T3: discuss the tightening proposals, then implement agreed edits atomically.
+1. T3: discuss the remaining tightening proposals, then implement agreed edits atomically.
    The extension section claims no uniform result for
    embedding dimension greater than four.
 2. V1: choose the additional proof-verification scope and trusted boundary.

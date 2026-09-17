@@ -19,7 +19,10 @@ the reader-facing PDF is retained alongside its sources.
 
 `proof.tex` and `analytic.tex` transcribe the selected PRELIM argument,
 with TeX theorem environments and cross-references. `verification.tex`
-describes the seven retained finite premises and the accompanying artifact.
+gives a short overview of the seven finite assertions and the accompanying
+code and interval certificates. Execution instructions, data formats,
+arithmetic safeguards, and diagnostic records belong to the packet's
+documentation rather than the paper.
 The bibliography cites primary sources and identifies the versions of
 recent preprints. The extension section states only proved identities,
 a conditional mesh transfer, and a lower-ideal obstruction; it claims no
@@ -32,13 +35,14 @@ This is an initial manuscript, not a final reviewed release.
 
 ## Draft checks
 
-The initial draft passes the editorial comparison against PRELIM: 186
-displayed formulas and 941 inline mathematical expressions are preserved,
-apart from numbering and the local full-weighted label notation. Its 153
-labels resolve and all 15 bibliography entries are cited. The converged
-38-page build has no warnings. A cold build from just the ten required
-source/build files outside the checkout produces identical rendered text,
-without PRELIM, Git, or historical files present.
+The editorial comparison preserves the proof-spine and analytic expressions
+from PRELIM, apart from numbering and the local full-weighted label notation.
+Implementation overflow envelopes are intentionally not repeated in the
+paper; they remain in the frozen packet. The converged 37-page build has no
+warnings, its 153 labels resolve, and all 15 bibliography entries are cited.
+A cold build from just the ten required source/build files outside the
+checkout produces identical rendered text, without PRELIM, Git, or
+historical files present.
 
 After `make pdf`, the repository-level authoring check is
 `python3 -I -B research/audit_tex_draft.py` (run from the repository root;

@@ -396,7 +396,6 @@ The second path uses increasing ordinary membership:
 It tests the complete window \([B_m-m+1,B_m]\), which is full exactly
 when \(M\le B_m\). A full window and closure under \(+m\) prove every
 larger integer is included, so gaps and conductor are fully determined.
-The two paths generate their own entire boxes; no valid list is shared.
 
 The generator-box finite lemma contradicts \eqref{eq:p:16} for any negative example.
 Thus all multiplicities through 29 are settled.
@@ -466,7 +465,6 @@ m=1+Q_*+\Beta-N+J
 \le1+28-3+3=29.
 \]
 This contradicts \(m\ge30\). Therefore \eqref{eq:p:6} proves \(W_4\ge0\).
-No shape, modular, residue-label, or optimization computation is needed.
 
 \subsection{No full-support corner}\label{sec:p8}
 
@@ -501,9 +499,7 @@ Use the method in Section~\ref{sec:p5}, with no clipping.
 A DP leaf requires its exact bound at most \(q\).
 An analytic leaf uses
 \(Q_0\ge2(q+B_1+C_1)+3q\), which implies \(D_Q\ge m\).
-The accompanying two independent coverage walks recompute every DP leaf,
-one by iterative prefix horn maxima, the other by direct recursive
-subrectangle transitions. They cover the closed root from height 5 to 24.
+The interval certificate covers the closed root from height 5 to 24.
 The finite lemma contradicts the hypothetical failure.
 Thus \(D_0\ge m-1\) throughout this branch.
 
@@ -548,8 +544,6 @@ satisfies \(m-D_Q\le1\).
 Apply Section~\ref{sec:p5}'s retained-height feasibility and clipped scores to all
 three corners. A DP leaf requires every corner bound at most \(q\).
 The planar rule \(Q_0\ge4(q+B_1+C_1)+3q\) is also sound, including equality.
-The independent paths use subtractive/prefix statistics and
-disjoint-box/direct-transition statistics, respectively.
 The complete closed tree establishes the finite lemma, contradicting failure.
 
 \subsubsection{Low height: exact profiles and two inline exceptions}
@@ -612,11 +606,8 @@ Section~\ref{sec:p2} therefore gives \(D_Q\ge54\ge29\) for all admissible real w
 The second ideal and witness are obtained by interchanging \(y,z\),
 including transposition of the \(yz\) profile.
 
-Two independent complete profile generators check the finite lemma and
-both explicit witnesses: recursive profiles/ten offsets, and Cartesian
-profiles/literal predecessor corners and successor-of-successor gain.
 Together with \eqref{eq:p:4}, the finite lemma proves \(D_0\ge m-1\) in low height.
-This completes the short-corner branch without a saved dual list.
+This completes the short-corner branch.
 
 \subsection{Residual degree at most six}\label{sec:p10}
 
@@ -685,9 +676,6 @@ The independent generators use recursive profiles and seven-element
 subsets of \(\{0,\ldots,13\}\), respectively.
 The subset bijection is \(f_i=t_i-6+i\) for descending
 \(13\ge t_0>\cdots>t_6\ge0\); its inverse is \(t_i=f_i+6-i\).
-One path uses literal points/bitset tops and masked shifts;
-the other uses columns, adjacent heights, and the six explicit degree-two moves.
-They both check the complete family, not a saved fallback list.
 Section~\ref{sec:p2} and \eqref{eq:p:21} give \(D_0\ge m\) for this branch.
 
 \subsection{Higher degree: a finite strip and a real interval bound}\label{sec:p11}
@@ -864,9 +852,7 @@ p_i\ge1,\quad5\le|p|_1\le\lfloor H_1/q\rfloor+1,\quad
 This contains every relevant corner, since \(\ell_i\ge q\).
 An empty list is accepted only as vacuous.
 For every listed corner the retained-center/three-horn bound \(V_p\)
-must satisfy \(10V_p\le29q\). Both paths compute every bound afresh:
-one uses full-box subtraction and three prefix comparisons, the other
-disjoint pieces and row/column prefix maxima.
+must satisfy \(10V_p\le29q\).
 The closed root is \(((q,q,7q),(78q,78q,78q))\).
 Each child is derived from its tightened parent; each split is strictly
 interior, and its two children share the split wall. Checked empty leaves

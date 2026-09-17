@@ -1,111 +1,32 @@
 \section{Exact finite verification}\label{sec:verification}
 
-The proof has seven retained local finite premises. Their mathematical
-contracts appear in Section~\ref{sec:proof}; the accompanying packet
-contains two checking paths for each:
+The accompanying repository provides source code and certificates for
+the seven finite assertions in Section~\ref{sec:proof}. Their domains
+and acceptance inequalities are stated in the corresponding finite
+lemmas. The computations enumerate a bounded generator family and two
+families of plane profiles, evaluate the finite degree strip, and
+establish three interval bounds on real parameter regions.
 
-\begin{center}
-\small
-\begin{tabularx}{\textwidth}{@{}lYY@{}}
-\toprule
-Premise & First path & Second path \\
-\midrule
-Generator box & Cyclic residue distances & Ordinary membership \\
-No-corner interval & Prefix horn maxima & Direct recursive transitions \\
-Short corner, high & Subtractive moments/prefix maxima & Disjoint moments/direct transitions \\
-Short corner, low & Recursive profiles/ten offsets & Cartesian profiles/successors \\
-Degree-six profiles & Recursive profiles/bitsets & Subset profiles/columns \\
-Three-allowance strip & Subtractive moments/prefix maxima & Retained points/all transitions \\
-Residual high interval & Full-box subtraction & Disjoint-box statistics \\
-\bottomrule
-\end{tabularx}
-\end{center}
+Each assertion is verified by two separate implementations using
+different representations or evaluation strategies. They independently
+generate the relevant families and recompute the required bounds using
+exact integer or rational arithmetic. The two explicit short-corner
+witnesses are also checked directly.
 
-The three-plane case has no finite premise. The published theorem for
-\(m\le19\) is an external input, not a component of this replay.
-The two profile paths generate their complete families independently,
-including all stated degree, cardinality, drop, and surface tests.
-No saved dual, exceptional-family list, LP solver, modular lift, or
-floating-point tolerance is an acceptance premise. The two inline
-short-corner witnesses are reconstructed and checked directly.
+The interval certificates describe finite subdivisions of closed
+parameter regions. After the mathematically justified tightening from
+Section~\ref{sec:proof}, each terminal region is proved empty, handled
+by an applicable analytic estimate, or bounded by a complete evaluation
+of the horn recurrence. The checkers verify the subdivision's coverage,
+including shared boundaries, and recompute every terminal bound.
+The certificates supply subdivisions, not cached answers. Consequently,
+they establish bounds throughout the real regions, not merely at
+sampled parameter values.
 
-\subsection{Closed interval certificates}
-
-The three interval inputs store only a root and indexed tree topology
-at scale \(q=4096\). Their closed roots have height ranges
-\(5\ldots24\), \(6\ldots42\), and \(7\ldots78\), respectively,
-with each weight coordinate ranging from one to the root's maximum
-height. At every node, the checker applies the stated tightening,
-then either derives two children sharing a strictly interior split
-wall or checks the declared leaf predicate. Node zero is the root;
-every node must be reached exactly once. Hence no component, split
-boundary, or subregion may be omitted.
-
-Empty leaves require an inverted tightened enclosure. Analytic leaves
-are permitted only in the first two trees, under the rules given in
-Sections~\ref{sec:p8} and~\ref{sec:p9}. Every other nonempty leaf
-requires a fresh complete evaluation of the horn recurrence. Each
-short-corner leaf checks all three orientations. Every residual leaf
-checks the full Cartesian corner range from Section~\ref{sec:p11}; an
-empty range is explicitly reported as vacuity. The two coverage walks
-use depth-first integer and breadth-first rational arithmetic,
-respectively. Neither walk trusts cached bounds or stored child boxes.
-
-For reference, the verified trees have the following node counts:
-\begin{center}
-\small
-\begin{tabular}{@{}lrrrr@{}}
-\toprule
-Tree & Splits & DP leaves & Analytic leaves & Empty leaves \\
-\midrule
-No corner & 25,442 & 24,912 & 531 & 0 \\
-Short corner & 55,432 & 54,978 & 455 & 0 \\
-Residual high & 47,229 & 47,088 & 0 & 142 \\
-\bottomrule
-\end{tabular}
-\end{center}
-These counts are diagnostic, not substitutes for coverage or leaf tests.
-The residual replay checks 35,852,138 corner bounds; its largest DP
-score is 11,824, below \(29\cdot4096/10\).
-The strip contains 715 sorted corner/allowance configurations across
-allowances 18, 19, and 20. The omitted null translation requires no
-allowance-21 computation.
-
-\subsection{Arithmetic and replay}
-
-% BEGIN selected PRELIM arithmetic
-All finite predicates are exact integer comparisons. Python integers are
-unbounded. C++ evaluators require signed scores with at least 63 value bits,
-indices with at least 31 value bits, and 64-bit bitsets where used.
-For the largest interval root, \(N_i\le78\), \(q=4096\), a conservative
-bound on score/moment/threshold intermediates is
-\[
-16\cdot79^3\bigl(156(3\cdot78q)+235q\bigr)<2^{51}<2^{63}-1.
-\]
-The strip envelope \(8\cdot21^3(9\cdot20+4)<2^{31}\) is smaller.
-Degree-six profiles have \(m\le84\), \(s_i\le504\), axis caps at most six;
-their denominator-cleared margins fit below \(2^{30}\) in magnitude.
-Generator-box distances are at most \((m-1)m(m-2)\le21924\).
-The concrete implementations also check their required integer widths.
-No mathematical operation is performed on a negative-infinity sentinel.
-% END selected PRELIM arithmetic
-
-The packet is the repository directory \texttt{prelim/}. From that
-directory, run \texttt{python3 -I -B verify.py}. Only Python standard
-libraries and a C++17 compiler are required; Git, network access,
-historical files, and third-party Python packages are not used.
-The runner hashes every manifest input before and after execution,
-compiles fresh evaluators with
-\texttt{-std=c++17 -O3 -Wall -Wextra -pedantic}, and rejects compiler
-diagnostics, partial runs, unsupported modes, and malformed responses.
-The two checking paths keep separate mathematical state and results.
-Scheduling and administrative hashing are not shared evaluators.
-
-A complete isolated replay of the frozen packet passed all seven pairs
-and 35 rejection tests. The generated record \texttt{replay.json}
-identifies tested inputs, toolchains, coverage, per-leaf agreement,
-and predicate partitions. The manifest and replay record identify
-specific sources; the replay record is never an acceptance input.
-The interval data total approximately 3.4 MB and contain no cached
-leaf answers. The TeX sources compile independently of that packet;
-the packet is needed to reproduce the computational premises.
+A complete run of both implementations has verified all seven finite
+assertions. The repository documentation gives execution instructions,
+algorithm descriptions, arithmetic safeguards, and the complete-run
+record. The published small-multiplicity result is an external theorem,
+not part of these computations; the three-plane branch is entirely
+analytic. Independent computational agreement supports checking but
+does not replace the mathematical reductions proved in the paper.
