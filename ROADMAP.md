@@ -105,6 +105,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B6.3 | Conditional H < 78 failure region, positive-corner allowance, and outward-clipping proof | [High-height note](paper/residual-high-height.md#3-b63-conditional-compactness-and-outward-clipping) |
 | B6.4 | Exact high-height predicate, clipped statistics, recurrence, coverage, and integer envelope | [High-height note](paper/residual-high-height.md#4-b64-high-height-interval-contract-and-coverage) |
 | D6 | Retain the exact strip and high-height tree; exclude producer/checkpoint/leaf-log data from the proof packet | [Decision](research/b6-simplification-decision.md) |
+| R6a | Independent complete 1,029-case strip; establishes the 5/42 continuous gap through B6.2 | [Audit](verification/b6/r6a-strip-audit.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -258,7 +259,6 @@ in the final verification package.
 
 | ID | Type | Atomic replay/audit | Depends on |
 |---|---|---|---|
-| R6a | [C] | B6 1,029 finite-strip configurations | D6 retaining that component |
 | R6b | [C] | B6 47,088 high-height interval leaves | D6 retaining that component |
 
 The displayed historical counts are regression expectations, not theorem
@@ -394,7 +394,7 @@ two AI-assisted checking paths are not two independent human reviews.
 
 ## Current ready queue
 
-The next task is **R6a, independent complete strip verification**. R4b and B5,
+The next task is **R6b, independent complete high-height replay**. R4b and B5,
 including D5 and R5, are complete. The active request continues through
 B6 and synthesis to a standalone PRELIM package.
 
