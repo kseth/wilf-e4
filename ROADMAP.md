@@ -1,6 +1,6 @@
 # Pre-manuscript reconstruction roadmap
 
-**Status date:** 2026-09-16
+**Status date:** 2026-09-17
 
 ## Purpose and cutoff
 
@@ -93,6 +93,8 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B4.4 | Exact centroid-dual soundness, integer predicate, three-maximal-point reduction, and complete-family checking semantics | [`paper/short-corner-centroid-certificates.md`](paper/short-corner-centroid-certificates.md) |
 | D4 | Retain the high-height tree; replace the low-height dual list with deterministic local checks and two inline witnesses | [Decision](research/b4-simplification-decision.md), [local contract](paper/short-corner-local-certificates.md) |
 | R4a | B4 high-height specification, arithmetic/coverage audit, and two fresh complete checking paths | [Specification](paper/short-corner-interval-specification.md), [audit and replay](verification/b4/r4a-high-height-audit.md) |
+| R4b | B4 low-height complete local-profile audit and two independent fresh paths; B4 internally closed | [Audit](verification/b4/r4b-local-profile-audit.md) |
+| B5.1 | Per-plane mixed-corner bound \(P-2\) | [Residual degree-six note](paper/residual-degree-six.md#1-b51-mixed-plane-corners) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -194,13 +196,14 @@ R4a's interval specification and two fresh complete independent checking
 paths establish B4-high-FV under V0. Together with B4.2, this closes the
 \(H\ge6\) routing subcase. An enumeration-wide research diagnostic passed
 28,497 low-height keys locally and handled exactly two exceptions, but
-the low-height finite lemma is not established under V0. Revised R4b remains.
+R4b now independently generates and checks the complete family through
+two fresh exact paths, including both inline witnesses. B4-low-local-FV
+and B4-low-FV are established under V0; with R4a, B4 is internally closed.
 
 ### B5: residual degree at most six
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B5.1 | [A] | Plane-corner restriction | FND, PART | Prove the per-plane bound \(\lvert p\rvert_1-2\), without summing across planes |
 | B5.2 | [A] | Surface-injection restriction | FND, PART | Prove \(\lvert F_i\cap F_j\rvert\le2n_k\), including slice boundaries |
 | B5.3 | [A] | Axis centroid witness and local-interface assembly | G2, D4 local soundness | Cite the existing \(D_0\ge U_2\) theorem; prove the axis mass/sign conditions and \(D_0\ge G\) when applicable, without a new local proof |
 | B5.4 | [C] | Degree-six profile specification | B5.1, B5.2, V0 | Prove exhaustive profiles, shared-axis conditions, corner cuts, and filters |
@@ -248,7 +251,6 @@ in the final verification package.
 
 | ID | Type | Atomic replay/audit | Depends on |
 |---|---|---|---|
-| R4b | [C] | B4-low-local-FV: exhaustive two-step checks and two inline exceptional witnesses, with independent paths | D4 retaining the finite profile check |
 | R5 | [C] | B5 5,574,644 shapes and 431 fallbacks | D5 retaining computation |
 | R6a | [C] | B6 1,029 finite-strip configurations | D6 retaining that component |
 | R6b | [C] | B6 47,088 high-height interval leaves | D6 retaining that component |
@@ -277,7 +279,9 @@ complete: both paths independently establish B2 tree coverage and every leaf
 bound. The B1 and B2 finite lemmas are complete under V0. R4a is complete:
 both paths independently cover the B4 high-height domain and recompute
 all three corner bounds at every DP leaf. B4-high-FV is established under
-V0; the low-height finite lemma and hence the full B4 branch remain open.
+V0. R4b is also complete, establishing the low-height local predicate and
+both exceptional witnesses independently. The full B4 branch is now
+internally complete; B5, B6, synthesis, and review remain.
 
 ## Layer 6: synthesis and pre-manuscript freeze
 
@@ -349,7 +353,7 @@ is made here.
 
 ### Artifact and evidence assessment
 
-At this checkpoint there were 57 tracked files outside the 580-file
+At the 2026-09-16 checkpoint there were 57 tracked files outside the 580-file
 historical archive. The active material occupied less than 1 MB; roughly
 250 MB of repository payload was historical. No certificate copy,
 committed build binary, or committed bytecode cache was found in the
@@ -383,7 +387,12 @@ two AI-assisted checking paths are not two independent human reviews.
 
 ## Current ready queue
 
-The topologically available tasks are R4b, B5.1, B5.2, B5.3, and B6.1.
-The recommended next task is **R4b, the short-corner low-height local-profile
-audit and replay**. It will audit the smaller deterministic local route
-and two inline witnesses, without the legacy low-height dual list.
+The topologically available tasks are B5.2, B5.3, and B6.1.
+The next task is **B5.2, the two-direction surface-injection restriction**,
+followed by B5.3 and B5.4. The active request then continues through D5,
+retained R5, B6, and synthesis to a standalone PRELIM package.
+
+The 2026-09-17 request authorizes self-contained PRELIM proof code and
+documents before FREEZE. They must not depend on historical source paths.
+Definitive TeX/PDF, external review, and any additional formalization remain
+separate milestones; PRELIM is not a public correctness or priority claim.

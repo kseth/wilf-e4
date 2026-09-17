@@ -522,13 +522,13 @@ computational simplification:
   three-point witnesses. G2 proves the local construction's soundness;
   B4.4 proves the exceptional witnesses' all-real-weight soundness.
   An enumeration-wide research diagnostic passes 28,497 keys locally
-  and handles exactly two exceptions. R4b still owes audited independent
-  fresh replays of B4-low-local-FV; B4-low-FV is not established under V0.
+  and handles exactly two exceptions. [R4b](../verification/b4/r4b-local-profile-audit.md)
+  now supplies two fresh independent complete paths and establishes
+  B4-low-local-FV and hence B4-low-FV under V0.
 
 The legacy 28,499-record dual list and its loader are no longer selected
-proof inputs. R4a is complete; revised R4b remains required. The analytic
-reductions and D4 decision alone do not establish the weighted deficit
-target throughout the remaining low-height domain.
+proof inputs. R4a and R4b are complete; both height subcases establish
+the target under V0. B4 is internally closed, without external review.
 
 Historical source:
 `round5/one_corner_extension/short_corner_weighted_theorem.md` and its cited

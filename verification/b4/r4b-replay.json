@@ -1,0 +1,535 @@
+{
+  "archive_inputs": false,
+  "cache_free": true,
+  "complete": true,
+  "component": "R4b",
+  "does_not_establish": [
+    "external review",
+    "global theorem"
+  ],
+  "elapsed_seconds": 11.225913041969761,
+  "environment": {
+    "dependencies": "Python standard library only",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]"
+  },
+  "establishes": "B4-low-local-FV under its mathematical coverage proof",
+  "exit_status": 0,
+  "finished_utc": "2026-09-17T17:57:10.798043+00:00",
+  "fresh": true,
+  "independent_agreement": true,
+  "negative_tests": [
+    {
+      "checker": "check_low_offsets.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-O",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py"
+      ],
+      "elapsed_seconds": 0.2637059999979101,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:00.060129+00:00",
+      "mutation": "optimized",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:56:59.796427+00:00",
+      "stderr": "R4b offsets failed: optimized Python is unsupported\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_offsets.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py",
+        "--sample",
+        "1"
+      ],
+      "elapsed_seconds": 0.0405790830263868,
+      "exit_status": 2,
+      "finished_utc": "2026-09-17T17:57:00.100741+00:00",
+      "mutation": "partial_mode",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:00.060180+00:00",
+      "stderr": "usage: check_low_offsets.py [-h]\ncheck_low_offsets.py: error: unrecognized arguments: --sample 1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_offsets.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((9, 9, 9), 90)])"
+      ],
+      "elapsed_seconds": 0.048370208009146154,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:00.149149+00:00",
+      "mutation": "bad_membership",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:00.100803+00:00",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((9, 9, 9), 90)])\n                                                                                                                                                                                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py\", line 47, in check_integer_witness\n    require(all(type(n) is int and n >= 0 and p in points\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                for p, n in weighted_points), \"witness membership/nonnegativity\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py\", line 20, in require\n    raise ValueError(message)\nValueError: witness membership/nonnegativity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_offsets.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 5), 38), ((2, 2, 0), 48), ((3, 1, 0), 5)])"
+      ],
+      "elapsed_seconds": 0.04143866599770263,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:00.190624+00:00",
+      "mutation": "bad_mass",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:00.149214+00:00",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 5), 38), ((2, 2, 0), 48), ((3, 1, 0), 5)])\n                                                                                                                                                                                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py\", line 49, in check_integer_witness\n    require(sum(n for _, n in weighted_points) == 3 * len(points), \"witness mass\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py\", line 20, in require\n    raise ValueError(message)\nValueError: witness mass\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_offsets.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 0), 90)])"
+      ],
+      "elapsed_seconds": 0.037832959031220526,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:00.228501+00:00",
+      "mutation": "bad_residual",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:00.190690+00:00",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 0), 90)])\n                                                                                                                                                                                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py\", line 52, in check_integer_witness\n    require(min(residual) >= 0 and sum(residual) >= len(points) - 1,\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            \"witness residual/target\")\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py\", line 20, in require\n    raise ValueError(message)\nValueError: witness residual/target\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_offsets.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 0), True)])"
+      ],
+      "elapsed_seconds": 0.037816833006218076,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:00.266352+00:00",
+      "mutation": "boolean_multiplier",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:00.228559+00:00",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 0), True)])\n                                                                                                                                                                                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py\", line 47, in check_integer_witness\n    require(all(type(n) is int and n >= 0 and p in points\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                for p, n in weighted_points), \"witness membership/nonnegativity\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py\", line 20, in require\n    raise ValueError(message)\nValueError: witness membership/nonnegativity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_successors.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-O",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_low_successors.py"
+      ],
+      "elapsed_seconds": 0.1344305410166271,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:05.922988+00:00",
+      "mutation": "optimized",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:05.788580+00:00",
+      "stderr": "R4b successors failed: optimized interpreter is forbidden\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_successors.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_low_successors.py",
+        "--sample",
+        "1"
+      ],
+      "elapsed_seconds": 0.048392041004262865,
+      "exit_status": 2,
+      "finished_utc": "2026-09-17T17:57:05.971420+00:00",
+      "mutation": "partial_mode",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:05.923043+00:00",
+      "stderr": "usage: check_low_successors.py [-h]\ncheck_low_successors.py: error: unrecognized arguments: --sample 1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_successors.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_successors.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((9, 9, 9), 90)])"
+      ],
+      "elapsed_seconds": 0.04077316599432379,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:06.012207+00:00",
+      "mutation": "bad_membership",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:05.971462+00:00",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_successors.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((9, 9, 9), 90)])\n                                                                                                                                                                                                                                                                                                                                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_successors.py\", line 33, in check_integer_witness\n    ensure(type(amount) is int and amount >= 0 and p in points, \"invalid witness\")\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_successors.py\", line 19, in ensure\n    raise RuntimeError(reason)\nRuntimeError: invalid witness\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_successors.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_successors.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 5), 38), ((2, 2, 0), 48), ((3, 1, 0), 5)])"
+      ],
+      "elapsed_seconds": 0.03963229199871421,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:06.051883+00:00",
+      "mutation": "bad_mass",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:06.012275+00:00",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_successors.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 5), 38), ((2, 2, 0), 48), ((3, 1, 0), 5)])\n                                                                                                                                                                                                                                                                                                                                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_successors.py\", line 37, in check_integer_witness\n    ensure(total == 3 * len(points), \"wrong witness mass\")\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_successors.py\", line 19, in ensure\n    raise RuntimeError(reason)\nRuntimeError: wrong witness mass\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_successors.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_successors.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 0), 90)])"
+      ],
+      "elapsed_seconds": 0.038872416014783084,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:06.090789+00:00",
+      "mutation": "bad_residual",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:06.051939+00:00",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_successors.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 0), 90)])\n                                                                                                                                                                                                                                                                                                                                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_successors.py\", line 41, in check_integer_witness\n    ensure(value >= 0, \"negative witness coordinate\")\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_successors.py\", line 19, in ensure\n    raise RuntimeError(reason)\nRuntimeError: negative witness coordinate\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "check_low_successors.py",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_successors.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 0), True)])"
+      ],
+      "elapsed_seconds": 0.03825545799918473,
+      "exit_status": 1,
+      "finished_utc": "2026-09-17T17:57:06.129070+00:00",
+      "mutation": "boolean_multiplier",
+      "rejected": true,
+      "started_utc": "2026-09-17T17:57:06.090842+00:00",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.util,itertools; s=importlib.util.spec_from_file_location('check','/Users/ksethura/math/wilf/verification/b4/check_low_successors.py'); m=importlib.util.module_from_spec(s);s.loader.exec_module(m); f=(4,3,3,2,0,0);g=(6,3,3,2,0,0);h=(6,4,2,2,0,0); t={p for p in itertools.product(range(6),repeat=3) if p[1]<f[p[0]] and p[2]<g[p[0]] and p[2]<h[p[1]] and not(p[0]>=2 and p[1]>=1 and p[2]>=1)}; m.check_integer_witness(t,[((0, 0, 0), True)])\n                                                                                                                                                                                                                                                                                                                                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_successors.py\", line 33, in check_integer_witness\n    ensure(type(amount) is int and amount >= 0 and p in points, \"invalid witness\")\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ksethura/math/wilf/verification/b4/check_low_successors.py\", line 19, in ensure\n    raise RuntimeError(reason)\nRuntimeError: invalid witness\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "processes": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_low_offsets.py"
+      ],
+      "elapsed_seconds": 5.52210262499284,
+      "exit_status": 0,
+      "finished_utc": "2026-09-17T17:57:05.788419+00:00",
+      "started_utc": "2026-09-17T17:57:00.266413+00:00",
+      "stderr": "",
+      "stdout_sha256": "5984b29d86c45c7505e51c1eaeb545d2e201dd31ddf5c8158377808fcb9e1b5d"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-I",
+        "-B",
+        "/Users/ksethura/math/wilf/verification/b4/check_low_successors.py"
+      ],
+      "elapsed_seconds": 4.667086541012395,
+      "exit_status": 0,
+      "finished_utc": "2026-09-17T17:57:10.796131+00:00",
+      "started_utc": "2026-09-17T17:57:06.129130+00:00",
+      "stderr": "",
+      "stdout_sha256": "440a4f265a67158e950b39bbd65e5b21ea110d1c37ff71c2d5b62bfd5d63f45b"
+    }
+  ],
+  "replay_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "verification/b4/replay_low.py"
+  ],
+  "repository_input_commit": "e1b0a50e21af92d89cc3f857f9f52f47623d25af",
+  "results": [
+    {
+      "archive_inputs": false,
+      "arithmetic": "Python arbitrary-precision integers",
+      "complete": true,
+      "component": "R4b-offsets",
+      "contract": "B4-low-local-FV",
+      "counts": {
+        "compatible": 81373,
+        "degree_filtered": 70175,
+        "eligible": 28499,
+        "local_pass": 28497
+      },
+      "exceptions": [
+        {
+          "U2": 27,
+          "key": [
+            [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              6,
+              3,
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              6,
+              4,
+              2,
+              2,
+              0,
+              0
+            ]
+          ],
+          "m": 30,
+          "moment": [
+            27,
+            25,
+            34
+          ],
+          "residual": [
+            0,
+            0,
+            54
+          ]
+        },
+        {
+          "U2": 27,
+          "key": [
+            [
+              6,
+              3,
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              4,
+              4,
+              2,
+              2,
+              1,
+              1
+            ]
+          ],
+          "m": 30,
+          "moment": [
+            27,
+            34,
+            25
+          ],
+          "residual": [
+            0,
+            54,
+            0
+          ]
+        }
+      ],
+      "largest_cardinality": 43,
+      "minimum_local_margin": 1,
+      "profile_counts": [
+        145,
+        265
+      ],
+      "result_sha256": "b1a06a8c5df228fef24531c5266f1ca68d49c0acb59a68290153bfbf1843c2b6",
+      "schema_version": 1,
+      "status": "PASS",
+      "unresolved": 0,
+      "unsupported": 0
+    },
+    {
+      "archive_inputs": false,
+      "arithmetic": "Python arbitrary-precision integers",
+      "complete": true,
+      "component": "R4b-successors",
+      "contract": "B4-low-local-FV",
+      "counts": {
+        "compatible": 81373,
+        "degree_filtered": 70175,
+        "eligible": 28499,
+        "local_pass": 28497
+      },
+      "exceptions": [
+        {
+          "U2": 27,
+          "key": [
+            [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              6,
+              3,
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              6,
+              4,
+              2,
+              2,
+              0,
+              0
+            ]
+          ],
+          "m": 30,
+          "moment": [
+            27,
+            25,
+            34
+          ],
+          "residual": [
+            0,
+            0,
+            54
+          ]
+        },
+        {
+          "U2": 27,
+          "key": [
+            [
+              6,
+              3,
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              4,
+              4,
+              2,
+              2,
+              1,
+              1
+            ]
+          ],
+          "m": 30,
+          "moment": [
+            27,
+            34,
+            25
+          ],
+          "residual": [
+            0,
+            54,
+            0
+          ]
+        }
+      ],
+      "largest_cardinality": 43,
+      "minimum_local_margin": 1,
+      "profile_counts": [
+        145,
+        265
+      ],
+      "result_sha256": "b1a06a8c5df228fef24531c5266f1ca68d49c0acb59a68290153bfbf1843c2b6",
+      "schema_version": 1,
+      "status": "PASS",
+      "unresolved": 0,
+      "unsupported": 0
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "path": "verification/b4/replay_low.py",
+      "sha256": "c401bd8f76b1dcf797cf968c12afb84b27dcf9926bfb6b35860c671f782ef943"
+    },
+    {
+      "path": "verification/b4/check_low_offsets.py",
+      "sha256": "0cb9be713e06d9935923a0a2c149ca40c4aa321e9498430bd22ce05038e16400"
+    },
+    {
+      "path": "verification/b4/check_low_successors.py",
+      "sha256": "a8e26230bf186f011ee5fb4ece9c441d56a82e1ad0b4d24978e2cfc8e2f6ab5c"
+    },
+    {
+      "path": "paper/short-corner-profile-specification.md",
+      "sha256": "a4fb24f17b510aca9a4dbf549b840387917a29b8dab5720658b028ed715cd22b"
+    },
+    {
+      "path": "paper/short-corner-local-certificates.md",
+      "sha256": "78788d422dc4841f157a7a49fc4f0664ce78e44bd776051d1f8fe47fbeccc8f3"
+    },
+    {
+      "path": "paper/coordinate-lines.md",
+      "sha256": "5f7a9dc2520b3be927d6805c728a03b5236f2ec77ca1983ba72b9a06ac2f1322"
+    },
+    {
+      "path": "paper/short-corner-centroid-certificates.md",
+      "sha256": "ad995829cab04e471fc2dd5234d8c35f6486770d8c2ef47fdd39a836a1def024"
+    },
+    {
+      "path": "paper/short-corner-height-split.md",
+      "sha256": "ce1ad81bb8f1e127df55c72563bf2cb10e87f617710b7c18760b8541228c7787"
+    },
+    {
+      "path": "paper/foundations.md",
+      "sha256": "0e0c14960db937e05250b9e86299829021225731b772cb53a60a0ac6f2786b84"
+    }
+  ],
+  "started_utc": "2026-09-17T17:56:59.572173+00:00",
+  "status": "PASS",
+  "unresolved": 0,
+  "unsupported": 0
+}
