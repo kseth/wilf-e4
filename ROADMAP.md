@@ -99,6 +99,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | B5.3 | Local-interface reuse and exact axis-witness soundness, with sign conditions | [Residual degree-six note](paper/residual-degree-six.md#3-b53-local-and-axis-soundness) |
 | B5.4 | Exhaustive degree-six profiles, corner orientation, filters, B5-FV contract, and integer bounds | [Residual degree-six note](paper/residual-degree-six.md#4-b54-exhaustive-finite-profiles) |
 | D5 | Retain exhaustive geometric profiles with two closed-form predicates; no saved fallback or LP data | [Decision](research/b5-simplification-decision.md) |
+| R5 | Independent exhaustive profiles, two exact predicates, and fresh agreement; B5 internally closed | [Audit](verification/b5/r5-degree-six-audit.md) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -206,8 +207,11 @@ and B4-low-FV are established under V0; with R4a, B4 is internally closed.
 
 ### B5: residual degree at most six
 
-| ID | Type | Atomic deliverable | Depends on | Completion test |
-|---|---|---|---|---|
+B5.1--B5.4 and D5 are complete. R5 independently regenerates the whole
+specified family twice, checking 5,574,644 eligible profiles. The local
+formula handles all but 431, and the axis formula handles those without
+saved witness data. B5-FV is established under V0; its soundness proofs
+give D0 >= m for genuine B5 ideals. B5 is internally closed.
 
 ### B6: residual degree at least seven
 
@@ -241,7 +245,8 @@ actual B3 routing cell and removes every B3 computed component. No
 computed lemma follows from gate closure alone. D4 is complete with a
 partial simplification: retain the high-height tree, replace the stored
 low-height dual list with local checks and two explicit witnesses, and
-retain the finite low-height profile obligation. D5 and D6 remain open.
+retain the finite low-height profile obligation. D5 is complete, retaining
+only two explicit integer predicates on exhaustive profiles. D6 remains open.
 
 ## Layer 5: audit and replay retained computations
 
@@ -251,7 +256,6 @@ in the final verification package.
 
 | ID | Type | Atomic replay/audit | Depends on |
 |---|---|---|---|
-| R5 | [C] | B5 5,574,644 shapes and 431 fallbacks | D5 retaining computation |
 | R6a | [C] | B6 1,029 finite-strip configurations | D6 retaining that component |
 | R6b | [C] | B6 47,088 high-height interval leaves | D6 retaining that component |
 
@@ -281,7 +285,8 @@ both paths independently cover the B4 high-height domain and recompute
 all three corner bounds at every DP leaf. B4-high-FV is established under
 V0. R4b is also complete, establishing the low-height local predicate and
 both exceptional witnesses independently. The full B4 branch is now
-internally complete; B5, B6, synthesis, and review remain.
+internally complete. R5 is complete and closes B5 internally; B6,
+synthesis, and review remain.
 
 ## Layer 6: synthesis and pre-manuscript freeze
 
@@ -387,10 +392,9 @@ two AI-assisted checking paths are not two independent human reviews.
 
 ## Current ready queue
 
-The topologically available tasks are R5 and B6.1.
-The next task is **R5, independent complete degree-six profile checks**.
-The active request then continues through D5,
-retained R5, B6, and synthesis to a standalone PRELIM package.
+The next task is **B6.1, the finite-strip specification**. R4b and B5,
+including D5 and R5, are complete. The active request continues through
+B6 and synthesis to a standalone PRELIM package.
 
 The 2026-09-17 request authorizes self-contained PRELIM proof code and
 documents before FREEZE. They must not depend on historical source paths.

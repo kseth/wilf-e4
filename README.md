@@ -13,12 +13,12 @@ analytic arguments and finite verifications have been independently checked.
 
 | Component | Current state |
 |---|---|
-| Main theorem | Proposed; B1, B2, and B4 are internally complete and B3 is complete analytically; B5, B6, synthesis, and review remain |
+| Main theorem | Proposed; B1--B5 are internally complete (B3 analytically); B6, synthesis, and review remain |
 | Shared analytic interfaces | Written in Markdown and internally checked; not externally reviewed or formalized |
 | Multiplicity \(m\le19\) | Published external inputs audited at theorem level |
 | Multiplicity \(20\le m\le29\) | Analytic reduction and two independent fresh replays complete under the repository trust policy |
 | B4 high-height subcase | Analytic reduction and two independent fresh complete checking paths establish B4-high-FV under the trust policy |
-| Computational verification | B1, B2, and both B4 subcases are complete under the trust policy; D3 eliminates B3 computation; B5 and B6 remain open |
+| Computational verification | B1, B2, both B4 subcases, and B5 are complete under the trust policy; D3 eliminates B3 computation; B6 remains open |
 | Release artifact | Definitive TeX, proof code, and PDF intentionally deferred until the roadmap freeze |
 
 Here “reconstructed” means that a clean argument has been extracted from the
@@ -49,7 +49,8 @@ For a branch-level reading path:
 | B3 | [Plane-entry lemma](paper/six-maxima-entry.md) and [analytic projection theorem](paper/three-plane-projection.md) | No retained computation; [D3](research/b3-simplification-decision.md) records the replacement |
 | B4 high-height | [Compactness](paper/short-corner-compactness.md) and [interval contract](paper/short-corner-interval-specification.md) | [R4a](verification/b4/r4a-high-height-audit.md) |
 | B4 low-height | [Profile coverage](paper/short-corner-profile-specification.md) and [local certificates](paper/short-corner-local-certificates.md) | [R4b](verification/b4/r4b-local-profile-audit.md); local checks and two inline witnesses, not the old dual list |
-| B5 and B6 | [Candidate contracts in the proof spine](paper/proof-outline.md#b5-residual-degree-at-most-six-a-c) | Entry proofs, finite specifications, simplification gates, and any retained replays remain |
+| B5 | [Degree-six proof and contract](paper/residual-degree-six.md) | [R5 independent complete replay](verification/b5/r5-degree-six-audit.md); no saved fallback data |
+| B6 | [Candidate contract in the proof spine](paper/proof-outline.md#b6-residual-degree-at-least-seven-a-c) | Entry proofs, finite specifications, simplification gate, and retained replays remain |
 
 The [Chomicz comparison](research/chomicz-assessment.md) informs the
 geometric language and D5 research target; it does not discharge a branch.

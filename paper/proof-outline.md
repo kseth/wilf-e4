@@ -536,87 +536,37 @@ low-height theorem.
 
 ### B5. Residual degree at most six [A], [C]
 
-This branch is not established under V0. The formulas below specify the
-candidate local-or-axis route; B5.1--B5.4, D5, and any retained R5 remain.
+B5 is internally complete under V0, without external review.
+The [degree-six note](residual-degree-six.md) proves the necessary
+per-plane mixed-corner bound and two-direction surface injection,
+the axis-witness soundness (including its remaining-mass sign condition),
+and exact profile coverage. G2 and the generic two-step construction give
+the local witness without another proof.
 
-For each coordinate line \(\ell\) of \(T\), let \(L_\ell\) be its length and
-\(t_\ell\) its top. The elementary identities
-
-\[
-\sum_\ell L_\ell=3m,
-\qquad
-\sum_\ell L_\ell t_\ell=4s
-\tag{3}
-\]
-
-give the common bookkeeping for the candidate centroid witnesses. G2's
-[coordinate-line note](coordinate-lines.md) proves local endpoint-upgrade
-soundness; the [two-step construction](short-corner-local-certificates.md#1-the-two-step-construction)
-already specializes it to \(D_0\ge U_2(T)\). B5.3 should cite these results
-and prove the separate axis construction, not re-prove the local theorem.
-
-For the local witness, define
-
+For line lengths and tops, define
 \[
 U_2(T)=\sum_\ell L_\ell
-\max\{\,|v|_1: v\ge0,\ |v|_1\le2,\ t_\ell+v\in T\,\}.
+\max\{\,|v|_1:v\ge0,\ |v|_1\le2,\ t_\ell+v\in T\,\}.
 \]
-
-For the axis witness, with \(q_i=\max_Tx_i\) and \(q_*=\max_iq_i\), define
-
+With \(q_i=\max_Tx_i>0\), \(q_*=\max_iq_i\), define
 \[
 G(T)=q_*\left(3m-4\sum_i\frac{s_i}{q_i}\right).
 \]
+The two proved soundness bounds give \(D_0\ge\max(U_2,G)\).
+When the remaining axis mass is negative, \(G<0\) and the
+nonnegative deficit baseline supplies that bound; no negative-mass
+centroid is claimed.
 
-The local formula gives a point \(z\in\operatorname{conv}(T)\) whose residual
-\(3mz-4s\) is coordinatewise nonnegative and has total surplus \(U_2(T)\).
-The proposed axis construction requires \(q_i>0\) and
-\(3m-4\sum_i s_i/q_i\ge0\); that sign condition is automatic when
-\(G(T)\ge m\). B5.3 must prove its residual and soundness under those
-conditions. Without the sign condition, one cannot assert a
-coordinatewise nonnegative residual of total surplus \(G(T)\).
-The candidate finite assertion is
-
-\[
-\boxed{\max\{U_2(T),G(T)\}\ge m.}
-\tag{4}
-\]
-
-Its domain consists of lower ideals in the degree-six simplex with \(m\ge30\),
-one full-support corner \(5\le|p|_1\le7\), and two necessary arithmetic
-restrictions:
-
-1. each coordinate plane has at most \(|p|_1-2\) mixed corners;
-2. \(|F_i\cap F_j|\le2n_k\) for the exposed surfaces, whose exact
-   definitions and boundary conventions must be supplied by B5.2.
-
-The historical enumeration reports 5,574,644 shapes: the local witness
-handles all but 431, and the axis witness handles those 431. Those saved
-counts are not a fresh R5 replay or proof of (4). Finding a structural proof
-of (4), perhaps by classifying the fallback shapes, remains an important
-opportunity to remove a large enumeration.
-
-A focused research diagnostic found that none of the 431 saved fallback
-shapes satisfies the necessary residue conditions for an Apéry L-shape.
-Of these, 199 are
-already excluded by nonzero, pairwise-distinct generator residues, the
-full-corner relation, and injectivity on the three axes; each of the remaining
-232 is excluded by one mixed minimal corner together with the opposite-axis
-support condition from F3. This suggests the sharper structural target
-
-\[
-\text{genuine Apéry L-shape in this branch}\quad\Longrightarrow\quad U_2(T)\ge m.
-\tag{5}
-\]
-
-We do not replace (4) by a modular search: that would exchange a short
-analytic witness for another computation rather than reduce verification.
-The present candidate strategy keeps \(G\) and treats (5) as an unproved
-analytic lemma for the bounded D5 gate. The probe does not establish that
-the saved fallback list exhausts all local failures. See the
-[Chomicz assessment](../research/chomicz-assessment.md).
-
-Historical source: `round10/local_centroid/local_centroid_theorem.md`.
+B5-FV states \(\max(U_2,G)\ge m\) on the exhaustively specified
+degree-six family with \(m\ge30\), \(5\le|p|_1\le7\), the necessary
+per-plane corner bounds, and the three surface intersections.
+[R5](../verification/b5/r5-degree-six-audit.md) independently regenerates
+all 5,574,644 eligible triples twice and checks this predicate.
+The local formula handles all but 431, all of which pass the axis
+formula. No saved fallback list, residue search, LP, or dual data is used.
+[D5](../research/b5-simplification-decision.md) records the route choice;
+the focused Chomicz/residue probe remains research context, not a premise.
+Thus \(D_0\ge m\) for every genuine B5 ideal.
 
 ### B6. Residual degree at least seven [A], [C]
 
@@ -687,8 +637,8 @@ The following is the minimal presently retained proof interface.
 | B1.3 | Multiplicities \(20\)–\(29\) | [C] | Specification, D1, R1a, and independent R1b complete |
 | B2 | No-corner weighted theorem | [A]+[C] | B2.1, B2.2, D2, and both R2 paths complete under V0; obtain independent analytic review |
 | B3 | Three-plane projection theorem | [A] | B3.1 and D3 complete analytically; no R3 needed; obtain independent review |
-| B4 | Short-corner theorem | [A]+[C] | B4.1--B4.4, D4, and R4a complete; high-height target established under V0; revised R4b local checks remain, not the legacy dual list |
-| B5 | Local-or-axis theorem | [A]+[C] | Prove (5) from Apéry relation compatibility, or prove (4) structurally |
+| B4 | Short-corner theorem | [A]+[C] | Both height subcases complete under V0 through R4a and R4b; no legacy dual list |
+| B5 | Local-or-axis theorem | [A]+[C] | Analytic soundness and profile coverage, D5, and independent complete R5 replay established under V0 |
 | B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
 | B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
 | PART | Case exhaustion | [A] | Reconstructed in `case-partition.md`; obtain independent review |
