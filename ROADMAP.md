@@ -95,6 +95,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | R4a | B4 high-height specification, arithmetic/coverage audit, and two fresh complete checking paths | [Specification](paper/short-corner-interval-specification.md), [audit and replay](verification/b4/r4a-high-height-audit.md) |
 | R4b | B4 low-height complete local-profile audit and two independent fresh paths; B4 internally closed | [Audit](verification/b4/r4b-local-profile-audit.md) |
 | B5.1 | Per-plane mixed-corner bound \(P-2\) | [Residual degree-six note](paper/residual-degree-six.md#1-b51-mixed-plane-corners) |
+| B5.2 | Two-direction surface injection, including all nonempty slices | [Residual degree-six note](paper/residual-degree-six.md#2-b52-two-direction-surface-injection) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -204,7 +205,6 @@ and B4-low-FV are established under V0; with R4a, B4 is internally closed.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B5.2 | [A] | Surface-injection restriction | FND, PART | Prove \(\lvert F_i\cap F_j\rvert\le2n_k\), including slice boundaries |
 | B5.3 | [A] | Axis centroid witness and local-interface assembly | G2, D4 local soundness | Cite the existing \(D_0\ge U_2\) theorem; prove the axis mass/sign conditions and \(D_0\ge G\) when applicable, without a new local proof |
 | B5.4 | [C] | Degree-six profile specification | B5.1, B5.2, V0 | Prove exhaustive profiles, shared-axis conditions, corner cuts, and filters |
 
@@ -387,9 +387,9 @@ two AI-assisted checking paths are not two independent human reviews.
 
 ## Current ready queue
 
-The topologically available tasks are B5.2, B5.3, and B6.1.
-The next task is **B5.2, the two-direction surface-injection restriction**,
-followed by B5.3 and B5.4. The active request then continues through D5,
+The topologically available tasks are B5.3 and B6.1.
+The next task is **B5.3, axis-witness soundness**, followed by B5.4.
+The active request then continues through D5,
 retained R5, B6, and synthesis to a standalone PRELIM package.
 
 The 2026-09-17 request authorizes self-contained PRELIM proof code and

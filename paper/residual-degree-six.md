@@ -43,3 +43,41 @@ Adding the three bounds gives
 (p_i-1)+(p_j-1)+p_k=P-2.
 \]
 This is a bound for each plane separately, not for the sum across planes.
+
+## 2. B5.2: two-direction surface injection
+
+For distinct coordinates \(i,j,k\), define
+\[
+F_i=\{x\in T:x+e_i\notin T\},\qquad n_k=1+\max_Tx_k.
+\]
+Then every residue-bijective finite lower ideal satisfies
+\[
+\boxed{|F_i\cap F_j|\le2n_k.}
+\]
+No degree or full-corner hypothesis is needed.
+
+Let \(C_{ij}\) be the excluded points \(q\) with \(q_i,q_j>0\) and
+both \(q-e_i,q-e_j\in T\). At each fixed \(k\)-level these are the mixed
+corners of the nonempty planar slice. Every such slice is nonempty,
+since its axis point belongs to \(T\).
+
+A finite nonempty planar lower ideal with \(h\) maximal points has
+\(h-1\) mixed corners: its positive column heights have \(h\) constant
+blocks, and the boundaries between successive positive blocks are exactly
+its mixed corners. This includes a single row, a single column, and a
+rectangle. Thus
+\[
+|C_{ij}|=|F_i\cap F_j|-n_k.
+\]
+If \(\rho(q)\in T\) is the representative of \(q\), a positive
+\(i\)-coordinate of \(\rho(q)\) would give distinct included points
+\(q-e_i,\rho(q)-e_i\) of the same residue. Therefore \(\rho(q)_i=0\);
+likewise \(\rho(q)_j=0\).
+Distinct \(q,q'\in C_{ij}\) cannot have the same residue, since their
+distinct \(i\)-predecessors would collide. Hence \(q\mapsto\rho(q)\)
+injects \(C_{ij}\) into the \(k\)-axis, which contains exactly \(n_k\)
+points. The bound follows.
+
+Slice corners need not be globally minimal exclusions: the proof uses
+only the two displayed predecessor conditions. It does not incorrectly
+apply the full minimal-corner theorem to a slice.
