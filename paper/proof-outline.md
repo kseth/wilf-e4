@@ -595,7 +595,9 @@ The G5 [structural note](central-box-horns.md) proves clipped-horn coverage.
 B6.1 specifies its complete finite allowances and scores.
 The selected route has two computational layers:
 
-1. a 1,029-case finite strip used to prove the continuous gap \(5/42\);
+1. a finite strip used to prove the continuous gap \(5/42\):
+   R6a checked 1,029 configurations, while the standalone packet needs only
+   715 after omitting the allowance arising only at the null zero translation;
 2. a closed real-parameter interval certificate with 47,088 accepted leaves.
 
 B6.2 proves that the finite-strip predicate implies the continuous

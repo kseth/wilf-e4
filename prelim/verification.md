@@ -13,7 +13,7 @@ every dynamic-programming leaf. Its seven premises are:
 | Short corner, high height | Section 9 | [Subtractive/prefix DP](code/b4_high_prefix.cpp); [disjoint/direct DP](code/b4_high_direct.cpp) |
 | Short corner, low height | Section 9 | [Recursive profiles/offsets](code/b4_low_offsets.py); [Cartesian profiles/successors](code/b4_low_successors.py) |
 | Degree-six residual profiles | Section 10 | [Recursive profiles/bitsets](code/b5_bits.cpp); [subset profiles/columns](code/b5_columns.cpp) |
-| Four-allowance strip | Section 11.1 | [Subtractive/prefix DP](code/b6_strip_prefix.cpp); [retained points/direct DP](code/b6_strip_points.cpp) |
+| Three-allowance strip | Section 11.1 | [Subtractive/prefix DP](code/b6_strip_prefix.cpp); [retained points/direct DP](code/b6_strip_points.cpp) |
 | Residual high-height real interval bound | Section 11.3 | [Subtractive DP](code/b6_high_subtract.cpp); [disjoint DP](code/b6_high_disjoint.cpp) |
 
 The two interval coverage implementations are
@@ -51,7 +51,9 @@ denominator-cleared axis formula; zero margins are accepted.
 No saved exceptional family, LP solver, modular lift, or tolerance is used.
 
 The strip programs enumerate every sorted positive corner of degree at most
-allowance plus one, for all four allowances. The replay independently
+allowance plus one, for allowances 18, 19, and 20: 715 configurations.
+Allowance 21 occurs only at the omitted null translation.
+The replay independently
 constructs the complete expected sequence and checks each score.
 The second evaluator uses every subrectangle transition explicitly.
 The predicate is score at most zero.

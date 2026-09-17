@@ -62,7 +62,7 @@ Value evaluate(int R,const Triple&corner){
 int main(int argc,char**){
  try{
   check(argc==1,"partial or unsupported mode");int total=0;
-  for(int R=18;R<=21;++R){
+  for(int R=18;R<=20;++R){
    std::vector<Triple>configurations;
    for(int x=1;x<=R;++x)for(int y=1;y<=R;++y)for(int z=1;z<=R;++z)
     if(x<=y&&y<=z&&x+y+z<=R+1)configurations.push_back({x,y,z});

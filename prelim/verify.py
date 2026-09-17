@@ -180,7 +180,7 @@ def b5(output):
 
 def strip(output):
     lines=output.splitlines()
-    expected=[(r,a,b,d) for r in range(18,22) for a in range(1,r+1)
+    expected=[(r,a,b,d) for r in range(18,21) for a in range(1,r+1)
               for b in range(a,r+1) for d in range(b,r+1) if a+b+d<=r+1]
     require(len(lines)==len(expected)+1 and lines[-1].split()==["PASS",str(len(expected))],"strip incomplete")
     rows=[]
@@ -190,7 +190,7 @@ def strip(output):
     return dict(status="PASS",complete=True,configurations=len(rows),
                 bound_sha256=hashlib.sha256(json.dumps(rows,separators=(",",":")).encode()).hexdigest(),
                 by_allowance=[dict(R=r,configurations=sum(x[0]==r for x in rows),
-                                  largest_bound=max(x[4] for x in rows if x[0]==r)) for r in range(18,22)])
+                                  largest_bound=max(x[4] for x in rows if x[0]==r)) for r in range(18,21)])
 
 def tree(output):
     rows=output.splitlines();require(len(rows)==1,"tree partial output");result=decode(rows[0])

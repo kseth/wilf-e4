@@ -705,9 +705,9 @@ The first finite premise supplies a continuous inequality; that inequality
 restricts a hypothetical failure to a compact real parameter region.
 The second finite premise excludes the entire region.
 
-### 11.1. The four-allowance strip
+### 11.1. The three-allowance strip
 
-> **Strip finite lemma.** For \(r\in\{18,19,20,21\}\), every finite lower
+> **Strip finite lemma.** For \(r\in\{18,19,20\}\), every finite lower
 > ideal \(T'\subseteq\mathbb N^3\) of degree at most \(r\), with at most
 > one positive minimal exclusion, satisfies
 > \[
@@ -760,7 +760,10 @@ T_z=\{y\in\mathbb N^3:z+hy\in K\},\quad
 r_z=\left\lfloor(1-|z|_1)/h\right\rfloor,\quad
 \epsilon_z=1-|z|_1-hr_z.
 \]
-Then \(r_z\in\{18,19,20,21\}\) and \(0\le\epsilon_z<h\).
+For \(z\ne0\), \(0<|z|_1<3h\), so
+\(r_z\in\{18,19,20\}\) and \(0\le\epsilon_z<h\).
+The zero translation is a null set and is omitted throughout the integral;
+no allowance-21 assertion is needed.
 Each excluded vertex \(g\) induces the discrete vertex
 \[
 g'_i=\max(0,\lceil(g_i-z_i)/h\rceil).
@@ -908,7 +911,7 @@ bound on score/moment/threshold intermediates is
 \[
 16\cdot79^3\bigl(156(3\cdot78q)+235q\bigr)<2^{51}<2^{63}-1.
 \]
-The strip envelope \(8\cdot22^3(9\cdot21+4)<2^{31}\) is smaller.
+The strip envelope \(8\cdot21^3(9\cdot20+4)<2^{31}\) is smaller.
 Degree-six profiles have \(m\le84\), \(s_i\le504\), axis caps at most six;
 their denominator-cleared margins fit below \(2^{30}\) in magnitude.
 Generator-box distances are at most \((m-1)m(m-2)\le21924\).

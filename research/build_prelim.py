@@ -115,6 +115,10 @@ int main(int argc,char**) {
         value = re.sub(r"\bR6a\b", "strip", value)
         value = re.sub(r"\bR6b\b", "high-height", value)
         value = value.replace(", archive_inputs=False", "")
+        if dest.startswith("b6_strip_"):
+            # Allowance 21 is used only by a null mesh translation.
+            value = value.replace("for(int R:{18,19,20,21})", "for(int R:{18,19,20})")
+            value = value.replace("for(int R=18;R<=21;++R)", "for(int R=18;R<=20;++R)")
         put("code/" + dest, value)
 
 def appendix():

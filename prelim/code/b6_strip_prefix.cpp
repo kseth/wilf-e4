@@ -53,7 +53,7 @@ I solve(int R,const P&p){
 int main(int argc,char**){
  try{
   need(argc==1,"only complete mode supported");int count=0;
-  for(int R:{18,19,20,21})for(int a=1;3*a<=R+1;++a)
+  for(int R:{18,19,20})for(int a=1;3*a<=R+1;++a)
    for(int b=a;a+2*b<=R+1;++b)for(int c=b;a+b+c<=R+1;++c){
     P p{a,b,c};I v=solve(R,p);need(v<=0,"positive strip bound");
     std::cout<<R<<" "<<a<<" "<<b<<" "<<c<<" "<<v<<"\n";++count;

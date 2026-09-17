@@ -28,7 +28,7 @@ The dependency review checks the following:
 | Low profiles | Required predecessor entries and matching axes recover the three plane sections; the literal total-degree check is retained |
 | Degree-six profiles | Sorted corners are accompanied by simultaneous weight permutations; plane and surface restrictions are necessary; no realizability filter is added |
 | Axis witness | Remaining mass is nonnegative only when its coefficient is; otherwise the independent baseline handles the negative formula |
-| Strip to continuous gap | All four allowances and missing-unit cases are covered; zero supports stay zero; exceptional boundaries are null; the partition Jacobian is one; fiber-average remainders give \(5/42\) |
+| Strip to continuous gap | The three almost-everywhere allowances and missing-unit cases are covered; zero supports stay zero; exceptional boundaries and the zero translation are null; the partition Jacobian is one; fiber-average remainders give \(5/42\) |
 | High compactness and coverage | The gap is used only after the strip predicate; every clipping ceiling is outward, including all equality walls; every Cartesian corner in the proved range is evaluated |
 | Final arithmetic | The analytic three-plane branch proves Wilf directly; the uniform deficit excludes \(W_4\le-1\) using \(D_0\le m(m-2)/(m+1)\); at \(m=30\) the normalized gap is \(1/310>0\) |
 
@@ -45,6 +45,14 @@ strict positivity. Negative integrality gives the correct nonnegative Wilf
 conclusion, with the displayed \(1/310\) endpoint gap. No finite family,
 predicate, evaluator, or earlier reconstruction lemma changed.
 The isolated replay is restarted against the corrected document identities.
+
+A further selected-proof refinement removes allowance 21: for every nonzero
+translation in the mesh cube, the allowance is 18, 19, or 20.
+The zero translation is null and cannot affect the integral. The standalone
+strip therefore needs only 715 configurations, with unchanged continuous
+gap and high-height predicate. The broader 1,029-configuration reconstruction
+contract and its successful source-specific R6a record remain intact;
+they are not required reader references.
 
 ## S3: exact minimal inventory and portability
 
