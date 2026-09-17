@@ -63,6 +63,33 @@ def replace_span(source, start, end, replacement):
     return source[:left] + replacement + source[right:]
 
 
+def replace_once(source, old, new):
+    require(source.count(old) == 1, "approved formula rewrite missing or repeated")
+    return source.replace(old, new)
+
+
+# A common cutoff lemma replaces three branch-specific quadratic arguments.
+# Its assumptions and the exact three parameter pairs are regression checked.
+CUTOFF_MATH = r"""
+\(H>3\) \(D_0<m\)
+\[
+\frac{D_0}{m}\ge\alpha H-\beta B,\qquad
+\alpha>0,\quad 0\le\beta\le3.
+\]
+\[\boxed{H<C:=3+\frac{1+9\beta}{\alpha}}.\]
+\(\alpha H<1+\beta B\) \(H-3\)
+\[
+\alpha H^2-(3\alpha+1+9\beta)H+3-\beta
+=\alpha H(H-C)+3-\beta<0.
+\]
+\(H\ge C\) \(\alpha>0\) \(3-\beta\ge0\)
+\(\alpha\) \(\beta\)
+\(1/3\) \(2/3\) \(H<24\)
+\(1/3\) \(4/3\) \(H<42\)
+\(5/42\) \(37/42\) \(H<78\)
+"""
+
+
 # These formulas replace only Appendix B.4--B.5's repeated definitions and
 # parallel calculations. The six-column obstruction remains source-matched.
 PROJECTION_MATH = r"""
@@ -93,6 +120,16 @@ spine = spine[spine.index("## 1. "):
 spine = re.sub(r"^> ?", "", spine, flags=re.M)
 # The interval and strip displays now cite the one recurrence in Appendix A.
 spine = without_tagged_displays(spine, {"14", "23"})
+spine = replace_once(spine,
+                     "## 5. Structural geometry and a reusable exact interval method",
+                     CUTOFF_MATH + "\n## 5. Structural geometry and a reusable exact interval method")
+spine = replace_once(spine, r"""\[
+H<3+2B,\qquad H^2-24H+7<0,\qquad H<24.
+\]""", r"\(H<24\)")
+spine = replace_once(spine,
+                     r"\(H<3+4B\), hence \(H^2-42H+5<0\) and \(H<42\).",
+                     r"\(H<42\).")
+spine = replace_once(spine, r"\(5H^2-390H+89<0\)", "")
 analytic = (ROOT / "prelim/analytic-details.md").read_text(encoding="utf-8")
 b = analytic.index("## Appendix B:")
 c = analytic.index("## Appendix C:")

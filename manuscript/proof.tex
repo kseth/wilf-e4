@@ -253,6 +253,45 @@ D_0<m\ \Longrightarrow\ \gamma H<1+(1-\gamma)B.
 \label{eq:p:10}
 \end{equation}
 
+\begin{lemma}[Height cutoff]\label{lemma:height-cutoff}
+Suppose \(H>3\), \(D_0<m\), and
+\[
+\frac{D_0}{m}\ge\alpha H-\beta B,\qquad
+\alpha>0,\quad 0\le\beta\le3.
+\]
+Then
+\begin{equation}
+\boxed{H<C:=3+\frac{1+9\beta}{\alpha}}.
+\label{eq:height-cutoff}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The assumed moment bound gives \(\alpha H<1+\beta B\).
+Substitute \eqref{eq:p:8} and multiply by the positive quantity \(H-3\):
+\[
+\alpha H^2-(3\alpha+1+9\beta)H+3-\beta
+=\alpha H(H-C)+3-\beta<0.
+\]
+If \(H\ge C\), the left side is nonnegative because \(\alpha>0\)
+and \(3-\beta\ge0\), a contradiction.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Branch & \(\alpha\) & \(\beta\) & Bound \\
+\midrule
+No full-support corner & \(1/3\) & \(2/3\) & \(H<24\) \\
+Short corner, high height & \(1/3\) & \(4/3\) & \(H<42\) \\
+Residual high height & \(5/42\) & \(37/42\) & \(H<78\) \\
+\bottomrule
+\end{tabular}
+\caption{Parameters for the common height-cutoff argument. The interval
+certificates cover the corresponding closed supersets.}
+\label{tab:height-cutoffs}
+\end{table}
+
 \subsection{Structural geometry and a reusable exact interval method}\label{sec:p5}
 
 Theorem~\ref{theorem:a:1.1}, proved in Section~\ref{sec:analytic-a},
@@ -463,10 +502,9 @@ implies cardinality at most 29, by eleven explicit central-cap bounds.
 
 If \(D_0<m-1\) at \(m\ge30\), then \(H\ge5\), since \(R\le H<5\)
 would force degree at most four. Sort weights to \((1,b,d)\), so
-\(1\le b\le d\le H\). Equations \eqref{eq:p:8}--\eqref{eq:p:10} give
-\[
-H<3+2B,\qquad H^2-24H+7<0,\qquad H<24.
-\]
+\(1\le b\le d\le H\). The continuous bound and \eqref{eq:p:10}
+give the first row of Table~\ref{tab:height-cutoffs}, so
+Lemma~\ref{lemma:height-cutoff} gives \(H<24\).
 For any allowance \(Q\), the continuous theorem also gives
 \(D_Q/m\ge(Q-2B)/3\).
 
@@ -515,8 +553,8 @@ Partition \(T\) into \(y=0\); \(y\ge1,z=0\);
 \(x=0,y,z\ge1\); and \(x=1,y,z\ge1\).
 These are translated planar lower ideals, with offsets respectively
 \(0,w_2,w_2+w_3,B\). Thus \(D_0/m\ge(H-4B)/3\).
-If \(H\ge6\) and \(D_0<m-1\), \eqref{eq:p:8} gives
-\(H<3+4B\), hence \(H^2-42H+5<0\) and \(H<42\).
+If \(H\ge6\) and \(D_0<m-1\), Lemma~\ref{lemma:height-cutoff}
+with the second row of Table~\ref{tab:height-cutoffs} gives \(H<42\).
 We retain the closed height-42 superset; a sharper cutoff is unnecessary.
 
 \begin{finitelemma}[Short-corner high]\label{finite:short-corner-high}
@@ -770,8 +808,8 @@ If \(D_0<m-29/10<m\), Section~\ref{sec:p4} and \eqref{eq:p:24} imply
 B<9+\frac{28}{H-3},\qquad
 \frac{D_0}{m}\ge\frac{5H-37B}{42},\qquad 5H<42+37B.
 \]
-It follows that \(5H^2-390H+89<0\). This polynomial is positive at
-78 and increasing thereafter, so \(H<78\).
+Lemma~\ref{lemma:height-cutoff}, with the final row of
+Table~\ref{tab:height-cutoffs}, gives \(H<78\).
 Also \(p-e_1\in T\) gives \(w\cdot p\le H+1\).
 It suffices to cover the closed necessary failure region
 \begin{equation}
