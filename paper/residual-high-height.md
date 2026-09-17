@@ -298,3 +298,155 @@ point. Convergence is not needed for soundness. Inversion proves that
 the raw box contains no point of (17). Otherwise the resulting tightened
 box remains a closed enclosure; splitting that enclosure covers every
 relevant point of the raw parent, including boundary walls.
+
+
+## 4. B6.4: high-height interval contract and coverage
+
+> **B6-high-FV.** For every \((b,c,Q)\in\mathcal F_6\), every positive
+> integer \(p\) with \(|p|_1\ge5\) and \((1,b,c)\cdot p\le Q+1\),
+> and every nonempty finite no-full-corner lower ideal \(U\), let
+> \(T=U\setminus(p+\mathbb N^3)\).
+> If \(\max_T(1,b,c)\cdot x\le Q\), then
+> \[
+> |T|-\left(3Q|T|-4(1,b,c)\cdot\sum_Tx\right)\le29/10.
+> \tag{I}
+> \]
+> Neither minimality of \(p\), residue labels, units, cardinality,
+> nor exposed-surface restrictions are assumed in this finite contract.
+
+A genuine failure satisfies every hypothesis at \(Q=H\), by (16)--(17)
+and the structural clipping theorem. Thus established (S) and (I)
+contradict (13), proving the B6 target.
+
+### Whole-box domination and finite corner range
+
+On a tightened integer box put
+\[
+\ell=(q,B_0,C_0),\quad u=(q,B_1,C_1),\quad
+h_-=H_0,\ h_+=H_1,\quad N_i=\lfloor h_+/\ell_i\rfloor.
+\]
+Every relevant retained point satisfies \(\ell\cdot x\le h_+\);
+unchanged axes bound all coordinates of \(U\) by \(N_i\).
+The exact integer point majorant is
+\[
+\psi(x)=4u\cdot x+q-3h_-,\qquad
+q\left(|T|-(3Q|T|-4w\cdot\sum_Tx)\right)\le\sum_T\psi(x).
+\tag{19}
+\]
+It holds for every real parameter in the box; there is no weight grid.
+Every relevant \(p\) is covered by the finite list
+\[
+p_i\ge1,\quad 5\le |p|_1\le\lfloor h_+/q\rfloor+1,\quad
+\ell\cdot p\le h_++q.
+\tag{20}
+\]
+Indeed all \(\ell_i\ge q\), and the real corner bound implies the last
+inequality. No sorting of \(p\) is allowed unless the *lower and upper*
+weights of the exchanged coordinates are both equal. The independent
+route enumerates the full Cartesian list without symmetry pruning.
+An empty list means no genuine candidate corner; acceptance is vacuous,
+not a claimed numerical bound on an actual ideal.
+
+### Clipped statistics and recurrence
+
+For an inclusive box \(B=[a,b]\), let
+\[
+n(B)=\prod_i(b_i-a_i+1),\quad
+J(B)=n(B)\sum_i u_i(a_i+b_i).
+\]
+Here \(J=2\sum_Bu\cdot x\). Subtract the removed box
+\([\max(a,p),b]\), when nonempty, to obtain \(n(A),J(A)\) for
+\(A=B\setminus(p+\mathbb N^3)\).
+Its retained feasibility maximum is
+\[
+M(A)=\max_{\substack{i\\a_i\le\min(b_i,p_i-1)}}
+\left(\ell_i\min(b_i,p_i-1)+\sum_{j\ne i}\ell_jb_j\right).
+\tag{21}
+\]
+A retained point has some coordinate below \(p\); the upper corner
+of each such surviving part proves (21).
+Independently partition by the first coordinate below \(p\):
+\[
+A=\mathbin{\dot\bigcup}_{i=1}^3
+\left(B\cap\{x_j\ge p_j\ (j<i),\ x_i<p_i\}\right).
+\tag{22}
+\]
+Summing disjoint-box counts and moments and maximizing their heights
+gives the same statistics without subtraction.
+
+For the axis-\(i\) section \(A_i(t,r,s)\), its score is
+\(C_i=2J+(q-3h_-)n\); feasibility is \(M\le h_+\).
+For a central box use the identical score and retained feasibility,
+not its uncut upper corner. With terminal \(F_i(N_i+1;R,S)=0\), use
+\[
+F_i(t;R,S)=
+\max\left(0,\
+\max_{\substack{r\le R,\ s\le S\\M(A_i(t,r,s))\le h_+}}
+\{C_i(t,r,s)+F_i(t+1;r,s)\}\right).
+\tag{23}
+\]
+All transverse caps are nonnegative. This is the same proved
+nested-horn induction as (3), now with separate feasibility and objective
+weights. Let
+\[
+V_p=\max_{c\ {\rm retained\ feasible}}
+\left(2J(A(c))+(q-3h_-)n(A(c))
++\sum_iF_i(c_i+1;c_j,c_k)\right).
+\tag{24}
+\]
+The origin survives every clipped center, so this maximum exists.
+The disjoint decomposition proves the upper bound (19) by \(V_p\).
+Independent horns may enlarge the geometric class; that is safe for
+an upper bound. A leaf is accepted only if every corner (20) satisfies
+\[
+10V_p\le29q.
+\tag{25}
+\]
+Integer comparison, not rounding or tolerance, handles equality.
+
+Both paths may evaluate the equivalent nested-rectangle prefix maximum.
+Their independent statistics and per-level implementations remain separate:
+one uses subtractive moments and three prefix comparisons; the other uses
+disjoint rectangles/boxes and a row-scan maximum followed by a column prefix.
+A literal-point/explicit-transition implementation is additionally suitable
+for bounded validation, but is not an omitted complete replay requirement.
+
+### Closed-tree coverage
+
+The root is \(((q,q,7q),(78q,78q,78q))\).
+At every node apply the exact finite tightening schedule (18).
+An inverted enclosure permits an empty leaf. Otherwise a split has
+an axis and integer split strictly inside that tightened interval.
+Its two children end and begin at the same split, in the other
+coordinates retaining the tightened endpoints. They cover every
+relevant parent point, including the shared wall.
+
+Every stored node must be reached exactly once; its raw box must equal
+the derived parent child, and every branch must end at a checked empty
+or DP leaf. A DP leaf recomputes the entire corner list and all its
+bounds. Cached completion flags, maximizing corners, case counts,
+and producer bounds do not permit early acceptance.
+Induction over this finite tree proves (I) throughout (17).
+
+### Fixed-width envelope and fail-closed semantics
+
+Within this root \(N_i\le78\), \(\ell_i,u_i\le78q\).
+Let \(K=79^3\), \(W=78q\). Counts are at most \(K\);
+twice moments are at most \(156(3W)K\).
+Center and horn supports are disjoint; a score envelope for every signed
+mathematical intermediate, including threshold multiplication, is
+\[
+16K\bigl(156(3W)+235q\bigr)<2^{51}<2^{63}-1.
+\tag{26}
+\]
+Array indices and dimensions fit signed 32-bit integers; signed scores
+require at least 63 value bits. No arithmetic may involve a negative
+infinity sentinel. For an empty corner list the worker must signal
+vacuity separately. Python tree/hash/clipping arithmetic is arbitrary precision.
+
+Malformed schemas, duplicate JSON fields, boolean endpoints, wrong roots,
+incomplete/unreachable/repeated nodes, inconsistent children, unsupported
+leaves, inward rounding, partial worker responses, positive threshold
+violations, and changed inputs cause rejection. The final evidence must
+name the exact data and source versions and independently recheck coverage
+and fresh leaf bounds on two paths.
