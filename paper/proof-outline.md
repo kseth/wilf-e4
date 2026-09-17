@@ -1,6 +1,11 @@
-# Proof outline and dependency ledger
+# Reconstruction proof outline and dependency ledger
 
 ## Purpose and status
+
+The selected self-contained reader proof is now
+[prelim/proof.md](../prelim/proof.md). This document is the detailed
+reconstruction ledger; its historical references are not PRELIM dependencies.
+Use [the roadmap](../ROADMAP.md) for live status.
 
 This document extracts the shortest presently claimed proof of Wilf's
 inequality for embedding dimension four from the historical archive. It is a
@@ -570,8 +575,11 @@ Thus \(D_0\ge m\) for every genuine B5 ideal.
 
 ### B6. Residual degree at least seven [A], [C]
 
-This branch is not established under V0. Its finite contracts, analytic
-transfers, simplification decision, and any retained replays remain open.
+The [selected B6 proof and finite contracts](residual-high-height.md) and
+[D6 decision](../research/b6-simplification-decision.md) are complete.
+[R6a](../verification/b6/r6a-strip-audit.md) establishes the strip and its
+continuous consequence internally. R6b's two complete high-height paths
+are running; B6 is not promoted before that predicate is established.
 
 Since \(H\ge R\), this branch has \(H\ge7\). The required abstract theorem is:
 
@@ -583,20 +591,19 @@ Since \(H\ge R\), this branch has \(H\ge7\). The required abstract theorem is:
 > \]
 
 No residue or exposed-surface restriction is used by this abstract theorem.
-The G5 [structural note](central-box-horns.md) now proves that its clipped-horn
-recurrence covers every ideal in the class; B6.1 must still establish the
-finite degree allowances and the exact score specification.
-The historical candidate route has two computational layers:
+The G5 [structural note](central-box-horns.md) proves clipped-horn coverage.
+B6.1 specifies its complete finite allowances and scores.
+The selected route has two computational layers:
 
 1. a 1,029-case finite strip used to prove the continuous gap \(5/42\);
 2. a closed real-parameter interval certificate with 47,088 accepted leaves.
 
-B6.2 must prove that the finite-strip predicate implies the continuous
-gap, and B6.3 must prove that this gap and G4 confine any target failure to
+B6.2 proves that the finite-strip predicate implies the continuous
+gap, and B6.3 proves that this gap and G4 confine any target failure to
 \(1\le b\le c\le H,\ 7\le H<78\). These are conditional analytic
-implications until the strip predicate is established by R6a or a proved
-D6 replacement. B6.4 must specify and justify the interval predicate;
-R6b would then check its full compact region. Historical success records
+implications whose strip premise is now established by R6a.
+B6.4 specifies and justifies the interval predicate;
+R6b checks its full compact region. Historical success records
 and configuration counts do not establish either finite premise.
 
 Historical sources: `round7/uniform_gap_theorem.md` and
@@ -639,8 +646,8 @@ The following is the minimal presently retained proof interface.
 | B3 | Three-plane projection theorem | [A] | B3.1 and D3 complete analytically; no R3 needed; obtain independent review |
 | B4 | Short-corner theorem | [A]+[C] | Both height subcases complete under V0 through R4a and R4b; no legacy dual list |
 | B5 | Local-or-axis theorem | [A]+[C] | Analytic soundness and profile coverage, D5, and independent complete R5 replay established under V0 |
-| B6a | Uniform continuous gap | [A]+[C] | Replace the four-strip computation if possible |
-| B6b | High-height interval theorem | [A]+[C] | Derive a direct weighted inequality or smaller certificate |
+| B6a | Uniform continuous gap | [A]+[C] | B6.1--B6.2, D6, and R6a complete internally; gap \(5/42\) established |
+| B6b | High-height interval theorem | [A]+[C] | B6.3--B6.4 and D6 complete; independent full R6b replay running |
 | PART | Case exhaustion | [A] | Reconstructed in `case-partition.md`; obtain independent review |
 | G1 | Final arithmetic | [A] | Reconstructed in `final-arithmetic.md`; obtain independent review |
 | G2 | Coordinate-line calculus | [A] | Reconstructed in `coordinate-lines.md`; obtain independent review |
