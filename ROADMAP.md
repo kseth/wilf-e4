@@ -101,6 +101,7 @@ barriers: any task may begin as soon as its stated dependencies are complete.
 | D5 | Retain exhaustive geometric profiles with two closed-form predicates; no saved fallback or LP data | [Decision](research/b5-simplification-decision.md) |
 | R5 | Independent exhaustive profiles, two exact predicates, and fresh agreement; B5 internally closed | [Audit](verification/b5/r5-degree-six-audit.md) |
 | B6.1 | Four-allowance strip predicate, complete corner/support coverage, recurrence, and arithmetic contract | [High-height note](paper/residual-high-height.md#1-b61-finite-strip-specification) |
+| B6.2 | Conditional 5/42 continuous gap, support preservation, Jacobian and remainder-average proof | [High-height note](paper/residual-high-height.md#2-b62-conditional-finite-to-continuous-transfer) |
 
 These items are internally reconstructed but still belong in the later
 external-review packet when they are retained proof dependencies. The
@@ -218,7 +219,6 @@ give D0 >= m for genuine B5 ideals. B5 is internally closed.
 
 | ID | Type | Atomic deliverable | Depends on | Completion test |
 |---|---|---|---|---|
-| B6.2 | [A] | Conditional finite-to-continuous transfer | B6.1 | Prove that the specified strip predicate implies the \(5/42\) gap, including boundary, support, Jacobian, and remainder checks; do not assume a saved success establishes the premise |
 | B6.3 | [A] | Conditional high-height compactness | G4, B6.2 | Assuming the specified gap, derive \(7\le H<78\) and all closed-box clipping inequalities |
 | B6.4 | [C] | High-height interval-tree specification | B6.3, V0 | Prove recurrence, whole-box bounds, outward rounding, and coverage |
 
@@ -392,7 +392,7 @@ two AI-assisted checking paths are not two independent human reviews.
 
 ## Current ready queue
 
-The next task is **B6.2, the conditional continuous transfer**. R4b and B5,
+The next task is **B6.3, conditional high-height compactness**. R4b and B5,
 including D5 and R5, are complete. The active request continues through
 B6 and synthesis to a standalone PRELIM package.
 
