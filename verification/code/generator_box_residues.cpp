@@ -13,10 +13,9 @@ static_assert(std::numeric_limits<long long>::digits >= 63, "64-bit scores requi
 static_assert(std::numeric_limits<int>::digits >= 31, "32-bit indices required");
 static_assert(std::numeric_limits<std::uint64_t>::digits == 64, "64-bit bitsets required");
 
-// Exact exhaustive Wilf-4 check for the generator box
-// m < a < b < c <= m*(m-2). No external libraries or floating-point tests.
-// The conductor-reduction theorem in the accompanying note proves that
-// every negative Wilf-4 semigroup at multiplicity m is inside this box.
+// Finite Lemma 2.2: cyclic-residue enumeration of the generator box.
+// 20 <= m <= 29, m < a < b < c <= m*(m-2).
+// Manuscript Section 2.6 proves the bounded-counterexample reduction.
 constexpr int INF = 1000000000;
 
 // Adjoin a generator w to a residue shortest-path vector. Translation by
@@ -50,8 +49,7 @@ struct Stats {
 };
 
 static void mix(Stats& s, std::uint64_t value) {
-    // FNV-1a on the eight little-endian bytes of each integer, to provide
-    // a reproducible traversal check (not a substitute for the proof).
+    // FNV-1a traversal fingerprint over eight little-endian bytes per integer.
     for (int k = 0; k < 8; ++k) {
         s.checksum ^= value & 255;
         s.checksum *= 1099511628211ULL;

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent breadth-first coverage, rational clipping, independent evaluators."""
+"""Finite Lemmas 2.3, 2.4, and 2.8: breadth-first coverage and rational clipping."""
 from __future__ import annotations
 import argparse
 from collections import Counter,deque

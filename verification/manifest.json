@@ -2,19 +2,19 @@
   "format": "wilf-four-verification-v1",
   "inputs": [
     {
-      "bytes": 2679,
+      "bytes": 2427,
       "path": "README.md",
-      "sha256": "afb144e20be574c955544132db275db4bf3c319cc69274b1ec227ec7faf5fd55"
+      "sha256": "1639099fdd486cdc59820f9baa33383c576f49cd334e7f85b90a4c5eceb924c0"
     },
     {
-      "bytes": 9329,
+      "bytes": 8389,
       "path": "SPECIFICATION.md",
-      "sha256": "83370d75ba497eceed72fa6b868aaad883d38480ff099308f3c8859afef66ee2"
+      "sha256": "aa90d7d2771944d71073456f49d983b4d2aae4a66361784988942392ec477a2f"
     },
     {
-      "bytes": 6291,
+      "bytes": 6289,
       "path": "code/degree_six_bits.cpp",
-      "sha256": "f8903ca187c4888a4347f2acca464c64af7d4d96e65a05262b146ce2cd46d94c"
+      "sha256": "f80d3d702c8d7e83b7c7a2de710b1b5dfce52929ee917528a5b21f2f8bbffcc3"
     },
     {
       "bytes": 6284,
@@ -22,44 +22,44 @@
       "sha256": "a4b7a3fb12b10dfa877a14037105345715c4af6e50eb7080842f643fc6403ad5"
     },
     {
-      "bytes": 5371,
+      "bytes": 5308,
       "path": "code/generator_box_membership.cpp",
-      "sha256": "82f34f3ae060623405c1f0837ee9783c4c141297b5a2a8518755fc50b85d9315"
+      "sha256": "da7b17e53a2da631c99eadd1fb9a3241e9c6b4bbe63f99c4936eb4c1fe0b3f64"
     },
     {
-      "bytes": 6511,
+      "bytes": 6353,
       "path": "code/generator_box_residues.cpp",
-      "sha256": "95e4359affb8fd476932dfdc1efa70edfd98acc4bab1f7cf499dee8c83f984b5"
+      "sha256": "9e46779fb1ebd6ded080a963c03ace54d97907b0bbfd3f2f16f7620363e9330e"
     },
     {
-      "bytes": 5215,
+      "bytes": 5210,
       "path": "code/high_height_disjoint.cpp",
-      "sha256": "2fbb2f87f4a441bef704dd9f06f5df096c34feaa3db109a19953228682f6d403"
+      "sha256": "656c6da6440bfa55e317236a59caf122895b741534f1c39521d6840e56ea7cd7"
     },
     {
-      "bytes": 4677,
+      "bytes": 4459,
       "path": "code/high_height_subtract.cpp",
-      "sha256": "a560520b5bf6bef8d13d13360c8926220d80d3abe46055c01d95db6d52839db8"
+      "sha256": "89bb78a370c2945fffbe624d5b823365a0fc7212ffb5aa4e9f5db13a79680c67"
     },
     {
-      "bytes": 2688,
+      "bytes": 2689,
       "path": "code/no_corner_interval_direct.py",
-      "sha256": "3987af886a357ff403e2aae419d289f899399a630484209ba9f93d535a2f8a0c"
+      "sha256": "46b87d04aef11a259dfe70531322cbd6e5f08d274f92fc69606c0d99ef1a1e6d"
     },
     {
-      "bytes": 2977,
+      "bytes": 2975,
       "path": "code/no_corner_interval_prefix.py",
-      "sha256": "02fc3d688a7ddbe046ecbcdee0c64ed794ed42e8636f6ff567e1baf27fb52f9f"
+      "sha256": "e85f89d75b3cf90875956f21038796b3ba7f3ea3de3e911149f6809d75a437e7"
     },
     {
-      "bytes": 5939,
+      "bytes": 5866,
       "path": "code/short_corner_high_direct.cpp",
-      "sha256": "3129a638d77793824493553e142c04e9f33211c3ba0751b599bd974ee2dc7ab7"
+      "sha256": "b20a570401c3d4d377e65b0a7387dfa5661539bcbcaeb2e29af972743f8001f8"
     },
     {
-      "bytes": 3931,
+      "bytes": 3934,
       "path": "code/short_corner_high_prefix.cpp",
-      "sha256": "fa5b12086cdc2248feabcfba9b27367c6b922b82fdb8a20fe5c51c69964cb987"
+      "sha256": "2747455204e5a889ca64652330277708169e7521b2196aaa6cfac14ccbe95e63"
     },
     {
       "bytes": 6281,
@@ -72,24 +72,24 @@
       "sha256": "d4621a8a2fb8a2de56654dd6ce980b247267ee36a5ca2533dc05e390616ad670"
     },
     {
-      "bytes": 3260,
+      "bytes": 3267,
       "path": "code/strip_points.cpp",
-      "sha256": "e9020d5964b79136bb537767f51db7ab550553761d99c83a456b4fe24f8e8849"
+      "sha256": "0e7d082d2afdc6a5574500372b361caa43b24e2515baeaf1313e12217b5c9d20"
     },
     {
-      "bytes": 2645,
+      "bytes": 2652,
       "path": "code/strip_prefix.cpp",
-      "sha256": "8a548bcc22a36b80c493530d1b4cbe9b3092d87311893e39278da651e2a70e2d"
+      "sha256": "7099929536e738af78884aaff9f17d09b979af0d3b9d9d9052846aa4202f45c1"
     },
     {
-      "bytes": 9592,
+      "bytes": 9607,
       "path": "code/trees_integer.py",
-      "sha256": "274e05fce1c6eec752e66318f6195ce739d47237fdf4d66aa5a94847c8c7be93"
+      "sha256": "e08220ac4c82c9ae9db9ab1ae72b103c9839e6915de8df7405e64d97f0be0214"
     },
     {
       "bytes": 10527,
       "path": "code/trees_rational.py",
-      "sha256": "4b14584395d6bad1cf5306c85e62447e02cb25480ac4b03e3526f3fa29eaf363"
+      "sha256": "d79baf459827345262f72861a554421d1d4d001a1272c45aea456c4dfb9b6f13"
     },
     {
       "bytes": 1260572,
@@ -107,9 +107,9 @@
       "sha256": "96d82c9518e4d783609e584e36cd35abb452cf823d0bd38deeb5e518441dc25e"
     },
     {
-      "bytes": 17998,
+      "bytes": 17756,
       "path": "verify.py",
-      "sha256": "ab8a95af72a447cc651a7230fcf29f142cd832de3c959d6012f1596e7481ebc2"
+      "sha256": "8f52f6750e8f8674fa227c29ddf9095d637c0fe286ae28c21f76491492970bc2"
     }
   ],
   "schema_version": 1

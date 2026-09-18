@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Depth-first closed-tree coverage and fresh integer evaluators."""
+"""Finite Lemmas 2.3, 2.4, and 2.8: depth-first coverage and integer evaluators."""
 from __future__ import annotations
 import argparse
 from collections import Counter

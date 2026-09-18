@@ -1,4 +1,4 @@
-// strip B: literal-point section prefixes and explicit rectangle transitions.
+// Finite Lemma 2.7: literal-point section prefixes and direct rectangle transitions.
 #include <algorithm>
 #include <array>
 #include <iostream>

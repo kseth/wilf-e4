@@ -1,4 +1,4 @@
-"""Exact no-corner interval evaluator; no stored bounds are read."""
+"""Finite Lemma 2.3: direct recursive horn DP with exact integers."""
 from __future__ import annotations
 from functools import lru_cache
 from itertools import product

@@ -34,7 +34,7 @@ bool allowed(const Plane& f, int a, int b, int P) {
 }
 int index(int x,int y,int z) { return 49*x+7*y+z; }
 void mix(Count& digest, I value) {
-    // Defined unsigned modular checksum; never used to accept an ideal.
+    // Unsigned modular traversal fingerprint for profile enumeration.
     digest=(digest ^ static_cast<Count>(value))*1099511628211ULL;
 }
 int main(int argc, char**) {

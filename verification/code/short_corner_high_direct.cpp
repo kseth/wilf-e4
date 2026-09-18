@@ -1,5 +1,4 @@
-// Independent short-corner backend: disjoint clipped boxes and DIRECT transitions.
-// No prefix-maximum recurrence or upper-box subtraction is used.
+// Finite Lemma 2.4: disjoint clipped boxes and direct rectangle transitions.
 #include <algorithm>
 #include <array>
 #include <iostream>
@@ -18,7 +17,7 @@ struct Statistics {
     Integer count = 0, twice_moment = 0, maximum = 0;
 };
 
-// Partition by the FIRST coordinate below p: earlier coordinates are >= p.
+// Partition by the first coordinate below p: earlier coordinates are >= p.
 Statistics measure(const Triple& a, const Triple& b, const Triple& p,
                    const Triple& feasible, const Triple& objective) {
     Statistics total;
@@ -73,7 +72,7 @@ Integer solve(Integer scale, const Triple& lower, const Triple& upper,
                         2 * piece.twice_moment + constant * piece.count
                         + tail[r * columns + s];
             }
-            // Enumerate EVERY permitted rectangle at EVERY state.
+            // Enumerate every permitted rectangle at each state.
             for (int R = 0; R < rows; ++R) for (int S = 0; S < columns; ++S) {
                 Integer best = 0; // terminate the horn
                 for (int r = 0; r <= R; ++r)

@@ -17,10 +17,8 @@ interval coverage, and recomputes every dynamic-programming leaf.
 The two interval coverage implementations are
 [depth-first integer](code/trees_integer.py) and
 [breadth-first rational](code/trees_rational.py), respectively.
-Their evaluations stay separate. [verify.py](verify.py) supplies only
-administrative compilation, hashing, process execution, result validation,
-and agreement checks; it is not a shared mathematical evaluator.
-The analytic three-plane branch has no computational premise.
+The runner [verify.py](verify.py) compiles and executes the separate
+evaluators, validates results, and checks agreement.
 
 ## 1. Exhaustiveness and exact predicates
 
@@ -37,7 +35,6 @@ labels; the membership program recognizes the conductor/Apéry bound by a full
 length-\(m\) membership window and counts the gaps directly. Bounded-family
 counts, minima, examples, and enumeration fingerprints must agree.
 Both independently check the nonnegative Wilf predicate.
-The published \(m\le19\) computation is outside this replay.
 
 The short-corner low and degree-six programs independently generate all
 compatible plane profiles. Literal degree, cardinality, and stated
@@ -46,13 +43,11 @@ The two exceptional short-corner witnesses are displayed in the proof;
 their membership, nonnegative mass, total mass, and coordinatewise residual
 are checked afresh. Degree-six local failures must pass the
 denominator-cleared axis formula; zero margins are accepted.
-No saved exceptional family, LP solver, modular lift, or tolerance is used.
 
 The strip programs enumerate every sorted positive corner of degree at most
 allowance plus one, for allowances 18, 19, and 20: 715 configurations.
-Allowance 21 occurs only at the omitted null translation.
-The replay independently
-constructs the complete expected sequence and checks each score.
+The replay independently constructs the complete expected sequence and
+checks each score.
 The second evaluator uses every subrectangle transition explicitly.
 The predicate is score at most zero.
 
@@ -99,26 +94,23 @@ Tree induction proves complete coverage, including the walls.
 Analytic leaves require \(Q_0\ge2(q+B_1+C_1)+3q\) for the no-corner tree
 or \(Q_0\ge4(q+B_1+C_1)+3q\) for the short-corner tree.
 Every other nonempty leaf recomputes its exact bound.
-No cached scores, maximizing corners, completion flags, raw child boxes,
-checkpoints, timings, or producer provenance occur inside the trees.
-Their shape is untrusted input, useful only after complete coverage and
-all leaf predicates are checked.
+The certificates encode subdivision topology. Acceptance requires complete
+coverage and verification of every terminal predicate.
 
 ## 3. Replay and rejection tests
 
-Run `python3 -I -B verify.py`. It uses no Git or network service, resolves
-all paths inside this packet, verifies every manifest input, and checks those
-identities again after the run. Programs are freshly compiled with
+Run `python3 -I -B verify.py`. The runner verifies every manifest input
+before and after execution. Programs are freshly compiled with
 `-std=c++17 -O3 -Wall -Wextra -pedantic`; compiler diagnostics reject a run.
 At most two checking paths run concurrently. Each native interval path
 uses at most four evaluator processes, capped at half the reported CPU count
 (at least one). Its independent partition and response-coverage checks
 assign every leaf exactly once; all leaf results are restored to index order.
-This is scheduling only: each evaluator has separate state and recomputes
-every supplied corner and DP state. No cached result is shared.
+Each checking path maintains separate evaluator state and recomputes its
+bounds.
 
 The replay rejects partial/unsupported arguments and optimized Python mode.
-Checks are unconditional, not removable Python assertions.
+Validation uses explicit runtime checks.
 Coverage mutation tests reject unknown/extended leaf records, unsound
 empty/analytic leaves, wrong roots, repeated children, boundary splits,
 unreachable nodes, boolean node values, and duplicate JSON keys.
@@ -131,15 +123,14 @@ complete node-kind counts, extrema, and residual corner/vacuity counts.
 Profile agreement includes family fingerprints and predicate partitions.
 The strip compares all score fingerprints.
 Generator-box agreement includes counts, minima, witnesses, and a 64-bit
-modular diagnostic fingerprint, which is neither an acceptance predicate
-nor a cryptographic security claim.
+modular diagnostic traversal fingerprint.
 
 The generated [replay.json](replay.json) records input identities, platform,
 process exit statuses/timings, result fingerprints, negative tests, and
-agreement. PASS requires all seven pairs to complete without unresolved
-cases or changed inputs. The record is never an acceptance input.
-The manifest identifies documents, code, and trees; the replay separately
-records its hash. Neither the manifest nor replay hashes itself.
+agreement. PASS requires all seven pairs to complete and agree, all rejection
+tests to pass, and the inputs to remain unchanged. The manifest identifies
+input documents, code, and trees; the generated replay record includes the
+manifest's hash and execution results.
 
 ## 4. Integer widths and overflow bounds
 
@@ -157,8 +148,3 @@ Degree-six profiles have \(m\le84\), \(s_i\le504\), and axis caps at most
 six; their denominator-cleared margins fit below \(2^{30}\) in magnitude.
 Generator-box distances are at most \((m-1)m(m-2)\le21924\).
 No mathematical operation is performed on a negative-infinity sentinel.
-
-The checking boundary consists of the paper's analytic reductions and
-coverage proofs, the evaluator sources, and faithful integer execution
-by the compiler and runtime. The published multiplicity results through
-19 remain upstream inputs.

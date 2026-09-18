@@ -1,4 +1,4 @@
-"""Exact no-corner interval evaluator; no stored bounds are read."""
+"""Finite Lemma 2.3: prefix-maxima horn DP with exact integers."""
 from __future__ import annotations
 def require(condition, message):
     if not condition: raise RuntimeError(message)

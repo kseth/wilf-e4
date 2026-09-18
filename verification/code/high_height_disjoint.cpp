@@ -1,4 +1,4 @@
-// high-height B: independently derived DISJOINT rectangles/boxes and row-scan DP.
+// Finite Lemma 2.8: disjoint retained rectangles/boxes and row-scan horn DP.
 #include <algorithm>
 #include <array>
 #include <iostream>

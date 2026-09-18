@@ -4,7 +4,7 @@ This directory supplies the code and certificates for Finite Lemmas 2.2–2.8
 of the [manuscript](../manuscript/wilf-four-generators.pdf). Their mathematical
 domains, reductions, and acceptance inequalities are stated in the paper.
 [SPECIFICATION.md](SPECIFICATION.md) describes the algorithms, certificate
-format, arithmetic bounds, and checking boundary.
+format and arithmetic bounds.
 
 ## Run
 
@@ -17,13 +17,13 @@ python3 -I -B verify.py
 Run from this directory, or invoke the script by its path. The complete run
 freshly compiles and executes both implementations of all seven assertions,
 checks exact input identities and interval coverage, and runs 35 rejection
-tests. It uses only Python's standard library and the compiler; no Git,
-network access, archive, or manuscript build is needed. Allow approximately
-15 minutes on the recorded toolchain; other machines may take longer.
+tests. The runner executes from this directory using Python's standard
+library and a C++17 compiler. The recorded isolated run took approximately
+14 minutes.
 
 The command writes [replay.json](replay.json), replacing the previous run
-record. That record reports results and input hashes; it is not an acceptance
-input. Partial runs cannot establish all seven assertions.
+record. The manifest identifies verification inputs; the replay record
+reports execution results and input hashes.
 
 ## Manuscript correspondence
 
@@ -43,6 +43,3 @@ paths are `trees_integer.py` and `trees_rational.py`.
 their assertions, totaling approximately 3.4 MB.
 [manifest.json](manifest.json) identifies every checking input.
 [verify.py](verify.py) manages compilation, execution, and result agreement.
-
-The three-plane argument is analytic. The paper's published multiplicity
-results through 19 are cited upstream theorems, outside these computations.

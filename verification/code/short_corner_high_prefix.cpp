@@ -1,5 +1,5 @@
-// Exact interval horn DP worker. All mathematical arithmetic is signed 64-bit.
-// Input rows: q B0 C0 H0 B1 C1 H1. Output: three 211-permutation bounds.
+// Finite Lemma 2.4: subtractive box moments and prefix-maxima horn DP.
+// Input rows: q B0 C0 H0 B1 C1 H1. Output: three (2,1,1)-corner orientation bounds.
 #include <algorithm>
 #include <array>
 #include <iostream>

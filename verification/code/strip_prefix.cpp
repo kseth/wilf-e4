@@ -1,4 +1,4 @@
-// strip A: subtractive box moments and monotone-prefix horn transitions.
+// Finite Lemma 2.7: subtractive box moments and prefix-maxima horn transitions.
 #include <algorithm>
 #include <array>
 #include <iostream>

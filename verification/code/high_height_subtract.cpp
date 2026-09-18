@@ -1,5 +1,4 @@
-// high-height A: subtractive precomputed section moments and prefix horn DP.
-// Standalone serial implementation; no OpenMP, producer, cache, or archive imports.
+// Finite Lemma 2.8: subtractive section moments and prefix-maxima horn DP.
 #include <algorithm>
 #include <array>
 #include <iostream>
@@ -21,9 +20,7 @@ I solve(I q,const std::array<I,3>&lo,const std::array<I,3>&hi,const std::array<i
     int nb=n[other[0]],nc=n[other[1]];stride[axis]=nc;
     auto index=[nb,nc](int t,int u,int v){return (t*nb+u)*nc+v;};
     auto &H=horns[axis];H.assign((n[axis]+1)*nb*nc,0);
-    // Producer integration: subtract the excluded upper rectangle once for
-    // each transverse bound. This deliberately remains different from the
-    // independent worker's sum of disjoint retained rectangles.
+    // Compute retained section moments by subtracting the excluded upper rectangle.
     struct Profile {I count,twice_transverse,maximum_transverse;};
     std::vector<Profile> whole(nb*nc),clipped(nb*nc);
     for(int u=0;u<nb;u++)for(int v=0;v<nc;v++){

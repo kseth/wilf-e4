@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Complete standalone replay. Only Python's standard library and C++17 are needed."""
+"""Complete replay of Finite Lemmas 2.2–2.8 of the manuscript."""
 from __future__ import annotations
 import argparse
 from concurrent.futures import ThreadPoolExecutor
@@ -245,7 +245,7 @@ def replay():
         record["processes"].append(info)
         record["environment"]=dict(python=sys.version,platform=platform.platform(),
                                   compiler=version.stdout,
-                                  dependencies="Python standard library and C++17; no third-party packages")
+                                  dependencies="Python standard library and C++17")
         record["replay_command"]=["python3","-I","-B","verify.py"]
         record["negative_tests"].extend(negative_coverage())
         record["negative_tests"].extend(negative_manifest())
@@ -278,9 +278,7 @@ def replay():
             print(json.dumps(dict(component=component,status="PASS")),flush=True)
         require(inputs()[0]==raw,"inputs/manifest changed during replay")
         record.update(status="PASS",complete=True,independent_agreement=True,unresolved=0,unsupported=0,
-                      establishes="Finite Lemmas 2.2–2.8 of the manuscript",
-                      does_not_establish=["published multiplicity-at-most-19 computation",
-                                          "proof-assistant certification","external mathematical review"])
+                      establishes="Finite Lemmas 2.2–2.8 of the manuscript")
     except Exception as error: record["error"]=f"{type(error).__name__}: {error}"
     record.update(finished_utc=datetime.now(timezone.utc).isoformat(),elapsed_seconds=time.monotonic()-clock)
     output.write_text(json.dumps(record,indent=2,sort_keys=True)+"\n")

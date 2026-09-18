@@ -12,8 +12,7 @@ static_assert(std::numeric_limits<long long>::digits >= 63, "64-bit scores requi
 static_assert(std::numeric_limits<int>::digits >= 31, "32-bit indices required");
 static_assert(std::numeric_limits<std::uint64_t>::digits == 64, "64-bit bitsets required");
 
-// Independent exact checker: uses integer semigroup membership, not a
-// residue shortest-path algorithm. It checks every tuple in the same box.
+// Finite Lemma 2.2: generator-box enumeration using integer semigroup membership.
 // A tuple can be discarded from the counterexample search exactly when
 // [B-m+1,B] is not fully contained in S: this is equivalent to max Ap(S,m)>B.
 
