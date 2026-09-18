@@ -3,7 +3,8 @@
 Run after `make pdf` in manuscript/. Requires Poppler's pdftotext.
 The proof spine and analytic mathematics are compared. Implementation
 arithmetic envelopes remain in PRELIM rather than the revised manuscript.
-Approved rewritten mathematics has explicit regression snapshots below.
+Approved rewritten mathematics has explicit regression snapshots below;
+approved editorial cuts are recorded as narrowly scoped replacements.
 This does not verify deductions or establish any computational premise.
 """
 from pathlib import Path
@@ -130,11 +131,25 @@ spine = replace_once(spine,
                      r"\(H<3+4B\), hence \(H^2-42H+5<0\) and \(H<42\).",
                      r"\(H<42\).")
 spine = replace_once(spine, r"\(5H^2-390H+89<0\)", "")
+# Approved editorial cuts remove only this evaluator-specific encoding and
+# two repeated conclusions; the family definition and inequalities remain.
+spine = replace_once(spine, r"""The independent generators use recursive profiles and seven-element
+subsets of \(\{0,\ldots,13\}\), respectively.
+The subset bijection is \(f_i=t_i-6+i\) for descending
+\(13\ge t_0>\cdots>t_6\ge0\); its inverse is \(t_i=f_i+6-i\).
+""", "")
+spine = replace_once(spine,
+                     r" (or the stronger \(D_0\ge m-1\) or \(D_0\ge m\))", "")
+spine = replace_once(spine, r"""The weakest branch therefore proves
+\(W_4\ge0\), not a general claim of strict positivity.
+""", "")
 analytic = (ROOT / "prelim/analytic-details.md").read_text(encoding="utf-8")
 b = analytic.index("## Appendix B:")
 c = analytic.index("## Appendix C:")
 # The only mathematical notation change in the import is local w(x) -> lambda(x).
 analytic = analytic[:b] + analytic[b:c].replace("w(", r"\lambda(") + analytic[c:]
+analytic = replace_once(analytic, r"""Here \(\lambda(x)\) denotes the unnormalized integer label, locally to this appendix.
+""", "")
 analytic = replace_span(analytic, "### B.4. The remaining projection scores",
                         "## Appendix C:", PROJECTION_MATH)
 # The schematic adds only coordinate/state labels; all of Appendix C's
@@ -224,7 +239,8 @@ require(text.count("Finite lemma 2.") == 7, "PDF finite assertion count")
 
 print(json.dumps({"status": "PASS", "math_fidelity": fidelity,
                   "approved_rewrites": ["shared horn recurrence", "classified projections",
-                                        "height cutoffs", "boundary-path schematic"],
+                                        "height cutoffs", "boundary-path schematic",
+                                        "approved editorial cuts"],
                   "finite_premises": 7, "bibliography_entries": len(cites),
                   "unique_labels": len(labels), "build_diagnostics": 0,
                   "pdf_pages": text.count("\f"),

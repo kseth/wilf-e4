@@ -36,8 +36,12 @@ This is an initial manuscript, not a final reviewed release.
 ## Draft checks
 
 The editorial comparison checks unchanged proof-spine and analytic expressions
-against PRELIM, with approved mathematical consolidations recorded explicitly
-in the audit. Numbering and the local full-weighted label notation differ.
+against PRELIM, with approved mathematical consolidations and editorial cuts
+recorded explicitly in the audit. Numbering and the local full-weighted label
+notation differ. The cuts omit repeated status disclaimers and self-evident
+asides, including the correction-term parity explanation and degree-six
+evaluator-specific subset encoding. All seven finite statements and the
+six-column obstruction are unchanged from the initial TeX audit checkpoint.
 Implementation overflow envelopes are intentionally not repeated in the
 paper; they remain in the frozen packet. The converged 36-page build has no
 warnings, all cross-references resolve, and all 15 bibliography entries are cited.

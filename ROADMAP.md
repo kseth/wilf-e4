@@ -38,9 +38,9 @@ not by replaying the superseded shape/modular route.
 | S3 | PASS; complete replay from a literal copy outside the checkout | All seven finite-premise pairs pass with exact-source matching; all 35 rejection tests pass |
 | PRELIM | Internally complete; ready for private specialist review | Standalone proof, analytic appendices, comprehensive finite contracts, minimal inventory, and [complete evidence](prelim/replay.json) |
 | T1 | Initial TeX/PDF draft complete | Requested section order; all selected analytic proofs; seven finite assertions; primary-source bibliography; construction history |
-| T2 | PASS; editorial regression; final source-only rebuild pending T4 | Unchanged expressions compared against PRELIM; approved consolidations recorded explicitly; implementation arithmetic envelopes remain in PRELIM; 149 labels resolve; 15 cited sources; warning-free 36-page PDF; prior ten-input cold build passed |
+| T2 | PASS; editorial regression and isolated source-only build after T4 | Unchanged expressions compared against PRELIM; approved consolidations and editorial cuts recorded explicitly; implementation arithmetic envelopes remain in PRELIM; 149 labels resolve; 15 cited sources; warning-free 36-page PDF; ten-input cold build gives identical rendered text without PRELIM/Git/history |
 | T3 | All six authorized edits complete; final checks PASS | Attribution and checking prose consolidated; one recurrence; shared projection/cutoff calculations; one-slab proof in named stages with a schematic; all seven finite statements and the six-column obstruction byte-for-byte unchanged |
-| T4 | In progress: approved aside/disclaimer audit, including both optional cuts | Narrative edits and parity-aside cut applied; proof-aside and degree-six encoding cuts next; preserve mathematical hypotheses, coverage, and both model credits |
+| T4 | Complete; final checks PASS | All approved aside/disclaimer removals and direct rewrites applied, including parity explanation and degree-six encoding cuts; mathematical hypotheses, coverage, both model credits, seven finite statements, and six-column obstruction preserved |
 
 The author has authorized a preliminary TeX/PDF draft before FREEZE, in a
 separate directory. This supersedes the earlier drafting order but does not
@@ -61,6 +61,14 @@ PRELIM and all computational contracts remain unchanged.
 Literal projection-count regressions and exact rational cutoff checks also
 pass. These are authoring regressions, not additional computational premises;
 the frozen packet's complete source-matching replay remains unchanged.
+T4 removes the approved repeated review-status disclaimers and self-evident
+asides, and replaces negative comparisons with direct statements. Both
+optional cuts are applied: the correction-term parity explanation and the
+degree-six evaluator-specific subset encoding. The latter remains in the
+packet documentation. All seven finite statements and the six-column
+obstruction still match the initial TeX audit checkpoint byte for byte.
+The updated expression comparison, frozen-packet audit, and ten-input
+source-only cold build pass; the latter gives identical rendered text.
 
 | Item | Proposed edit | Boundary to preserve |
 |---|---|---|
@@ -69,13 +77,13 @@ the frozen packet's complete source-matching replay remains unchanged.
 | T3.3 | Complete: projection inequality reused; three-/four-column calculations merged | Restrict the shared calculation to the two classified projections; retain the six-column residue obstruction |
 | T3.4 | Complete: one height-cutoff lemma and three-row parameter table | State \(H>3\), \(D_0<m\), \(\alpha>0\), \(0\le\beta\le3\); retain closed roots 24, 42, and 78 |
 | T3.5 | Complete: named stages and one L-shaped boundary-path schematic | Retain all boundary, jump-merging, and polynomial nonnegativity arguments; clarity takes precedence over page count |
-| T4 | Authorized: remove repetitive status disclaimers and self-evident asides; make direct positive statements; omit parity explanation and evaluator-specific subset encoding | Preserve all seven finite statements, scope of the higher-dimensional example, conditional transfer hypothesis, rounding/coverage proofs, and construction attribution |
+| T4 | Complete: remove repetitive status disclaimers and self-evident asides; make direct positive statements; omit parity explanation and evaluator-specific subset encoding | Preserve all seven finite statements, scope of the higher-dimensional example, conditional transfer hypothesis, rounding/coverage proofs, and construction attribution |
 
 ## Remaining topological order
 
-1. Read through the tightened draft and agree any further editorial changes.
-   The extension section claims no uniform result for
-   embedding dimension greater than four.
+1. Author read-through of the tightened draft; agree any further editorial
+   changes. The approved aside/disclaimer audit is complete. The extension
+   section retains its conditional hypothesis and general lower-ideal scope.
 2. V1: choose the additional proof-verification scope and trusted boundary.
    Targeted formalization is an option, not already completed or mandatory.
 3. H1: obtain independent specialist review of the mathematics, finite

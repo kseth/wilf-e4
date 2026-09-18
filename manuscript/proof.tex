@@ -58,8 +58,7 @@ points of equal residue, impossible. Likewise two distinct corners
 sharing a positive coordinate cannot have the same residue.
 Hence a positive corner has representative zero, and there is at most one
 positive corner. All other corners have a zero coordinate.
-These are the support/collision consequences of \cite[Proposition~2.6]{HRW},
-with their elementary predecessor-subtraction proofs included here.
+These are the support/collision consequences of \cite[Proposition~2.6]{HRW}.
 
 \subsection{Coordinate lines and two centroid bounds}\label{sec:p2}
 
@@ -114,7 +113,7 @@ G=q_*\left(3m-4\sum_i s_i/q_i\right).
 When \(C=3m-4\sum_i s_i/q_i\ge0\), assign mass \(4s_i/q_i\)
 to \(q_ie_i\), and mass \(C\) to a longest-axis endpoint.
 The total is \(3m\), with residual \(Cq_*e_j\ge0\), proving \(D_Q\ge G\).
-When \(C<0\), \eqref{eq:p:3} gives \(D_Q\ge0>G\); no negative-mass witness is claimed.
+When \(C<0\), \eqref{eq:p:3} gives \(D_Q\ge0>G\).
 In all cases \(D_Q\ge\max(U_2,G)\).
 
 \subsection{The final-window projection inequality}\label{sec:p3}
@@ -173,7 +172,7 @@ Thus
 \[
 mW_4\ge m(P(T)-3|Z|)-(m-1)E(Z),
 \]
-which is \eqref{eq:p:6}. All inequalities include equality.
+which is \eqref{eq:p:6}.
 In particular \(\Phi(T,K)\ge0\) suffices to prove Wilf.
 
 \subsection{Phase and rectangular thickening}\label{sec:p4}
@@ -301,8 +300,6 @@ Horn \(i\) consists of rectangles at levels \(t>z_i\), with transverse
 caps at most \(z_j,z_k\), nonincreasing with \(t\).
 The proof constructs a chordal compatibility graph, proves its needed
 clique-tree property, and uses the median of three coordinate maximizers.
-The classical graph-theoretic lineage is \cite{G}, but the necessary lemma
-is proved in Section~\ref{sec:analytic-a}.
 
 For a unique positive corner \(p\), deleting its generator from the
 upper-ideal complement gives a finite no-full-corner \(U\) with
@@ -365,7 +362,6 @@ Splitting a tightened box at an interior integer wall yields two closed
 children sharing that wall and covering the parent.
 A finite tree reaching every node exactly once and ending only at checked
 empty, analytic, or exact-DP leaves covers all real root parameters.
-This is interval domination, not testing a rational grid.
 
 
 \subsection{Small multiplicity}\label{sec:p6}
@@ -373,8 +369,7 @@ This is interval domination, not testing a rational grid.
 The two published computer-assisted results \cite[Theorem~4.3]{B} and
 \cite[Proposition~6.9]{KS} settle all numerical semigroups of multiplicity at
 most 18 and exactly 19, respectively, without an embedding-dimension
-restriction. We use them as external theorems; the accompanying packet does not replay
-their Kunz-polyhedron computations.
+restriction.
 
 For \(20\le m\le29\) we need an analytic counterexample reduction.
 Theorem~\ref{theorem:b:1.1}, proved in Section~\ref{sec:analytic-b},
@@ -555,7 +550,7 @@ These are translated planar lower ideals, with offsets respectively
 \(0,w_2,w_2+w_3,B\). Thus \(D_0/m\ge(H-4B)/3\).
 If \(H\ge6\) and \(D_0<m-1\), Lemma~\ref{lemma:height-cutoff}
 with the second row of Table~\ref{tab:height-cutoffs} gives \(H<42\).
-We retain the closed height-42 superset; a sharper cutoff is unnecessary.
+We retain the closed height-42 superset.
 
 \begin{finitelemma}[Short-corner high]\label{finite:short-corner-high}
 For all
@@ -697,10 +692,6 @@ are exact. With \(d=q_1q_2q_3>0\), the latter is
 \[
 q_*\left(3md-4\sum_i s_i\prod_{j\ne i}q_j\right)\ge md.
 \]
-The independent generators use recursive profiles and seven-element
-subsets of \(\{0,\ldots,13\}\), respectively.
-The subset bijection is \(f_i=t_i-6+i\) for descending
-\(13\ge t_0>\cdots>t_6\ge0\); its inverse is \(t_i=f_i+6-i\).
 Section~\ref{sec:p2} and \eqref{eq:p:21} give \(D_0\ge m\) for this branch.
 
 \subsection{Higher degree: a finite strip and a real interval bound}\label{sec:p11}
@@ -748,7 +739,7 @@ allowance.
 The maximum of center score plus its three horn bounds is an upper bound
 for \(\sum_{T'}f_r=4|T'|-D_r(T')\). Every configuration must have this
 bound at most zero. This is a search over corner/allowance configurations
-and exact dynamic-programming states, not an enumerated list of ideals.
+and exact dynamic-programming states.
 Singletons, zero caps, and inactive corners are included.
 
 \subsubsection{Transfer to the continuous gap}
@@ -836,8 +827,7 @@ put \(T'=U\setminus(p+\mathbb N^3)\). If
 
 No residue, cardinality, minimality, unit, or surface restriction is used
 in this enlarged geometric family.
-For reproducibility, the only region-specific interval tightening is as
-follows. At scale \(q=4096\) write endpoints
+Use the following interval tightening. At scale \(q=4096\) write endpoints
 \(L=(B_0,C_0,H_0)\), \(U=(B_1,C_1,H_1)\) for \((b,d,Q)\).
 First intersect with order:
 \[
@@ -875,7 +865,7 @@ The closed root is \(((q,q,7q),(78q,78q,78q))\).
 Each child is derived from its tightened parent; each split is strictly
 interior, and its two children share the split wall. Checked empty leaves
 and checked dynamic-programming leaves exhaust all nodes.
-Induction proves \eqref{eq:p:26} for the entire real region, not a parameter grid.
+Induction proves \eqref{eq:p:26} throughout the closed real parameter region.
 At \(Q=H\), it contradicts the proposed failure and proves this branch.
 
 \subsection{Assembly of the proof}\label{sec:p12}
@@ -885,7 +875,7 @@ At \(Q=H\), it contradicts the proposed failure and proves this branch.
 The branches are exhaustive. Multiplicity at most 29 is settled by Section~\ref{sec:p6}.
 For \(m\ge30\), Section~\ref{sec:p7} routes every ideal to exactly one of Sections~\ref{sec:p8}--\ref{sec:p11} or the analytic three-plane case. The three-plane case already gives
 \(W_4\ge0\). On the remaining branches their conclusions give
-\(D_0\ge m-29/10\) (or the stronger \(D_0\ge m-1\) or \(D_0\ge m\)).
+\(D_0\ge m-29/10\).
 Suppose, for contradiction, that \(W_4<0\). It is an integer, so
 \(W_4\le-1\), and \eqref{eq:p:1} implies \(AD_0\le m(m-2)\).
 Since \(A\ge m+1\) and \(m\ge30\), this gives
@@ -899,8 +889,7 @@ But
 =\frac1{10}-\frac3{m+1}
 \ge\frac1{310}>0.
 \]
-This contradicts the branch bound. The weakest branch therefore proves
-\(W_4\ge0\), not a general claim of strict positivity.
+This contradicts the branch bound.
 Together with the direct analytic three-plane case and the
 small-multiplicity result, this proves the proposed theorem
 using the stated, independently replayed finite lemmas and the published

@@ -1,11 +1,8 @@
 \section{Analytic details}\label{sec:analytic}
 
-The following three arguments are integral to the proof. They require no finite computation.
+The following three arguments are integral to the proof.
 
 \subsection{Central boxes and three monotone horns}\label{sec:analytic-a}
-
-
-The needed clique-tree fact is classical and is proved below.
 
 \subsubsection{Statement}
 
@@ -381,8 +378,7 @@ levels and cap choices, so backward evaluation terminates.
 
 Equivalently, a prefix-maximum implementation may compare the state
 \((b,d)\) with \((b-1,d)\) and \((b,d-1)\), because every proper
-subrectangle decreases at least one cap. This is an implementation identity,
-not an additional geometric assumption.
+subrectangle decreases at least one cap.
 
 For a fixed center, the three arms in \eqref{eq:a:1} or \eqref{eq:a:12} are disjoint, so their
 additive optima may be computed independently and added to the central-piece
@@ -393,8 +389,6 @@ height allowances, and interval bounds are specified in Section~\ref{sec:proof}.
 
 \subsection{Full weighted Apéry ideals}\label{sec:analytic-b}
 
-
-Here \(\lambda(x)\) denotes the unnormalized integer label; the sorted generators are local to this section.
 
 \subsubsection{Setup and statement}
 
@@ -435,8 +429,6 @@ and use coordinates \((x,y,z)\), so that
 \lambda(x,y,z)=ax+by+dz.
 \]
 
-The inequalities are strict because the minimal generators are distinct.
-
 \begin{theorem}[Full-weighted-ideal theorem]\label{theorem:b:1.1}
 
 If the preferred Apéry ideal \(T\) is full weighted, then
@@ -444,8 +436,6 @@ If the preferred Apéry ideal \(T\) is full weighted, then
 \[
 W_4(S)\ge0.
 \]
-
-We prove the theorem in three steps.
 
 \end{theorem}
 \subsubsection{Classification of the column projection}
@@ -834,7 +824,6 @@ excludes the six-column triangle, and Lemma~\ref{lemma:b:4.1} gives
 \(\Phi(T,K)\ge0\) in the remaining cases. The projection inequality
 \eqref{eq:p:6} proves \(W_4(S)\ge0\).
 
-No finite verification is used.
 \end{proof}
 
 
@@ -1119,9 +1108,9 @@ jump covers the virtual excess.
 \put(60,95){\circle*{4}}
 \put(110,99){\makebox(0,0)[l]{\footnotesize crossing jump}}
 \end{picture}
-\caption{The L-shaped boundary path in \eqref{eq:c:23}. The dashed
+\caption{Schematic of the L-shaped boundary path in \eqref{eq:c:23}. The dashed
 extension represents the virtual initial state; a crossing jump skips
-the turn. The diagram is schematic, not to scale.}
+the turn.}
 \label{fig:boundary-path}
 \end{figure}
 
@@ -1458,8 +1447,7 @@ which is the negative of the central contribution \eqref{eq:c:10}. Hence
 The rectangular thickening of Section~\ref{sec:p4}, after positive diagonal
 scaling, has the box-horn form proved in Section~\ref{sec:analytic-a}. Its simplex containment
 and the preceding theorem give its deficit at least one third.
-The box side lengths named \(a,b,c\) in this section are local geometric
-variables, not the semigroup conductor or normalized generator weights.
+Here \(a,b,c\) denote box side lengths.
 
 \subsubsection{The degree-four cardinality bound}
 
