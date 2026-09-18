@@ -38,8 +38,9 @@ not by replaying the superseded shape/modular route.
 | S3 | PASS; complete replay from a literal copy outside the checkout | All seven finite-premise pairs pass with exact-source matching; all 35 rejection tests pass |
 | PRELIM | Internally complete; ready for private specialist review | Standalone proof, analytic appendices, comprehensive finite contracts, minimal inventory, and [complete evidence](prelim/replay.json) |
 | T1 | Initial TeX/PDF draft complete | Requested section order; all selected analytic proofs; seven finite assertions; primary-source bibliography; construction history |
-| T2 | PASS; editorial regression and isolated source-only build | Unchanged expressions compared against PRELIM; approved consolidations recorded explicitly; implementation arithmetic envelopes remain in PRELIM; 149 labels resolve; 15 cited sources; warning-free 37-page PDF; ten-input cold build gives identical rendered text without PRELIM/Git/history |
+| T2 | PASS; editorial regression; final source-only rebuild pending T4 | Unchanged expressions compared against PRELIM; approved consolidations recorded explicitly; implementation arithmetic envelopes remain in PRELIM; 149 labels resolve; 15 cited sources; warning-free 36-page PDF; prior ten-input cold build passed |
 | T3 | All six authorized edits complete; final checks PASS | Attribution and checking prose consolidated; one recurrence; shared projection/cutoff calculations; one-slab proof in named stages with a schematic; all seven finite statements and the six-column obstruction byte-for-byte unchanged |
+| T4 | In progress: approved aside/disclaimer audit, including both optional cuts | Narrative edits and parity-aside cut applied; proof-aside and degree-six encoding cuts next; preserve mathematical hypotheses, coverage, and both model credits |
 
 The author has authorized a preliminary TeX/PDF draft before FREEZE, in a
 separate directory. This supersedes the earlier drafting order but does not
@@ -68,6 +69,7 @@ the frozen packet's complete source-matching replay remains unchanged.
 | T3.3 | Complete: projection inequality reused; three-/four-column calculations merged | Restrict the shared calculation to the two classified projections; retain the six-column residue obstruction |
 | T3.4 | Complete: one height-cutoff lemma and three-row parameter table | State \(H>3\), \(D_0<m\), \(\alpha>0\), \(0\le\beta\le3\); retain closed roots 24, 42, and 78 |
 | T3.5 | Complete: named stages and one L-shaped boundary-path schematic | Retain all boundary, jump-merging, and polynomial nonnegativity arguments; clarity takes precedence over page count |
+| T4 | Authorized: remove repetitive status disclaimers and self-evident asides; make direct positive statements; omit parity explanation and evaluator-specific subset encoding | Preserve all seven finite statements, scope of the higher-dimensional example, conditional transfer hypothesis, rounding/coverage proofs, and construction attribution |
 
 ## Remaining topological order
 

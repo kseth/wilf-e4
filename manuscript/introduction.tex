@@ -21,27 +21,20 @@ W_4(S):=4|S\cap[0,c)|-c\ge0.
 \]
 \end{theorem}
 
-This is a preliminary computer-assisted proof for independent mathematical
-review. All analytic arguments and finite predicates are stated in the
-paper. The accompanying verification packet contains the exact computations
-used to establish those predicates; no proof-assistant certification is
-claimed.
-
 \subsection{Foundational work}
 
 The proof builds on Zhai's \cite{Z} preferred factorizations of
 Ap\'ery elements and weighted mean inequality for finite lower ideals.
 Hellus, Rechenauer, and Waldi \cite{HRW} developed the monomial
 initial-ideal and residue-lattice interpretation, including restrictions
-on the supports of minimal exclusions. We give the short elementary
-arguments needed for our specialization, with attribution at the point
-of use. The classical Ap\'ery genus formula supplies the exact link from
+on the supports of minimal exclusions. The classical Ap\'ery genus
+formula supplies the exact link from
 weighted moments to Wilf's inequality; see also \cite{Book}.
 
 Two published computer-assisted results dispose of multiplicities through
 19: Bruns, Garc\'ia-S\'anchez, O'Neill, and Wilburne
 \cite[Theorem~4.3]{B}, and Kliem and Stump
-\cite[Proposition~6.9, published version]{KS}. These are external inputs.
+\cite[Proposition~6.9, published version]{KS}.
 The clique-tree ingredient in our geometric decomposition is classical
 \cite{G}; its needed finite form is proved here. Connections with
 three-dimensional L-shapes \cite{L,C} and other approaches to Wilf's
@@ -84,8 +77,8 @@ moment gap by averaging translated lattice meshes.
 
 The weakest retained conclusion is
 \(3mH-4w\cdot s\ge m-29/10\) for the branches not already settled
-directly. Integrality matters: a negative Wilf number is at most \(-1\),
-not merely a negative real number. For \(m\ge30\), this turns the weakest
+directly. Since \(W_4\) is integral, \(W_4<0\) implies \(W_4\le-1\).
+For \(m\ge30\), this turns the weakest
 surplus into a contradiction.
 
 \subsection{Organization}
