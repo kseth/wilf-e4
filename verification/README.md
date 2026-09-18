@@ -1,10 +1,15 @@
 # Verification companion
 
-This directory supplies the code and certificates for Finite Lemmas 2.2–2.8
+This directory supplies the code and coverage certificates for Finite Lemmas 2.2–2.8
 of the [manuscript](../manuscript/wilf-four-generators.pdf). Their mathematical
 domains, reductions, and acceptance inequalities are stated in the paper.
 [SPECIFICATION.md](SPECIFICATION.md) describes the algorithms, certificate
 format and arithmetic bounds.
+
+The three certificates encode interval subdivision trees. Both checking paths
+reconstruct complete coverage and recompute the bounds. Input hashes identify
+the files used in a run; result fingerprints compactly compare the checkers'
+outputs. Mathematical acceptance rests on coverage and predicate checks.
 
 ## Run
 

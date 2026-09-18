@@ -1,8 +1,13 @@
 # Exact finite verification
 
 This specification accompanies [the manuscript](../manuscript/wilf-four-generators.pdf).
-The complete replay independently regenerates profile families, reconstructs
-interval coverage, and recomputes every dynamic-programming leaf.
+The complete replay independently regenerates finite families and checks their
+predicates. The three interval certificates encode subdivision topology rather
+than cached bounds: each checking path reconstructs full coverage, justifies
+empty and analytic leaves, and recomputes every dynamic-programming bound.
+Input hashes identify the exact files used in a run; result fingerprints
+compactly compare computed results. Coverage and predicate checks establish
+the computational premises.
 
 | Premise | Manuscript location | Independent checking paths |
 |---|---|---|

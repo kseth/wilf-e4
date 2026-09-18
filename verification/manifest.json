@@ -2,14 +2,14 @@
   "format": "wilf-four-verification-v1",
   "inputs": [
     {
-      "bytes": 2427,
+      "bytes": 2743,
       "path": "README.md",
-      "sha256": "1639099fdd486cdc59820f9baa33383c576f49cd334e7f85b90a4c5eceb924c0"
+      "sha256": "7bd7346b97859429b92a7769408c549f9498f52302016805d18d349404d42add"
     },
     {
-      "bytes": 8389,
+      "bytes": 8733,
       "path": "SPECIFICATION.md",
-      "sha256": "aa90d7d2771944d71073456f49d983b4d2aae4a66361784988942392ec477a2f"
+      "sha256": "faa1af8766a2ecc47cd5d70f279337f1a53c9b216d0b2d5efbeca0186c3afa2e"
     },
     {
       "bytes": 6289,
