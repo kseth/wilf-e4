@@ -11,5 +11,6 @@ Start with the [first-draft paper](manuscript/wilf-four-generators.pdf).
 Build the paper with `make -C manuscript pdf`.
 Reproduce all seven computational assertions with
 `python3 -I -B verification/verify.py`.
-The [complete-run record](verification/replay.json) identifies checked inputs
-and results for all seven assertions and 35 rejection tests.
+A fresh replay from an isolated copy passed both implementations of all seven
+assertions and all 35 rejection tests; see the
+[complete-run record](verification/replay.json).
