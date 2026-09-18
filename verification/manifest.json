@@ -1,0 +1,116 @@
+{
+  "format": "wilf-four-verification-v1",
+  "inputs": [
+    {
+      "bytes": 2679,
+      "path": "README.md",
+      "sha256": "afb144e20be574c955544132db275db4bf3c319cc69274b1ec227ec7faf5fd55"
+    },
+    {
+      "bytes": 9329,
+      "path": "SPECIFICATION.md",
+      "sha256": "83370d75ba497eceed72fa6b868aaad883d38480ff099308f3c8859afef66ee2"
+    },
+    {
+      "bytes": 6291,
+      "path": "code/degree_six_bits.cpp",
+      "sha256": "f8903ca187c4888a4347f2acca464c64af7d4d96e65a05262b146ce2cd46d94c"
+    },
+    {
+      "bytes": 6284,
+      "path": "code/degree_six_columns.cpp",
+      "sha256": "a4b7a3fb12b10dfa877a14037105345715c4af6e50eb7080842f643fc6403ad5"
+    },
+    {
+      "bytes": 5371,
+      "path": "code/generator_box_membership.cpp",
+      "sha256": "82f34f3ae060623405c1f0837ee9783c4c141297b5a2a8518755fc50b85d9315"
+    },
+    {
+      "bytes": 6511,
+      "path": "code/generator_box_residues.cpp",
+      "sha256": "95e4359affb8fd476932dfdc1efa70edfd98acc4bab1f7cf499dee8c83f984b5"
+    },
+    {
+      "bytes": 5215,
+      "path": "code/high_height_disjoint.cpp",
+      "sha256": "2fbb2f87f4a441bef704dd9f06f5df096c34feaa3db109a19953228682f6d403"
+    },
+    {
+      "bytes": 4677,
+      "path": "code/high_height_subtract.cpp",
+      "sha256": "a560520b5bf6bef8d13d13360c8926220d80d3abe46055c01d95db6d52839db8"
+    },
+    {
+      "bytes": 2688,
+      "path": "code/no_corner_interval_direct.py",
+      "sha256": "3987af886a357ff403e2aae419d289f899399a630484209ba9f93d535a2f8a0c"
+    },
+    {
+      "bytes": 2977,
+      "path": "code/no_corner_interval_prefix.py",
+      "sha256": "02fc3d688a7ddbe046ecbcdee0c64ed794ed42e8636f6ff567e1baf27fb52f9f"
+    },
+    {
+      "bytes": 5939,
+      "path": "code/short_corner_high_direct.cpp",
+      "sha256": "3129a638d77793824493553e142c04e9f33211c3ba0751b599bd974ee2dc7ab7"
+    },
+    {
+      "bytes": 3931,
+      "path": "code/short_corner_high_prefix.cpp",
+      "sha256": "fa5b12086cdc2248feabcfba9b27367c6b922b82fdb8a20fe5c51c69964cb987"
+    },
+    {
+      "bytes": 6281,
+      "path": "code/short_corner_low_offsets.py",
+      "sha256": "1d653e9912a91dfed173b7bdd48af1179e5e2c8b6f767c87d4bb7bfbc1277033"
+    },
+    {
+      "bytes": 6275,
+      "path": "code/short_corner_low_successors.py",
+      "sha256": "d4621a8a2fb8a2de56654dd6ce980b247267ee36a5ca2533dc05e390616ad670"
+    },
+    {
+      "bytes": 3260,
+      "path": "code/strip_points.cpp",
+      "sha256": "e9020d5964b79136bb537767f51db7ab550553761d99c83a456b4fe24f8e8849"
+    },
+    {
+      "bytes": 2645,
+      "path": "code/strip_prefix.cpp",
+      "sha256": "8a548bcc22a36b80c493530d1b4cbe9b3092d87311893e39278da651e2a70e2d"
+    },
+    {
+      "bytes": 9592,
+      "path": "code/trees_integer.py",
+      "sha256": "274e05fce1c6eec752e66318f6195ce739d47237fdf4d66aa5a94847c8c7be93"
+    },
+    {
+      "bytes": 10527,
+      "path": "code/trees_rational.py",
+      "sha256": "4b14584395d6bad1cf5306c85e62447e02cb25480ac4b03e3526f3fa29eaf363"
+    },
+    {
+      "bytes": 1260572,
+      "path": "data/high-height.json",
+      "sha256": "c80ab0d65d3fa76db023f0f82eea992b1b4b4d3d4fda8caac0823ffa877cea57"
+    },
+    {
+      "bytes": 670180,
+      "path": "data/no-corner-interval.json",
+      "sha256": "4f778d6786d9b7bf79d5aee3212efb33901807532b111eca695287791ec2e0f1"
+    },
+    {
+      "bytes": 1494212,
+      "path": "data/short-corner-high.json",
+      "sha256": "96d82c9518e4d783609e584e36cd35abb452cf823d0bd38deeb5e518441dc25e"
+    },
+    {
+      "bytes": 17998,
+      "path": "verify.py",
+      "sha256": "ab8a95af72a447cc651a7230fcf29f142cd832de3c959d6012f1596e7481ebc2"
+    }
+  ],
+  "schema_version": 1
+}

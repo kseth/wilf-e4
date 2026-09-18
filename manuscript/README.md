@@ -1,55 +1,34 @@
-# Preliminary TeX manuscript
-
-This directory contains the TeX draft of Karthik Sethuraman's proposed
-computer-assisted proof. It is separate from the frozen PRELIM verification
-packet. The paper includes its complete analytic arguments; reading or
-compiling it requires no historical manuscript or research notes.
+# Manuscript
 
 Start with [the PDF](wilf-four-generators.pdf) or [main.tex](main.tex).
-The mathematical sections conclude with extensions to embedding dimension
-greater than four and related work. A construction-history section follows,
-covering the initial GPT-6 Astra iterations, subsequent reconstruction
-with GPT-5.6 Sol via Codex, attribution, and exact computer aids. There
-is no separate responsibility section.
+Karthik Sethuraman's first draft includes the analytic argument, seven finite
+assertions, extensions, related work, bibliography, and construction history
+crediting GPT-6 Astra and GPT-5.6 Sol via Codex.
 
-Build locally with `make pdf` from this directory, using a standard TeX
-installation with `latexmk`, pdfLaTeX, and BibTeX. No shell escape or downloaded
-assets are used. Build intermediates stay in the ignored `build/` directory;
-the reader-facing PDF is retained alongside its sources.
+## Build
 
-`proof.tex` and `analytic.tex` transcribe the selected PRELIM argument,
-with TeX theorem environments and cross-references. `verification.tex`
-gives a short overview of the seven finite assertions and the accompanying
-code and interval certificates. Execution instructions, data formats,
-arithmetic safeguards, and diagnostic records belong to the packet's
-documentation rather than the paper.
-The bibliography cites primary sources and identifies the versions of
-recent preprints. The extension section states only proved identities,
-a conditional mesh transfer, and a lower-ideal obstruction; it claims no
-uniform theorem for more than four generators.
+From this directory, run `make pdf` with a standard TeX installation
+providing `latexmk`, pdfLaTeX, and BibTeX. No shell escape or downloaded
+assets are used. Intermediates stay in the ignored `build/` directory; the
+reader-facing PDF is retained alongside its sources.
 
-The accompanying code remains in [../prelim/](../prelim/README.md).
-Run `python3 -I -B verify.py` there to recompute every retained finite premise.
-Its frozen manifest and complete replay have not been changed by TeX drafting.
-This is an initial manuscript, not a final reviewed release.
+## Self-sufficiency audit
 
-## Draft checks
+The eight TeX files and `references.bib` contain all analytic proofs,
+finite-family definitions, reductions, and final arithmetic. Every internal
+reference resolves, and all 15 bibliography entries are cited. The
+warning-free 36-page PDF also builds from an isolated copy of the ten
+source/build inputs, with identical rendered text.
 
-The editorial comparison checks unchanged proof-spine and analytic expressions
-against PRELIM, with approved mathematical consolidations and editorial cuts
-recorded explicitly in the audit. Numbering and the local full-weighted label
-notation differ. The cuts omit repeated status disclaimers and self-evident
-asides, including the correction-term parity explanation and degree-six
-evaluator-specific subset encoding. All seven finite statements and the
-six-column obstruction are unchanged from the initial TeX audit checkpoint.
-Implementation overflow envelopes are intentionally not repeated in the
-paper; they remain in the frozen packet. The converged 36-page build has no
-warnings, all cross-references resolve, and all 15 bibliography entries are cited.
-A cold build from just the ten required source/build files outside the
-checkout produces identical rendered text, without PRELIM, Git, or
-historical files present.
+The seven computational assertions are established by the accompanying
+[verification code and certificates](../verification/README.md), mapped there
+to Finite Lemmas 2.2–2.8 and their stable TeX labels. The published results
+for multiplicities at most 18 and exactly 19 are explicitly cited in
+Section 2.6. All other needed elementary upstream ingredients are proved
+in the paper.
 
-After `make pdf`, the repository-level authoring check is
-`python3 -I -B research/audit_tex_draft.py` (run from the repository root;
-requires Poppler's `pdftotext`). It checks transcription and build hygiene,
-not the correctness of the deductions or computational premises.
+Reading and building the manuscript requires no archive, reconstruction
+notes, or Markdown proof. Replaying the finite assertions requires only
+`verification/`, Python's standard library, and a C++17 compiler. Numerical
+width bounds and implementation details are in its
+[specification](../verification/SPECIFICATION.md).
