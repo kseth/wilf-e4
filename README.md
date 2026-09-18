@@ -1,6 +1,10 @@
 # Wilf's inequality for four generators
 
-Start with the [first-draft paper](manuscript/wilf-four-generators.pdf).
+This repository contains a computer-assisted proof of Wilf's conjecture for
+numerical semigroups with four minimal generators, with a self-contained
+manuscript and reproducible code for its finite computations.
+
+Start with the [Current Manuscript](manuscript/wilf-four-generators.pdf).
 
 | Directory | Contents |
 |---|---|
