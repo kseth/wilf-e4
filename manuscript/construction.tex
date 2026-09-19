@@ -1,31 +1,27 @@
 \section{How the proof was constructed}\label{sec:construction}
 
-Karthik Sethuraman began this project through repeated iterations with
-GPT-6 Astra over a period of several weeks. Those iterations produced
-a complete but difficult-to-read candidate proof, accompanied by numerous
-computational and exploratory artifacts.
+Karthik Sethuraman began this project through several weeks of iteration
+with GPT-6 Astra. This produced an initial complete candidate proof and
+associated exploratory computations.
 
-Once that candidate was available, Sethuraman iterated with GPT-5.6 Sol
-via Codex to break apart, simplify, rephrase, and improve the proof.
-These iterations decomposed the argument into small
-proof obligations and explicit dependencies. We reconstructed
-the Ap\'ery foundations, separated the geometric branches, normalized
-notation and endpoints, and audited the final arithmetic. We simplified
-the argument, removed unnecessary conditions, and replaced several
-computations with analytic proofs. In particular, the three-plane
-branch became entirely analytic, the low short-corner branch was reduced
-to local centroid predicates and two explicit witnesses, and the degree-six
-branch used complete local-or-axis predicates. The mesh transfer was reduced
-to the three allowances that occur almost everywhere.
+Sethuraman then iterated with GPT-5.6 Sol via Codex to decompose, simplify,
+and rewrite the proof. This work organized the argument into explicit proof
+obligations and dependencies, reconstructed the Ap\'ery foundations,
+separated the geometric branches, normalized notation and endpoints, and
+reduced the scope of finite verification. Several computations were replaced
+by analytic proofs. In particular, the three-plane branch became entirely
+analytic, the low short-corner branch was reduced to local centroid predicates
+and two explicit witnesses, and the degree-six branch used complete
+local-or-axis predicates. The mesh transfer was reduced to the three
+allowances that occur almost everywhere.
 
-Literature work formed part of this reconstruction. We identified and
-attributed the preferred-factorization, weighted-downset, initial-ideal,
-and support ingredients; checked the exact published multiplicity
-cutoff; and assessed whether Chomicz's results could simplify the final
-proof. We also examined what survives in more exponent
-coordinates and where the three-dimensional structure fails.
+The reconstruction also included a literature review that identified and
+attributed the preferred-factorization, weighted-downset, initial-ideal, and
+support ingredients, and situated the proof relative to Chomicz's Ap\'ery-set
+constructions. The resulting comparison clarified what survives in more
+exponent coordinates and where the three-dimensional structure fails.
 
 Computer assistance has two distinct roles here. AI assisted discovery,
-reconstruction, exposition, and checking. Exact programs establish the
-finite assertions specified mathematically in the paper, as
-described in Section~\ref{sec:verification}.
+proof development, exposition, and implementation. Exact programs establish
+the finite assertions specified mathematically in the paper, as described in
+Section~\ref{sec:verification}.
