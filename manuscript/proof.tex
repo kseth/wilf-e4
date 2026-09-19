@@ -182,6 +182,14 @@ Normalize by attained height: \(u_i=w_i/H\), \(v=\min_i u_i\),
 \(\mu_i=\mathbb E_T(u_iX_i)\), and
 \(\kappa=3-4\sum_i\mu_i=D_0/(mH)\).
 Units give \(u_i\le1\). The mean slack of direction \(j\) line tops is
+defined as follows. For \(x\in T\), let \(t_j(x)\) be the top of the
+direction-\(j\) line through \(x\), and put
+\[
+\delta_j(x)=1-u\cdot t_j(x),\qquad
+\bar\delta_j=\frac1m\sum_{x\in T}\delta_j(x).
+\]
+Thus \(\bar\delta_j\) is the length-weighted mean over direction-\(j\)
+lines, and the line moment identities give
 \[
 \bar\delta_j=(1+\kappa)/4-\mu_j,\qquad
 \sum_j\bar\delta_j=\kappa\ge0.
@@ -197,8 +205,9 @@ To prove this, write \(h=nq+r_0\): \(n\) full periods contribute
 Cauchy--Schwarz gives \((nq^2+r_0^2)/2\ge h^2/(2(n+1))\),
 and \(n+1\le(h+q)/q\).
 
-On a coordinate-\(k\) line of length \(L\), the direction-\(j\) slacks,
-\(j\ne k\), have residues \([\theta-tv]_{u_j}\).
+On a coordinate-\(k\) line of length \(L\), write \(\delta_j(t)\) for the
+slack at its point with \(k\)-coordinate \(t\). For \(j\ne k\), these
+slacks have residues \([\theta-tv]_{u_j}\).
 Nonnegative slack and
 \([\theta-tv+r]_{u_j}\le\delta_j(t)+r\), \(0\le r\le v\),
 bound the integral over the concatenated intervals of total length \(Lv\).

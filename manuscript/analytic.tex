@@ -897,7 +897,11 @@ three envelopes are absorbed by the negative contribution \eqref{eq:c:10}.
 \subsubsection{The boundary-tail potential}
 
 It is convenient to give the formulas at an arbitrary height allowance
-\(L>0\). For \(0\le x\le y\), define
+\(L>0\). At this height write
+\[
+\mathcal J_L(E)=\int_E\bigl(3(x_1+x_2+x_3)-2L\bigr)\,dx,
+\]
+so that \(\mathcal J=\mathcal J_1\). For \(0\le x\le y\), define
 
 \begin{equation}
 \begin{aligned}
@@ -1019,6 +1023,10 @@ height allowance \(L\), has contribution at most \(U_L(a;B,C)\).
 \begin{proof}
 
 Scale to \(L=1\), and sort the two transverse coordinates so \(B\le C\).
+Replacing the two sides pointwise by their minimum and maximum preserves
+nestedness and area. The smaller side remains at most \(B\), while both
+original sides and hence the larger remain at most \(C\). We may therefore
+assume that the first side is the smaller one at every level.
 We proceed in three stages: make the slabs height-tight, compare them
 with a boundary interpolation, and remove or merge the remaining jumps.
 
@@ -1047,15 +1055,25 @@ A(r)(r-s)xy.
 \label{eq:c:21}
 \end{equation}
 
+Retain the possibly slack initial slab, including any central slack;
+the filling below applies only to transitions between genuine tight states.
 For transitions wholly inside \(r\le2/3\), any monotone boundary
 interpolation has area at least that of the smaller endpoint rectangle, while
 \(A(r)\ge0\). Filling those transitions therefore weakly increases the
-objective. Lemma~\ref{lemma:c:3.1} then bounds the filled tail.
+objective.
 
-It remains to control the earlier transitions, where \(A(r)\le0\). If none
+If none
 of the states reaches reverse time at most \(2/3\), all terms in \eqref{eq:c:21} are
 nonpositive and the empty horn dominates. Otherwise let \((u,v)\), \(u\le v\),
-be the first tight state with \(u+v\le2/3\). At every earlier state of sum
+be the first tight state with \(u+v\le2/3\).
+From \((u,v)\) toward reverse time zero, use the pointwise maximizing
+continuation: keep the smaller side \(u\) fixed down to \((u,u)\), then
+follow the balanced path. This continuation is nested and respects both
+caps; it is the boundary profile from Lemma~\ref{lemma:c:3.1} in this
+nonnegative region.
+
+It remains to control the earlier transitions between genuine states, where
+\(A(r)\le0\). At every such state of sum
 \(s\), nestedness and the cap conditions allow its product to be replaced by
 the smaller product at
 
@@ -1237,10 +1255,14 @@ Let \(r=L-a-x-y\). Direct differentiation gives
 \label{eq:c:30}
 \end{equation}
 
-Where the gain in \eqref{eq:c:12} is active, it is nondecreasing in \(y\). Hence, for
-fixed \(x\), \(F_L(a;x,y)\) first decreases and then increases as \(y\) runs
-from \(x\) to its allowed cap; its maximum is at the diagonal or at the full
-larger cap. If \(a+x\ge L/3\), \eqref{eq:c:30} sends the diagonal endpoint to the full
+The gain in \eqref{eq:c:12} is active only when \(y+2x>L\). Since \(x\le y\),
+activity implies \(y>L/3\), and hence \(3(a+y)-L>0\). Thus
+\eqref{eq:c:30} is nonnegative wherever the nondecreasing gain is active.
+Before activation, the displayed derivative changes sign at most once, from
+negative to positive. Therefore, for fixed \(x\), \(F_L(a;x,y)\) first
+decreases and then increases as \(y\) runs from \(x\) to its allowed cap;
+its maximum is at the diagonal or at the full larger cap. If
+\(a+x\ge L/3\), \eqref{eq:c:30} sends the diagonal endpoint to the full
 cap. If \(a+x\le L/3\), the gain vanishes on the diagonal segment and
 
 \begin{equation}
