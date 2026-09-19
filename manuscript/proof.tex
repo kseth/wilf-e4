@@ -338,13 +338,14 @@ q\bigl(m-(3mQ-4w\cdot s)\bigr)\le\sum_T\psi(x).
 \label{eq:p:12}
 \end{equation}
 
-For an inclusive box \([a,d]\), its count is \(\prod_i(d_i-a_i+1)\)
-and twice its objective moment is that count times \(\sum_i u_i(a_i+d_i)\).
-For a clipped box subtract the upper box \([\max(a,p),d]\).
+For an inclusive box \([x^-,x^+]\), its count is
+\(\prod_i(x_i^+-x_i^-+1)\), and twice its objective moment is that count
+times \(\sum_i u_i(x_i^-+x_i^+)\). For a clipped box subtract the upper box
+\([\max(x^-,p),x^+]\).
 The retained feasibility maximum is
 \begin{equation}
-\max_{\substack{i\\a_i\le\min(d_i,p_i-1)}}
-\left(\ell_i\min(d_i,p_i-1)+\sum_{j\ne i}\ell_jd_j\right).
+\max_{\substack{i\\x_i^-\le\min(x_i^+,p_i-1)}}
+\left(\ell_i\min(x_i^+,p_i-1)+\sum_{j\ne i}\ell_jx_j^+\right).
 \label{eq:p:13}
 \end{equation}
 This maximizes over the parts with some coordinate below \(p\).
@@ -844,11 +845,11 @@ put \(T'=U\setminus(p+\mathbb N^3)\). If
 No residue, cardinality, minimality, unit, or surface restriction is used
 in this enlarged geometric family.
 Use the following interval tightening. At scale \(q=4096\) write endpoints
-\(L=(B_0,C_0,H_0)\), \(U=(B_1,C_1,H_1)\) for \((b,d,Q)\).
+\(L=(B_0,C_0,H_0)\), \(V=(B_1,C_1,H_1)\) for \((b,d,Q)\).
 First intersect with order:
 \[
 L\leftarrow(B_0,\max(B_0,C_0),\max(B_0,C_0,H_0)),\quad
-U\leftarrow(\min(B_1,C_1,H_1),\min(C_1,H_1),H_1).
+V\leftarrow(\min(B_1,C_1,H_1),\min(C_1,H_1),H_1).
 \]
 If not inverted, compute, in this order,
 \begin{equation}
