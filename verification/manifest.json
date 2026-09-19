@@ -12,14 +12,14 @@
       "sha256": "faa1af8766a2ecc47cd5d70f279337f1a53c9b216d0b2d5efbeca0186c3afa2e"
     },
     {
-      "bytes": 6289,
+      "bytes": 6299,
       "path": "code/degree_six_bits.cpp",
-      "sha256": "f80d3d702c8d7e83b7c7a2de710b1b5dfce52929ee917528a5b21f2f8bbffcc3"
+      "sha256": "96d39ac112d1a577db61dfb0377bc865204d5a845a1881fb7ed1a3128acea687"
     },
     {
-      "bytes": 6284,
+      "bytes": 6290,
       "path": "code/degree_six_columns.cpp",
-      "sha256": "a4b7a3fb12b10dfa877a14037105345715c4af6e50eb7080842f643fc6403ad5"
+      "sha256": "aa9b06d43d9fbaadf57967eb90a9af9e358b0b79e4fd4b7db2baa593712cf0e5"
     },
     {
       "bytes": 5308,
@@ -32,14 +32,14 @@
       "sha256": "9e46779fb1ebd6ded080a963c03ace54d97907b0bbfd3f2f16f7620363e9330e"
     },
     {
-      "bytes": 5210,
+      "bytes": 5217,
       "path": "code/high_height_disjoint.cpp",
-      "sha256": "656c6da6440bfa55e317236a59caf122895b741534f1c39521d6840e56ea7cd7"
+      "sha256": "39be2703318aef811f7b371526ed00e7104a61fd57b10e8a8f793e14194c8bc0"
     },
     {
-      "bytes": 4459,
+      "bytes": 4464,
       "path": "code/high_height_subtract.cpp",
-      "sha256": "89bb78a370c2945fffbe624d5b823365a0fc7212ffb5aa4e9f5db13a79680c67"
+      "sha256": "c0641809a0db43d6789541174cd58bbcc594f635cd7baeb2a41f02c62e7e039d"
     },
     {
       "bytes": 2689,
@@ -57,9 +57,9 @@
       "sha256": "b20a570401c3d4d377e65b0a7387dfa5661539bcbcaeb2e29af972743f8001f8"
     },
     {
-      "bytes": 3934,
+      "bytes": 3943,
       "path": "code/short_corner_high_prefix.cpp",
-      "sha256": "2747455204e5a889ca64652330277708169e7521b2196aaa6cfac14ccbe95e63"
+      "sha256": "7dd7e6e332fe2c568b906d4d5dcc44bee1eaee007bbbac642d8c03f43735686c"
     },
     {
       "bytes": 6281,
@@ -72,14 +72,14 @@
       "sha256": "d4621a8a2fb8a2de56654dd6ce980b247267ee36a5ca2533dc05e390616ad670"
     },
     {
-      "bytes": 3267,
+      "bytes": 3270,
       "path": "code/strip_points.cpp",
-      "sha256": "0e7d082d2afdc6a5574500372b361caa43b24e2515baeaf1313e12217b5c9d20"
+      "sha256": "100aabb42b03e5cd1453ba1892842ab248409a27b4593cd5d282f48cf1794bde"
     },
     {
-      "bytes": 2652,
+      "bytes": 2655,
       "path": "code/strip_prefix.cpp",
-      "sha256": "7099929536e738af78884aaff9f17d09b979af0d3b9d9d9052846aa4202f45c1"
+      "sha256": "e112469f6c02b2f415725f733f61aa1d6b3b450fc6a585ba04f8bbaea9b9009e"
     },
     {
       "bytes": 9607,

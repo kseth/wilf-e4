@@ -80,7 +80,8 @@ int main(int argc, char**) {
           }
           if(!valid)continue;
           ++degree; I m=points.size(); need(m<=84,"simplex size");
-          if(m<30)continue; ++m30;
+          if(m<30)continue;
+          ++m30;
           std::array<Mask,3> top;
           Mask next;
           for(int i=0;i<3;++i) { Mask succ=(T>>steps[i])&interior[i]; top[i]=T&~succ; next|=succ; }

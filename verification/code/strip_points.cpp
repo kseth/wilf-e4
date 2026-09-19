@@ -55,7 +55,8 @@ Value evaluate(int R,const Triple&corner){
   int index=cube(x+1,y+1,z+1);if(heights[index]>R)continue;
   Value value=scores[index]+parts[0][address(x+1,y,z)]
    +parts[1][address(y+1,x,z)]+parts[2][address(z+1,x,y)];
-  if(!exists||value>answer)answer=value;exists=true;
+  if(!exists||value>answer)answer=value;
+  exists=true;
  }
  check(exists,"empty central search");return answer;
 }

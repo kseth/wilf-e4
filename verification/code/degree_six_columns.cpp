@@ -70,7 +70,8 @@ int main(int argc,char**) {
      }
      if(!bounded_degree)continue;
      ++bounded;verify(m<=84,"degree-six cardinality");
-     if(m<30)continue;++large;
+     if(m<30)continue;
+     ++large;
      Integer intersections[3]={},gain=0,mass=0,weighted[3]={};
      for(int x=0;x<7;++x)for(int y=0;y<7;++y)for(int z=0;z<height[x][y];++z) {
       bool top[3]={z>=height[x+1][y],z>=height[x][y+1],z+1>=height[x][y]};

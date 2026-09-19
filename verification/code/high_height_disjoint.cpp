@@ -112,7 +112,8 @@ int main(int argc,char**) {
      for(int c=1;weights[0]*a+weights[1]*b+weights[2]*c<=limit;++c) {
       if(a+b+c<5)continue;
       I result=solve(scale,lower,upper,{a,b,c});
-      if(total==0||result>maximum)maximum=result;++total;
+      if(total==0||result>maximum)maximum=result;
+      ++total;
      }
    if(total&&10*maximum>29*scale)throw std::runtime_error("interval inequality");
    std::cout<<maximum<<" "<<total<<"\n"<<std::flush;

@@ -76,7 +76,8 @@ int main(int argc,char**) {
       for(auto p:{std::array<int,3>{2,1,1},std::array<int,3>{1,2,1},std::array<int,3>{1,1,2}}) {
         I value=solve(q,lo,hi,p);
         if(value>q)throw std::runtime_error("finite predicate failed");
-        if(!first)std::cout<<' ';first=false;std::cout<<value;
+        if(!first)std::cout<<' ';
+        first=false;std::cout<<value;
       }
       std::cout<<'\n';
       if(!std::cout)throw std::runtime_error("output failure");

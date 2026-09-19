@@ -95,7 +95,8 @@ int main(int argc,char**) {
    for(int P=5;P<=hi[2]/q+1;++P)for(int a=1;a<P-1;++a)for(int b=1;b<P-a;++b) {
     int c=P-a-b;if(q*a+lo[0]*b+lo[1]*c>hi[2]+q)continue;
     I value=solve(q,lo,hi,{a,b,c});
-    if(!cases||value>best)best=value;++cases;
+    if(!cases||value>best)best=value;
+    ++cases;
    }
    if(cases&&10*best>29*q)throw std::runtime_error("high-height predicate failed");
    std::cout<<best<<" "<<cases<<"\n"<<std::flush;

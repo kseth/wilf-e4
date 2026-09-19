@@ -46,7 +46,8 @@ I solve(int R,const P&p){
   P c{x,y,z};const auto q=measure({0,0,0},c,p);if(q.maximum>R)continue;
   I value=2*q.twice+offset*q.count;
   value+=horn[0][id(x+1,y,z)]+horn[1][id(y+1,x,z)]+horn[2][id(z+1,x,y)];
-  if(!found||value>best)best=value;found=true;
+  if(!found||value>best)best=value;
+  found=true;
  }
  need(found,"no feasible center");return best;
 }
