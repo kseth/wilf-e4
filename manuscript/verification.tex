@@ -14,7 +14,7 @@ exact integer or rational arithmetic. The two explicit short-corner
 witnesses are also checked directly.
 
 The interval certificates describe finite subdivisions of closed
-parameter regions. After the mathematically justified tightening from
+parameter regions. Using the interval tightening from
 Section~\ref{sec:proof}, each terminal region is proved empty, handled
 by an applicable analytic estimate, or bounded by a complete evaluation
 of the horn recurrence. The checkers verify the subdivision's coverage,
@@ -22,7 +22,5 @@ including shared boundaries, and recompute every terminal bound.
 The certificates establish bounds throughout the closed real parameter
 regions.
 
-A complete run of both implementations has verified all seven finite
-assertions. The repository documentation gives execution instructions,
-algorithm descriptions, arithmetic safeguards, and the complete-run
-record.
+Both implementations pass all seven finite assertions. Execution
+instructions and the run record accompany the code.
