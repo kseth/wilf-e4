@@ -17,8 +17,9 @@ coverage and recompute the bounds. Input hashes identify tested files; result
 fingerprints compactly compare the two checkers' outputs.
 
 Build the paper with `make -C manuscript pdf`.
-Reproduce all seven computational assertions with
+With Python 3.10 or newer and a C++17 compiler, reproduce all seven
+computational assertions with
 `python3 -I -B verification/verify.py`.
-The current isolated replay passed both implementations of all seven
+The current complete replay passed both implementations of all seven
 assertions and all 67 rejection tests; see the
 [complete-run record](verification/replay.json).
