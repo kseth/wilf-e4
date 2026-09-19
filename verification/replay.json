@@ -1337,7 +1337,7 @@
             "-pedantic"
           ],
           "source": "short_corner_high_prefix.cpp",
-          "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+          "version": "c++ (Homebrew GCC 16.2.0) 16.2.0",
           "workers": 4
         },
         {
@@ -1349,7 +1349,7 @@
             "-pedantic"
           ],
           "source": "short_corner_high_direct.cpp",
-          "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+          "version": "c++ (Homebrew GCC 16.2.0) 16.2.0",
           "workers": 4
         }
       ],
@@ -1383,7 +1383,7 @@
             "-pedantic"
           ],
           "source": "high_height_subtract.cpp",
-          "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+          "version": "c++ (Homebrew GCC 16.2.0) 16.2.0",
           "workers": 4
         },
         {
@@ -1395,7 +1395,7 @@
             "-pedantic"
           ],
           "source": "high_height_disjoint.cpp",
-          "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+          "version": "c++ (Homebrew GCC 16.2.0) 16.2.0",
           "workers": 4
         }
       ],
@@ -1418,37 +1418,37 @@
       "vacuous_dp_leaves": 564
     }
   ],
-  "elapsed_seconds": 846.955053541984,
+  "elapsed_seconds": 1035.409693374997,
   "environment": {
-    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "compiler": "c++ (Homebrew GCC 16.2.0) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
     "dependencies": "Python standard library and C++17",
     "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
     "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]"
   },
   "establishes": "Finite Lemmas 2.2\u20132.8 of the manuscript",
-  "finished_utc": "2026-09-18T05:19:01.136874+00:00",
+  "finished_utc": "2026-09-19T05:38:06.399160+00:00",
   "fresh": true,
   "independent_agreement": true,
   "inputs": [
     {
-      "bytes": 2427,
+      "bytes": 2818,
       "path": "README.md",
-      "sha256": "1639099fdd486cdc59820f9baa33383c576f49cd334e7f85b90a4c5eceb924c0"
+      "sha256": "c7ef9b06600d8d6dd99ca644025592b4d954f40cb49d086c82a72845e000409f"
     },
     {
-      "bytes": 8389,
+      "bytes": 8943,
       "path": "SPECIFICATION.md",
-      "sha256": "aa90d7d2771944d71073456f49d983b4d2aae4a66361784988942392ec477a2f"
+      "sha256": "3d3cb871a14745672a3235df961d9f5f571b42d42fd5d9a7dc60e823a74f2829"
     },
     {
-      "bytes": 6289,
+      "bytes": 6299,
       "path": "code/degree_six_bits.cpp",
-      "sha256": "f80d3d702c8d7e83b7c7a2de710b1b5dfce52929ee917528a5b21f2f8bbffcc3"
+      "sha256": "96d39ac112d1a577db61dfb0377bc865204d5a845a1881fb7ed1a3128acea687"
     },
     {
-      "bytes": 6284,
+      "bytes": 6290,
       "path": "code/degree_six_columns.cpp",
-      "sha256": "a4b7a3fb12b10dfa877a14037105345715c4af6e50eb7080842f643fc6403ad5"
+      "sha256": "aa9b06d43d9fbaadf57967eb90a9af9e358b0b79e4fd4b7db2baa593712cf0e5"
     },
     {
       "bytes": 5308,
@@ -1461,14 +1461,14 @@
       "sha256": "9e46779fb1ebd6ded080a963c03ace54d97907b0bbfd3f2f16f7620363e9330e"
     },
     {
-      "bytes": 5210,
+      "bytes": 5217,
       "path": "code/high_height_disjoint.cpp",
-      "sha256": "656c6da6440bfa55e317236a59caf122895b741534f1c39521d6840e56ea7cd7"
+      "sha256": "39be2703318aef811f7b371526ed00e7104a61fd57b10e8a8f793e14194c8bc0"
     },
     {
-      "bytes": 4459,
+      "bytes": 4464,
       "path": "code/high_height_subtract.cpp",
-      "sha256": "89bb78a370c2945fffbe624d5b823365a0fc7212ffb5aa4e9f5db13a79680c67"
+      "sha256": "c0641809a0db43d6789541174cd58bbcc594f635cd7baeb2a41f02c62e7e039d"
     },
     {
       "bytes": 2689,
@@ -1486,9 +1486,9 @@
       "sha256": "b20a570401c3d4d377e65b0a7387dfa5661539bcbcaeb2e29af972743f8001f8"
     },
     {
-      "bytes": 3934,
+      "bytes": 3943,
       "path": "code/short_corner_high_prefix.cpp",
-      "sha256": "2747455204e5a889ca64652330277708169e7521b2196aaa6cfac14ccbe95e63"
+      "sha256": "7dd7e6e332fe2c568b906d4d5dcc44bee1eaee007bbbac642d8c03f43735686c"
     },
     {
       "bytes": 6281,
@@ -1501,24 +1501,24 @@
       "sha256": "d4621a8a2fb8a2de56654dd6ce980b247267ee36a5ca2533dc05e390616ad670"
     },
     {
-      "bytes": 3267,
+      "bytes": 3270,
       "path": "code/strip_points.cpp",
-      "sha256": "0e7d082d2afdc6a5574500372b361caa43b24e2515baeaf1313e12217b5c9d20"
+      "sha256": "100aabb42b03e5cd1453ba1892842ab248409a27b4593cd5d282f48cf1794bde"
     },
     {
-      "bytes": 2652,
+      "bytes": 2655,
       "path": "code/strip_prefix.cpp",
-      "sha256": "7099929536e738af78884aaff9f17d09b979af0d3b9d9d9052846aa4202f45c1"
+      "sha256": "e112469f6c02b2f415725f733f61aa1d6b3b450fc6a585ba04f8bbaea9b9009e"
     },
     {
-      "bytes": 9607,
+      "bytes": 9741,
       "path": "code/trees_integer.py",
-      "sha256": "e08220ac4c82c9ae9db9ab1ae72b103c9839e6915de8df7405e64d97f0be0214"
+      "sha256": "0696bfe42ce79e1ca77cd8f592e8b56b009b754c0cc99a3ec5cade50df09e117"
     },
     {
-      "bytes": 10527,
+      "bytes": 10720,
       "path": "code/trees_rational.py",
-      "sha256": "d79baf459827345262f72861a554421d1d4d001a1272c45aea456c4dfb9b6f13"
+      "sha256": "1c72951e8b84ddff90c47075c99ab7858231cdcaabcecbdb529f7fca7339e939"
     },
     {
       "bytes": 1260572,
@@ -1536,12 +1536,12 @@
       "sha256": "96d82c9518e4d783609e584e36cd35abb452cf823d0bd38deeb5e518441dc25e"
     },
     {
-      "bytes": 17756,
+      "bytes": 22792,
       "path": "verify.py",
-      "sha256": "8f52f6750e8f8674fa227c29ddf9095d637c0fe286ae28c21f76491492970bc2"
+      "sha256": "f367e29320fd63f9fd65b177e76b89f07c5b1e36e9e2283558cc2a216439272d"
     }
   ],
-  "manifest_sha256": "d8cafd4035510edefa01d7ebf7f6dc1626f44e01e19295a7284c9f8eb77ef3ab",
+  "manifest_sha256": "28e5d5648baa5b5287006665ae1a0581f173ada3d53ae650396b0d1f19db3c12",
   "negative_tests": [
     {
       "checker": "trees_integer",
@@ -1659,6 +1659,166 @@
       "rejected": true
     },
     {
+      "checker": "verify.py",
+      "mutation": "tree_summary_wrong_component",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_boolean_tree_nodes",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_negative_node_count",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_unexpected_node_kind",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_dp_leaf_mismatch",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_negative_vacuous_count",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_negative_bound_count",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_excessive_largest_bound",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_malformed_leaf_hash",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_wrong_tree_hash",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_boolean_unresolved",
+      "rejected": true
+    },
+    {
+      "checker": "verify.py",
+      "mutation": "tree_summary_unsupported_nonzero",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "short_missing",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "short_extra",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "short_malformed",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "short_excessive",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "high_missing",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "high_extra",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "high_malformed",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "high_negative_count",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "high_invalid_vacuity",
+      "rejected": true
+    },
+    {
+      "checker": "trees_integer",
+      "mutation": "high_excessive",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "short_missing",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "short_extra",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "short_malformed",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "short_excessive",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "high_missing",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "high_extra",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "high_malformed",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "high_negative_count",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "high_invalid_vacuity",
+      "rejected": true
+    },
+    {
+      "checker": "trees_rational",
+      "mutation": "high_excessive",
+      "rejected": true
+    },
+    {
       "checker": "trees_integer.py",
       "mutation": "optimized_mode",
       "rejected": true
@@ -1722,151 +1882,151 @@
   "packet": "wilf-four-verification",
   "processes": [
     {
-      "elapsed_seconds": 0.04244904196821153,
+      "elapsed_seconds": 0.02022954198764637,
       "exit_status": 0,
       "label": "compiler identity",
       "stderr": "",
-      "stdout_sha256": "55f7662ee66d47566d9f08f35a12158ac9588e4852f788eed57fa3bf625c9a5d"
+      "stdout_sha256": "c2bb31f0bfa41f22f491f11e642591c16100e3c4c9dcbf33a15915add5b249fd"
     },
     {
-      "elapsed_seconds": 0.4332229999708943,
+      "elapsed_seconds": 3.5761598339886405,
       "exit_status": 0,
       "label": "generator-box/generator_box_residues.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 0.39823908399557695,
+      "elapsed_seconds": 0.4877256670151837,
       "exit_status": 0,
       "label": "generator-box/generator_box_membership.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 11.616158750024624,
+      "elapsed_seconds": 13.008612125006039,
       "exit_status": 0,
       "label": "generator-box/generator_box_residues.cpp",
       "stderr": "",
-      "stdout_sha256": "f08c59f800d9fd6abd086498c262ff5de31bea592c4c4b0be47e513e136abc53"
+      "stdout_sha256": "2f02614ac3ecbed0b1530c7366a2a9c77cacb56ae19296d218b44d170b0ae264"
     },
     {
-      "elapsed_seconds": 3.8789470420451835,
+      "elapsed_seconds": 6.247173833020497,
       "exit_status": 0,
       "label": "generator-box/generator_box_membership.cpp",
       "stderr": "",
-      "stdout_sha256": "adb42fadf5482b8fd2e36d3b9b23daead2ac5a9b695b8ce7ef76ccde34ddec46"
+      "stdout_sha256": "55403737f2843baf3c1b23cf343b253ad3e0427a66caf24daeba52efee98c97c"
     },
     {
-      "elapsed_seconds": 5.1277055839891545,
+      "elapsed_seconds": 5.158253790985327,
       "exit_status": 0,
       "label": "short-corner-low/short_corner_low_offsets.py",
       "stderr": "",
       "stdout_sha256": "dc4231d2768292681b08769e60f32a499661e16e66bde4389d8ae3f32481bc3c"
     },
     {
-      "elapsed_seconds": 4.118056249979418,
+      "elapsed_seconds": 4.079217958031222,
       "exit_status": 0,
       "label": "short-corner-low/short_corner_low_successors.py",
       "stderr": "",
       "stdout_sha256": "deb3a590413eb39b55a1f5db0e1f208ce6f879b2a1b62a3aac14fdbfb62c0068"
     },
     {
-      "elapsed_seconds": 0.5747318749781698,
+      "elapsed_seconds": 0.8347083330154419,
       "exit_status": 0,
       "label": "degree-six/degree_six_bits.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 0.5228665419854224,
+      "elapsed_seconds": 0.7932809999911115,
       "exit_status": 0,
       "label": "degree-six/degree_six_columns.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 17.838212208007462,
+      "elapsed_seconds": 18.16077962500276,
       "exit_status": 0,
       "label": "degree-six/degree_six_bits.cpp",
       "stderr": "",
       "stdout_sha256": "aa29f1dade684c6c49f955eb7b96f413254f480e11e8c164071f49e0088648e2"
     },
     {
-      "elapsed_seconds": 5.497564499964938,
+      "elapsed_seconds": 5.399204833025578,
       "exit_status": 0,
       "label": "degree-six/degree_six_columns.cpp",
       "stderr": "",
       "stdout_sha256": "bb4231763ca99e6686f3c8bfc9833dbb79e7e4b45773645ad9278c0997e461f6"
     },
     {
-      "elapsed_seconds": 0.3922388749779202,
+      "elapsed_seconds": 0.4039012499852106,
       "exit_status": 0,
       "label": "strip/strip_prefix.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 0.4023638750077225,
+      "elapsed_seconds": 0.5086299999966286,
       "exit_status": 0,
       "label": "strip/strip_points.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 0.09587575000477955,
+      "elapsed_seconds": 0.08841004100395367,
       "exit_status": 0,
       "label": "strip/strip_prefix.cpp",
       "stderr": "",
       "stdout_sha256": "495c4a44393e96bcaffa9c6f70c2d278b7c33a00f6a122d41c8dd58e1deadaac"
     },
     {
-      "elapsed_seconds": 0.8498033749638125,
+      "elapsed_seconds": 0.8798222499899566,
       "exit_status": 0,
       "label": "strip/strip_points.cpp",
       "stderr": "",
       "stdout_sha256": "495c4a44393e96bcaffa9c6f70c2d278b7c33a00f6a122d41c8dd58e1deadaac"
     },
     {
-      "elapsed_seconds": 9.456600750039797,
+      "elapsed_seconds": 9.353405375033617,
       "exit_status": 0,
       "label": "no-corner-interval/trees_integer.py",
       "stderr": "",
       "stdout_sha256": "44afd79a15f8cd46c7f0ea302d6996eefad815615f0783e8fe31e59767ea19f6"
     },
     {
-      "elapsed_seconds": 21.032926584011875,
+      "elapsed_seconds": 20.856320624996442,
       "exit_status": 0,
       "label": "no-corner-interval/trees_rational.py",
       "stderr": "",
       "stdout_sha256": "467abe464abb8c875be89a1aa30f7c688f8b64e74b7d46baff65efcea05aad1c"
     },
     {
-      "elapsed_seconds": 1.6722826250479557,
+      "elapsed_seconds": 1.511877250042744,
       "exit_status": 0,
       "label": "short-corner-high/trees_integer.py",
       "stderr": "",
-      "stdout_sha256": "7fa2b5afb5fdf353329adc1124ba210aad4eac142e1704084ef720d9054ef362"
+      "stdout_sha256": "d4a3b5f4c05fde2c7c25201b931809f3364fa0d9744dae481393ce4ebce4c0c9"
     },
     {
-      "elapsed_seconds": 6.159222625021357,
+      "elapsed_seconds": 8.005650624982081,
       "exit_status": 0,
       "label": "short-corner-high/trees_rational.py",
       "stderr": "",
-      "stdout_sha256": "d3ce9c757fc1996f2175a47c326f14889bd83bdb0dbabb7e3007cfacaa2d4380"
+      "stdout_sha256": "e646db22767a6ad9397ef8f9ff91ef2e5fdfea961d07752e10cce83544ee48e0"
     },
     {
-      "elapsed_seconds": 778.8223967079539,
+      "elapsed_seconds": 959.6673808339983,
       "exit_status": 0,
       "label": "high-height/trees_integer.py",
       "stderr": "",
-      "stdout_sha256": "318706f831e51d2b6d0565df60a47d62593c110907a911bc04f38eb1bd9c638c"
+      "stdout_sha256": "7c103743d7d30e8a395c8e054cd47e154c17d502903dafbcd9d85fe0bca4d26e"
     },
     {
-      "elapsed_seconds": 584.6489368750481,
+      "elapsed_seconds": 711.9252141250181,
       "exit_status": 0,
       "label": "high-height/trees_rational.py",
       "stderr": "",
-      "stdout_sha256": "f735da206cc70a35212dd7c6e512ee657a5ef7e5c821d952546a33f08d4ce2ea"
+      "stdout_sha256": "a8c8f581e38cf6ad2d9a6ce58412f221305a8942897d4f576e71f1a20c3de98c"
     }
   ],
   "replay_command": [
@@ -1878,7 +2038,7 @@
   "schema_version": 1,
   "standalone_copy_checked": true,
   "standalone_copy_contained_git": false,
-  "started_utc": "2026-09-18T05:04:54.178709+00:00",
+  "started_utc": "2026-09-19T05:20:50.976990+00:00",
   "status": "PASS",
   "unresolved": 0,
   "unsupported": 0
