@@ -27,11 +27,11 @@ evaluators, validates results, and checks agreement.
 
 ## 1. Exhaustiveness and exact predicates
 
-The proof establishes why every genuine Apéry ideal reaches a retained
-geometric family. An evaluator may enlarge a family by dropping
-realizability, residue, minimality, unit, or cardinality restrictions only
-where its contract explicitly allows it. An upper bound on the enlarged
-family remains sound.
+The proof establishes that every Apéry ideal arising in the argument belongs
+to one of the retained geometric families. An evaluator may enlarge a family
+by dropping realizability, residue, minimality, unit, or cardinality
+restrictions only where its contract explicitly allows it. An upper bound on
+the enlarged family remains sound.
 
 The generator box uses the inclusive bound \(m(m-2)\). Both programs
 partition every strictly increasing generator triple by the same five
