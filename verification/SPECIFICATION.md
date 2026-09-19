@@ -12,7 +12,7 @@ the computational premises.
 | Premise | Manuscript location | Independent checking paths |
 |---|---|---|
 | Inclusive generator box, \(20\le m\le29\) | Finite Lemma 2.2, Section 2.6 | [Cyclic residues](code/generator_box_residues.cpp); [ordinary membership](code/generator_box_membership.cpp) |
-| No-corner real interval bound | Finite Lemma 2.3, Section 2.8 | [Prefix DP](code/no_corner_interval_prefix.py); [direct recursive DP](code/no_corner_interval_direct.py) |
+| No-full-corner real interval bound | Finite Lemma 2.3, Section 2.8 | [Prefix DP](code/no_corner_interval_prefix.py); [direct recursive DP](code/no_corner_interval_direct.py) |
 | Short corner, high height | Finite Lemma 2.4, Section 2.9 | [Subtractive/prefix DP](code/short_corner_high_prefix.cpp); [disjoint/direct DP](code/short_corner_high_direct.cpp) |
 | Short corner, low height | Finite Lemma 2.5, Section 2.9 | [Recursive profiles/offsets](code/short_corner_low_offsets.py); [Cartesian profiles/successors](code/short_corner_low_successors.py) |
 | Degree-six residual profiles | Finite Lemma 2.6, Section 2.10 | [Recursive profiles/bitsets](code/degree_six_bits.cpp); [subset profiles/columns](code/degree_six_columns.cpp) |
@@ -85,7 +85,7 @@ height. All endpoints are multiplied by the scale.
 | `[axis, split, left_index, right_index]` | Split the tightened parent along axis 0, 1, or 2 |
 | `[-1]` | Empty leaf, justified by an inverted tightened enclosure |
 | `[-2]` | Dynamic-programming leaf, requiring fresh complete evaluation |
-| `[-3]` | Analytic leaf, allowed only for the no-corner and short-corner trees |
+| `[-3]` | Analytic leaf, allowed only for the no-full-corner and short-corner trees |
 
 Node zero is the root. Every node must be reached exactly once.
 Child boxes are derived: the left upper and right lower endpoint equal
@@ -96,7 +96,7 @@ precisely the twenty-step outward clipping schedule in manuscript (2.26)
 Every finite step preserves all relevant real parameters.
 Tree induction proves complete coverage, including the walls.
 
-Analytic leaves require \(Q_0\ge2(q+B_1+C_1)+3q\) for the no-corner tree
+Analytic leaves require \(Q_0\ge2(q+B_1+C_1)+3q\) for the no-full-corner tree
 or \(Q_0\ge4(q+B_1+C_1)+3q\) for the short-corner tree.
 Every other nonempty leaf recomputes its exact bound.
 The certificates encode subdivision topology. Acceptance requires complete
