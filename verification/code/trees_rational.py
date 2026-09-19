@@ -107,6 +107,28 @@ def coverage(document,component):
     ensure(len(work)>0,"no finite leaves")
     return sorted(work),results,dict(sorted(tallies.items()))
 
+def parse_native_rows(component,rows,expected):
+    ensure(type(rows) is list and len(rows)==expected
+           and all(type(row) is str for row in rows),"worker response coverage")
+    bounds=[]
+    for response in rows:
+        parts=response.split()
+        ensure(len(parts)==(3 if component=="short-corner-high" else 2)
+               and all(re.fullmatch("-?[0-9]+",p) for p in parts),"invalid response")
+        numbers=tuple(int(p) for p in parts)
+        if component=="short-corner-high":
+            ensure(all(n<=SCALE for n in numbers),"short-corner violation");bounds.append((numbers,3))
+        else:
+            maximum,cardinality=numbers
+            ensure(cardinality>=0,"negative corner count")
+            if cardinality:
+                ensure(10*maximum<=29*SCALE,"residual interval violation")
+                bounds.append((maximum,cardinality))
+            else:
+                ensure(maximum==0,"invalid empty enumeration")
+                bounds.append((None,0))
+    return bounds
+
 def evaluate_native(component,work):
     filename={"short-corner-high":"short_corner_high_direct.cpp","high-height":"high_height_disjoint.cpp"}[component]
     cc=shutil.which("c++");ensure(cc is not None,"compiler unavailable")
@@ -135,23 +157,7 @@ def evaluate_native(component,work):
                     responses[identifier]=row
         ensure(set(responses)==set(range(len(work))),"missing response")
         output=[responses[i] for i in range(len(work))]
-        bounds=[]
-        for response in output:
-            parts=response.split()
-            ensure(len(parts)==(3 if component=="short-corner-high" else 2)
-                   and all(re.fullmatch("-?[0-9]+",p) for p in parts),"invalid response")
-            numbers=tuple(int(p) for p in parts)
-            if component=="short-corner-high":
-                ensure(all(n<=SCALE for n in numbers),"short-corner violation");bounds.append((numbers,3))
-            else:
-                maximum,cardinality=numbers
-                ensure(cardinality>=0,"negative corner count")
-                if cardinality:
-                    ensure(10*maximum<=29*SCALE,"residual interval violation")
-                    bounds.append((maximum,cardinality))
-                else:
-                    ensure(maximum==0,"invalid empty enumeration")
-                    bounds.append((None,0))
+        bounds=parse_native_rows(component,output,len(work))
     return bounds,dict(version=version,flags=flags,source=filename,workers=workers)
 
 def check(component):

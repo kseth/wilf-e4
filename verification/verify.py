@@ -120,6 +120,64 @@ def negative_manifest():
         else: raise RuntimeError("wrong manifest hash accepted")
     return [dict(checker="verify.py",mutation="input_hash_mismatch",rejected=True)]
 
+def negative_tree_summaries():
+    expected_tree="b"*64
+    base=dict(component="no-corner-interval",status="PASS",complete=True,tree_nodes=1,
+              node_kinds={"dp":1},dp_leaves=1,vacuous_dp_leaves=0,bounds_checked=1,
+              largest_bound=4096,leaf_sha256="a"*64,tree_sha256=expected_tree,
+              unresolved=0,unsupported=0,environment={})
+    tree(json.dumps(base),"no-corner-interval",expected_tree)
+    tests=[]
+    def mutation(label,**changes):
+        value=dict(base);value.update(changes);tests.append((label,value))
+    mutation("wrong_component",component="high-height")
+    mutation("boolean_tree_nodes",tree_nodes=True)
+    mutation("negative_node_count",node_kinds={"dp":-1})
+    mutation("unexpected_node_kind",node_kinds={"dp":1,"other":0})
+    mutation("dp_leaf_mismatch",dp_leaves=2)
+    mutation("negative_vacuous_count",vacuous_dp_leaves=-1)
+    mutation("negative_bound_count",bounds_checked=-1)
+    mutation("excessive_largest_bound",largest_bound=4097)
+    mutation("malformed_leaf_hash",leaf_sha256="not-a-hash")
+    mutation("wrong_tree_hash",tree_sha256="c"*64)
+    mutation("boolean_unresolved",unresolved=False)
+    mutation("unsupported_nonzero",unsupported=1)
+    results=[]
+    for label,value in tests:
+        try: tree(json.dumps(value),"no-corner-interval",expected_tree)
+        except (RuntimeError,ValueError): pass
+        else: raise RuntimeError("tree-summary mutation accepted: "+label)
+        results.append(dict(checker="verify.py",mutation="tree_summary_"+label,rejected=True))
+    return results
+
+def negative_worker_streams():
+    cases=(
+        ("short_missing","short-corner-high",[]),
+        ("short_extra","short-corner-high",["0 0 0","0 0 0"]),
+        ("short_malformed","short-corner-high",["x 0 0"]),
+        ("short_excessive","short-corner-high",["4097 0 0"]),
+        ("high_missing","high-height",[]),
+        ("high_extra","high-height",["0 1","0 1"]),
+        ("high_malformed","high-height",["x 1"]),
+        ("high_negative_count","high-height",["0 -1"]),
+        ("high_invalid_vacuity","high-height",["1 0"]),
+        ("high_excessive","high-height",["11879 1"]),
+    )
+    results=[]
+    for name in ("trees_integer","trees_rational"):
+        module=load_module(name)
+        require(module.parse_native_rows("short-corner-high",["0 0 0"],1)==[((0,0,0),3)],
+                "valid short-corner response rejected")
+        require(module.parse_native_rows("high-height",["0 1"],1)==[(0,1)]
+                and module.parse_native_rows("high-height",["0 0"],1)==[(None,0)],
+                "valid high-height response rejected")
+        for label,component,rows in cases:
+            try: module.parse_native_rows(component,rows,1)
+            except (RuntimeError,ValueError): pass
+            else: raise RuntimeError("worker-stream mutation accepted: "+name+"/"+label)
+            results.append(dict(checker=name,mutation=label,rejected=True))
+    return results
+
 def generator_box(output):
     rows=[decode(line) for line in output.splitlines()]
     require(len(rows)==10,"small-multiplicity incomplete output")
@@ -192,14 +250,42 @@ def strip(output):
                 by_allowance=[dict(R=r,configurations=sum(x[0]==r for x in rows),
                                   largest_bound=max(x[4] for x in rows if x[0]==r)) for r in range(18,21)])
 
-def tree(output):
+def tree(output,expected_component,expected_tree_sha256):
     rows=output.splitlines();require(len(rows)==1,"tree partial output");result=decode(rows[0])
     require(set(result)=={"component","status","complete","tree_nodes","node_kinds","dp_leaves",
             "vacuous_dp_leaves","bounds_checked","largest_bound","leaf_sha256","tree_sha256",
             "unresolved","unsupported","environment"},"tree result schema")
-    require(result["status"]=="PASS" and result["complete"] is True
-            and result["unresolved"]==result["unsupported"]==0,"tree incomplete")
-    require(sum(result["node_kinds"].values())==result["tree_nodes"] and result["dp_leaves"]>0,"tree partition")
+    require(result["component"]==expected_component and result["status"]=="PASS"
+            and result["complete"] is True,"tree identity/status")
+    integers=("tree_nodes","dp_leaves","vacuous_dp_leaves","bounds_checked","largest_bound",
+              "unresolved","unsupported")
+    require(all(type(result[field]) is int for field in integers),"tree integer types")
+    require(result["tree_nodes"]>0 and result["dp_leaves"]>0
+            and 0<=result["vacuous_dp_leaves"]<=result["dp_leaves"]
+            and result["bounds_checked"]>=0
+            and result["unresolved"]==result["unsupported"]==0,"tree counts/status")
+    kinds=result["node_kinds"]
+    require(type(kinds) is dict and set(kinds)<={"split","empty","analytic","dp"}
+            and all(type(key) is str and type(value) is int and value>=0
+                    for key,value in kinds.items()),"tree node-kind schema")
+    require(kinds.get("dp")==result["dp_leaves"]
+            and sum(kinds.values())==result["tree_nodes"],"tree partition")
+    if expected_component=="no-corner-interval":
+        require(result["vacuous_dp_leaves"]==0
+                and result["bounds_checked"]==result["dp_leaves"],"no-corner summary")
+    elif expected_component=="short-corner-high":
+        require(result["vacuous_dp_leaves"]==0
+                and result["bounds_checked"]==3*result["dp_leaves"],"short-corner summary")
+    else:
+        require("analytic" not in kinds and result["bounds_checked"]>=
+                result["dp_leaves"]-result["vacuous_dp_leaves"],"high-height summary")
+    if expected_component=="high-height":
+        require(10*result["largest_bound"]<=29*4096,"high-height summary bound")
+    else: require(result["largest_bound"]<=4096,"tree summary bound")
+    require(type(result["leaf_sha256"]) is str and re.fullmatch("[0-9a-f]{64}",result["leaf_sha256"]),
+            "leaf fingerprint")
+    require(result["tree_sha256"]==expected_tree_sha256 and type(result["environment"]) is dict,
+            "tree/environment identity")
     return {k:v for k,v in result.items() if k!="environment"}
 
 def run_pair(label,names,validator,native,processes,negatives):
@@ -249,6 +335,8 @@ def replay():
         record["replay_command"]=["python3","-I","-B","verify.py"]
         record["negative_tests"].extend(negative_coverage())
         record["negative_tests"].extend(negative_manifest())
+        record["negative_tests"].extend(negative_tree_summaries())
+        record["negative_tests"].extend(negative_worker_streams())
         for name in ("trees_integer.py","trees_rational.py"):
             failed,_=call([sys.executable,"-O","-I","-B",str(CODE/name),"no-corner-interval"],name+"/optimized")
             require(failed.returncode!=0,"optimized tree checker accepted")
@@ -270,8 +358,10 @@ def replay():
                          for name in ("trees_integer.py","trees_rational.py")]
                 runs=[f.result() for f in futures]
             normalized=[]
+            tree_hash=next(entry["sha256"] for entry in entries if entry["path"]==f"data/{component}.json")
             for process,info in runs:
-                record["processes"].append(info);success(process);normalized.append(tree(process.stdout))
+                record["processes"].append(info);success(process)
+                normalized.append(tree(process.stdout,component,tree_hash))
             require(normalized[0]==normalized[1],"independent tree disagreement: "+component)
             record["components"].append(dict(independent_agreement=True,**normalized[0],
                 checking_environments=[decode(process.stdout)["environment"] for process,_ in runs]))

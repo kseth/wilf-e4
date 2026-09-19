@@ -102,6 +102,24 @@ def coverage(data, component):
     leaves.sort()
     return leaves,terminal,dict(sorted(counts.items()))
 
+def parse_native_rows(component, rows, expected):
+    require(type(rows) is list and len(rows)==expected
+            and all(type(row) is str for row in rows),"worker response coverage")
+    values=[]
+    for row in rows:
+        cells=row.split()
+        require(len(cells)==(3 if component=="short-corner-high" else 2)
+                and all(re.fullmatch(r"-?\d+",x) for x in cells),"worker response schema")
+        integers=tuple(map(int,cells))
+        if component=="short-corner-high":
+            require(max(integers)<=Q,"short-corner predicate");values.append((integers,3))
+        else:
+            bound,cases=integers
+            require(cases>=0 and (cases>0 or bound==0),"invalid vacuity")
+            require(not cases or 10*bound<=29*Q,"high-height predicate")
+            values.append((bound if cases else None,cases))
+    return values
+
 def cpp(component, leaves):
     source=HERE/{"short-corner-high":"short_corner_high_prefix.cpp","high-height":"high_height_subtract.cpp"}[component]
     compiler=shutil.which("c++");require(compiler is not None,"C++17 compiler missing")
@@ -127,20 +145,7 @@ def cpp(component, leaves):
                 for position,row in answers:
                     require(rows[position] is None,"duplicate worker response")
                     rows[position]=row
-        require(all(type(row) is str for row in rows),"missing worker response")
-        values=[]
-        for row in rows:
-            cells=row.split()
-            require(len(cells)==(3 if component=="short-corner-high" else 2)
-                    and all(re.fullmatch(r"-?\d+",x) for x in cells),"worker response schema")
-            integers=tuple(map(int,cells))
-            if component=="short-corner-high":
-                require(max(integers)<=Q,"short-corner predicate");values.append((integers,3))
-            else:
-                bound,cases=integers
-                require(cases>=0 and (cases>0 or bound==0),"invalid vacuity")
-                require(not cases or 10*bound<=29*Q,"high-height predicate")
-                values.append((bound if cases else None,cases))
+        values=parse_native_rows(component,rows,len(leaves))
     return values,dict(version=version,flags=flags,source=source.name,workers=workers)
 
 def check(component):

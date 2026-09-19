@@ -19,6 +19,5 @@ fingerprints compactly compare the two checkers' outputs.
 Build the paper with `make -C manuscript pdf`.
 Reproduce all seven computational assertions with
 `python3 -I -B verification/verify.py`.
-The recorded replay from an isolated copy passed both implementations of all seven
-assertions and all 35 rejection tests; see the
-[complete-run record](verification/replay.json).
+The [complete-run record](verification/replay.json) identifies the tested
+inputs and execution results.

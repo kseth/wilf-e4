@@ -121,6 +121,9 @@ empty/analytic leaves, wrong roots, repeated children, boundary splits,
 unreachable nodes, boolean node values, and duplicate JSON keys.
 Stream checks reject missing configurations, partial/extra worker responses,
 malformed integers, negative counts, and threshold violations.
+Tree summaries must identify the expected component and certificate hash,
+give exact nonnegative counts with consistent node and leaf partitions,
+and report valid fingerprints and threshold-respecting extrema.
 Changing any manifest input or its hash rejects the packet.
 
 Agreement covers every per-leaf bound through an ordered SHA-256 fingerprint,

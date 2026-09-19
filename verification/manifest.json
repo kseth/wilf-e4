@@ -2,14 +2,14 @@
   "format": "wilf-four-verification-v1",
   "inputs": [
     {
-      "bytes": 2743,
+      "bytes": 2818,
       "path": "README.md",
-      "sha256": "7bd7346b97859429b92a7769408c549f9498f52302016805d18d349404d42add"
+      "sha256": "c7ef9b06600d8d6dd99ca644025592b4d954f40cb49d086c82a72845e000409f"
     },
     {
-      "bytes": 8733,
+      "bytes": 8943,
       "path": "SPECIFICATION.md",
-      "sha256": "faa1af8766a2ecc47cd5d70f279337f1a53c9b216d0b2d5efbeca0186c3afa2e"
+      "sha256": "3d3cb871a14745672a3235df961d9f5f571b42d42fd5d9a7dc60e823a74f2829"
     },
     {
       "bytes": 6299,
@@ -82,14 +82,14 @@
       "sha256": "e112469f6c02b2f415725f733f61aa1d6b3b450fc6a585ba04f8bbaea9b9009e"
     },
     {
-      "bytes": 9607,
+      "bytes": 9741,
       "path": "code/trees_integer.py",
-      "sha256": "e08220ac4c82c9ae9db9ab1ae72b103c9839e6915de8df7405e64d97f0be0214"
+      "sha256": "0696bfe42ce79e1ca77cd8f592e8b56b009b754c0cc99a3ec5cade50df09e117"
     },
     {
-      "bytes": 10527,
+      "bytes": 10720,
       "path": "code/trees_rational.py",
-      "sha256": "d79baf459827345262f72861a554421d1d4d001a1272c45aea456c4dfb9b6f13"
+      "sha256": "1c72951e8b84ddff90c47075c99ab7858231cdcaabcecbdb529f7fca7339e939"
     },
     {
       "bytes": 1260572,
@@ -107,9 +107,9 @@
       "sha256": "96d82c9518e4d783609e584e36cd35abb452cf823d0bd38deeb5e518441dc25e"
     },
     {
-      "bytes": 17756,
+      "bytes": 22792,
       "path": "verify.py",
-      "sha256": "8f52f6750e8f8674fa227c29ddf9095d637c0fe286ae28c21f76491492970bc2"
+      "sha256": "f367e29320fd63f9fd65b177e76b89f07c5b1e36e9e2283558cc2a216439272d"
     }
   ],
   "schema_version": 1

@@ -21,10 +21,11 @@ python3 -I -B verify.py
 
 Run from this directory, or invoke the script by its path. The complete run
 freshly compiles and executes both implementations of all seven assertions,
-checks exact input identities and interval coverage, and runs 35 rejection
-tests. The runner executes from this directory using Python's standard
-library and a C++17 compiler. The recorded isolated run took approximately
-14 minutes.
+checks exact input identities and interval coverage, and runs 67 rejection
+tests covering certificate geometry, manifest identity, result summaries,
+worker streams, and unsupported execution modes. The runner uses Python's
+standard library and a C++17 compiler; runtime depends on the compiler and
+platform.
 
 The command writes [replay.json](replay.json), replacing the previous run
 record. The manifest identifies verification inputs; the replay record
