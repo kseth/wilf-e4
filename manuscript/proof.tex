@@ -473,6 +473,8 @@ Side cap at \(i\), \(1\le b<h_i\) & \((b,h_j)\) & \(bh_j\) & \(b\) & \(h_i\) \\
 Let \(s_f\) count split planes, \(I\) the globally maximal axis directions,
 \(J=\sum_{i\in I}h_i\), \(\Beta=\sum\beta_{ij}\),
 \(C=\sum(c_{ij}-\beta_{ij})\), and \(N=\sum\nu_{ij}\).
+Every split plane requires both incident axis caps to be at least two;
+checking \(s_f=0,1,2,3\) gives \(h\ge s_f+3\).
 Every mixed planar maximum is globally maximal. An axis top is globally
 maximal exactly when both incident planes side-cap that axis.
 Each side-cap plane can cap only one axis, while a split plane caps none.
@@ -495,7 +497,7 @@ If this were negative, integrality would give \(Q_*\le3k-4\le14\), and
 \[
 m=1+Q_*+\Beta-N+J
 \le1+2Q_*-h+s_f-N+2J
-\le1+28-3+3=29.
+\le2Q_*-2\le26.
 \]
 This contradicts \(m\ge30\). Therefore \eqref{eq:p:6} proves \(W_4\ge0\).
 

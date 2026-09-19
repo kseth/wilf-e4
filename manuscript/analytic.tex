@@ -1057,10 +1057,16 @@ A(r)(r-s)xy.
 
 Retain the possibly slack initial slab, including any central slack;
 the filling below applies only to transitions between genuine tight states.
-For transitions wholly inside \(r\le2/3\), any monotone boundary
-interpolation has area at least that of the smaller endpoint rectangle, while
-\(A(r)\ge0\). Filling those transitions therefore weakly increases the
-objective.
+For a transition from reverse time \(r\) to \(s\), where
+\(0\le s\le r\le2/3\), let \(q(\rho)\) be the area of a monotone boundary
+interpolation and \(xy\) the smaller endpoint area. Then
+\[
+\int_s^r A(\rho)q(\rho)\,d\rho
+\ge xy\int_s^r A(\rho)\,d\rho
+\ge xyA(r)(r-s).
+\]
+The right side is the tight-slab contribution \eqref{eq:c:21}, so filling
+such transitions weakly increases the objective.
 
 If none
 of the states reaches reverse time at most \(2/3\), all terms in \eqref{eq:c:21} are
@@ -1462,6 +1468,16 @@ abc\left(2-\frac32(a+b+c)\right),
 which is the negative of the central contribution \eqref{eq:c:10}. Hence
 \(\mathcal J(K)\le0\), which is \eqref{eq:c:42}.
 \end{proof}
+
+\begin{remark}
+The constant \(2/3\) is sharp for finite-step box-horn sets as a supremum.
+The central cube \([0,1/3]^3\), with three square-section horns of side
+\((1-t)/2\) at height \(1/3<t<1\), has volume \(1/9\) and coordinate-sum
+moment \(2/27\). Approximating the horns from below by nested finite-step
+sections preserves the height bound and makes the normalized first moment
+tend to \(2/3\). Thus a uniformly stronger bound requires structure beyond
+the box-horn hypotheses.
+\end{remark}
 
 
 \subsubsection{Application to the thickening}
