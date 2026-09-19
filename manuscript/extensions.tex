@@ -60,10 +60,14 @@ The translated-mesh argument has a useful dimension-independent form.
 Let \(K\) be a measurable positive-volume downset in the unit simplex.
 Choose an integer \(N>d\), put \(h=1/N\), and define
 \(T_z=\{y\in\mathbb N^d:z+hy\in K\}\).
+For a finite \(T\subseteq\mathbb N^d\), write
+\[
+\Delta_r(T)=d r|T|-(d+1)\sum_{y\in T}|y|_1.
+\]
 Suppose that, for almost every \(z\in[0,h)^d\), this induced discrete
 ideal satisfies
 \[
-d r_z|T_z|-(d+1)\sum_{y\in T_z}|y|_1\ge\alpha|T_z|,
+\Delta_{r_z}(T_z)\ge\alpha|T_z|,
 \qquad
 r_z=\left\lfloor\frac{1-|z|_1}{h}\right\rfloor.
 \]
@@ -72,7 +76,7 @@ Only allowances \(N-d,\ldots,N-1\) occur almost everywhere. Writing
 \[
 \begin{aligned}
 \sum_{y\in T_z}\bigl(d-(d+1)|z+hy|_1\bigr)
-&=hD_{r_z}(T_z)+(d\epsilon_z-|z|_1)|T_z|\\
+&=h\Delta_{r_z}(T_z)+(d\epsilon_z-|z|_1)|T_z|\\
 &\ge(\alpha h-|z|_1)|T_z|.
 \end{aligned}
 \]
@@ -103,9 +107,9 @@ on the four positive axis levels has the induced cycle
 \]
 whose two diagonals are absent.
 
-More directly, no central box \([0,c]\), \(c\in U\), together with
+More directly, no central box \([0,q]\), \(q\in U\), together with
 four horns restricted to exceeding only one central coordinate can
-cover \(U\). The support of \(c\) is empty, a singleton, or an adjacent
+cover \(U\). The support of \(q\) is empty, a singleton, or an adjacent
 pair of this cycle. In every case there is an adjacent pair disjoint
 from that support. Its vector \(e_i+e_j\) lies in \(U\), exceeds two
 central caps, and belongs to neither the central box nor any such horn.
@@ -136,8 +140,9 @@ labels from \(U\) have distinct residues, so they are precisely the Ap\'ery
 set and each has a unique factorization. Thus the exponent ideal is \(U\)
 independently of the preference rule. Here \(c=27\), \(g=18\), \(n=9\),
 and \(W_5=18\): the example obstructs the decomposition while satisfying
-Wilf's inequality. A higher-dimensional argument therefore needs a richer
-structural model or additional hypotheses that exclude this example.
+Wilf's inequality. A direct higher-dimensional extension of the
+central-box/horn method therefore needs a richer structural model or
+additional hypotheses that exclude this example.
 
 Known dimension-independent results still cover substantial regions,
 including \(3e\ge m\) \cite{Graph}, \(c\le3m\) \cite{Macaulay}, and
