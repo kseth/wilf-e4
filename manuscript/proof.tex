@@ -253,7 +253,8 @@ Its mean coordinate sum is
 The complement is the union of upper orthants with vertices
 \((w_ip_i/(H+B))_i\), for the discrete minimal exclusions \(p\).
 Positive diagonal scaling preserves their supports and minimality.
-The same identity holds with an allowance \(Q\) in place of \(H\).
+The same calculation with an allowance \(Q\) in place of \(H\) replaces
+\(D_0\) by \(D_Q\) in the identity.
 A continuous lower bound \(\kappa_c\ge\gamma\) therefore gives
 \begin{equation}
 D_0/m\ge\gamma H-(1-\gamma)B,\qquad
@@ -463,7 +464,7 @@ Its frontier has one of the following forms, allowing transpose:
 Type & Mixed maxima & Mixed point count \(c_{ij}\) & Correction \(\beta_{ij}\) & Axis charge \(\nu_{ij}\) \\
 \midrule
 Rectangle & \((h_i,h_j)\) & \(h_ih_j\) & 0 & 0 \\
-Split, \(b,d\ge1\) & \((b,h_j),(h_i,d)\) & \(bh_j+dh_i-bd\) & \(b+d\) & 0 \\
+Split, \(1\le b<h_i,\ 1\le d<h_j\) & \((b,h_j),(h_i,d)\) & \(bh_j+dh_i-bd\) & \(b+d\) & 0 \\
 Side cap at \(i\), \(1\le b<h_i\) & \((b,h_j)\) & \(bh_j\) & \(b\) & \(h_i\) \\
 \bottomrule
 \end{tabular}
@@ -474,7 +475,9 @@ Let \(s_f\) count split planes, \(I\) the globally maximal axis directions,
 \(C=\sum(c_{ij}-\beta_{ij})\), and \(N=\sum\nu_{ij}\).
 Every mixed planar maximum is globally maximal. An axis top is globally
 maximal exactly when both incident planes side-cap that axis.
-Thus \(k=|K|=3+s_f+|I|\le6\).
+Each side-cap plane can cap only one axis, while a split plane caps none.
+Consequently \(2|I|\le3-s_f\), so \(s_f+|I|\le3\) and
+\(k=|K|=3+s_f+|I|\le6\).
 For a split,
 \(c_{ij}-\beta_{ij}
 =bd+b(h_j-d-1)+d(h_i-b-1)\ge b+d-1\).
@@ -773,8 +776,9 @@ A zero coordinate stays zero. Consequently at most one induced minimal
 vertex is positive, even after redundant vertices are removed.
 For almost every translation boundary conventions agree; the exceptional
 translations lie in finitely many coordinate hyperplanes modulo \(h\).
-The hypotheses of \eqref{eq:p:22} therefore hold for \(T_z\), including when units
-are absent. Expansion gives
+The simplex condition gives \(|y|_1\le r_z\) for every \(y\in T_z\).
+The hypotheses of \eqref{eq:p:22} therefore hold for \(T_z\), including when
+units are absent. Expansion gives
 \[
 \sum_{y\in T_z}(3-4|z+hy|_1)
  =hD_{r_z}(T_z)+(3\epsilon_z-|z|_1)|T_z|
