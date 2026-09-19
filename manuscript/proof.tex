@@ -518,7 +518,7 @@ Lemma~\ref{lemma:height-cutoff} gives \(H<24\).
 For any allowance \(Q\), the continuous theorem also gives
 \(D_Q/m\ge(Q-2B)/3\).
 
-\begin{finitelemma}[No-corner interval]\label{finite:no-corner-interval}
+\begin{finitelemma}[No-full-corner interval]\label{finite:no-corner-interval}
 For all real
 \(1\le b\le d\le Q\), \(5\le Q\le24\), and every nonempty finite
 no-full-corner ideal of attained height at most \(Q\),
@@ -528,7 +528,7 @@ m-D_Q\le1.
 
 \end{finitelemma}
 
-This is stronger than the genuine branch domain: no units, residue
+This is stronger than this branch requires: no units, residue
 labels, attained allowance, or cardinality restriction is required.
 Use the method in Section~\ref{sec:p5}, with no clipping.
 A DP leaf requires its exact bound at most \(q\).
@@ -615,9 +615,9 @@ T=\{(x,y,z):y<f_x,\ z<g_x,\ z<h_y,\ (x,y,z)\not\ge(2,1,1)\}.
 Keep exactly those of degree at most five and \(30\le|T|\le48\).
 Matching axes recover each plane section exactly.
 The required plane entries include all three predecessors of \(p\).
-Any extra reconstructed point in a genuine ideal would dominate a planar
-minimal exclusion, violating its corresponding pair test.
-Thus every genuine low-height ideal is recovered uniquely.
+Any extra reconstructed point in an Ap\'ery ideal in this branch would
+dominate a planar minimal exclusion, violating its corresponding pair test.
+Thus every low-height Ap\'ery ideal in this branch is recovered uniquely.
 Profiles alone do not guarantee total degree: the literal degree check is essential.
 
 \begin{finitelemma}[Short-corner low]\label{finite:short-corner-low}
@@ -691,7 +691,7 @@ as in \eqref{eq:p:18}, and reconstruct with its own \(p\)-orthant deleted.
 Keep precisely degree at most six, cardinality at least 30,
 and the three bounds \eqref{eq:p:20}. No maxima, realizability, modular, or erosion filter is used.
 The same plane-recovery and excluded-corner argument as for \eqref{eq:p:18}
-proves complete, unique coverage of genuine oriented ideals.
+proves complete, unique coverage of oriented Ap\'ery ideals in this branch.
 
 \begin{finitelemma}[Degree-six]\label{finite:degree-six}
 On this complete geometric family,
@@ -733,7 +733,7 @@ Empty ideals and missing coordinate units are allowed.
 The empty ideal satisfies the inequality directly. For nonempty ideals,
 the following finite reduction is exhaustive. If there is a positive minimal
 corner \(p'\), its predecessors imply \(|p'|_1\le r+1\).
-Remove that exclusion generator to obtain a finite no-corner completion:
+Remove that exclusion generator to obtain a finite no-full-corner completion:
 pure-axis exclusions remain, and deleting a positive orthant leaves every
 axis point unchanged. Thus its axis caps are at most \(r\).
 If there is no positive corner, take \(p'=(1,1,r-1)\); its orthant is
@@ -831,7 +831,7 @@ It suffices to cover the closed necessary failure region
 \begin{finitelemma}[High-height]\label{finite:high-height}
 For every \((b,d,Q)\in\mathcal F\),
 every positive integer \(p\) with \(|p|_1\ge5\) and
-\((1,b,d)\cdot p\le Q+1\), and every nonempty finite no-corner lower ideal \(U\),
+\((1,b,d)\cdot p\le Q+1\), and every nonempty finite no-full-corner lower ideal \(U\),
 put \(T'=U\setminus(p+\mathbb N^3)\). If
 \(\max_{T'}(1,b,d)\cdot x\le Q\), then
 \begin{equation}
