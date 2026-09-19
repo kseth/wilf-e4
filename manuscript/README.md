@@ -1,7 +1,7 @@
 # Manuscript
 
 Start with [the PDF](wilf-four-generators.pdf) or [main.tex](main.tex).
-Karthik Sethuraman's first draft includes the analytic argument, seven finite
+The manuscript includes the analytic argument, seven finite
 assertions, extensions, related work, bibliography, and construction history
 crediting GPT-6 Astra and GPT-5.6 Sol via Codex.
 
