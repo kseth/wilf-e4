@@ -889,22 +889,20 @@ The branches are exhaustive. Multiplicity at most 29 is settled by Section~\ref{
 For \(m\ge30\), Section~\ref{sec:p7} routes every ideal to exactly one of Sections~\ref{sec:p8}--\ref{sec:p11} or the analytic three-plane case. The three-plane case already gives
 \(W_4\ge0\). On the remaining branches their conclusions give
 \(D_0\ge m-29/10\).
-Suppose, for contradiction, that \(W_4<0\). It is an integer, so
-\(W_4\le-1\), and \eqref{eq:p:1} implies \(AD_0\le m(m-2)\).
-Since \(A\ge m+1\) and \(m\ge30\), this gives
+This bound is positive, and \(A\ge m+1\). Hence \eqref{eq:p:1} gives
 \[
-D_0\le\frac{m(m-2)}{m+1}=m-3+\frac3{m+1}.
+\begin{aligned}
+mW_4
+&\ge(m+1)\left(m-\frac{29}{10}\right)-m(m-1)\\
+&=-\frac{9m+29}{10}>-m,
+\end{aligned}
 \]
-But
-\[
-\left(m-\frac{29}{10}\right)
--\left(m-3+\frac3{m+1}\right)
-=\frac1{10}-\frac3{m+1}
-\ge\frac1{310}>0.
-\]
-This contradicts the branch bound.
+where the strict inequality is equivalent to \(m>29\). Thus \(W_4>-1\),
+and its integrality gives \(W_4\ge0\). More generally, the same calculation
+would accept a uniform deficit \(D_0\ge m-C\) for all \(m\ge30\) whenever
+\(C<90/31\); the retained value \(C=29/10\) lies just below this threshold.
 Together with the direct analytic three-plane case and the
-small-multiplicity result, this proves the proposed theorem
+small-multiplicity result, this proves the theorem
 using the stated, independently replayed finite lemmas and the published
 multiplicity-at-most-19 result.
 \end{proof}
