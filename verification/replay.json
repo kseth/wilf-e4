@@ -1337,7 +1337,7 @@
             "-pedantic"
           ],
           "source": "short_corner_high_prefix.cpp",
-          "version": "c++ (Homebrew GCC 16.2.0) 16.2.0",
+          "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
           "workers": 4
         },
         {
@@ -1349,7 +1349,7 @@
             "-pedantic"
           ],
           "source": "short_corner_high_direct.cpp",
-          "version": "c++ (Homebrew GCC 16.2.0) 16.2.0",
+          "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
           "workers": 4
         }
       ],
@@ -1383,7 +1383,7 @@
             "-pedantic"
           ],
           "source": "high_height_subtract.cpp",
-          "version": "c++ (Homebrew GCC 16.2.0) 16.2.0",
+          "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
           "workers": 4
         },
         {
@@ -1395,7 +1395,7 @@
             "-pedantic"
           ],
           "source": "high_height_disjoint.cpp",
-          "version": "c++ (Homebrew GCC 16.2.0) 16.2.0",
+          "version": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
           "workers": 4
         }
       ],
@@ -1418,27 +1418,27 @@
       "vacuous_dp_leaves": 564
     }
   ],
-  "elapsed_seconds": 1035.409693374997,
+  "elapsed_seconds": 879.9024292919785,
   "environment": {
-    "compiler": "c++ (Homebrew GCC 16.2.0) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
     "dependencies": "Python standard library and C++17",
     "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
-    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]"
+    "python": "3.13.13 (main, Apr  7 2026, 18:19:01) [Clang 21.0.0 (clang-2100.0.123.102)]"
   },
   "establishes": "Finite Lemmas 2.2\u20132.8 of the manuscript",
-  "finished_utc": "2026-09-19T05:38:06.399160+00:00",
+  "finished_utc": "2026-09-19T16:32:54.487253+00:00",
   "fresh": true,
   "independent_agreement": true,
   "inputs": [
     {
-      "bytes": 2818,
+      "bytes": 2823,
       "path": "README.md",
-      "sha256": "c7ef9b06600d8d6dd99ca644025592b4d954f40cb49d086c82a72845e000409f"
+      "sha256": "f1c7129379a9bde289a969d57b61676bbc261056801eadb912adea6c497d5ba1"
     },
     {
-      "bytes": 8943,
+      "bytes": 8989,
       "path": "SPECIFICATION.md",
-      "sha256": "3d3cb871a14745672a3235df961d9f5f571b42d42fd5d9a7dc60e823a74f2829"
+      "sha256": "6bc8c487bde8fdedb690fc637f0de6d418e8f471796826ee1102551946b3da7a"
     },
     {
       "bytes": 6299,
@@ -1541,7 +1541,7 @@
       "sha256": "f367e29320fd63f9fd65b177e76b89f07c5b1e36e9e2283558cc2a216439272d"
     }
   ],
-  "manifest_sha256": "28e5d5648baa5b5287006665ae1a0581f173ada3d53ae650396b0d1f19db3c12",
+  "manifest_sha256": "b574fb05d0de7d88cced1de0adf5abd6d7ff4cd6ef81ac2a2dcb831d4ba562bd",
   "negative_tests": [
     {
       "checker": "trees_integer",
@@ -1882,151 +1882,151 @@
   "packet": "wilf-four-verification",
   "processes": [
     {
-      "elapsed_seconds": 0.02022954198764637,
+      "elapsed_seconds": 0.019861208042129874,
       "exit_status": 0,
       "label": "compiler identity",
       "stderr": "",
-      "stdout_sha256": "c2bb31f0bfa41f22f491f11e642591c16100e3c4c9dcbf33a15915add5b249fd"
+      "stdout_sha256": "55f7662ee66d47566d9f08f35a12158ac9588e4852f788eed57fa3bf625c9a5d"
     },
     {
-      "elapsed_seconds": 3.5761598339886405,
+      "elapsed_seconds": 0.499007000005804,
       "exit_status": 0,
       "label": "generator-box/generator_box_residues.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 0.4877256670151837,
+      "elapsed_seconds": 0.3972555419895798,
       "exit_status": 0,
       "label": "generator-box/generator_box_membership.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 13.008612125006039,
+      "elapsed_seconds": 11.511962291027885,
       "exit_status": 0,
       "label": "generator-box/generator_box_residues.cpp",
       "stderr": "",
-      "stdout_sha256": "2f02614ac3ecbed0b1530c7366a2a9c77cacb56ae19296d218b44d170b0ae264"
+      "stdout_sha256": "2ff6f8725eee3454374a09364cb9ff38a603f51c2e8251ef6ed8be4b29d36c59"
     },
     {
-      "elapsed_seconds": 6.247173833020497,
+      "elapsed_seconds": 3.884209541953169,
       "exit_status": 0,
       "label": "generator-box/generator_box_membership.cpp",
       "stderr": "",
-      "stdout_sha256": "55403737f2843baf3c1b23cf343b253ad3e0427a66caf24daeba52efee98c97c"
+      "stdout_sha256": "990cd597f46027bdd519b1352a3a8c6a2bc01c301694371857c115a6c1df5c9c"
     },
     {
-      "elapsed_seconds": 5.158253790985327,
+      "elapsed_seconds": 4.927339209010825,
       "exit_status": 0,
       "label": "short-corner-low/short_corner_low_offsets.py",
       "stderr": "",
       "stdout_sha256": "dc4231d2768292681b08769e60f32a499661e16e66bde4389d8ae3f32481bc3c"
     },
     {
-      "elapsed_seconds": 4.079217958031222,
+      "elapsed_seconds": 4.3847254169522785,
       "exit_status": 0,
       "label": "short-corner-low/short_corner_low_successors.py",
       "stderr": "",
       "stdout_sha256": "deb3a590413eb39b55a1f5db0e1f208ce6f879b2a1b62a3aac14fdbfb62c0068"
     },
     {
-      "elapsed_seconds": 0.8347083330154419,
+      "elapsed_seconds": 0.5552160419756547,
       "exit_status": 0,
       "label": "degree-six/degree_six_bits.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 0.7932809999911115,
+      "elapsed_seconds": 0.5550916669890285,
       "exit_status": 0,
       "label": "degree-six/degree_six_columns.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 18.16077962500276,
+      "elapsed_seconds": 17.60896912496537,
       "exit_status": 0,
       "label": "degree-six/degree_six_bits.cpp",
       "stderr": "",
       "stdout_sha256": "aa29f1dade684c6c49f955eb7b96f413254f480e11e8c164071f49e0088648e2"
     },
     {
-      "elapsed_seconds": 5.399204833025578,
+      "elapsed_seconds": 5.465270625019912,
       "exit_status": 0,
       "label": "degree-six/degree_six_columns.cpp",
       "stderr": "",
       "stdout_sha256": "bb4231763ca99e6686f3c8bfc9833dbb79e7e4b45773645ad9278c0997e461f6"
     },
     {
-      "elapsed_seconds": 0.4039012499852106,
+      "elapsed_seconds": 0.39242579200072214,
       "exit_status": 0,
       "label": "strip/strip_prefix.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 0.5086299999966286,
+      "elapsed_seconds": 0.39730379200773314,
       "exit_status": 0,
       "label": "strip/strip_points.cpp/compile",
       "stderr": "",
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "elapsed_seconds": 0.08841004100395367,
+      "elapsed_seconds": 0.10573333397042006,
       "exit_status": 0,
       "label": "strip/strip_prefix.cpp",
       "stderr": "",
       "stdout_sha256": "495c4a44393e96bcaffa9c6f70c2d278b7c33a00f6a122d41c8dd58e1deadaac"
     },
     {
-      "elapsed_seconds": 0.8798222499899566,
+      "elapsed_seconds": 0.8288302919827402,
       "exit_status": 0,
       "label": "strip/strip_points.cpp",
       "stderr": "",
       "stdout_sha256": "495c4a44393e96bcaffa9c6f70c2d278b7c33a00f6a122d41c8dd58e1deadaac"
     },
     {
-      "elapsed_seconds": 9.353405375033617,
+      "elapsed_seconds": 9.931493249954656,
       "exit_status": 0,
       "label": "no-corner-interval/trees_integer.py",
       "stderr": "",
       "stdout_sha256": "44afd79a15f8cd46c7f0ea302d6996eefad815615f0783e8fe31e59767ea19f6"
     },
     {
-      "elapsed_seconds": 20.856320624996442,
+      "elapsed_seconds": 23.267147749953438,
       "exit_status": 0,
       "label": "no-corner-interval/trees_rational.py",
       "stderr": "",
       "stdout_sha256": "467abe464abb8c875be89a1aa30f7c688f8b64e74b7d46baff65efcea05aad1c"
     },
     {
-      "elapsed_seconds": 1.511877250042744,
+      "elapsed_seconds": 1.5138877920107916,
       "exit_status": 0,
       "label": "short-corner-high/trees_integer.py",
       "stderr": "",
-      "stdout_sha256": "d4a3b5f4c05fde2c7c25201b931809f3364fa0d9744dae481393ce4ebce4c0c9"
+      "stdout_sha256": "7fa2b5afb5fdf353329adc1124ba210aad4eac142e1704084ef720d9054ef362"
     },
     {
-      "elapsed_seconds": 8.005650624982081,
+      "elapsed_seconds": 6.38949616701575,
       "exit_status": 0,
       "label": "short-corner-high/trees_rational.py",
       "stderr": "",
-      "stdout_sha256": "e646db22767a6ad9397ef8f9ff91ef2e5fdfea961d07752e10cce83544ee48e0"
+      "stdout_sha256": "d3ce9c757fc1996f2175a47c326f14889bd83bdb0dbabb7e3007cfacaa2d4380"
     },
     {
-      "elapsed_seconds": 959.6673808339983,
+      "elapsed_seconds": 809.7427121250075,
       "exit_status": 0,
       "label": "high-height/trees_integer.py",
       "stderr": "",
-      "stdout_sha256": "7c103743d7d30e8a395c8e054cd47e154c17d502903dafbcd9d85fe0bca4d26e"
+      "stdout_sha256": "318706f831e51d2b6d0565df60a47d62593c110907a911bc04f38eb1bd9c638c"
     },
     {
-      "elapsed_seconds": 711.9252141250181,
+      "elapsed_seconds": 603.9565280830138,
       "exit_status": 0,
       "label": "high-height/trees_rational.py",
       "stderr": "",
-      "stdout_sha256": "a8c8f581e38cf6ad2d9a6ce58412f221305a8942897d4f576e71f1a20c3de98c"
+      "stdout_sha256": "f735da206cc70a35212dd7c6e512ee657a5ef7e5c821d952546a33f08d4ce2ea"
     }
   ],
   "replay_command": [
@@ -2036,9 +2036,7 @@
     "verify.py"
   ],
   "schema_version": 1,
-  "standalone_copy_checked": true,
-  "standalone_copy_contained_git": false,
-  "started_utc": "2026-09-19T05:20:50.976990+00:00",
+  "started_utc": "2026-09-19T16:18:14.604078+00:00",
   "status": "PASS",
   "unresolved": 0,
   "unsupported": 0
