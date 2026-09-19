@@ -36,8 +36,23 @@ at most \(H\), and \(w_i\ge1\), then
 \[
 D_e=\sum_x\alpha_x(H-w\cdot x)+w\cdot\beta\ge|\beta|_1.
 \]
-Thus the local centroid mechanism extends. What is missing is a uniform
-surplus of the required size for every relevant ideal.
+Thus the local centroid mechanism extends. The exact identity also quantifies
+the uniform surplus that would suffice. Fix \(m_0\ge e\). If \(m\ge m_0\) and
+\[
+D_e\ge\frac{e-2}{2}m-\eta,
+\qquad 0\le\eta<\frac{(e-1)m_0}{m_0+1},
+\]
+then \(D_e\ge0\) and \(A\ge m+1\) give
+\[
+mW_e\ge(m+1)\left(\frac{e-2}{2}m-\eta\right)
+       -\frac{e-2}{2}m(m-1)
+=((e-2)-\eta)m-\eta>-m.
+\]
+The strict inequality follows because \(m/(m+1)\) is increasing, so
+\(\eta<(e-1)m/(m+1)\). Hence integrality gives \(W_e\ge0\). For \(e=4\)
+and \(m_0=30\), this recovers \(\eta<90/31\); for \(e=5\), the leading
+surplus target is \(3m/2\). What is missing beyond four generators is a
+structural argument that establishes such a bound for every relevant ideal.
 
 \subsection{A conditional mesh-transfer principle}
 
@@ -95,24 +110,34 @@ pair of this cycle. In every case there is an adjacent pair disjoint
 from that support. Its vector \(e_i+e_j\) lies in \(U\), exceeds two
 central caps, and belongs to neither the central box nor any such horn.
 
-In fact, this obstruction already occurs for a preferred Ap\'ery ideal in
-embedding dimension five. Take
+In fact, this obstruction already occurs for a uniquely factorized Ap\'ery
+set in embedding dimension five. Take
 \[
-S=\langle9,11,12,10,15\rangle
+S=\langle9,19,12,20,15\rangle.
 \]
-and use the displayed order \((11,12,10,15)\) of the four nonmultiplicity
-generators for lexicographic preference. All four are below \(2m=18\), so
-the five displayed generators are minimal. In residue order modulo nine,
+Use the displayed order \((19,12,20,15)\) for the four exponent coordinates.
+The elements \(9,12,15\) are minimal by size. A sum of these three is
+divisible by three, so cannot equal \(19\) or \(20\), and any sum using
+\(19\) and another positive generator exceeds \(20\). Thus the five displayed
+generators are minimal. In residue order modulo nine,
 \[
-\operatorname{Ap}(S,9)=(0,10,11,12,22,23,15,25,26).
+\operatorname{Ap}(S,9)=(0,19,20,12,31,32,15,34,35).
 \]
-The only nonunique factorization among these elements is
-\(22=2\cdot11=12+10\). Lexicographic preference selects the exponent vector
-of \(12+10\), so the preferred exponent ideal is exactly \(U\). Here
-\(c=18\), \(n=6\), and \(W_5=12\): the example obstructs the decomposition
-while satisfying Wilf's inequality. A higher-dimensional argument therefore
-needs a richer structural model or additional hypotheses that exclude this
-example.
+The six minimal exclusions reduce strictly within their residue classes:
+\[
+\begin{aligned}
+2\cdot19&=20+2\cdot9,&2\cdot12&=15+9,\\
+2\cdot20&=19+12+9,&2\cdot15&=12+2\cdot9,\\
+19+20&=12+3\cdot9,&12+15&=3\cdot9.
+\end{aligned}
+\]
+Every exponent outside \(U\) dominates one of these exclusions. The nine
+labels from \(U\) have distinct residues, so they are precisely the Ap\'ery
+set and each has a unique factorization. Thus the exponent ideal is \(U\)
+independently of the preference rule. Here \(c=27\), \(g=18\), \(n=9\),
+and \(W_5=18\): the example obstructs the decomposition while satisfying
+Wilf's inequality. A higher-dimensional argument therefore needs a richer
+structural model or additional hypotheses that exclude this example.
 
 Known dimension-independent results still cover substantial regions,
 including \(3e\ge m\) \cite{Graph}, \(c\le3m\) \cite{Macaulay}, and
