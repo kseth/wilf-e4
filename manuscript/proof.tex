@@ -173,7 +173,7 @@ A deep line, whose top is outside \(Z\), has \(d_\ell\ge1\).
 Its positive axis-prefix residues are distinct nonzero residues on \(T\);
 therefore \(R_j(L)\le m(L-1)-\binom L2\) and \(\sigma_\ell\ge m\).
 There are \(P(T)-3|Z|\) deep lines, because every \(z\in Z\) tops exactly
-one line in each direction.
+one line in each direction by the maximality proved above.
 
 On a final line \(d_\ell=0\), so \(\sigma_\ell\ge-R_j(L)\).
 Across final lines each positive axis-prefix point appears once, with
@@ -623,7 +623,8 @@ A mixed \(xy\) corner has representative \(\gamma e_3\ne0\).
 If its \(x\)-coordinate is at least two, subtracting \(2e_1+e_2\)
 gives an included point with residue \((\gamma+1)a_3\).
 It forces \(\gamma=h_3\); at most one such corner exists.
-The antichain permits at most one additional corner at \(x=1\).
+There is at most one additional corner at \(x=1\): two planar minimal
+exclusions with the same first coordinate would be comparable in the second.
 The \(xz\) plane is identical. A \(yz\) corner yields residue
 \((\gamma+2)a_1\) on subtracting \(e_2+e_3\), forcing
 \(\gamma\in\{h_1-1,h_1\}\).
@@ -693,7 +694,14 @@ In an \(ij\)-plane, distinct mixed corners have distinct representatives
 \(\gamma e_k\ne0\). At most \(p_i-1\) have coordinate \(q_i<p_i\),
 and at most \(p_j-1\) have \(q_j<p_j\), by antichain distinct coordinates.
 For the remaining corners, subtract \(p_ie_i+p_je_j\).
-The included result has residue \((\gamma+p_k)a_k\);
+If \(q\) is such a corner, then
+\[
+r=q-p_ie_i-p_je_j\quad\text{satisfies}\quad
+0\le r\le q-e_i\in T.
+\]
+Here \(p_i,p_j\ge1\), and \(q-e_i\) is included by minimality of \(q\),
+so lower closure proves \(r\in T\). This point has residue
+\((\gamma+p_k)a_k\);
 collision with the \(k\)-axis forces \(\gamma>h_k-p_k\).
 At most \(p_k\) distinct representatives remain. Each plane thus has at most
 \begin{equation}
