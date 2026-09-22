@@ -153,8 +153,21 @@ Reading the line backward gives
 L(M-\lambda(t_\ell))
 =\sum_{x\in\ell}[M-\lambda(x)]_m+\sigma_\ell.
 \]
-Each direction partitions all \(m\) residues. Summing and using \eqref{eq:p:1} gives
-\(mW_4=\binom m2+\sum_\ell\sigma_\ell\).
+Here \([\cdot]_m\) denotes the least nonnegative residue. Because the labels
+of \(T\) represent every residue modulo \(m\) exactly once,
+\[
+\sum_{x\in T}[M-\lambda(x)]_m
+=\sum_{r=0}^{m-1}r=\binom m2.
+\]
+Each coordinate direction partitions \(T\), while \eqref{eq:p:2} with the
+unnormalized weights \(a\) gives
+\[
+3mM-4a\cdot s=3\binom m2+\sum_\ell\sigma_\ell.
+\]
+Since \(m(m-1)=2\binom m2\), equation \eqref{eq:p:1} now yields
+\[
+mW_4=\binom m2+\sum_\ell\sigma_\ell.
+\]
 
 A deep line, whose top is outside \(Z\), has \(d_\ell\ge1\).
 Its positive axis-prefix residues are distinct nonzero residues on \(T\);
@@ -196,7 +209,12 @@ lines, and the line moment identities give
 \sum_j\bar\delta_j=\kappa\ge0.
 \]
 
-Choose coordinate \(k\) of weight \(v\).
+Choose coordinate \(k\) with \(u_k=v\), and denote the other coordinates
+by \(j,\ell\) so that
+\[
+u_j=\tau,\qquad u_\ell=U,\qquad
+0<v\le\tau\le U\le1,qquad \sigma=v+\tau+U.
+\]
 Every interval of length \(h\) has sawtooth integral
 \[
 \int_I[r]_q\,dr\ge\frac{qh^2}{2(h+q)}.
@@ -217,14 +235,25 @@ Since \(Lv\le1+v\), division gives
 \operatorname{mean}_{\rm line}\delta_j
 \ge\frac{u_jvL}{2(1+v+u_j)}-\frac v2.
 \]
-Length-weighted averaging uses \(v\sum L^2/m=2\mu_k+v\), hence
+Length-weighted averaging uses \(v\sum L^2/m=2\mu_k+v\), hence, for
+\(r\in\{j,\ell\}\),
 \[
-2\bar\delta_j(1+v+u_j)\ge2u_j\mu_k-v(1+v).
+2\bar\delta_r(1+v+u_r)\ge2u_r\mu_k-v(1+v).
 \]
-Sum over \(j\ne k\), substitute \(\mu_k=(1+\kappa)/4-\bar\delta_k\),
-and use \(U\le\sigma-2v\).
-The remaining slack coefficient is the middle weight minus \(1+v\),
-nonpositive because that weight is at most one. Discarding it gives
+Add the two inequalities, substitute
+\(\mu_k=(1+\kappa)/4-\bar\delta_k\) and
+\(\bar\delta_\ell=\kappa-\bar\delta_k-\bar\delta_j\), and multiply by two:
+\[
+\begin{aligned}
+(\sigma-v)(1+\kappa)
+\le{}&4(1+v+U)\kappa+4v(1+v)\\
+&+4(\tau-1-v)\bar\delta_k
+-4(U-\tau)\bar\delta_j.
+\end{aligned}
+\]
+Both terms on the second line are nonpositive because the mean slacks are
+nonnegative, \(\tau\le1\), and \(\tau\le U\). Discard them and use
+\(U\le\sigma-2v\). Rearrangement gives
 \begin{equation}
 \boxed{\sigma(1-3\kappa)\le4\kappa+5v-3\kappa v+4v^2.}
 \label{eq:p:7}
@@ -232,7 +261,12 @@ nonpositive because that weight is at most one. Discarding it gives
 If \(H>3\) and \(D_0<m\), then \(0\le\kappa<v=1/H<1/3\).
 The right side divided by \(1-3\kappa\) is strictly increasing in \(\kappa\),
 with derivative numerator \(4+12v+12v^2>0\).
-Writing \(B=\sum_iw_i\) proves the necessary failure cutoff
+Consequently
+\[
+\sigma<\frac{9v+v^2}{1-3v},\qquad
+B=H\sigma<\frac{9H+1}{H-3}=9+\frac{28}{H-3}.
+\]
+Thus we obtain the necessary failure cutoff
 \begin{equation}
 \boxed{B<9+28/(H-3).}
 \label{eq:p:8}
