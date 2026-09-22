@@ -1201,7 +1201,20 @@ such jumps may be filled.
 At most one jump crosses the turn in \eqref{eq:c:23}, as illustrated in
 Figure~\ref{fig:boundary-path}. Suppose it starts at
 \((u+p,C)\) and ends at \((u,C-q)\). If its gain over the continuous L-path
-is denoted by \(G(p,q;u,C)\), direct integration gives
+is denoted by \(G(p,q;u,C)\), then
+\[
+p\ge0,\qquad 0\le q\le C-u.
+\]
+Fix every contribution before the jump. After its endpoint use the remaining
+continuous L-path to \((u,u)\), followed by the balanced tail. Let
+\(J_{\mathrm{base}}(p;u,C)\) be the fixed preceding contribution together
+with the complete continuous L-path from \((u+p,C)\) through \((u,C)\) and
+\((u,u)\), followed by that tail. This baseline has the same fixed start and
+tail for every admissible \(q\), so the whole continuation is
+\[
+J(q)=J_{\mathrm{base}}(p;u,C)+G(p,q;u,C).
+\]
+Direct integration gives
 
 \begin{equation}
 \frac{\partial G}{\partial q}
@@ -1211,12 +1224,13 @@ is denoted by \(G(p,q;u,C)\), direct integration gives
 
 This derivative changes sign at most once, from negative to positive, so the
 maximum occurs at \(q=0\) or \(q=C-u\). The continuous baseline from the
-jump's start through the remaining tail is independent of \(q\), so the same
-endpoint conclusion applies to the whole continuation. The first choice
-moves the jump entirely onto the fixed-\(C\) branch.
+jump's start through the remaining tail is independent of \(q\), as the
+display makes explicit, so the same endpoint conclusion applies to the whole
+continuation. The first choice moves the jump entirely onto the
+fixed-\(C\) branch; the second lands at the balanced state \((u,u)\).
 
-For the balanced endpoint, a jump from reverse time \(r\) to \((z,z)\),
-followed by the balanced tail, has value
+To compare the latter endpoint, keep the reverse starting time \(r\) fixed.
+A jump to \((z,z)\), followed by the balanced tail, has value
 
 \[
 E_r(z)=A(r)(r-2z)z^2+\frac23z^3-\frac32z^4,
@@ -1230,15 +1244,16 @@ E_r'(z)=-6z\left(z-\frac r2\right)
 \label{eq:c:27}
 \end{equation}
 
-On \(0\le z\le R\le r/2\), the maximum of \(E_r\) is therefore at \(0\) or
-\(R\). For a noninitial crossing jump, take \(R\) to be the smaller side of
-its actual starting state; the second endpoint is a fixed-smaller-side jump
-and is dominated by filling. For the initial crossing jump, take \(R=B\),
-which is valid because \(2B\le B+C\le1-a\). Its second endpoint is the
-admissible initial slab ending at \((B,B)\). If the zero endpoint wins, every
-earlier term still lies in the nonpositive part, so the empty horn dominates.
-Thus the crossing jump either disappears or is replaced by an admissible
-one-slab construction.
+On the admissible interval \(0\le z\le R\le r/2\), the maximum of \(E_r\)
+is therefore at \(0\) or \(R\). For a noninitial crossing jump, take \(R\)
+to be the smaller side of its actual starting state. At \(z=R\) the jump has
+that side fixed and is dominated by the boundary filling already considered;
+at \(z=0\) the remaining horn is empty. For the initial crossing jump, take
+\(R=B\), which is valid because \(2B\le B+C\le1-a\). The endpoint \(z=B\)
+is the admissible initial slab ending at \((B,B)\); if \(z=0\) wins, every
+earlier term still lies in the nonpositive part, so again the empty horn
+dominates. Thus an initial crossing jump either disappears or becomes an
+admissible one-slab construction, while a noninitial one is removed.
 
 \smallskip\noindent\emph{Merging jumps before the turn.}
 All remaining jumps lie on the fixed-\(C\) branch. Retain the first jump,
@@ -1252,14 +1267,19 @@ e>\frac32\left(\frac23-C\right)>\frac23-C.
 
 Equation \eqref{eq:c:25} shows that merging it into the first jump cannot decrease the
 total gain. The individual gains depend only on jump lengths, so the jump and
-continuous lengths may be reordered along the same branch before merging.
-Their total length, the continuous baseline, nestedness, and the initial cap
-constraint are unchanged. Repetition leaves a single initial jump followed
-by a boundary profile.
+continuous lengths may be reordered along the same fixed-\(C\) branch before
+merging. This preserves the branch endpoints and total length, the fixed
+transverse side \(C\) and the other transverse cap, nestedness, the continuous
+baseline, and the mandatory initial slack. Equation \eqref{eq:c:25} then
+replaces the two adjacent jumps by one with the same total jump length.
+Repetition leaves a single initial jump followed by a boundary profile.
 
 If that jump ends at effective caps \((x,y)\), its contribution together with
-the optimal continuation is \(F_1(a;x,y)\). The effective caps lie inside
-\((B,C)\), so \eqref{eq:c:20} proves the lemma.
+the optimal continuation is \(F_1(a;x,y)\). Its endpoint is height-feasible,
+so \(a+x+y\le1\), and its effective caps satisfy
+\(0\le x\le B\), \(0\le y\le C\). Thus it is one of the competitors in
+\(U_1(a;B,C)\), and \eqref{eq:c:20} proves the lemma. All comparisons are
+weak, so zero-length jumps and equality cases are included.
 \end{proof}
 
 \subsubsection{The joint three-horn inequality}
