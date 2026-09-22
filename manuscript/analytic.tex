@@ -375,8 +375,8 @@ every feasible nested horn and only such sequences. There are finitely many
 levels and cap choices, so backward evaluation terminates.
 \end{proof}
 
-Equivalently, a prefix-maximum implementation may compare the state
-\((b,d)\) with \((b-1,d)\) and \((b,d-1)\), because every proper
+Equivalently, the maximum over proper subrectangles is obtained from the
+prefix maxima at \((b-1,d)\) and \((b,d-1)\), because every proper
 subrectangle decreases at least one cap.
 
 For a fixed center, the three arms in \eqref{eq:a:1} or \eqref{eq:a:12} are disjoint, so their
@@ -384,12 +384,11 @@ additive optima may be computed independently and added to the central-piece
 score. Maximizing over all centers therefore covers every ideal in the
 theorem or clipping corollary. Particular score formulas, degree or weighted
 height allowances, and interval bounds are specified in Section~\ref{sec:proof}.
-For soundness, an application must show that every relevant ideal supplies
-one of these center-and-horn states; it need not show that every enumerated
-state is realizable. Dropping realizability or minimality restrictions only
-enlarges the maximum. Any retained-state filter used below is instead proved
-as a necessary feasibility condition for the exact uncut or clipped section
-being scored.
+Consequently, any class containing the center-and-horn states of every
+relevant ideal gives a valid upper bound, even if it also contains
+unrealizable states. Conversely, the recurrences below restrict retained
+states only by conditions necessary for feasibility of the exact uncut or
+clipped section.
 
 
 \subsection{Full weighted Apéry ideals}\label{sec:analytic-b}
@@ -1137,10 +1136,10 @@ objective. All earlier states now lie on the L-shaped boundary path
 \label{eq:c:23}
 \end{equation}
 
-The possibly slack initial slab has not been interpolated. Its position is
-represented only for bookkeeping by the virtual state \((x_0,C)\), where
-\(x_0=1-a-C\ge B\). This is not an actual rectangle and may exceed the
-transverse cap \(B\); the first actual jump records the virtual excess.
+The possibly slack initial slab has not been interpolated. Set
+\(x_0=1-a-C\ge B\), and use the virtual state \((x_0,C)\) only in the formula
+for the first jump. It is not an actual rectangle and may exceed the
+transverse cap \(B\); the first actual jump absorbs the excess \(x_0-B\).
 
 \begin{figure}[htbp]
 \centering

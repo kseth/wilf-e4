@@ -525,7 +525,7 @@ Let \(s_f\) count split planes, \(I\) the globally maximal axis directions,
 \(J=\sum_{i\in I}h_i\), \(\Beta=\sum\beta_{ij}\),
 \(C=\sum(c_{ij}-\beta_{ij})\), and \(N=\sum\nu_{ij}\).
 Every split plane requires both incident axis caps to be at least two;
-checking \(s_f=0,1,2,3\) gives \(h\ge s_f+3\).
+for \(s_f=0,1,2,3\), these requirements give \(h\ge s_f+3\).
 Every mixed planar maximum is globally maximal. An axis top is globally
 maximal exactly when both incident planes side-cap that axis.
 Each side-cap plane can cap only one axis, while a split plane caps none.
@@ -675,7 +675,8 @@ The required plane entries include all three predecessors of \(p\).
 Any extra reconstructed point in an Ap\'ery ideal in this branch would
 dominate a planar minimal exclusion, violating its corresponding pair test.
 Thus every low-height Ap\'ery ideal in this branch is recovered uniquely.
-Profiles alone do not guarantee total degree: the literal degree check is essential.
+The profile restrictions do not imply total degree at most five, so the
+degree condition remains part of the family.
 
 \begin{finitelemma}[Short-corner low]\label{finite:short-corner-low}
 Every such triple, ordered as \((f^{xy},f^{xz},f^{yz})\), satisfies
@@ -929,7 +930,8 @@ H_1&\leftarrow\min(H_1,\lceil(42q+37S_{\mathrm{upper}})/5\rceil).
 Perform at most twenty iterations, stopping on inversion or unchanged
 endpoints. Every upper rounding is outward. The inequalities in \eqref{eq:p:25},
 the lower bound \(qQ\ge H_0\), and \(b\le d\) prove that each step retains
-every relevant real point. Convergence is not required for soundness.
+every relevant real point. Thus twenty iterations give an outward enclosure
+whether or not the updates have stabilized.
 
 For a nonempty tightened box use Section~\ref{sec:p5} with
 \(\ell=(q,B_0,C_0)\), \(u=(q,B_1,C_1)\), and
