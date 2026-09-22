@@ -1030,14 +1030,41 @@ We proceed in three stages: make the slabs height-tight, compare them
 with a boundary interpolation, and remove or merge the remaining jumps.
 
 \smallskip\noindent\emph{Step 1: endpoint tightness.}
-First fix the finite list of nested rectangle states and vary only the
-outward endpoints of their slabs. The objective is a separable convex
-quadratic in those endpoints: the quadratic coefficient at an endpoint is
-\(3(A_i-A_{i+1})/2\ge0\), where \(A_i\) is the area of the \(i\)-th rectangle
-and \(A_{n+1}=0\). A maximum on the endpoint polytope is attained at a
-vertex. A block of equal endpoints at such a vertex either begins at \(a\)
-or meets one of its height bounds. Removing zero-length slabs leaves every
-surviving slab tight at its right endpoint.
+Fix the nonempty nested rectangle states \((b_i,c_i)\), \(1\le i\le n\),
+in outward order, so \(b_{i+1}\le b_i\) and \(c_{i+1}\le c_i\).
+Let state \(i\) occupy the slab from \(t_{i-1}\) to \(t_i\), with
+\(t_0=a\). The outward endpoints range over the compact polytope
+\[
+a=t_0\le t_1\le\cdots\le t_n,
+\qquad t_i\le1-b_i-c_i\quad(1\le i\le n).
+\]
+Endpoint conventions on the slabs do not affect the integral. Put
+\(A_i=b_ic_i\) and \(A_{n+1}=0\). Their contribution is
+\[
+\sum_{i=1}^n A_i
+ \int_{t_{i-1}}^{t_i}
+ \left(3t+\frac32(b_i+c_i)-2\right)dt.
+\]
+After like endpoint terms are collected, this is a separable quadratic in
+\(t_1,\ldots,t_n\), and the coefficient of \(t_i^2\) is
+\(3(A_i-A_{i+1})/2\ge0\). Thus it is convex and has a maximum at a vertex of
+the endpoint polytope.
+
+Consider a maximal block of equal endpoints at a vertex. If its common
+value is not \(a\) and none of its height inequalities is active, the whole
+block can be shifted slightly in either direction while preserving its
+order, all strict neighboring gaps, and all height bounds. The vertex would
+then be the midpoint of two distinct feasible points, a contradiction.
+Hence every block either has value \(a\) or contains an endpoint satisfying
+\(t_k=1-b_k-c_k\). Remove the zero-length slabs. If state \(i\) survives,
+then the block containing \(t_i\) does not meet the base and starts at \(i\).
+For an active \(k\) in that block, nesting and feasibility give
+\[
+t_i\le1-b_i-c_i\le1-b_k-c_k=t_k=t_i.
+\]
+Thus every surviving slab is height-tight at its right endpoint. This also
+covers coincident height bounds; if no state survives, the horn is empty and
+already satisfies the claimed bound.
 
 \smallskip\noindent\emph{Step 2: boundary interpolation.}
 Reverse time by \(r=1-t\), and write
@@ -1055,17 +1082,22 @@ A(r)(r-s)xy.
 \end{equation}
 
 Retain the possibly slack initial slab, including any central slack;
-the filling below applies only to transitions between actual tight states.
+the comparison below applies only to transitions between actual tight
+states. A boundary interpolation is a pair of possibly continuous transverse
+side functions, nondecreasing in reverse time, that respects the caps and
+has side sum \(\rho\) at reverse time \(\rho\). It is used only as a
+comparison class for an upper bound; it need not be a finite-step horn.
 For a transition from reverse time \(r\) to \(s\), where
 \(0\le s\le r\le2/3\), let \(q(\rho)\) be the area of a monotone boundary
-interpolation and \(xy\) the smaller endpoint area. Then
+interpolation and \(xy\) the smaller endpoint area. Monotonicity gives
+\(q(\rho)\ge xy\), while \(A(\rho)\ge A(r)\ge0\). Therefore
 \[
 \int_s^r A(\rho)q(\rho)\,d\rho
 \ge xy\int_s^r A(\rho)\,d\rho
 \ge xyA(r)(r-s).
 \]
 The right side is the tight-slab contribution \eqref{eq:c:21}, so filling
-such transitions weakly increases the objective.
+the boundary between the two states weakly increases the objective.
 
 If none
 of the states reaches reverse time at most \(2/3\), all terms in \eqref{eq:c:21} are
@@ -1078,7 +1110,8 @@ caps; it is the boundary profile from Lemma~\ref{lemma:c:3.1} in this
 nonnegative region.
 
 It remains to control the earlier transitions between actual states, where
-\(A(r)\le0\). At every such state of sum
+\(A(r)\le0\). In this region lowering a permitted rectangle product weakly
+increases its contribution. At every such state of sum
 \(s\), nestedness and the cap conditions allow its product to be replaced by
 the smaller product at
 
@@ -1098,9 +1131,10 @@ objective. All earlier states now lie on the L-shaped boundary path
 \label{eq:c:23}
 \end{equation}
 
-The possibly slack initial position is represented only for bookkeeping by
-the virtual state \((x_0,C)\), where \(x_0=1-a-C\ge B\). The first actual
-jump covers the virtual excess.
+The possibly slack initial slab has not been interpolated. Its position is
+represented only for bookkeeping by the virtual state \((x_0,C)\), where
+\(x_0=1-a-C\ge B\). This is not an actual rectangle and may exceed the
+transverse cap \(B\); the first actual jump records the virtual excess.
 
 \begin{figure}[htbp]
 \centering
