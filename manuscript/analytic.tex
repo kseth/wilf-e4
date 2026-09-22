@@ -1116,9 +1116,9 @@ nonnegative region.
 
 It remains to control the earlier transitions between actual states, where
 \(A(r)\le0\). In this region lowering a permitted rectangle product weakly
-increases its contribution. At every such state of sum
-\(s\), nestedness and the cap conditions allow its product to be replaced by
-the smaller product at
+increases its contribution. Write the ordered sides of such a state as
+\((x,s-x)\). Nestedness gives \(x\ge u\), and the larger-side cap gives
+\(x\ge s-C\). Hence \(x\ge x_*(s)\), where
 
 \begin{equation}
 x_*(s)=\max(u,s-C),\qquad
@@ -1126,9 +1126,10 @@ y_*(s)=\min(C,s-u).
 \label{eq:c:22}
 \end{equation}
 
-Indeed \(x(s-x)\) is increasing for \(x\le s/2\); the pair in \eqref{eq:c:22} is
-nested as \(s\) varies, respects \(B,C\), and ends at \((u,v)\). Since the
-coefficient in \eqref{eq:c:21} is nonpositive, this replacement can only increase the
+Since \(x(s-x)\) is increasing for \(x\le s/2\), the pair in
+\eqref{eq:c:22} has no larger product. It is nested as \(s\) varies, respects
+\(B,C\), and ends at \((u,v)\). The nonpositive coefficient in
+\eqref{eq:c:21} therefore makes the replacement weakly increase the
 objective. All earlier states now lie on the L-shaped boundary path
 
 \begin{equation}
@@ -1228,11 +1229,9 @@ Direct integration gives
 \end{equation}
 
 This derivative changes sign at most once, from negative to positive, so the
-maximum occurs at \(q=0\) or \(q=C-u\). The continuous baseline from the
-jump's start through the remaining tail is independent of \(q\), as the
-display makes explicit, so the same endpoint conclusion applies to the whole
-continuation. The first choice moves the jump entirely onto the
-fixed-\(C\) branch; the second lands at the balanced state \((u,u)\).
+maximum occurs at \(q=0\) or \(q=C-u\). At \(q=0\) the jump lies entirely
+on the fixed-\(C\) branch; at \(q=C-u\) it lands at the balanced state
+\((u,u)\).
 
 To compare the latter endpoint, keep the reverse starting time \(r\) fixed.
 A jump to \((z,z)\), followed by the balanced tail, has value
