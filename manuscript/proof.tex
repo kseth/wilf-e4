@@ -23,8 +23,9 @@ every \(w-m\) is at most the largest gap \(c-1\), while \(c-1+m\) is Apéry.
 For each Apéry element choose the lexicographically least exponent vector
 \(x\in\mathbb N^3\) with label \(\lambda(x)=a\cdot x=w\).
 Let \(T\) be the chosen vectors. This is the preferred-factorization
-construction of Zhai, with the initial-ideal interpretation of
-Hellus--Rechenauer--Waldi \cite{Z,HRW}.
+construction of Zhai \cite{Z}. Hellus--Rechenauer--Waldi
+\cite[Proposition~2.3]{HRW} identify the monomial ideal complementary to
+these lexicographic representatives as the corresponding initial ideal.
 
 To prove lower closure, take \(y\le x\in T\) and \(v=x-y\).
 If \(\lambda(y)-m\in S\), then \(\lambda(x)-m\in S\), a contradiction.
@@ -37,15 +38,26 @@ Thus \(\lambda(y)\) is Apéry. A lexicographically earlier factorization
 \ \text{is bijective},
 \]
 and the labels on \(T\) are distinct modulo \(m\).
+For
+\[
+\Lambda=\ker\bigl(\mathbb Z^3\longrightarrow\mathbb Z/m\mathbb Z,
+\ x\longmapsto a\cdot x\bmod m\bigr),
+\]
+the residue bijection gives the disjoint tessellation
+\[
+\mathbb Z^3=\bigsqcup_{\ell\in\Lambda}(\ell+T),
+\]
+which is the setting of \cite[Proposition~2.5]{HRW}.
 
 Let \(s=\sum_Tx\), \(w=a/A\), \(H=M/A=\max_Tw\cdot x\), and
 \(R=\max_T|x|_1\). Every \(w_i\ge1\), so \(R\le H\).
 Writing the least representative of residue \(r\) as \(r+k_rm\)
 and counting its \(k_r\) gaps proves the classical genus formula
-(also \cite[Lemma~1]{Z})
 \[
 g=\frac1m\sum_{\operatorname{Ap}}w-\frac{m-1}{2}.
 \]
+Equivalently, Zhai's \cite[Lemma~1]{Z} formula is stated for
+\(c'=c-g\), the number of semigroup elements below the conductor.
 Since \(W_4=3c-4g\), substitution gives the exact identity
 \begin{equation}
 \boxed{mW_4=A D_0-m(m-1),\qquad D_0=3mH-4w\cdot s.}
@@ -59,7 +71,9 @@ points of equal residue, impossible. Likewise two distinct corners
 sharing a positive coordinate cannot have the same residue.
 Hence a positive corner has representative zero, and there is at most one
 positive corner. All other corners have a zero coordinate.
-These are the support/collision consequences of \cite[Proposition~2.6]{HRW}.
+These elementary residue arguments are precisely the support/collision
+conclusions of \cite[Proposition~2.6]{HRW}, whose tessellation hypothesis
+holds by the preceding display.
 
 \subsection{Coordinate lines and two centroid bounds}\label{sec:p2}
 
