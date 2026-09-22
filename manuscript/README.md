@@ -17,7 +17,7 @@ reader-facing PDF is retained alongside its sources.
 The eight TeX files and `references.bib` contain all analytic proofs,
 finite-family definitions, reductions, and final arithmetic. Every internal
 reference resolves, and all 15 bibliography entries are cited. The
-warning-free 37-page PDF also builds from an isolated copy of the ten
+warning-free 39-page PDF also builds from an isolated copy of the ten
 source/build inputs, with identical rendered text.
 
 The seven computational assertions are established by the accompanying
