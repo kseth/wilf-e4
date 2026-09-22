@@ -630,22 +630,28 @@ The \(xz\) plane is identical. A \(yz\) corner yields residue
 Hence each plane has at most two mixed corners, with the refined incident
 plane restriction, and contains respectively \((2,1),(2,1),(1,1)\).
 
-A degree-five plane profile is \(f=(f_0,\ldots,f_5)\),
-\(0\le f_i\le6-i\), nonincreasing, encoding \(\{(i,j):j<f_i\}\).
+A degree-five \(ij\)-plane profile is
+\(f^{ij}=(f^{ij}_0,\ldots,f^{ij}_5)\),
+\(0\le f^{ij}_r\le6-r\), nonincreasing, encoding
+\(\{(r,s):s<f^{ij}_r\}\).
 Let \(\ell(f)\) count positive columns and
 \(\Delta(f)=\{i:1\le i<\ell(f),\ f_i<f_{i-1}\}\).
 These, and only these, are mixed corners; a drop to zero is a pure-axis corner.
 
-For \(xy,xz\), require \(f_2\ge2\), \(|\Delta(f)|\le2\), and at most
-one drop at index at least two. For \(yz\), require \(h_1\ge2\)
-and \(|\Delta(h)|\le2\).
-Use all compatible ordered triples \(f,g,h\), with
+For \(xy,xz\), require \(f^{ij}_2\ge2\),
+\(|\Delta(f^{ij})|\le2\), and at most one drop at index at least two.
+Minimality of \(p\) gives \((1,1,1)=p-e_1\in T\), and lower closure gives
+\((0,1,1)\in T\). Thus the \(yz\)-profile satisfies
+\(f^{yz}_1\ge2\); also require \(|\Delta(f^{yz})|\le2\).
+Use all compatible ordered triples \((f^{xy},f^{xz},f^{yz})\), with
 \[
-\ell(f)=\ell(g),\quad f_0=\ell(h),\quad g_0=h_0,
+\ell(f^{xy})=\ell(f^{xz}),\quad
+f^{xy}_0=\ell(f^{yz}),\quad f^{xz}_0=f^{yz}_0,
 \]
 and reconstruct
 \begin{equation}
-T=\{(x,y,z):y<f_x,\ z<g_x,\ z<h_y,\ (x,y,z)\not\ge(2,1,1)\}.
+T=\{(x,y,z):y<f^{xy}_x,\ z<f^{xz}_x,\ z<f^{yz}_y,
+\ (x,y,z)\not\ge(2,1,1)\}.
 \label{eq:p:18}
 \end{equation}
 Keep exactly those of degree at most five and \(30\le|T|\le48\).
@@ -657,7 +663,7 @@ Thus every low-height Ap\'ery ideal in this branch is recovered uniquely.
 Profiles alone do not guarantee total degree: the literal degree check is essential.
 
 \begin{finitelemma}[Short-corner low]\label{finite:short-corner-low}
-Every such triple satisfies
+Every such triple, ordered as \((f^{xy},f^{xz},f^{yz})\), satisfies
 \(U_2\ge m-1\), except possibly the two keys
 \[
 \begin{aligned}
