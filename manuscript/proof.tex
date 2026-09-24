@@ -648,6 +648,13 @@ The \(xz\) plane is identical. A \(yz\) corner yields residue
 Hence each plane has at most two mixed corners, with the refined incident
 plane restriction, and contains respectively \((2,1),(2,1),(1,1)\).
 
+When \(p\) is the unique positive corner, a point \(x\) belongs to \(T\)
+exactly when \(x\not\ge p\) and all three of its coordinate-plane
+projections belong to \(T\). Indeed, a minimal exclusion below a point
+outside \(T\) is either \(p\) or has a zero coordinate; in the latter case
+it also excludes one projection. This is the one-corner form of
+\eqref{eq:a:4}.
+
 A degree-five \(ij\)-plane profile is
 \(f^{ij}=(f^{ij}_0,\ldots,f^{ij}_5)\),
 \(0\le f^{ij}_r\le6-r\), nonincreasing, encoding
@@ -675,9 +682,8 @@ T=\{(x,y,z):y<f^{xy}_x,\ z<f^{xz}_x,\ z<f^{yz}_y,
 Keep exactly those of degree at most five and \(30\le|T|\le48\).
 Matching axes recover each plane section exactly.
 The required plane entries include all three predecessors of \(p\).
-Any extra reconstructed point in an Ap\'ery ideal in this branch would
-dominate a planar minimal exclusion, violating its corresponding pair test.
-Thus every low-height Ap\'ery ideal in this branch is recovered uniquely.
+The projection rule therefore recovers every low-height Ap\'ery ideal in
+this branch uniquely.
 The profile restrictions do not imply total degree at most five, so the
 degree condition remains part of the family.
 
@@ -759,8 +765,8 @@ as in \eqref{eq:p:18}, and reconstruct with its own \(p\)-orthant deleted.
 Keep precisely the reconstructions of degree at most six and cardinality at
 least 30 that satisfy the three bounds \eqref{eq:p:20}. No maxima,
 realizability, modular, or erosion filter is used.
-The same plane-recovery and excluded-corner argument as for \eqref{eq:p:18}
-proves complete, unique coverage of oriented Ap\'ery ideals in this branch.
+Shared-axis compatibility and the projection rule above give complete,
+unique coverage of oriented Ap\'ery ideals in this branch.
 
 \begin{finitelemma}[Degree-six]\label{finite:degree-six}
 On this complete geometric family,
