@@ -35,7 +35,7 @@ reports execution results and input hashes.
 
 | Finite lemma | Assertion / replay component | Evaluators |
 |---|---|---|
-| 2.2 (`finite:generator-box`) | Generator-box / `generator-box` | `generator_box_residues.cpp`, `generator_box_membership.cpp` |
+| 2.2 (`finite:generator-box`) | Generator-box, \(4\le m\le29\) / `generator-box` | `generator_box_residues.cpp`, `generator_box_membership.cpp` |
 | 2.3 (`finite:no-corner-interval`) | No-full-corner interval / `no-corner-interval` | `no_corner_interval_prefix.py`, `no_corner_interval_direct.py` |
 | 2.4 (`finite:short-corner-high`) | Short-corner high / `short-corner-high` | `short_corner_high_prefix.cpp`, `short_corner_high_direct.cpp` |
 | 2.5 (`finite:short-corner-low`) | Short-corner low / `short-corner-low` | `short_corner_low_offsets.py`, `short_corner_low_successors.py` |

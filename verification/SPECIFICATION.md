@@ -11,7 +11,7 @@ the computational premises.
 
 | Premise | Manuscript location | Independent checking paths |
 |---|---|---|
-| Inclusive generator box, \(20\le m\le29\) | Finite Lemma 2.2, Section 2.6 | [Cyclic residues](code/generator_box_residues.cpp); [ordinary membership](code/generator_box_membership.cpp) |
+| Inclusive generator box, \(4\le m\le29\) | Finite Lemma 2.2, Section 2.6 | [Cyclic residues](code/generator_box_residues.cpp); [ordinary membership](code/generator_box_membership.cpp) |
 | No-full-corner real interval bound | Finite Lemma 2.3, Section 2.8 | [Prefix DP](code/no_corner_interval_prefix.py); [direct recursive DP](code/no_corner_interval_direct.py) |
 | Short corner, high height | Finite Lemma 2.4, Section 2.9 | [Subtractive/prefix DP](code/short_corner_high_prefix.cpp); [disjoint/direct DP](code/short_corner_high_direct.cpp) |
 | Short corner, low height | Finite Lemma 2.5, Section 2.9 | [Recursive profiles/offsets](code/short_corner_low_offsets.py); [Cartesian profiles/successors](code/short_corner_low_successors.py) |

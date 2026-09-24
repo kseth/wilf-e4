@@ -22,10 +22,9 @@ source/build inputs, with identical rendered text.
 
 The seven computational assertions are established by the accompanying
 [verification code and certificates](../verification/README.md), mapped there
-to Finite Lemmas 2.2–2.8 and their stable TeX labels. The published results
-for multiplicities at most 18 and exactly 19 are explicitly cited in
-Section 2.6. All other needed elementary upstream ingredients are proved
-in the paper.
+to Finite Lemmas 2.2–2.8 and their stable TeX labels. Finite Lemma 2.2
+covers every multiplicity from 4 through 29. All other needed elementary
+upstream ingredients are proved in the paper.
 
 Reading and building the manuscript requires no archive, reconstruction
 notes, or Markdown proof. Replaying the finite assertions requires only
