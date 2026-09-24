@@ -2,14 +2,14 @@
   "format": "wilf-four-verification-v1",
   "inputs": [
     {
-      "bytes": 2823,
+      "bytes": 2840,
       "path": "README.md",
-      "sha256": "f1c7129379a9bde289a969d57b61676bbc261056801eadb912adea6c497d5ba1"
+      "sha256": "6f5dc92af49b88e3b1a4751deb324a963f0df521f2d09059b329670acac4c5d7"
     },
     {
-      "bytes": 8989,
+      "bytes": 8988,
       "path": "SPECIFICATION.md",
-      "sha256": "6bc8c487bde8fdedb690fc637f0de6d418e8f471796826ee1102551946b3da7a"
+      "sha256": "c21c705bc5164790aa8df900e7b83a7977cff7a003abd16275eb4d16e89d2af5"
     },
     {
       "bytes": 6299,
@@ -22,14 +22,14 @@
       "sha256": "aa9b06d43d9fbaadf57967eb90a9af9e358b0b79e4fd4b7db2baa593712cf0e5"
     },
     {
-      "bytes": 5308,
+      "bytes": 5307,
       "path": "code/generator_box_membership.cpp",
-      "sha256": "da7b17e53a2da631c99eadd1fb9a3241e9c6b4bbe63f99c4936eb4c1fe0b3f64"
+      "sha256": "7ccbd640ab85a75541fb6be8f1d558cfc598ed9d3b1c5343fa18ad8db36133f4"
     },
     {
-      "bytes": 6353,
+      "bytes": 6351,
       "path": "code/generator_box_residues.cpp",
-      "sha256": "9e46779fb1ebd6ded080a963c03ace54d97907b0bbfd3f2f16f7620363e9330e"
+      "sha256": "ebffc7c7213e11ee02a584a11c19696155d032a5779cf460c233ef2c8b669b73"
     },
     {
       "bytes": 5217,
@@ -107,9 +107,9 @@
       "sha256": "96d82c9518e4d783609e584e36cd35abb452cf823d0bd38deeb5e518441dc25e"
     },
     {
-      "bytes": 22792,
+      "bytes": 22791,
       "path": "verify.py",
-      "sha256": "f367e29320fd63f9fd65b177e76b89f07c5b1e36e9e2283558cc2a216439272d"
+      "sha256": "ad3e7f5d65ca952b24691e0c687213eafc9f9794889bd94f8bfba1d3670fcee7"
     }
   ],
   "schema_version": 1
