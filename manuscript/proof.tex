@@ -937,10 +937,21 @@ H_1&\leftarrow\min(H_1,\lceil(42q+37S_{\mathrm{upper}})/5\rceil).
 \label{eq:p:27}
 \end{equation}
 Perform at most twenty iterations, stopping on inversion or unchanged
-endpoints. Every upper rounding is outward. The inequalities in \eqref{eq:p:25},
-the lower bound \(qQ\ge H_0\), and \(b\le d\) prove that each step retains
-every relevant real point. Thus twenty iterations give an outward enclosure
-whether or not the updates have stabilized.
+endpoints. To see that each update is outward, take a point of \(\mathcal F\)
+in the current box. Since \(qQ\ge H_0>3q\), \eqref{eq:p:25} gives
+\[
+q(1+b+d)\le9q+\frac{28q^2}{H_0-3q}\le S_{\max}.
+\]
+Order and the lower endpoint then give
+\[
+2qb\le q(b+d)\le S_{\max}-q,\qquad
+qd\le S_{\max}-q-B_0.
+\]
+After these two upper updates, \(q(1+b+d)\le S_{\mathrm{upper}}\);
+the other inequality in \eqref{eq:p:25} gives
+\(5qQ\le42q+37S_{\mathrm{upper}}\).
+Thus every rounding in \eqref{eq:p:27} is outward, and twenty iterations
+retain every relevant real point whether or not the updates stabilize.
 
 For a nonempty tightened box use Section~\ref{sec:p5} with
 \(\ell=(q,B_0,C_0)\), \(u=(q,B_1,C_1)\), and
