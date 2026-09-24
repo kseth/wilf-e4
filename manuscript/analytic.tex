@@ -946,10 +946,21 @@ The cap conditions give
 \label{eq:c:14}
 \end{equation}
 
-The coefficient of \(-d^2\) changes sign only at \(r=2/3\). After fixing
-\(d(2/3)\), the optimal admissible function is therefore the smallest one
-allowed by \eqref{eq:c:14} to the left of \(2/3\), and the largest one allowed to its
-right. Writing \(q=(2/3-d(2/3))/2\), the associated transverse sides are
+The coefficient of \(-d^2\) changes sign only at \(r=2/3\). If
+\(x+y\ge2/3\), fix \(d_0=d(2/3)\). The pointwise smallest admissible
+function to the left and largest to the right are, respectively,
+\[
+d_-(r)=\max\{0,r-2x,d_0-(2/3-r)\},\qquad
+d_+(r)=\min\{r,2y-r,d_0+(r-2/3)\}.
+\]
+They meet at \(d_0\), are \(1\)-Lipschitz, and satisfy \eqref{eq:c:14}.
+Writing \(q=(2/3-d_0)/2\), feasibility gives
+\[
+\max(0,2/3-y)\le q\le\min(x,1/3),
+\qquad 2q\le2/3\le y+q.
+\]
+The sign of the coefficient then makes these extremal functions optimal;
+their associated transverse sides are
 
 \begin{equation}
 \begin{cases}
@@ -961,11 +972,7 @@ right. Writing \(q=(2/3-d(2/3))/2\), the associated transverse sides are
 \end{equation}
 
 The same profile follows directly from pointwise product maximization if
-\(x+y\le2/3\). When \(x+y\ge2/3\), feasibility gives
-
-\[
-\max(0,2/3-y)\le q\le\min(x,1/3).
-\]
+\(x+y\le2/3\).
 
 Let \(I(q;x,y)\) denote the integral in \eqref{eq:c:13} for \eqref{eq:c:15}. Direct integration
 gives
@@ -1251,7 +1258,9 @@ E_r'(z)=-6z\left(z-\frac r2\right)
 On the admissible interval \(0\le z\le R\le r/2\), the maximum of \(E_r\)
 is therefore at \(0\) or \(R\). For a noninitial crossing jump, take \(R\)
 to be the smaller side of its actual starting state. At \(z=R\) the jump has
-that side fixed and is dominated by the boundary filling already considered.
+that side fixed, with gain \(G_R(C-R)\le0\) by \eqref{eq:c:24}: indeed,
+\(2(C-R)+3R-2=2C+R-2\le0\), since \(R+C\le B+C\le1-a\).
+It is therefore dominated by the boundary filling already considered.
 At \(z=0\) the suffix vanishes. Every preceding slab has nonpositive
 contribution by the choice of \((u,v)\) as the first tight state with
 \(u+v\le2/3\), so the entire horn is dominated by the empty horn.
