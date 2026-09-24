@@ -14,7 +14,7 @@ static_assert(std::numeric_limits<int>::digits >= 31, "32-bit indices required")
 static_assert(std::numeric_limits<std::uint64_t>::digits == 64, "64-bit bitsets required");
 
 // Finite Lemma 2.2: cyclic-residue enumeration of the generator box.
-// 20 <= m <= 29, m < a < b < c <= m*(m-2).
+// 4 <= m <= 29, m < a < b < c <= m*(m-2).
 // Manuscript Section 2.6 proves the bounded-counterexample reduction.
 constexpr int INF = 1000000000;
 
@@ -149,7 +149,7 @@ static void run(int m) {
 
 int main(int argc, char**) {
     if (argc != 1) { std::cerr << "only complete mode supported\n"; return 2; }
-    try { for (int m = 20; m <= 29; ++m) run(m); }
+    try { for (int m = 4; m <= 29; ++m) run(m); }
     catch (const std::exception& error) { std::cerr << error.what() << '\n'; return 1; }
     return 0;
 }

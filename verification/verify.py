@@ -180,13 +180,13 @@ def negative_worker_streams():
 
 def generator_box(output):
     rows=[decode(line) for line in output.splitlines()]
-    require(len(rows)==10,"small-multiplicity incomplete output")
+    require(len(rows)==26,"small-multiplicity incomplete output")
     common=[]
     fields=("m","generator_bound_inclusive","raw_triples","smallest_redundant","middle_redundant",
             "largest_redundant","nontrivial_gcd","minimal_four_generator_semigroups",
             "maximum_apery_within_bound","negative_wilf_count","minimum_wilf_with_bounded_apery",
             "bounded_minimum_example","bounded_checksum_fnv1a64")
-    for m,row in zip(range(20,30),rows,strict=True):
+    for m,row in zip(range(4,30),rows,strict=True):
         require(type(row) is dict and set(fields)<=set(row),"generator-box schema")
         for field in fields[:-2]: require(type(row[field]) is int,"generator-box integer")
         bound=m*(m-2)

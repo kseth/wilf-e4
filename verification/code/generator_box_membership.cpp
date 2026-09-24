@@ -113,7 +113,7 @@ static void run(int m) {
 
 int main(int argc, char**) {
     if (argc != 1) { std::cerr << "only complete mode supported\n"; return 2; }
-    try { for (int m = 20; m <= 29; ++m) run(m); }
+    try { for (int m = 4; m <= 29; ++m) run(m); }
     catch (const std::exception& error) { std::cerr << error.what() << '\n'; return 1; }
     return 0;
 }
